@@ -1,0 +1,197 @@
+# Challenge a Friend - Feature Plan
+# Saved: 2026-01-04
+# Status: Pending implementation
+
+## Overview
+Allow players to challenge friends to beat their score on a specific case, with WhatsApp sharing and result notifications.
+
+## User Decisions
+| Decision | Choice |
+|----------|--------|
+| Pre-game info | Just grade (suspense) |
+| Challenge expiry | 7 days |
+| Multi-challenge | Unlimited per case |
+| Already played | Show "You already beat them" or "Your grade was X" |
+| Notifications | In-app only + winner can share victory via WhatsApp |
+| Guest mode | Should work (prerequisite) |
+
+---
+
+## Complete Flow
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                      CHALLENGER (Player A)                       │
+├─────────────────────────────────────────────────────────────────┤
+│  1. Completes case → Sees result screen                         │
+│  2. Clicks "Challenge a Friend" button                          │
+│  3. System creates challenge record                             │
+│  4. WhatsApp share opens with pre-filled message:               │
+│     "Think you can diagnose this case better than me?           │
+│      I scored [Grade] on this medical case. Try it: [link]"     │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                      CHALLENGED (Player B)                       │
+├─────────────────────────────────────────────────────────────────┤
+│  5. Receives WhatsApp → Clicks link                             │
+│  6. Opens challenge landing page:                               │
+│     "Dr. John challenged you!"                                  │
+│     "They scored: A on a Cardiology case"                       │
+│     [Accept Challenge] button                                   │
+│  7. Plays the SAME case in guest mode                           │
+│  8. Completes → Sees comparison:                                │
+│     "You: B (78) vs John: A (92) — John wins!"                  │
+│  9. Prompt: "Login to save & challenge others!"                 │
+│  10. Phone + OTP login → Results saved                          │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    NOTIFICATION TO CHALLENGER                    │
+├─────────────────────────────────────────────────────────────────┤
+│  11. Player A gets in-app notification:                         │
+│      "Sarah completed your challenge!"                          │
+│      "You won! (A vs B)"                                        │
+│      [View Details]                                             │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Data Model
+
+### Challenge
+```typescript
+interface Challenge {
+  id: string;                    // Shareable ID (short, URL-safe)
+  caseId: string;                // Which case to play
+  caseDomain: string;
+
+  challengerId: string;
+  challengerName: string;
+  challengerGrade: string;       // Just grade, not score
+  challengerScore: number;       // Stored but not shown pre-game
+
+  challengedUserId?: string;     // Filled after login
+  challengedName?: string;
+  challengedGrade?: string;
+  challengedScore?: number;
+
+  winnerId?: string;
+  status: 'pending' | 'completed' | 'expired';
+
+  createdAt: number;
+  completedAt?: number;
+  expiresAt: number;             // createdAt + 7 days
+}
+```
+
+### Notification
+```typescript
+interface Notification {
+  id: string;
+  userId: string;
+  type: 'challenge_completed' | 'challenge_received';
+  title: string;
+  message: string;
+  data: { challengeId: string };
+  read: boolean;
+  createdAt: number;
+}
+```
+
+---
+
+## API Routes
+
+### Challenge Routes (server/src/routes/challenge.ts)
+| Route | Purpose |
+|-------|---------|
+| POST /api/challenge/create | Create challenge after winning a case |
+| GET /api/challenge/:id | Get challenge info (for landing page) |
+| POST /api/challenge/:id/start | Start playing a challenged case |
+| POST /api/challenge/:id/complete | Submit result, determine winner |
+| GET /api/challenge/:id/result | Get comparison result (for sharing) |
+
+### Notification Routes (server/src/routes/notification.ts)
+| Route | Purpose |
+|-------|---------|
+| GET /api/notifications | Get user's unread notifications |
+| POST /api/notifications/:id/read | Mark as read |
+| GET /api/notifications/count | Get unread count |
+
+---
+
+## Implementation Phases
+
+### Phase 1: Enable Guest Mode (Prerequisite)
+- Modify ProtectedRoute to allow guest access
+- Add isGuest state to AuthContext
+- Backend already handles optional userId
+
+### Phase 2: Challenge Data Model
+- Add types to shared/types.ts
+- Create challenges.json storage
+- Create challengeService.ts
+
+### Phase 3: Backend API Routes
+- Create challenge.ts routes
+- Create notification.ts routes
+- Register in index.ts
+
+### Phase 4: Challenge Creation UI
+- Add "Challenge a Friend" button to GameOverModal
+- Create share.ts utils for WhatsApp sharing
+
+### Phase 5: Challenge Landing Page
+- Create ChallengePage.tsx
+- Handle expired/already-played states
+- Show challenger info and accept button
+
+### Phase 6: Challenge Play Flow
+- Add routing for /challenge/:id
+- Track challengeId in game state
+- Show comparison after completion
+
+### Phase 7: Victory Share Feature
+- Create VictoryShareCard.tsx
+- Use html2canvas to generate shareable image
+- WhatsApp share with image
+
+### Phase 8: Notification System
+- Add notification bell to Header
+- Create NotificationDropdown.tsx
+- Real-time badge count
+
+### Phase 9: Post-Challenge Login
+- Guest result storage
+- Claim results after login
+
+---
+
+## File Changes Summary
+
+| File | Action | Phase |
+|------|--------|-------|
+| shared/types.ts | Add Challenge, Notification types | 2 |
+| client/src/components/auth/ProtectedRoute.tsx | Add guest mode option | 1 |
+| client/src/App.tsx | Add routing, challenge state | 1, 5, 6 |
+| client/src/contexts/AuthContext.tsx | Add isGuest flag | 1 |
+| server/src/routes/challenge.ts | NEW - Challenge API | 3 |
+| server/src/routes/notification.ts | NEW - Notification API | 3 |
+| server/src/services/challengeService.ts | NEW - Business logic | 3 |
+| server/src/data/challenges/challenges.json | NEW - Storage | 2 |
+| client/src/pages/ChallengePage.tsx | NEW - Landing page | 5 |
+| client/src/components/GameOverModal.tsx | Add challenge button, comparison | 4, 6 |
+| client/src/utils/share.ts | NEW - WhatsApp share utils | 4 |
+| client/src/components/VictoryShareCard.tsx | NEW - Victory image card | 7 |
+| client/src/components/Header.tsx | Add notification bell | 8 |
+| client/src/components/NotificationDropdown.tsx | NEW - Notifications | 8 |
+| server/src/index.ts | Register new routes | 3 |
+
+---
+
+## Open Questions
+1. URL structure: yoursite.com/challenge/ABC123 or different?
+2. Victory share: html2canvas (client) or server-generated PNG?
+3. Guest session persistence if browser closes mid-challenge?

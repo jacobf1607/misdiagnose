@@ -1,7 +1,7 @@
 # MISDIAGNOSE - COMPREHENSIVE SYSTEM DOCUMENTATION
 
-**Last Updated:** January 5, 2026
-**Version:** 3.0.0
+**Last Updated:** January 7, 2026
+**Version:** 3.1.0
 **Project:** Misdiagnose - Medical Deduction Game with RAG Integration
 **Architecture:** Full-Stack TypeScript + Python RAG Service + Firebase Auth
 **Primary Languages:** TypeScript (Frontend & Backend), Python (RAG Service)

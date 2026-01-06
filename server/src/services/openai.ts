@@ -318,6 +318,37 @@ The case should be challenging but solvable through systematic questioning.`;
     caseData.id = `case_${Date.now()}`;
     caseData.domain = selectedDomain; // Track which domain was used
 
+    // VALIDATION: Reject garbage cases that indicate generation failure
+    const invalidPatterns = [
+      'unknown',
+      'textbook reference',
+      'cannot be generated',
+      'not provided',
+      'cannot generate',
+      'unable to generate',
+      'no reference',
+      'reference not'
+    ];
+
+    // Check diagnoses for garbage
+    const hasBadDiagnosis = caseData.diagnoses?.some((d: { name?: string; description?: string }) => {
+      const nameAndDesc = `${d.name || ''} ${d.description || ''}`.toLowerCase();
+      return invalidPatterns.some(pattern => nameAndDesc.includes(pattern));
+    });
+
+    // Check initialComplaint for error messages
+    const hasBadComplaint = invalidPatterns.some(pattern =>
+      (caseData.initialComplaint || '').toLowerCase().includes(pattern)
+    );
+
+    if (hasBadDiagnosis || hasBadComplaint) {
+      console.error('[Case Generation] REJECTED: Case contains invalid/garbage content');
+      console.error('  - Bad diagnosis:', hasBadDiagnosis);
+      console.error('  - Bad complaint:', hasBadComplaint);
+      console.error('  - Initial complaint:', caseData.initialComplaint?.substring(0, 100));
+      throw new Error('Case generation failed - AI returned error message instead of valid case');
+    }
+
     // If RAG is available, enrich with more disease info and optionally generate ideal pathway
     if (ragAvailable) {
       const correctDiagnosis = caseData.diagnoses.find(

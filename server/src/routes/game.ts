@@ -131,6 +131,129 @@ router.get('/pool/status', (req: Request, res: Response) => {
 });
 
 /**
+ * GET /api/game/pool/scan-invalid - Scan for invalid/garbage cases
+ * Returns list of cases that have invalid content (error messages as diagnoses)
+ */
+router.get('/pool/scan-invalid', (req: Request, res: Response) => {
+  try {
+    const casesDir = path.join(__dirname, '../data/cases');
+    const files = fs.readdirSync(casesDir).filter(f => f.startsWith('case_') && f.endsWith('.json'));
+
+    const invalidPatterns = [
+      'unknown',
+      'textbook reference',
+      'cannot be generated',
+      'not provided',
+      'cannot generate',
+      'unable to generate',
+      'no reference',
+      'reference not'
+    ];
+
+    const invalidCases: Array<{ caseId: string; reason: string; sample: string }> = [];
+
+    for (const file of files) {
+      try {
+        const filePath = path.join(casesDir, file);
+        const caseData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+        // Check diagnoses
+        const badDiagnosis = caseData.diagnoses?.find((d: { name?: string; description?: string }) => {
+          const text = `${d.name || ''} ${d.description || ''}`.toLowerCase();
+          return invalidPatterns.some(p => text.includes(p));
+        });
+
+        // Check initialComplaint
+        const badComplaint = invalidPatterns.some(p =>
+          (caseData.initialComplaint || '').toLowerCase().includes(p)
+        );
+
+        if (badDiagnosis || badComplaint) {
+          invalidCases.push({
+            caseId: caseData.id || file.replace('.json', ''),
+            reason: badDiagnosis ? `Bad diagnosis: ${badDiagnosis.name}` : 'Bad initial complaint',
+            sample: badDiagnosis ? badDiagnosis.name : caseData.initialComplaint?.substring(0, 100)
+          });
+        }
+      } catch (e) {
+        // Skip files that can't be parsed
+      }
+    }
+
+    res.json({
+      totalCases: files.length,
+      invalidCount: invalidCases.length,
+      invalidCases
+    });
+  } catch (error) {
+    console.error('Error scanning cases:', error);
+    res.status(500).json({ error: 'Failed to scan cases' });
+  }
+});
+
+/**
+ * DELETE /api/game/pool/clean-invalid - Delete all invalid/garbage cases
+ * Removes cases with error messages as diagnoses
+ */
+router.delete('/pool/clean-invalid', (req: Request, res: Response) => {
+  try {
+    const casesDir = path.join(__dirname, '../data/cases');
+    const files = fs.readdirSync(casesDir).filter(f => f.startsWith('case_') && f.endsWith('.json'));
+
+    const invalidPatterns = [
+      'unknown',
+      'textbook reference',
+      'cannot be generated',
+      'not provided',
+      'cannot generate',
+      'unable to generate',
+      'no reference',
+      'reference not'
+    ];
+
+    const deleted: string[] = [];
+
+    for (const file of files) {
+      try {
+        const filePath = path.join(casesDir, file);
+        const caseData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+
+        // Check diagnoses
+        const badDiagnosis = caseData.diagnoses?.some((d: { name?: string; description?: string }) => {
+          const text = `${d.name || ''} ${d.description || ''}`.toLowerCase();
+          return invalidPatterns.some(p => text.includes(p));
+        });
+
+        // Check initialComplaint
+        const badComplaint = invalidPatterns.some(p =>
+          (caseData.initialComplaint || '').toLowerCase().includes(p)
+        );
+
+        if (badDiagnosis || badComplaint) {
+          fs.unlinkSync(filePath);
+          deleted.push(caseData.id || file.replace('.json', ''));
+          console.log(`[Pool Cleanup] Deleted invalid case: ${file}`);
+        }
+      } catch (e) {
+        // Skip files that can't be parsed
+      }
+    }
+
+    // Reload the pool index after cleanup
+    const { loadIndex } = require('../services/casePoolManager');
+    loadIndex();
+
+    res.json({
+      deleted: deleted.length,
+      deletedCases: deleted
+    });
+  } catch (error) {
+    console.error('Error cleaning cases:', error);
+    res.status(500).json({ error: 'Failed to clean cases' });
+  }
+});
+
+/**
  * GET /api/game/pool/test-cases - Get 3 random cases for test mode
  * Future: Will be restricted to admin/test accounts only
  */
