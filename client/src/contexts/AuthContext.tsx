@@ -75,18 +75,36 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [needsUsername, setNeedsUsername] = useState(false);
   const [pendingPhoneNumber, setPendingPhoneNumber] = useState<string | null>(null);
 
+  // Result type for fetchUserProfile to distinguish 404 from network errors
+  type FetchProfileResult =
+    | { user: UserProfile; notFound: false; networkError: false }
+    | { user: null; notFound: true; networkError: false }
+    | { user: null; notFound: false; networkError: true };
+
   // Fetch user profile from backend
-  const fetchUserProfile = useCallback(async (uid: string): Promise<UserProfile | null> => {
+  // IMPORTANT: Distinguishes between "user not found" (404) and "network error"
+  // This prevents treating network failures as "new user"
+  const fetchUserProfile = useCallback(async (uid: string): Promise<FetchProfileResult> => {
     try {
       const response = await fetch(`${API_BASE}/user/${uid}`);
+
       if (response.ok) {
         const data = await response.json();
-        return data.user;
+        return { user: data.user, notFound: false, networkError: false };
       }
-      return null;
+
+      if (response.status === 404) {
+        // User genuinely doesn't exist
+        return { user: null, notFound: true, networkError: false };
+      }
+
+      // Other HTTP errors (500, etc.) - treat as network error
+      console.error('Failed to fetch user profile: HTTP', response.status);
+      return { user: null, notFound: false, networkError: true };
     } catch (err) {
-      console.error('Failed to fetch user profile:', err);
-      return null;
+      // Network error (CORS, timeout, etc.) - NOT the same as "user not found"
+      console.error('Network error fetching user profile:', err);
+      return { user: null, notFound: false, networkError: true };
     }
   }, []);
 
@@ -118,21 +136,31 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       if (user) {
         // User is signed in - fetch their profile
-        const profile = await fetchUserProfile(user.uid);
-        if (profile) {
-          setUserProfile(profile);
+        const result = await fetchUserProfile(user.uid);
+
+        if (result.user) {
+          // Existing user found
+          setUserProfile(result.user);
           setNeedsUsername(false);
-          setIsGuest(false); // No longer a guest when logged in
-        } else {
-          // New user - needs to set username
+          setIsGuest(false);
+          setError(null);
+        } else if (result.notFound) {
+          // User genuinely doesn't exist - needs to set username
           setNeedsUsername(true);
           setPendingPhoneNumber(user.phoneNumber);
+          setError(null);
+        } else if (result.networkError) {
+          // Network error - DO NOT assume new user, show error
+          setError('Unable to connect to server. Please check your connection and try again.');
+          // Keep user in limbo state - don't set needsUsername
+          setNeedsUsername(false);
         }
       } else {
         // User is signed out - back to guest mode
         setUserProfile(null);
         setNeedsUsername(false);
         setIsGuest(true);
+        setError(null);
       }
 
       setLoading(false);
@@ -171,9 +199,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
       const user = await firebaseVerifyOTP(otp);
 
       // Check if user exists in our backend
-      const profile = await fetchUserProfile(user.uid);
+      const result = await fetchUserProfile(user.uid);
 
-      if (profile) {
+      if (result.user) {
         // Existing user - update last_login
         const updatedProfile = await createOrUpdateUser(
           user.uid,
@@ -181,9 +209,15 @@ export function AuthProvider({ children }: AuthProviderProps) {
         );
         setUserProfile(updatedProfile);
         setNeedsUsername(false);
-      } else {
+        setIsGuest(false);
+      } else if (result.notFound) {
         // New user - needs to set username
         setNeedsUsername(true);
+      } else if (result.networkError) {
+        // Network error - show error, don't assume new user
+        setError('Unable to connect to server. Please try again.');
+        // User is authenticated in Firebase but we can't check backend
+        // Don't set needsUsername to avoid accidental account creation
       }
 
       setOtpSent(false);

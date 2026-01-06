@@ -1,42 +1,64 @@
 /**
  * Background Case Generator
  *
- * Monitors pool size and triggers generation when below threshold.
- * Now uses per-user availability checking:
- *   - Gets active users (logged in within last 7 days)
- *   - Checks if ANY user has fewer than MIN_CASES_PER_USER unseen cases
- *   - Triggers generation if so
+ * SIMPLIFIED LOGIC (per-user only):
+ *   1. Find minimum unseen cases across all active users
+ *   2. If min < 10 (MIN_CASES_PER_USER), need to get cases ready
+ *   3. Calculate needed = 20 (TARGET) - min
+ *   4. First, complete cases from pending queue (prioritize by completion stage)
+ *   5. Only generate new Phase 1 cases if pending is empty AND still need cases
  *
- * Uses a simple interval-based approach (not a separate worker thread).
+ * This ensures:
+ *   - No flooding of pending queue
+ *   - Efficient processing (closest-to-done first)
+ *   - Clear trigger logic based on user needs
  */
 
 import {
   getPoolStatus,
-  needsReplenishment,
   replenishPool,
   loadIndex,
   findUserNeedingCases
 } from './casePoolManager';
-import { getActiveUsers, getAllUserIds } from './userService';
-import { startPendingMonitor, stopPendingMonitor, isMonitorRunning, getPendingStatus, migrateIncompleteCasesToPending } from './pendingCaseManager';
+import { getActiveUsers } from './userService';
+import {
+  stopPendingMonitor,
+  isMonitorRunning,
+  getPendingStatus,
+  getPendingBreakdown,
+  migrateIncompleteCasesToPending,
+  completeCasesFromPending
+} from './pendingCaseManager';
 
-let isGenerating = false;
+let isProcessing = false;
 let intervalId: NodeJS.Timeout | null = null;
 
 // Check every 60 seconds
 const CHECK_INTERVAL_MS = 60000;
 
-// Generate up to 10 cases at a time (phased generation handles parallelization)
-const MAX_CONCURRENT_GENERATION = 10;
+// Maximum cases to generate/complete in one cycle
+const MAX_BATCH_SIZE = 10;
 
-// Minimum unseen cases each active user should have available
+// Minimum unseen cases per user - TRIGGER threshold
 const MIN_CASES_PER_USER = 10;
 
-// Target: keep generating until each user has this many unseen cases
+// Target unseen cases per user - how many to aim for
 const TARGET_CASES_PER_USER = 20;
 
 // Only check users active in the last N days
 const ACTIVE_USER_DAYS = 7;
+
+/**
+ * Find the minimum unseen case count across all active users
+ * Returns { userId, unseenCount } for the user with fewest unseen cases
+ */
+function getMinUnseenUser(activeUserIds: string[]): { userId: string; unseenCount: number } | null {
+  if (activeUserIds.length === 0) return null;
+
+  // Use a very high threshold to get the lowest user regardless
+  // findUserNeedingCases returns the user with lowest unseenCount below threshold
+  return findUserNeedingCases(activeUserIds, Number.MAX_SAFE_INTEGER);
+}
 
 /**
  * Start background monitoring
@@ -47,14 +69,11 @@ export function startBackgroundGenerator(): void {
     return;
   }
 
-  console.log('[BackgroundGenerator] Starting pool monitor...');
+  console.log('[BackgroundGenerator] Starting case generator...');
   console.log(`[BackgroundGenerator] Check interval: ${CHECK_INTERVAL_MS / 1000}s`);
-
-  const index = loadIndex();
-  console.log(`[BackgroundGenerator] Min pool size: ${index.generationSettings.minPoolSize}`);
-  console.log(`[BackgroundGenerator] Target pool size: ${index.generationSettings.targetPoolSize}`);
-  console.log(`[BackgroundGenerator] Min cases per user: ${MIN_CASES_PER_USER}`);
-  console.log(`[BackgroundGenerator] Target cases per user: ${TARGET_CASES_PER_USER}`);
+  console.log(`[BackgroundGenerator] Trigger: min(unseen per user) < ${MIN_CASES_PER_USER}`);
+  console.log(`[BackgroundGenerator] Target: ${TARGET_CASES_PER_USER} unseen per user`);
+  console.log(`[BackgroundGenerator] Max batch size: ${MAX_BATCH_SIZE}`);
   console.log(`[BackgroundGenerator] Active user window: ${ACTIVE_USER_DAYS} days`);
 
   // One-time migration: move incomplete cases from pool to pending
@@ -63,8 +82,14 @@ export function startBackgroundGenerator(): void {
     console.log(`[BackgroundGenerator] Migrated ${migrated} incomplete cases to pending queue`);
   }
 
-  // Start the pending case monitor (completes Phase 2-3 for pending cases)
-  startPendingMonitor(60000); // Check every 60 seconds
+  // Log initial pending status
+  const pendingBreakdown = getPendingBreakdown();
+  if (pendingBreakdown.total > 0) {
+    console.log(`[BackgroundGenerator] Pending queue: ${pendingBreakdown.total} cases (${pendingBreakdown.phase3Incomplete} in Phase 3, ${pendingBreakdown.phase2Incomplete} in Phase 2)`);
+  }
+
+  // NOTE: We do NOT start the automatic pending monitor anymore
+  // The checkAndReplenish function now handles pending processing directly
 
   intervalId = setInterval(async () => {
     await checkAndReplenish();
@@ -85,90 +110,106 @@ export function stopBackgroundGenerator(): void {
     intervalId = null;
     console.log('[BackgroundGenerator] Stopped');
   }
-  // Also stop the pending monitor
+  // Stop pending monitor if it was running
   stopPendingMonitor();
 }
 
 /**
- * Check pool and generate if needed
+ * Main check and replenish logic
  *
- * CRITICAL: Only generate new cases (Phase 1) when pending queue is empty.
- * This ensures we complete a batch before starting the next one.
+ * Flow:
+ * 1. Get min(unseen) across all active users
+ * 2. If min >= MIN_CASES_PER_USER (10), do nothing
+ * 3. Calculate needed = TARGET (20) - min
+ * 4. If pending has cases, complete from pending (up to needed)
+ * 5. If still need cases AND pending is empty, generate new Phase 1 cases
  */
 async function checkAndReplenish(): Promise<void> {
-  // Skip if already generating
-  if (isGenerating) {
-    console.log('[BackgroundGenerator] Already generating, skipping check');
+  // Skip if already processing
+  if (isProcessing) {
+    console.log('[BackgroundGenerator] Already processing, skipping check');
     return;
   }
 
-  // CRITICAL: Do NOT generate new cases if there are pending cases
-  // Wait for current batch to complete before starting next batch
-  const pendingStatus = getPendingStatus();
-  if (pendingStatus.total > 0) {
-    console.log(`[BackgroundGenerator] ${pendingStatus.total} cases pending completion - waiting before generating new batch`);
-    return;
-  }
-
-  // Get active users (logged in within last N days)
+  // Get active users
   const activeUsers = getActiveUsers(ACTIVE_USER_DAYS);
   const activeUserIds = activeUsers.map(u => u.uid);
-  const status = getPoolStatus();
 
-  // First check: is the total pool below minimum? (regardless of users)
-  const totalPoolLow = needsReplenishment();
-
-  // Second check: does any active user have fewer than TARGET unseen cases?
-  // (We trigger at MIN but keep generating until TARGET)
-  const userNeedingCases = activeUserIds.length > 0
-    ? findUserNeedingCases(activeUserIds, TARGET_CASES_PER_USER)
-    : null;
-
-  // Decide if we need to generate
-  const needsGeneration = totalPoolLow || userNeedingCases !== null;
-
-  if (!needsGeneration) {
+  // If no active users, nothing to do
+  if (activeUserIds.length === 0) {
     return;
   }
 
-  isGenerating = true;
+  // Find user with minimum unseen cases
+  const minUnseenUser = getMinUnseenUser(activeUserIds);
 
-  // Log why we're generating
-  if (userNeedingCases) {
-    const user = activeUsers.find(u => u.uid === userNeedingCases.userId);
-    console.log(`[BackgroundGenerator] User "${user?.username || userNeedingCases.userId}" only has ${userNeedingCases.unseenCount} unseen cases (min: ${MIN_CASES_PER_USER})`);
-  } else if (totalPoolLow) {
-    console.log(`[BackgroundGenerator] Pool low (${status.totalCases} total, need ${status.needsGeneration} more)`);
+  if (!minUnseenUser) {
+    return;
   }
 
+  const { userId, unseenCount } = minUnseenUser;
+  const user = activeUsers.find(u => u.uid === userId);
+  const username = user?.username || userId;
+
+  // Check if trigger threshold is met
+  if (unseenCount >= MIN_CASES_PER_USER) {
+    // All users have enough cases, nothing to do
+    return;
+  }
+
+  // Calculate how many cases we need
+  const needed = Math.min(TARGET_CASES_PER_USER - unseenCount, MAX_BATCH_SIZE);
+
+  console.log(`[BackgroundGenerator] User "${username}" has ${unseenCount} unseen cases (min: ${MIN_CASES_PER_USER})`);
+  console.log(`[BackgroundGenerator] Need to get ${needed} more cases ready`);
+
+  isProcessing = true;
+
   try {
-    // Generate cases - aim for TARGET, not just MIN
-    const toGenerate = Math.min(
-      userNeedingCases
-        ? TARGET_CASES_PER_USER - userNeedingCases.unseenCount  // Generate enough to reach target
-        : status.needsGeneration,
-      MAX_CONCURRENT_GENERATION
-    );
-    console.log(`[BackgroundGenerator] Generating ${toGenerate} cases (target: ${TARGET_CASES_PER_USER} per user)...`);
+    // Check pending queue
+    const pendingBreakdown = getPendingBreakdown();
 
-    const generated = await replenishPool(toGenerate);
-    console.log(`[BackgroundGenerator] Generated ${generated} cases`);
+    if (pendingBreakdown.total > 0) {
+      // STEP 1: Complete from pending queue first
+      console.log(`[BackgroundGenerator] Pending queue has ${pendingBreakdown.total} cases (${pendingBreakdown.phase3Incomplete} Phase 3, ${pendingBreakdown.phase2Incomplete} Phase 2)`);
+      console.log(`[BackgroundGenerator] Completing up to ${needed} cases from pending...`);
 
-    // Check if any user still needs more (below TARGET)
-    const stillNeedingUser = activeUserIds.length > 0
-      ? findUserNeedingCases(activeUserIds, TARGET_CASES_PER_USER)
-      : null;
+      const completed = await completeCasesFromPending(needed);
 
-    if (stillNeedingUser) {
-      const user = activeUsers.find(u => u.uid === stillNeedingUser.userId);
-      console.log(`[BackgroundGenerator] User "${user?.username || stillNeedingUser.userId}" has ${stillNeedingUser.unseenCount}/${TARGET_CASES_PER_USER} unseen cases, will continue next cycle`);
+      console.log(`[BackgroundGenerator] Completed ${completed} cases from pending`);
+
+      // Check if we still need more
+      const stillNeeded = needed - completed;
+      const newPendingBreakdown = getPendingBreakdown();
+
+      if (stillNeeded > 0 && newPendingBreakdown.total === 0) {
+        // Pending is now empty but we still need more - generate new Phase 1
+        console.log(`[BackgroundGenerator] Still need ${stillNeeded} cases, generating new batch...`);
+        const generated = await replenishPool(stillNeeded);
+        console.log(`[BackgroundGenerator] Generated ${generated} new cases (Phase 1)`);
+      } else if (stillNeeded > 0) {
+        console.log(`[BackgroundGenerator] Still need ${stillNeeded} cases, ${newPendingBreakdown.total} pending - will continue next cycle`);
+      } else {
+        console.log(`[BackgroundGenerator] Target reached for this cycle`);
+      }
     } else {
-      console.log(`[BackgroundGenerator] All users have ${TARGET_CASES_PER_USER}+ unseen cases`);
+      // STEP 2: No pending cases - generate new Phase 1 batch
+      console.log(`[BackgroundGenerator] Pending queue empty, generating ${needed} new cases...`);
+      const generated = await replenishPool(needed);
+      console.log(`[BackgroundGenerator] Generated ${generated} new cases (Phase 1)`);
     }
+
+    // Log final status
+    const finalMinUser = getMinUnseenUser(activeUserIds);
+    if (finalMinUser) {
+      const finalUser = activeUsers.find(u => u.uid === finalMinUser.userId);
+      console.log(`[BackgroundGenerator] After processing: "${finalUser?.username || finalMinUser.userId}" now has ${finalMinUser.unseenCount} unseen cases`);
+    }
+
   } catch (error) {
-    console.error('[BackgroundGenerator] Error during generation:', error);
+    console.error('[BackgroundGenerator] Error during processing:', error);
   } finally {
-    isGenerating = false;
+    isProcessing = false;
   }
 }
 
@@ -177,16 +218,23 @@ async function checkAndReplenish(): Promise<void> {
  */
 export function getGeneratorStatus(): {
   running: boolean;
-  isGenerating: boolean;
+  isProcessing: boolean;
   pendingMonitor: boolean;
   pendingCases: number;
+  pendingBreakdown: {
+    total: number;
+    phase2Incomplete: number;
+    phase3Incomplete: number;
+  };
 } {
   const pendingStatus = getPendingStatus();
+  const breakdown = getPendingBreakdown();
   return {
     running: intervalId !== null,
-    isGenerating,
+    isProcessing,
     pendingMonitor: isMonitorRunning(),
-    pendingCases: pendingStatus.total
+    pendingCases: pendingStatus.total,
+    pendingBreakdown: breakdown
   };
 }
 

@@ -291,8 +291,129 @@ export async function processPendingCase(caseId: string): Promise<boolean> {
 }
 
 /**
- * Process all pending cases
- * Called by background monitor
+ * Complete cases from pending queue to fill pool
+ *
+ * SMART PROCESSING: Only processes what's needed, prioritizes cases closest to completion.
+ *
+ * Priority order:
+ * 1. Phase 2 complete + most explanations (closest to done)
+ * 2. Phase 2 complete + fewer explanations
+ * 3. Phase 2 incomplete (needs pathway + explanations)
+ *
+ * @param needed - Number of cases to complete
+ * @returns Number of cases actually completed
+ */
+export async function completeCasesFromPending(needed: number): Promise<number> {
+  if (needed <= 0) {
+    console.log('[PendingCases] No cases needed');
+    return 0;
+  }
+
+  const index = loadPendingIndex();
+  if (index.cases.length === 0) {
+    console.log('[PendingCases] No pending cases to process');
+    return 0;
+  }
+
+  console.log(`[PendingCases] Completing up to ${needed} cases from ${index.cases.length} pending...`);
+
+  // Sort by completion stage: cases closest to done first
+  // Priority:
+  // 1. Phase 2 complete + has most explanations (closest to done)
+  // 2. Phase 2 complete + fewer explanations
+  // 3. Phase 2 incomplete (needs pathway + explanations)
+  const sortedCases = [...index.cases].sort((a, b) => {
+    // Phase 2 complete cases come first
+    if (a.phase2Complete && !b.phase2Complete) return -1;
+    if (!a.phase2Complete && b.phase2Complete) return 1;
+
+    // Among Phase 2 complete, sort by explanation progress (descending - more progress first)
+    if (a.phase2Complete && b.phase2Complete) {
+      const aProgress = a.phase3Progress / a.phase3Total;
+      const bProgress = b.phase3Progress / b.phase3Total;
+      return bProgress - aProgress;
+    }
+
+    // For Phase 2 incomplete, sort by attempt count (fewer attempts first)
+    return a.attemptCount - b.attemptCount;
+  });
+
+  let completed = 0;
+
+  for (const status of sortedCases) {
+    // Stop if we've completed enough
+    if (completed >= needed) {
+      console.log(`[PendingCases] ✓ Reached target of ${needed} completed cases`);
+      break;
+    }
+
+    // Delete if too many attempts (permanent failure)
+    if (status.attemptCount >= 10) {
+      console.warn(`[PendingCases] Case ${status.caseId} failed 10 times, deleting`);
+      deletePendingCase(status.caseId);
+      continue;
+    }
+
+    // Skip if attempted very recently (within 30 seconds) - avoid hammering
+    const timeSinceAttempt = Date.now() - status.lastAttempt;
+    if (status.attemptCount > 0 && timeSinceAttempt < 30000) {
+      continue;
+    }
+
+    // Log what we're processing
+    const phase = status.phase2Complete
+      ? `Phase 3 (${status.phase3Progress}/${status.phase3Total} explanations)`
+      : 'Phase 2 (needs pathway)';
+    console.log(`[PendingCases] Processing ${status.caseId} - ${phase}`);
+
+    // Process this case
+    const wasCompleted = await processPendingCase(status.caseId);
+    if (wasCompleted) {
+      completed++;
+      console.log(`[PendingCases] ✓ Completed ${completed}/${needed} cases`);
+    }
+
+    // Small delay between cases to avoid overwhelming APIs
+    await new Promise(r => setTimeout(r, 500));
+  }
+
+  const remaining = getPendingCount();
+  console.log(`[PendingCases] Finished batch: ${completed} completed, ${remaining} still pending`);
+
+  return completed;
+}
+
+/**
+ * Get breakdown of pending cases by phase
+ */
+export function getPendingBreakdown(): {
+  total: number;
+  phase2Incomplete: number;  // Need pathway
+  phase3Incomplete: number;  // Have pathway, need explanations
+} {
+  const index = loadPendingIndex();
+
+  let phase2Incomplete = 0;
+  let phase3Incomplete = 0;
+
+  for (const status of index.cases) {
+    if (!status.phase2Complete) {
+      phase2Incomplete++;
+    } else if (status.phase3Progress < status.phase3Total) {
+      phase3Incomplete++;
+    }
+  }
+
+  return {
+    total: index.cases.length,
+    phase2Incomplete,
+    phase3Incomplete
+  };
+}
+
+/**
+ * Process all pending cases (legacy - used by monitor for gradual background processing)
+ * @deprecated Use completeCasesFromPending for targeted processing
  */
 export async function processAllPending(): Promise<{ completed: number; remaining: number }> {
   const index = loadPendingIndex();
