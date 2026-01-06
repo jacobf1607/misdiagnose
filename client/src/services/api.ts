@@ -18,7 +18,7 @@ import type {
   SubmitFeedbackResponse,
   GetFeedbackResponse,
   UpdateFeedbackStatusRequest
-} from '../../../shared/types';
+} from '../types';
 
 // In production, VITE_API_URL should be set to the backend URL
 // In development, Vite proxy handles /api requests

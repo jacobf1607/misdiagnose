@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { getCaseHistory } from '../services/api';
 import { CaseDetailModal } from '../components/CaseDetailModal';
-import type { CaseHistoryEntry } from '../../../shared/types';
+import type { CaseHistoryEntry } from '../types';
 import './PastCasesPage.css';
 
 interface PastCasesPageProps {

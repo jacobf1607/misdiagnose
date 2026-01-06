@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { FeedbackEntry, FeedbackStatus } from '../../../shared/types';
+import type { FeedbackEntry, FeedbackStatus } from '../types';
 import * as api from '../services/api';
 import './FeedbackDashboard.css';
 

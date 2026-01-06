@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { GameState, ScoreBreakdown, CoachingFeedback, DiagnosisExplanation, IncorrectDiagnosisExplanation, Challenge } from '../../../shared/types';
+import type { GameState, ScoreBreakdown, CoachingFeedback, DiagnosisExplanation, IncorrectDiagnosisExplanation, Challenge } from '../types';
 import { useAuth } from '../contexts/AuthContext';
 import { CoachingModal } from './CoachingModal';
 import { ShareModal } from './ShareModal';

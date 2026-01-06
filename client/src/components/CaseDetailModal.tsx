@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { CaseHistoryEntry } from '../../../shared/types';
+import type { CaseHistoryEntry } from '../types';
 import './CaseDetailModal.css';
 
 interface CaseDetailModalProps {

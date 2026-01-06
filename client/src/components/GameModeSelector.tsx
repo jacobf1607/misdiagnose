@@ -1,4 +1,4 @@
-import type { GameMode } from '../../../shared/types';
+import type { GameMode } from '../types';
 import './GameModeSelector.css';
 
 interface GameModeSelectorProps {

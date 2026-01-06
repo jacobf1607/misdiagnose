@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Diagnosis } from '../../../shared/types';
+import type { Diagnosis } from '../types';
 import './DiagnosisList.css';
 
 interface DiagnosisListProps {

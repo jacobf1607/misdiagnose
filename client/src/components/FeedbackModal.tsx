@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { FeedbackContext, FeedbackCaseSnapshot, GameState } from '../../../shared/types';
+import type { FeedbackContext, FeedbackCaseSnapshot, GameState } from '../types';
 import * as api from '../services/api';
 import './FeedbackModal.css';
 

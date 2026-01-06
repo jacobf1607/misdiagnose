@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import type { GameState, ScoreBreakdown, DiagnosisExplanation, IncorrectDiagnosisExplanation, ValidationError, GameMode, Challenge, Case } from '../../shared/types';
+import type { GameState, ScoreBreakdown, DiagnosisExplanation, IncorrectDiagnosisExplanation, ValidationError, GameMode, Challenge, Case } from './types';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { Header } from './components/Header';

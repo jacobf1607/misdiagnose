@@ -3,7 +3,7 @@
  * Handles sharing challenges via WhatsApp and other platforms
  */
 
-import type { GameMode } from '../../../shared/types';
+import type { GameMode } from '../types';
 
 /**
  * Create a challenge and get the share URL

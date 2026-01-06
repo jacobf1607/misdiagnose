@@ -6,7 +6,7 @@
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import type { Challenge, ChallengeResponse, Case } from '../../../shared/types';
+import type { Challenge, ChallengeResponse, Case } from '../types';
 import './ChallengePage.css';
 
 interface ChallengePageProps {

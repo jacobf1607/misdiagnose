@@ -5,7 +5,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import type { Notification } from '../../../shared/types';
+import type { Notification } from '../types';
 import './NotificationDropdown.css';
 
 export function NotificationDropdown() {

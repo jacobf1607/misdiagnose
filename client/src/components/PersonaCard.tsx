@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Persona } from '../../../shared/types';
+import type { Persona } from '../types';
 import './PersonaCard.css';
 
 interface PersonaCardProps {

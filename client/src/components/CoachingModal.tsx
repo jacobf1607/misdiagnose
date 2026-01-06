@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { CoachingFeedback, PathwayStep } from '../../../shared/types';
+import type { CoachingFeedback, PathwayStep } from '../types';
 import './CoachingModal.css';
 
 interface CoachingModalProps {

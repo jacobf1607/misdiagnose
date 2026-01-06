@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { FeedbackContext, GameState } from '../../../shared/types';
+import type { FeedbackContext, GameState } from '../types';
 import { FeedbackModal } from './FeedbackModal';
 import './FeedbackModal.css';
 

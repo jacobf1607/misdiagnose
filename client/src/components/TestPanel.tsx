@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { TestResult, ValidationError } from '../../../shared/types';
+import type { TestResult, ValidationError } from '../types';
 import './TestPanel.css';
 
 interface TestPanelProps {
