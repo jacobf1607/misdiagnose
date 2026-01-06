@@ -22,7 +22,9 @@ const corsOptions = {
     ? [
         process.env.FRONTEND_URL || '',
         /\.railway\.app$/,  // Allow Railway domains
-        /\.up\.railway\.app$/
+        /\.up\.railway\.app$/,
+        'https://misdiagnose.in',
+        'https://www.misdiagnose.in'
       ].filter(Boolean)
     : '*',  // Allow all in development
   credentials: true
