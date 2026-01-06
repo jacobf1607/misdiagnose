@@ -1,0 +1,386 @@
+{
+  "persona": {
+    "name": "Shanti Murthy",
+    "age": 29,
+    "gender": "Female",
+    "occupation": "Software Engineer in Bangalore",
+    "background": "She works long hours at a desk job and has been avoiding workouts lately because of intermittent neurologic symptoms that come and go.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "detail-oriented",
+      "anxious about health",
+      "high-functioning"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Multiple sclerosis (Relapsing-remitting MS)",
+      "description": "A demyelinating CNS disease with relapsing and remitting symptoms disseminated in time and space; common presentations include optic neuritis, brainstem syndromes (diplopia/vertigo with nystagmus), sensory symptoms (e.g., Lhermitte’s sign), ataxia, fatigue, and urinary symptoms."
+    },
+    {
+      "id": "d2",
+      "name": "Acute transverse myelitis",
+      "description": "A noncompressive myelopathy that can present acutely with early bladder and bowel involvement; listed as a classical example of noncompressive myelopathy."
+    },
+    {
+      "id": "d3",
+      "name": "Vitamin B12 deficiency (Subacute combined degeneration of cord)",
+      "description": "A treatable myelopathy due to vitamin B12 deficiency with paresthesia in hands/feet, early loss of vibration and position sensation, and progressive spastic and ataxic weakness; MRI may show an inverted V (rabbit ear) T2 hyperintensity in posterolateral columns."
+    },
+    {
+      "id": "d4",
+      "name": "Wallenberg’s syndrome (Lateral medullary syndrome)",
+      "description": "Posterior circulation brainstem stroke syndrome with features including dizziness/imbalance, nystagmus, ipsilateral cerebellar ataxia, and bulbar involvement (e.g., palatal/pharyngeal/laryngeal weakness)."
+    },
+    {
+      "id": "d5",
+      "name": "Multiple sclerosis (Relapsing-remitting MS)",
+      "description": "Relapsing-remitting MS presents with discrete attacks and complete recovery; typical lesions are multifocal (periventricular/juxtacortical/infratentorial/spinal cord) and MRI often shows ovoid T2 hyperintense lesions perpendicular to ventricles (Dawson’s fingers); CSF may show oligoclonal IgG bands and increased IgG index."
+    },
+    {
+      "id": "d6",
+      "name": "Internuclear ophthalmoplegia (INO) due to medial longitudinal fasciculus (MLF) lesion",
+      "description": "An MLF lesion causes ipsilateral adduction palsy with contralateral gaze-evoked nystagmus; can occur as a brainstem localization problem."
+    },
+    {
+      "id": "d7",
+      "name": "Migraine with aura (Classical migraine)",
+      "description": "Migraine with aura has warning signs (often visual) before headache; migraine is usually episodic and associated with sensitivity to light/sound/movement and nausea/vomiting."
+    },
+    {
+      "id": "d8",
+      "name": "Normal pressure hydrocephalus",
+      "description": "A condition with enlarged ventricles and normal opening pressure presenting with the triad of dementia, gait disturbance, and urinary incontinence (Adams triad)."
+    },
+    {
+      "id": "d9",
+      "name": "Cervical spondylosis (as a cause of posterolateral column disease/spastic paraplegia)",
+      "description": "Listed among causes of posterolateral column disease and causes of spastic paraplegia; can produce myelopathic features involving posterior and lateral tracts."
+    },
+    {
+      "id": "d10",
+      "name": "Amyotrophic lateral sclerosis (ALS)",
+      "description": "A progressive motor neuron disease with combined UMN and LMN signs, typically beginning focally in one limb and spreading; sensory system is not affected and bladder/bowel are rarely involved."
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "“For the last few months I’ve had episodes where my vision gets worse and sometimes I get double vision with dizziness. I also get an electric shock-like feeling down my back when I bend my neck, and lately I’m unusually tired.”",
+  "medicalHistory": "No known chronic illnesses documented. No prior stroke history reported. No known trauma history reported.",
+  "symptoms": "Relapsing-remitting pattern with discrete episodes and recovery. Episodes include optic neuropathy (neuritis) with worsening of vision, acute brainstem syndrome with sudden diplopia and vertigo with nystagmus, sensory symptoms including Lhermitte’s sign (electric sensation down the back/into limbs on neck flexion), fatigue, and intermittent unsteadiness/ataxia. She also reports urinary symptoms suggestive of bladder hyperreflexia during some episodes.\n\nFrom textbook: prospective) and at least\n\nyears. from onset two out of three criteria\nClinical course: Main clinical patterns are: ¾ Dissemination in space in the brain\n\n¾\nz Relapsing-remitting MS (RRMS) (85–90%): Discrete attack Dissemination in space in the spinal\n\ncord based on 2 or more T2 lesions\nand complete recovery. ¾ Positive CSF\n\nz Secondary progressive MS (SPMS): Begin as RRMS, clinical\nsteady deterioration at some stage. Box 16.19: Common presentations of multiple sclerosis.\n\nz Primary progressive ",
+  "relevantFindings": "MRI brain/spinal cord: multifocal T2 hyperintense lesions in typical MS locations (periventricular/juxtacortical/infratentorial or spinal cord), with ovoid lesions up to ~2 cm and lesions oriented perpendicular to the lateral ventricles (Dawson’s fingers). CSF: may show mononuclear cell pleocytosis (5–60 mononuclear cells/mm3), increased IgG/IgG index, and oligoclonal IgG bands (not specific). Evoked potentials: abnormalities can be present in one or more modalities (visual/auditory/somatosensory) as supportive evidence.\n\nFrom textbook: prospective) and at least\n\nyears. from onset two out of three criteria\nClinical course: Main clinical patterns are: ¾ Dissemination in space in the brain\n\n¾\nz Relapsing-remitting MS (RRMS) (85–90%): Discrete attack Dissemination in space in the spinal\n\ncord based on 2 or more T2 lesions\nand complete recovery. ¾ Positive CSF\n\nz Secondary progressive MS (SPMS): Begin as RRMS, clinical\nsteady deterioration at some stage. Box 16.19: Common presentations of multiple sclerosis.\n\nz Primary progressive ",
+  "redHerrings": "Episodes of diplopia and vertigo with nystagmus could suggest a posterior circulation brainstem syndrome; unsteadiness/ataxia could suggest a cerebellar problem; urinary complaints and gait issues could raise consideration of normal pressure hydrocephalus; paresthesia/ataxic weakness could overlap with subacute combined degeneration due to vitamin B12 deficiency.",
+  "id": "case_1767641036854",
+  "domain": "neurology",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Multiple sclerosis (Relapsing-remitting MS)",
+      "description": "**Relapsing-remitting multiple sclerosis (RRMS)** is an immune-mediated demyelinating disease of the **central nervous system** characterized by discrete neurologic attacks with partial or complete recovery. It typically shows **dissemination in time and space** on clinical history and/or MRI, often supported by **CSF oligoclonal IgG bands** and elevated **IgG index**.",
+      "keySymptoms": [
+        "**Optic neuritis** - Subacute painful monocular vision loss with impaired color vision, often improving over weeks.",
+        "**Internuclear ophthalmoplegia/diplopia** - Brainstem demyelination causing binocular double vision, nystagmus, and impaired conjugate gaze.",
+        "**Vertigo** - Infratentorial involvement producing episodic dizziness with nystagmus and gait imbalance.",
+        "**Lhermitte’s sign** - Electric shock sensation down spine/limbs on neck flexion from cervical cord demyelination.",
+        "**Sensory disturbances** - Patchy numbness/paresthesias reflecting multifocal CNS white-matter lesions in space.",
+        "**Fatigue** - Disproportionate, persistent tiredness common in MS, worsened by heat, infection, or exertion.",
+        "**Ataxia/unsteadiness** - Cerebellar pathway involvement causing impaired coordination, wide-based gait, and falls risk.",
+        "**Urinary urgency** - Detrusor overactivity from spinal cord lesions leading to frequency, urgency, and urge incontinence."
+      ],
+      "clinicalReasoning": "This presentation is strongly suggestive of **demyelinating CNS disease** because symptoms localize to multiple CNS regions (optic nerve, brainstem/cerebellar pathways, spinal cord). The course is described as **relapsing-remitting**, with discrete episodes and recovery, supporting **dissemination in time**. The provided MRI features (multifocal **T2 hyperintense** ovoid lesions, **Dawson’s fingers**, typical periventricular/juxtacortical/infratentorial or spinal cord distribution) and supportive CSF findings (elevated **IgG index**, **oligoclonal bands**) are classic for MS. Evoked potential abnormalities further support subclinical dissemination.",
+      "whyIncorrectForCase": "It is not incorrect for this patient: the clinical course and MRI/CSF features fit **RRMS** very well. Therefore labeling **Multiple sclerosis (Relapsing-remitting MS)** as the target diagnosis being incorrect conflicts with the case data.",
+      "keyDifferencesFromCorrect": [
+        "**None** - This diagnosis is the same as the correct diagnosis (Multiple sclerosis (Relapsing-remitting MS)).",
+        "**Course** - RRMS requires discrete attacks with recovery; this matches the described relapsing-remitting pattern.",
+        "**MRI dissemination in space** - Typical MS lesion distribution and **Dawson’s fingers** are consistent with RRMS criteria."
+      ],
+      "missingFindings": [
+        "**Contradictory alternative diagnosis features** - No evidence provided for mimics (e.g., infection, vascular, compressive, metabolic) that would rule out RRMS.",
+        "**Progressive-only course** - Absence of continuous progression from onset argues against **primary progressive MS**, supporting RRMS instead."
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Acute transverse myelitis",
+      "description": "**Acute transverse myelitis (ATM)** is an inflammatory disorder of the spinal cord causing acute or subacute bilateral motor, sensory, and autonomic dysfunction below a spinal level. It typically presents as a single monophasic episode over hours to days, often with a clear sensory level and prominent bowel/bladder involvement.",
+      "keySymptoms": [
+        "**Acute bilateral limb weakness** - Rapid onset paraparesis/quadriparesis developing over hours to days below lesion level.",
+        "**Sensory level** - Clearly demarcated change in sensation on the trunk indicating a specific spinal cord level.",
+        "**Back pain** - Localized spinal pain that may precede or accompany cord inflammation.",
+        "**Autonomic dysfunction** - Urinary retention, constipation, and sexual dysfunction due to spinal cord involvement.",
+        "**Hyperreflexia and spasticity** - Upper motor neuron signs evolving after initial spinal shock phase.",
+        "**Paresthesias below lesion** - Numbness/tingling affecting both sides beneath the inflammatory cord segment."
+      ],
+      "clinicalReasoning": "ATM is considered when there is an acute/subacute spinal cord syndrome with bilateral deficits and a definable sensory level, often with prominent bowel/bladder dysfunction. Diagnosis is supported by spinal MRI showing an intramedullary inflammatory lesion and CSF pleocytosis or elevated inflammatory markers. While ATM can occur as part of demyelinating disease, isolated ATM does not explain recurrent optic neuritis or brainstem symptoms. The patient’s pattern instead indicates dissemination in time and space typical of **relapsing-remitting multiple sclerosis (RRMS)**.",
+      "whyIncorrectForCase": "This patient has a **relapsing-remitting** course with discrete episodes affecting **optic nerve** and **brainstem** (diplopia/vertigo/nystagmus), which is not explained by isolated ATM. MRI shows classic **MS** features (periventricular ovoid lesions and **Dawson’s fingers**) indicating multifocal CNS demyelination beyond the spinal cord.",
+      "keyDifferencesFromCorrect": [
+        "**Clinical course** - ATM is usually monophasic; **RRMS** has recurrent attacks with recovery (dissemination in time).",
+        "**Anatomic distribution** - ATM is confined to spinal cord; **RRMS** involves optic nerve, brain, brainstem, and/or spinal cord (dissemination in space).",
+        "**Typical MRI pattern** - ATM shows focal/longitudinal cord inflammation; **RRMS** shows periventricular/juxtacortical/infratentorial lesions and **Dawson’s fingers**.",
+        "**Core presenting syndromes** - ATM centers on a sensory level with bilateral weakness; **RRMS** commonly presents with **optic neuritis**, brainstem syndromes, sensory symptoms, and fatigue.",
+        "**Supportive testing** - ATM may have nonspecific CSF inflammation; **RRMS** often has **oligoclonal IgG bands** and increased **IgG index** supporting chronic CNS immune activity."
+      ],
+      "missingFindings": [
+        "**Definite sensory level** - Lack of a clear truncal sensory level makes a primary transverse cord syndrome less likely.",
+        "**Acute sustained paraplegia/quadriplegia** - No single episode of severe bilateral weakness evolving over hours to days is described.",
+        "**Spinal MRI showing isolated focal myelitis** - Case instead emphasizes multifocal brain/spinal lesions typical of **MS**, not an isolated cord lesion.",
+        "**Monophasic presentation** - Recurrent episodes with recovery argue against a single ATM event.",
+        "**Predominant bowel/urinary retention at onset** - Urinary symptoms are intermittent and episodic, not the dominant acute presentation expected in ATM."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Vitamin B12 deficiency (Subacute combined degeneration of cord)",
+      "description": "**Vitamin B12 deficiency** can cause **subacute combined degeneration (SCD)** due to demyelination of the **dorsal columns** and **lateral corticospinal tracts**, producing sensory ataxia and upper motor neuron signs. It typically evolves insidiously and may be accompanied by **macrocytic anemia** and neuropsychiatric symptoms; it does not usually present with relapsing focal CNS attacks.",
+      "keySymptoms": [
+        "**Paresthesias** - Distal tingling/numbness from dorsal column dysfunction, often symmetric and progressive.",
+        "**Loss of vibration/position sense** - Impaired proprioception causing sensory gait ataxia and positive Romberg sign.",
+        "**Spasticity/hyperreflexia** - Upper motor neuron signs from corticospinal tract involvement, often with extensor plantar responses.",
+        "**Gait ataxia** - Unsteady, broad-based gait driven by proprioceptive loss rather than cerebellar lesions.",
+        "**Cognitive/psychiatric changes** - Memory issues, irritability, depression, or confusion can occur in severe deficiency.",
+        "**Macrocytic anemia** - Fatigue and pallor from megaloblastic anemia with elevated MCV and hypersegmented neutrophils."
+      ],
+      "clinicalReasoning": "This patient’s history is dominated by **relapsing-remitting** discrete neurological episodes with recovery, including **optic neuritis** (episodic visual loss), **brainstem syndrome** (diplopia, vertigo, nystagmus), and intermittent **urinary symptoms**. The MRI description (multifocal **T2 hyperintense** lesions in typical MS locations with **Dawson’s fingers**) and CSF findings (possible **oligoclonal IgG bands** and elevated **IgG index**) are classic supportive evidence for **multiple sclerosis**. While **Lhermitte’s sign** can occur in both MS and B12 deficiency, the overall pattern of dissemination in time and space strongly favors MS over a metabolic myelopathy.",
+      "whyIncorrectForCase": "B12-related SCD usually causes a slowly progressive, predominantly spinal cord syndrome with symmetric dorsal column and corticospinal signs, not recurrent focal attacks involving the optic nerve and brainstem. The case provides MS-typical MRI/CSF features (e.g., **Dawson’s fingers**, **oligoclonal bands**) rather than findings expected in isolated B12 deficiency.",
+      "keyDifferencesFromCorrect": [
+        "**Clinical course** - B12 deficiency is typically insidious and progressive; **RRMS** has discrete relapses with recovery.",
+        "**Anatomical dissemination** - B12 deficiency primarily affects **posterior columns/corticospinal tracts**; **RRMS** disseminates across optic nerve, brainstem, cerebellum, and spinal cord.",
+        "**MRI pattern** - B12 deficiency may show posterior column signal in the cord; **RRMS** shows multifocal periventricular/juxtacortical/infratentorial lesions with **Dawson’s fingers**.",
+        "**CSF immunology** - B12 deficiency does not cause **oligoclonal IgG bands**; **RRMS** commonly has **OCBs** and elevated **IgG index**.",
+        "**Visual involvement** - Optic neuropathy in B12 deficiency is uncommon and not typically relapsing; **RRMS** commonly presents with **optic neuritis**."
+      ],
+      "missingFindings": [
+        "**Macrocytosis (elevated MCV)** - Expected in many B12 deficiency cases; absence makes B12 deficiency less likely.",
+        "**Low serum B12 / elevated methylmalonic acid** - Biochemical confirmation is central; not reported in this case.",
+        "**Symmetric loss of vibration/position sense** - Hallmark dorsal column deficit in SCD; case emphasizes focal relapses and brainstem/optic features.",
+        "**Posterior column–predominant spinal MRI changes** - Typical for SCD; case instead describes MS-typical multifocal lesions and **Dawson’s fingers**."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Wallenberg’s syndrome (Lateral medullary syndrome)",
+      "description": "Wallenberg’s syndrome is an acute ischemic infarct of the lateral medulla, most often from vertebral artery or PICA occlusion. It causes a sudden-onset brainstem syndrome with characteristic crossed sensory deficits, bulbar symptoms, and prominent vertigo/ataxia.",
+      "keySymptoms": [
+        "**Acute vertigo with nystagmus** - Sudden vestibular dysfunction causing spinning sensation, nausea, and direction-fixed nystagmus.",
+        "**Ipsilateral limb ataxia** - Cerebellar pathway involvement causes dysmetria and gait unsteadiness on the lesion side.",
+        "**Dysphagia/hoarseness** - Nucleus ambiguus involvement produces bulbar weakness with swallowing difficulty and vocal cord paresis.",
+        "**Ipsilateral facial pain-temperature loss** - Spinal trigeminal nucleus/tract lesion reduces facial pinprick and temperature sensation.",
+        "**Contralateral body pain-temperature loss** - Spinothalamic tract lesion reduces trunk and limb pain-temperature sensation opposite lesion.",
+        "**Horner syndrome** - Disruption of descending sympathetics causes ptosis, miosis, and anhidrosis ipsilaterally.",
+        "**Hiccups** - Medullary involvement can trigger persistent hiccups in some patients."
+      ],
+      "clinicalReasoning": "The target diagnosis is considered because the patient has episodic diplopia, vertigo, nystagmus, and ataxia, which can occur with lateral medullary involvement. However, Wallenberg’s syndrome classically presents as a single abrupt vascular event rather than a relapsing-remitting course. The patient also has optic neuritis-like visual loss, **Lhermitte’s sign**, fatigue, and urinary symptoms, which point toward multifocal CNS demyelination rather than a focal medullary infarct. MRI and CSF findings described (multifocal **T2** lesions in typical MS locations and **oligoclonal bands**) support **Multiple sclerosis (Relapsing-remitting MS)**.",
+      "whyIncorrectForCase": "Wallenberg’s syndrome is typically a sudden, monophasic stroke syndrome, not months of discrete attacks with recovery. The patient’s optic neuritis, Lhermitte’s phenomenon, urinary hyperreflexia episodes, and disseminated MRI/CSF findings fit **RRMS** and are not explained by a single lateral medullary lesion.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Wallenberg’s is abrupt-onset and usually monophasic; **RRMS** is relapsing-remitting over months/years.",
+        "**Lesion distribution** - Wallenberg’s is a focal lateral medulla infarct; **RRMS** shows disseminated CNS lesions (periventricular/juxtacortical/infratentorial/spinal).",
+        "**Optic neuritis** - Uncommon in Wallenberg’s; common presenting relapse in **RRMS** with painful visual loss.",
+        "**Lhermitte’s sign** - Not typical of medullary infarct; suggests cervical spinal cord demyelination in **RRMS**.",
+        "**CSF findings** - Stroke usually lacks **oligoclonal IgG bands**; **RRMS** often has oligoclonal bands and elevated IgG index.",
+        "**MRI pattern** - Wallenberg’s shows restricted diffusion in lateral medulla; **RRMS** shows ovoid **T2** lesions and **Dawson’s fingers**."
+      ],
+      "missingFindings": [
+        "**Dysphagia/hoarseness** - Expected from nucleus ambiguus involvement; not reported in this patient’s episodes.",
+        "**Crossed pain-temperature sensory loss** - Typical alternating facial/body pattern is not described in the history.",
+        "**Ipsilateral Horner syndrome** - Ptosis/miosis/anhidrosis would support lateral medullary infarct; not noted.",
+        "**Acute diffusion-restricting lateral medullary lesion on MRI** - Required to confirm infarct; instead MRI shows multifocal demyelinating lesions.",
+        "**Vascular risk context** - Often associated with vertebral artery dissection or stroke risk factors; not suggested here."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Multiple sclerosis (Relapsing-remitting MS)",
+      "description": "**Multiple sclerosis (MS)** is an immune-mediated demyelinating disease of the **central nervous system** causing neurologic deficits separated in time and anatomic location. **Relapsing-remitting MS (RRMS)** presents with discrete attacks followed by partial or complete recovery, often with supportive MRI and CSF inflammatory findings.",
+      "keySymptoms": [
+        "**Relapsing-remitting episodes** - Discrete neurologic attacks with recovery indicate dissemination in time typical of RRMS.",
+        "**Optic neuritis** - Painful or subacute visual loss reflects optic nerve demyelination, a classic MS presentation.",
+        "**Diplopia with vertigo and nystagmus** - Brainstem/infratentorial demyelination causes ocular motility disturbance and vestibular symptoms.",
+        "**Lhermitte’s sign** - Electric shock sensation on neck flexion suggests cervical spinal cord dorsal column involvement.",
+        "**Fatigue** - Common MS symptom reflecting central inflammation, demyelination, and impaired neural conduction efficiency.",
+        "**Unsteadiness/ataxia** - Cerebellar or sensory pathway lesions produce gait imbalance during relapses.",
+        "**Urinary urgency/frequency** - **Neurogenic bladder** from spinal cord involvement can cause detrusor overactivity (hyperreflexia)."
+      ],
+      "clinicalReasoning": "The patient’s history shows neurologic deficits occurring in discrete episodes with recovery, supporting **dissemination in time** consistent with **RRMS**. Symptoms localize to multiple CNS regions—**optic nerve** (optic neuritis), **brainstem/infratentorial pathways** (diplopia, vertigo, nystagmus), and **cervical spinal cord** (Lhermitte’s sign, bladder hyperreflexia)—demonstrating **dissemination in space**. MRI findings of multifocal ovoid **T2 hyperintense lesions** in typical MS locations, including periventricular lesions oriented perpendicular to the ventricles (**Dawson’s fingers**), strongly support MS. CSF with increased **IgG index** and **oligoclonal IgG bands** (with possible mild mononuclear pleocytosis) and abnormal evoked potentials further corroborate inflammatory demyelination."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Internuclear ophthalmoplegia (INO) due to medial longitudinal fasciculus (MLF) lesion",
+      "description": "**Internuclear ophthalmoplegia (INO)** is an ocular motor disorder caused by a lesion of the **medial longitudinal fasciculus (MLF)** in the brainstem. It classically produces impaired adduction of the affected eye on horizontal gaze with **abducting nystagmus** of the contralateral eye, and may be unilateral or bilateral.",
+      "keySymptoms": [
+        "**Impaired adduction** - Ipsilateral eye fails to move inward during horizontal gaze due to MLF disruption.",
+        "**Abducting nystagmus** - Contralateral abducting eye shows nystagmus when looking laterally, reflecting gaze dysconjugacy.",
+        "**Horizontal diplopia** - Double vision worse on lateral gaze from misalignment due to impaired conjugate movements.",
+        "**Preserved convergence (often)** - Convergence may remain intact because pathways can bypass the MLF lesion.",
+        "**Brainstem localizing signs** - May coexist with other pontine/midbrain findings depending on lesion extent."
+      ],
+      "clinicalReasoning": "The target diagnosis focuses on a single brainstem pathway lesion (the **MLF**) producing a stereotyped ocular motility pattern. While this patient reports diplopia with vertigo and nystagmus during episodes (compatible with a brainstem syndrome), the overall history is dominated by multi-episode, multi-site neurologic dysfunction. The presence of **optic neuritis**, **Lhermitte’s sign**, urinary symptoms, fatigue, and MRI/CSF evidence of dissemination strongly indicates a demyelinating disease rather than an isolated ocular motor syndrome. INO can occur within MS, but it is a manifestation/sign, not the unifying diagnosis for her full presentation.",
+      "whyIncorrectForCase": "INO does not explain the patient’s recurrent **optic neuropathy**, **Lhermitte’s sign** from cervical cord involvement, and intermittent bladder symptoms across separate attacks. The case provides MRI and CSF features supporting **dissemination in space** and inflammatory demyelination, which point to **relapsing-remitting multiple sclerosis** rather than an isolated MLF lesion diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Scope of disease** - INO is a focal ocular motor syndrome; **RRMS** is a multifocal CNS demyelinating disorder.",
+        "**Typical symptom range** - INO mainly causes gaze-evoked diplopia; **RRMS** causes optic neuritis, sensory/cerebellar, brainstem, and bladder symptoms.",
+        "**Course** - INO reflects a single lesion at a time; **RRMS** shows relapsing-remitting episodes with dissemination over time.",
+        "**Imaging pattern** - INO alone would not predict widespread **periventricular/juxtacortical/infratentorial/spinal** T2 lesions with **Dawson’s fingers** typical of MS.",
+        "**CSF findings** - INO by itself has no characteristic CSF pattern; **RRMS** may show **oligoclonal IgG bands** and elevated **IgG index**."
+      ],
+      "missingFindings": [
+        "**Exam-proven INO pattern** - No documented impaired adduction with contralateral abducting nystagmus on horizontal gaze testing.",
+        "**Preserved convergence documentation** - Lack of reported preserved convergence makes classic INO unconfirmed clinically.",
+        "**Isolated brainstem localization** - Case evidence suggests multifocal CNS involvement (optic nerve and spinal cord), not isolated MLF pathology.",
+        "**Single-lesion imaging correlation** - Provided MRI describes multifocal MS-typical lesions rather than a solitary MLF lesion explaining all symptoms."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Multiple sclerosis (Relapsing-remitting MS)",
+    "domain": "neurology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about episodes of visual loss/blurred vision suggestive of optic neuritis (onset, recurrence, recovery).",
+        "reasoning": "Optic neuropathy (neuritis) is a common presentation and supports relapsing symptoms referable to CNS white matter.",
+        "expectedFinding": "History of discrete episodes of optic neuropathy with recovery (relapsing-remitting pattern).",
+        "importance": "critical",
+        "textbookReference": "“Common presentations of multiple sclerosis… • Optic neuropathy (neuritis)” and “Relapsing-remitting MS (RRMS)… Discrete attack and complete recovery.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about diplopia with vertigo/dizziness and whether it was sudden and associated with nystagmus (brainstem syndrome).",
+        "reasoning": "Acute brainstem syndromes are common MS presentations and help localize lesions to different CNS sites (dissemination in space).",
+        "expectedFinding": "Episodes of sudden diplopia with vertigo (± nystagmus symptoms) that remit.",
+        "importance": "important",
+        "textbookReference": "“Acute brainstem syndrome: Sudden diplopia, and vertigo with nystagmus”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about Lhermitte’s sign: electric shock-like sensation down the back/into limbs on neck flexion.",
+        "reasoning": "Relapsing/remitting sensory symptoms including Lhermitte’s sign are listed as common MS presentations and suggest spinal cord involvement.",
+        "expectedFinding": "Electrical sensation down the back/into limb triggered by neck flexion (Lhermitte’s sign).",
+        "importance": "important",
+        "textbookReference": "“Relapsing/remitting sensory symptoms [e.g. Lhermitte’s sign (barber chair phenomenon, is an electrical sensation that runs down the back and into the limb on neck flexion)]”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about gait unsteadiness/ataxia and speech issues (dysarthria) and tremor.",
+        "reasoning": "Cerebellar involvement is common and Charcot’s triad is specifically noted; supports multifocal CNS involvement.",
+        "expectedFinding": "Episodes of unsteadiness/ataxia (± dysarthria and tremor) with partial/complete recovery.",
+        "importance": "helpful",
+        "textbookReference": "“Unsteadiness or ataxia. Charcot’s triad of dysarthria, ataxia, and tremor”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about fatigue and cognitive impairment, and whether symptoms worsen with overheating (Uhthoff’s phenomenon).",
+        "reasoning": "Fatigue/cognitive impairment are common in MS; Uhthoff’s phenomenon is characteristic worsening with overheating.",
+        "expectedFinding": "Prominent fatigue/cognitive symptoms and worsening (especially vision) when overheated.",
+        "importance": "helpful",
+        "textbookReference": "“Fatigue, cognitive impairment” and “Uhthoff ’s phenomenon: Worsening of neurologic symptoms (especially vision) when the body gets overheated”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Perform a focused cranial nerve exam emphasizing ocular motility to look for sixth nerve palsy and internuclear ophthalmoplegia (WEBINO).",
+        "reasoning": "Brainstem/MLF involvement is common in MS and specific ocular motor findings are listed among common presentations.",
+        "expectedFinding": "Sixth cranial nerve palsy and/or wall-eyed bilateral internuclear ophthalmoplegia (WEBINO).",
+        "importance": "critical",
+        "textbookReference": "“Sixth cranial nerve palsy, wall-eyed bilateral internuclear ophthalmoplegia (WEBINO)”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Perform cerebellar examination (gait/coordination and speech assessment) to assess for ataxia and dysarthria/tremor.",
+        "reasoning": "Unsteadiness/ataxia and Charcot’s triad are common MS presentations, supporting lesion localization.",
+        "expectedFinding": "Ataxia and/or dysarthria and tremor.",
+        "importance": "important",
+        "textbookReference": "“Unsteadiness or ataxia. Charcot’s triad of dysarthria, ataxia, and tremor”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess for spinal cord involvement by examining dorsal column function in the upper limb (fine touch/position sense function clinically) and functional hand use.",
+        "reasoning": "Subacute loss of upper limb function due to dorsal column deficit (‘clumsy/useless hand’) is a listed presentation.",
+        "expectedFinding": "Clumsy/useless hand or limb consistent with dorsal column deficit.",
+        "importance": "important",
+        "textbookReference": "“Subacute loss of function of upper limb (dorsal column deficit): Clumsy/useless hand or limb”"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Assess for urinary dysfunction suggestive of bladder hyperreflexia (screen symptoms and examine neurologic context).",
+        "reasoning": "Urinary symptoms due to bladder hyperreflexia are common in MS and support CNS involvement.",
+        "expectedFinding": "Urinary symptoms consistent with bladder hyperreflexia.",
+        "importance": "helpful",
+        "textbookReference": "“Urinary symptoms—bladder hyperreflexia”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order evoked potentials (visual/auditory/somatosensory) to assess CNS pathway function.",
+        "reasoning": "EP abnormalities occur in 80–90% of MS patients and can provide supportive evidence of CNS pathway involvement; less important than MRI but can be used as a supportive test.",
+        "expectedFinding": "Abnormalities on one or more EP modalities.",
+        "importance": "helpful",
+        "textbookReference": "“Evoked potential… abnormalities on one or more EP modalities occur in 80–90% of MS patients. However, they are less important than MRI.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Perform cerebrospinal fluid (CSF) examination including cell count, IgG/total protein/IgG index, and oligoclonal bands by electrophoresis.",
+        "reasoning": "CSF can show mononuclear pleocytosis, increased IgG and IgG index, and oligoclonal IgG bands; positive CSF supports diagnosis and is part of criteria used in progression scenarios and helps differentiate from NMO (oligoclonal bands usually absent in NMO).",
+        "expectedFinding": "Mononuclear cell pleocytosis (5–60 cells/mm3), increased IgG/IgG index, and oligoclonal IgG bands (not specific).",
+        "importance": "important",
+        "textbookReference": "“CSF cell count may be raised (5–60 mononuclear cells/mm)… Increased immunoglobulin G (IgG)… CSF IgG index… Oligoclonal IgG bands… but these are not specific.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order MRI brain and spinal cord (T2-weighted sequences) to look for characteristic demyelinating lesions and dissemination in space.",
+        "reasoning": "MRI shows characteristic abnormalities in >95% of patients; typical lesions are T2 hyperintense, oval up to 2 cm, often perpendicular to lateral ventricles (Dawson’s fingers), and multifocal (periventricular, juxtacortical, infratentorial, spinal cord).",
+        "expectedFinding": "Multifocal T2 hyperintense lesions (periventricular/juxtacortical/infratentorial/spinal cord), with typical oval lesions and Dawson’s fingers pattern.",
+        "importance": "critical",
+        "textbookReference": "“Characteristic abnormalities are found in >95% of patients… focal area of hyperintensity on T2-weighted… oval up to 2 cm… orientated perpendicular… (Dawson’s fingers)… Lesions are multifocal (periventricular, juxtacortical, infratentorial, or spinal cord).”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Apply McDonald criteria using clinical attacks/lesions plus MRI evidence of dissemination in space/time and/or CSF support as applicable.",
+        "reasoning": "Diagnosis is based on dissemination in time and space; McDonald criteria specify how to combine attacks, lesions, and MRI/CSF evidence to confirm MS.",
+        "expectedFinding": "Meets McDonald criteria category consistent with MS (e.g., attacks/lesions plus MRI dissemination in space/time, or awaiting further attack if not yet met).",
+        "importance": "important",
+        "textbookReference": "“McDonald criteria for MS are presented in Table 16.26.” and “The neurological deficits are disseminated in time and space.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Neuromyelitis optica (Devic’s disease, NMO)",
+        "howToRuleOut": "Use clinical distribution and severity plus MRI and CSF differences: NMO is restricted to optic nerves and spinal cord, attacks usually severe; brain MRI usually normal; cord MRI shows longitudinally extensive transverse myelitis (≥3 segments); CSF pleocytosis during attack and oligoclonal bands usually absent; anti-AQP4/anti-NMO antibodies present.",
+        "textbookReference": "“Differences between multiple sclerosis and neuromyelitis optica (NMO)… Distribution… Restricted to optic nerves and spinal cord… Brain MRI usually normal… Cord MRI… LETM… Oligoclonal bands usually absent… anti-AQP4… present.”"
+      },
+      {
+        "name": "Acute transverse myelitis (noncompressive myelopathy example)",
+        "howToRuleOut": "Consider when bladder/bowel involvement is early and course may be acute; compare with compressive vs noncompressive myelopathy features (noncompressive may be acute; bladder/bowel early).",
+        "textbookReference": "“Differences between compressive and noncompressive myelopathy… Onset and progress… May be acute… Bladder and bowel movement… Early (acute transverse myelitis).”"
+      },
+      {
+        "name": "Compressive myelopathy (e.g., spinal cord compression)",
+        "howToRuleOut": "Look for compressive features: bony deformity/tenderness, girdle-like sensation, upper level of sensory loss, zone of hyperesthesia, root pain, gradual onset and progression; bladder/bowel involvement tends to be late.",
+        "textbookReference": "“Differences between compressive and noncompressive myelopathy… Bony deformity… Root pain… Onset and progress gradual… Bladder and bowel movement late.”"
+      }
+    ],
+    "diagnosticApproach": "Suspect RRMS in a young adult with relapsing and remitting symptoms referable to different CNS white matter sites (e.g., optic neuritis, acute brainstem syndrome with diplopia/vertigo, Lhermitte’s sign, ataxia, fatigue/cognitive impairment, urinary symptoms). On examination, look for focal neurologic signs supporting multifocal CNS involvement (notably ocular motor abnormalities such as sixth nerve palsy/WEBINO, cerebellar signs, dorsal column-related upper limb dysfunction, and bladder hyperreflexia). Confirm dissemination in space/time using McDonald criteria supported primarily by MRI (multifocal T2 hyperintense lesions with typical morphology and distribution), with CSF (pleocytosis, increased IgG/IgG index, oligoclonal bands) and evoked potentials as supportive tests. Differentiate especially from NMO using the textbook MRI/CSF patterns and antibody profile, and consider myelopathy differentials (compressive vs noncompressive/acute transverse myelitis) based on onset, root pain/bony signs, and timing of bladder/bowel involvement.",
+    "textbookSources": [
+      "prospective) and at least\n\nyears. from onset two out of three criteria\nClinical course: Main clinical patterns are: ¾ Dissemination in space in the brain\n\n¾\nz Relapsing-remitting MS (RRMS) (85–90%): D...",
+      "prospective) and at least\n\nyears. from onset two out of three criteria\nClinical course: Main clinical patterns are: ¾ Dissemination in space in the brain\n\n¾\nz Relapsing-remitting MS (RRMS) (85–90%): D..."
+    ]
+  }
+}

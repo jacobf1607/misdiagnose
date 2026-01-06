@@ -1,0 +1,530 @@
+{
+  "persona": {
+    "name": "Saroja Krishnan",
+    "age": 42,
+    "gender": "Female",
+    "occupation": "Farmer in Punjab",
+    "background": "She works long hours doing repetitive hand work (harvesting, milking, carrying loads) and has found early-morning tasks increasingly difficult due to hand stiffness.",
+    "lifestyle": {
+      "activityLevel": "high",
+      "smoking": "unknown",
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "hardworking",
+      "stoic",
+      "pragmatic"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Rheumatoid arthritis (RA)",
+      "description": "A chronic inflammatory, potentially crippling arthritis with multisystem involvement; typically symmetric small-joint (MCP/PIP/MTP) involvement with morning stiffness >1 hour and DIP sparing."
+    },
+    {
+      "id": "d2",
+      "name": "Osteoarthritis (OA)",
+      "description": "A noninflammatory degenerative arthritis, usually in older patients; pain worsens with activity, morning stiffness <30 minutes, commonly affects large weight-bearing joints and can involve DIP/PIP while sparing MCP."
+    },
+    {
+      "id": "d3",
+      "name": "Systemic lupus erythematosus (SLE)",
+      "description": "A multisystem autoimmune disease with immune complex formation and complement activation; can have arthritis (typically non-erosive) with features like malar rash, oral ulcers, alopecia, serositis, and renal involvement."
+    },
+    {
+      "id": "d4",
+      "name": "Rheumatic fever (rheumatic arthritis)",
+      "description": "Poststreptococcal illness with acute migratory arthritis mainly affecting major joints; small joints are rarely involved and morning stiffness is not prominent."
+    },
+    {
+      "id": "d5",
+      "name": "Palindromic rheumatism",
+      "description": "Intermittent relapsing and remitting episodes of pain, stiffness and swelling lasting hours to days with symptom-free periods; may progress to rheumatoid arthritis later."
+    },
+    {
+      "id": "d6",
+      "name": "Reactive arthritis",
+      "description": "An inflammatory arthritis often following recent gastrointestinal or genitourinary infection; tends to be asymmetric and oligoarticular and may be associated with conjunctivitis and oral ulcers."
+    },
+    {
+      "id": "d7",
+      "name": "Psoriatic arthritis",
+      "description": "An inflammatory arthritis that may be mono- or polyarticular and symmetric or asymmetric; associated with psoriatic skin and nail changes and can show enthesitis or dactylitis."
+    },
+    {
+      "id": "d8",
+      "name": "Gout",
+      "description": "A crystal-induced arthritis with sudden onset joint pain, redness and swelling, often recurrent; diagnosis is supported by crystal identification on polarized microscopy."
+    },
+    {
+      "id": "d9",
+      "name": "Fibromyalgia syndrome (FMS)",
+      "description": "Chronic widespread pain for >3 months above and below the waist; physical exam is normal except for multiple tender points (classically ≥11/18)."
+    },
+    {
+      "id": "d10",
+      "name": "Ankylosing spondylitis",
+      "description": "A chronic inflammatory disorder primarily affecting the axial skeleton (sacroiliac joints and spine) with inflammatory back pain >3 months, morning stiffness improving with activity and worse with rest."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "“For the past few months, my hands and wrists feel stiff and swollen when I wake up. It takes more than an hour before I can brush my teeth or comb my hair properly.”",
+  "medicalHistory": "No documented prior joint disease. No known history provided of psoriasis, recent gastrointestinal/genitourinary infection, or chronic infections. Medication history not provided.",
+  "symptoms": "Subacute/chronic joint pain, swelling and stiffness with morning stiffness lasting >1 hour. Symptoms are symmetric and begin in small joints of the hands (metacarpophalangeal and proximal interphalangeal joints) and wrists; routine early-morning activities like brushing teeth and combing hair are difficult. She reports generalized fatigue and weakness consistent with constitutional features of RA. She notices swelling of the fingers with early spindling (swelling of proximal but not distal interphalangeal joints), with distal interphalangeal joints spared.\n\nFrom textbook: ) are involved in the disease progression.\nB cells, CD4+ T cells, compliment mediated immune activation play a contributory role.\n\nClinical Features\nQ.  Enumerate the clinical features of rheumatoid arthritis.\nz Gender: Female to male ratio is 3:1.\nz Age: Most common age of onset is between 30 and 50 years, but the disease can occur at any age. In women in late\n\nchildbearing years and in men during sixth to eighth decade.\n\nOnset\nThe presenting symptoms result from inflammation of the joints, ten",
+  "relevantFindings": "Joint exam: swollen, warm, tender small joints in a symmetric distribution, predominantly MCP and PIP joints and wrists; DIP joints are spared. Labs (consistent with RA work-up): raised ESR/CRP as acute phase reactants; normocytic normochromic anemia of chronic disease; thrombocytosis may be present. Serology: rheumatoid factor and/or ACPA may be positive (RF positive in 70–80% overall; high titers suggest more severe disease/extra-articular risk). Imaging (radiographs of affected joints): symmetric pattern with soft tissue swelling and juxta-articular osteoporosis; may show marginal erosions and joint space narrowing (mnemonic ABCDE'S: Alignment abnormal without ankylosis; periarticular osteoporosis; uniform joint space loss; deformities with symmetrical distribution; marginal erosions; soft-tissue swelling). Synovial fluid (if aspirated): inflammatory range WBC typically 5,000–50,000/µL with ~two-thirds neutrophils, no crystals or organisms.\n\nFrom textbook: throcyte sedimentation rate)\n\nCHAPTER 8: Rheumatology and Connective Tissue Disorders 675\n\nz The Disease Activity Score in 28 joints (DAS28) is used to grade severity of RA.\nz Simplified Disease Activity Index (SDAI) and Clinical Disease Activity Index (CDAI) are also used in monitoring.\nz Above criteria yields a score of 0–10. A score of ≥6 required for definitive diagnosis of RA.\nz A score of <6/10 are not classifiable as RA, but their status to be reassessed over time.\nz A clinician should co",
+  "redHerrings": "Intermittent episodes of joint swelling could suggest palindromic rheumatism (intermittent arthritis). Generalized pain and fatigue could suggest fibromyalgia syndrome (though FMS exam would be normal except tender points). If she later reports oral ulcers or rash, SLE would enter the differential (SLE can have arthritis with mucocutaneous features). If she reports a recent GI/GU infection with conjunctivitis/oral ulcers, reactive arthritis would become plausible. If she reports sudden attacks of a single joint with marked redness/swelling, gout/pseudogout would be considered (crystals on polarized microscopy).",
+  "id": "case_1767639049408",
+  "domain": "rheumatology",
+  "idealPathway": {
+    "diseaseName": "Rheumatoid arthritis (RA)",
+    "domain": "rheumatology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about morning stiffness duration and whether it lasts >1 hour",
+        "reasoning": "Morning stiffness lasting more than 1 hour is characteristic of RA and helps distinguish inflammatory arthritis from noninflammatory causes.",
+        "expectedFinding": "Morning stiffness lasting >1 hour, with difficulty doing early morning activities (e.g., brushing teeth, combing hair)",
+        "importance": "critical",
+        "textbookReference": "“Stiffness dominating in the mornings (‘morning stiffness’) lasting more than 1 hour is characteristic.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask which joints are involved and whether the pattern is symmetric, focusing on small joints (MCP, PIP, MTP) and wrists",
+        "reasoning": "RA typically begins in small synovial joints with symmetric distribution; this joint pattern supports RA over OA and other arthritides.",
+        "expectedFinding": "Symmetric pain/swelling in MCP, PIP, MTP joints and/or wrists; progression to larger joints may occur later",
+        "importance": "critical",
+        "textbookReference": "“RA can affect any of the synovial (diarthrodial) joints and involvement is usually in a symmetric distribution. Most commonly, RA starts in the small joints, namely metacarpophalangeal (MCP), proximal interphalangeal (PIP), and metatarsophalangeal (MTP) joints…”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about onset pattern: slow/insidious vs acute vs palindromic (relapsing-remitting episodes lasting hours to days)",
+        "reasoning": "The textbook describes multiple RA onset patterns; identifying palindromic or acute onset supports RA spectrum presentations and guides reassessment if early/atypical.",
+        "expectedFinding": "Slow insidious systemic symptoms preceding arthritis, or acute onset with morning stiffness/polyarthritis/pitting edema, or palindromic relapsing-remitting attacks",
+        "importance": "important",
+        "textbookReference": "“The onset varies: Slow and insidious… Acute onset… Palindromic onset… relapsing and remitting episodes… alternating with symptom-free periods.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about constitutional symptoms (fatigue, weight loss, low-grade fever) and other extra-articular symptoms",
+        "reasoning": "RA is a systemic disease; constitutional features and extra-articular involvement support inflammatory systemic arthritis and help assess severity.",
+        "expectedFinding": "Fatigue, weight loss, low-grade fever (<38°C) and/or symptoms suggesting extra-articular involvement",
+        "importance": "important",
+        "textbookReference": "“RA is a systemic disease and features such as fatigue, weight loss, and low-grade fever (<38°C) occur frequently.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about symptoms suggesting specific extra-articular joint involvement: hoarseness/stridor (cricoarytenoid) and neck symptoms suggestive of cervical spine involvement",
+        "reasoning": "The textbook notes clinically important non-peripheral joint involvement (cricoarytenoid and cervical spine) that can occur in RA and indicates broader disease.",
+        "expectedFinding": "Hoarseness of voice and/or inspiratory stridor; symptoms concerning for cervical spine involvement",
+        "importance": "helpful",
+        "textbookReference": "“Cricoarytenoid joint involvement may present (30%) with hoarseness of voice and inspiratory stridor.” / “the cervical spine (atlantoaxial subluxation) can be involved producing quadriparesis.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Examine hands/wrists/feet for synovitis: palpate joint capsules for synovial thickening, soft-tissue swelling and effusions; assess warmth, tenderness, swelling",
+        "reasoning": "Inflammatory arthritis is defined by clinical inflammation; RA commonly affects small joints and produces synovial thickening and swelling.",
+        "expectedFinding": "Swollen, warm, tender joints with synovial thickening/effusion in a symmetric small-joint distribution (MCP/PIP/MTP, wrists)",
+        "importance": "critical",
+        "textbookReference": "“Erythema, warmth, pain and swelling are the cardinal features of inflammation… Palpate the joint capsule for synovial thickening, soft tissue swelling effusions.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Assess for characteristic rheumatoid hand findings and joint sparing pattern (DIP sparing) and look for early ‘spindling’ of fingers",
+        "reasoning": "The textbook highlights DIP sparing and early spindling as characteristic hand findings in RA, helping differentiate from OA and other arthritides.",
+        "expectedFinding": "Spindling of fingers (PIP swelling with DIP spared); DIP joints typically spared unless coexistent OA",
+        "importance": "important",
+        "textbookReference": "“The DIP joint is characteristically always spared… Spindling of the fingers: It is the earliest finding characterized by swelling of the proximal, but not the distal interphalangeal joints.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Inspect for chronic deformities (ulnar deviation, swan-neck, boutonnière) and document symmetry",
+        "reasoning": "Chronic RA can cause irreversible deformities; documenting these supports established RA and correlates with radiographic changes.",
+        "expectedFinding": "Ulnar deviation and/or swan-neck/boutonnière deformities with symmetrical distribution",
+        "importance": "helpful",
+        "textbookReference": "“Deformities… Ulnar deviation… ‘Swan-neck’ deformity…” / “Deformities… with symmetrical distribution.”"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Examine for rheumatoid nodules on extensor surfaces and areas subject to repeated trauma",
+        "reasoning": "Rheumatoid nodules are a classic extra-articular manifestation and are strongly associated with seropositive RA and more severe disease.",
+        "expectedFinding": "Firm, nontender subcutaneous nodules (2 mm to 5 cm) on extensor surfaces (e.g., forearms) or other listed sites",
+        "importance": "helpful",
+        "textbookReference": "“Nodules are seen in about one-fourth of patients with RA and, almost exclusively in those patients who are seropositive for rheumatoid factor… Typically occur on extensor surfaces…”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order complete blood count (CBC)",
+        "reasoning": "CBC provides diagnostic clues in inflammatory arthritides and RA (anemia of chronic disease, thrombocytosis, variable WBC).",
+        "expectedFinding": "Normocytic normochromic anemia (anemia of chronic disease) and/or thrombocytosis; WBC may be raised/normal/low (Felty’s syndrome)",
+        "importance": "important",
+        "textbookReference": "“A complete blood count… may provide diagnostic clues.” / “Anemia of chronic disease is seen in majority of patients… Thrombocytosis is common… WBC counts may be raised, normal, or profoundly depressed (Felty’s syndrome).”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order inflammatory markers: ESR and/or C-reactive protein (CRP)",
+        "reasoning": "Acute phase reactants parallel RA disease activity and persistent elevation carries poor prognosis; also supports inflammatory arthritis.",
+        "expectedFinding": "Elevated ESR and/or CRP consistent with active inflammatory arthritis",
+        "importance": "important",
+        "textbookReference": "“Acute phase reactants, erythrocyte sedimentation rate and C-reactive protein levels parallel the activity of the disease…”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order serology: Rheumatoid factor (RF) and anti-cyclic citrullinated protein antibodies (ACPA)",
+        "reasoning": "Textbook lists RF and ACPA as key serologies for RA; also notes interpretation caution for RF.",
+        "expectedFinding": "Positive RF and/or ACPA (seropositivity supports RA; dual positivity associated with more systemic features)",
+        "importance": "critical",
+        "textbookReference": "“Serology: Rheumatoid factor… Anticyclic citrullinated protein antibodies (ACPA).” / “Rheumatoid factor lacks sensitivity and specificity; hence both positive and negative results should be interpreted cautiously.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order plain radiographs (X-rays) of affected joints (hands/feet/wrists as appropriate)",
+        "reasoning": "Radiographs show characteristic RA changes and help document structural disease (erosions, joint space narrowing, periarticular osteoporosis) with symmetric pattern.",
+        "expectedFinding": "Symmetrical involvement with juxta-articular osteoporosis, soft tissue swelling, marginal erosions, and joint space narrowing (ABCDE’S mnemonic)",
+        "importance": "important",
+        "textbookReference": "“Radiographs… symmetrical pattern of involvement, juxta-articular osteoporosis, soft tissue swelling, bone erosions and narrowing of the joint space.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "If needed for early disease or to assess persistent synovitis, order ultrasonography (including Doppler) and/or MRI",
+        "reasoning": "Ultrasound/MRI are more sensitive than plain radiographs for early synovitis and soft-tissue disease; Doppler helps demonstrate persistent synovitis when deciding on DMARD need or efficacy.",
+        "expectedFinding": "Synovitis detected before radiographic joint damage; Doppler evidence of persistent synovitis",
+        "importance": "helpful",
+        "textbookReference": "“Ultrasonography and MRI: More sensitive than plain radiographs and detects soft-tissue synovitis before joint damage. Doppler ultrasound is useful for demonstration persistent synovitis…”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Osteoarthritis (OA)",
+        "howToRuleOut": "OA is typically noninflammatory with morning stiffness <30 minutes, pain worsened with movement/activity, often asymmetrical, and commonly involves DIP joints with sparing of MCP; RA typically has morning stiffness >1 hour, symmetric small-joint (MCP/PIP) involvement and spares DIP.",
+        "textbookReference": "“Morning stiffness for >1 hour” (RA) vs “Morning stiffness for <30 minutes” (OA) / “Osteoarthritis involves distal interphalangeal (DIP)… with sparing of metacarpophalangeal joints. Rheumatoid arthritis spares DIP but affects PIP and metacarpophalangeal (MCP) joints.”"
+      },
+      {
+        "name": "Psoriatic arthritis",
+        "howToRuleOut": "Consider if there are psoriatic skin and nail changes; joint pattern may involve DIP as well (unlike RA which spares DIP).",
+        "textbookReference": "“Psoriatic skin and nail changes accompany psoriatic arthritis.” / “Psoriasis and crystal arthropathies affect all three joints [DIP, PIP, MCP].”"
+      },
+      {
+        "name": "Reactive arthritis / spondyloarthropathies",
+        "howToRuleOut": "Reactive arthritis and spondyloarthropathies tend to be asymmetric and oligoarticular, often affecting lower extremities; reactive arthritis suggested by recent GI/GU infection with conjunctivitis and oral ulcers; spondyloarthropathies may present with enthesitis/dactylitis and back disease (axial involvement).",
+        "textbookReference": "“Joint involvement in RA tends to be symmetrical and polyarticular whereas spondyloarthropathy… reactive arthritis involvement is asymmetric and oligoarticular.” / “Reactive arthritis is suggested by a history of recent gastrointestinal or genitourinary infection, conjunctivitis and oral ulcers.” / “Spondyloarthropathies can present with enthesitis or dactylitis…”"
+      },
+      {
+        "name": "Crystal-induced arthritis (gout/pseudogout) or infectious arthritis",
+        "howToRuleOut": "These are often mono- or oligoarticular. If suspected, perform synovial fluid analysis: crystals suggest gout/pseudogout; WBC >50,000/mm3 suggests infection and requires culture. RA synovial fluid typically has WBC 5000–50,000/µL with neutrophil predominance and no crystals/organisms.",
+        "textbookReference": "“Crystal and infectious arthritides are often mono or oligoarticular whereas OA and RA are polyarticular.” / “WBC count higher than 50,000 per mm3 indicates infection… synovial fluid needs to be cultured…” / “Synovial fluid… 5000–50,000 per microliter… neutrophils with no crystals or organism.”"
+      }
+    ],
+    "diagnosticApproach": "Systematically confirm inflammatory, symmetric small-joint arthritis with morning stiffness >1 hour and objective synovitis on examination (warmth, swelling, tenderness, synovial thickening/effusion), noting typical joint distribution (MCP/PIP/MTP, wrists) and DIP sparing. Screen for constitutional and extra-articular features (e.g., rheumatoid nodules; hoarseness/stridor; cervical spine involvement). Order cost-effective tests first (CBC, ESR/CRP), then RA serology (RF and ACPA, interpreting RF cautiously), followed by radiographs of affected joints for characteristic changes (symmetry, juxta-articular osteoporosis, erosions, joint space narrowing). Use ultrasound (Doppler) or MRI when early disease is suspected or to demonstrate persistent synovitis and assess treatment efficacy. Reconsider alternative diagnoses particularly with asymmetric arthritis, migrating pattern, predominantly large-joint arthritis, DIP involvement, rashes, back disease, renal disease, leukopenia, or hypocomplementemia.",
+    "textbookSources": [
+      ") are involved in the disease progression.\nB cells, CD4+ T cells, compliment mediated immune activation play a contributory role.\n\nClinical Features\nQ.  Enumerate the clinical features of rheumatoid a...",
+      "<200 200–5000 5000–50,000 >50,000\nPredominant cell Monocytes Monocytes Polymorphs >60% Polymorphs >80%.\n\nBacteria present\nProtein <2–3 g/dL <2–3 g/dL >3 g/dL >3 g/dL\nSugar Equal to blood sugar (BS) Eq..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Rheumatoid arthritis (RA)",
+      "description": "Rheumatoid arthritis is a chronic, systemic **autoimmune inflammatory arthritis** characterized by persistent **synovitis** leading to pain, swelling, and progressive joint damage. It classically presents with **symmetric** involvement of small joints (especially **MCP/PIP** and wrists) and prolonged **morning stiffness**, with potential constitutional and extra-articular manifestations.",
+      "keySymptoms": [
+        "**Morning stiffness >1 hour** - Suggests inflammatory arthritis; prolonged stiffness is typical of RA over osteoarthritis.",
+        "**Symmetric small-joint pain/swelling** - RA characteristically affects both hands with symmetric **MCP/PIP** and wrist synovitis.",
+        "**MCP and PIP involvement** - Early RA commonly begins in these joints due to prominent synovial inflammation.",
+        "**Wrist involvement** - Frequent early site in RA; supports inflammatory polyarthritis rather than isolated degenerative disease.",
+        "**DIP sparing** - Helps distinguish RA from osteoarthritis and psoriatic arthritis, which often involve DIP joints.",
+        "**Difficulty with early-morning activities** - Functional limitation on waking reflects active synovitis and inflammatory stiffness.",
+        "**Fatigue and weakness** - Constitutional symptoms reflect systemic inflammation and cytokine-mediated effects in RA.",
+        "**Spindling of fingers** - Fusiform PIP swelling indicates synovial hypertrophy/effusion typical of RA."
+      ],
+      "clinicalReasoning": "This 42-year-old woman has subacute-to-chronic **symmetric inflammatory polyarthritis** with prominent **morning stiffness lasting >1 hour**, strongly favoring RA. The distribution (predominant **MCP/PIP** and wrists) with **DIP sparing** is classic for RA and matches her functional difficulty with brushing teeth and combing hair on waking. Expected supportive findings include elevated **ESR/CRP**, possible **normocytic normochromic anemia of chronic disease** and **thrombocytosis**, and seropositivity for **RF** and/or **ACPA**. Imaging and synovial fluid features (periarticular osteopenia, marginal erosions, inflammatory WBC without crystals/organisms) further align with RA pathophysiology involving **B cells**, **CD4+ T cells**, and **complement-mediated immune activation**."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Osteoarthritis (OA)",
+      "description": "**Osteoarthritis (OA)** is a degenerative joint disease driven by progressive **articular cartilage loss** with secondary **subchondral bone remodeling**. It typically causes **mechanical pain** that worsens with use and improves with rest, with minimal systemic inflammation.",
+      "keySymptoms": [
+        "**Mechanical joint pain** - Pain worsens with activity and improves with rest; inflammatory features are limited.",
+        "**Brief morning stiffness** - Stiffness usually lasts <30 minutes, improving quickly after movement.",
+        "**Bony enlargement** - Osteophyte-related enlargement (e.g., Heberden/Bouchard nodes) rather than soft synovitis.",
+        "**Crepitus** - Grating sensation with joint motion due to irregular cartilage and osteophytes.",
+        "**Functional limitation** - Reduced range of motion and difficulty with weight-bearing tasks as disease progresses.",
+        "**Common joint distribution** - Often affects knees/hips/spine and hands at DIP/1st CMC more than MCP."
+      ],
+      "clinicalReasoning": "Although hand symptoms can occur in **OA**, the typical pattern is **DIP** and **1st CMC** involvement with **short-lived morning stiffness** and little true synovitis. OA is generally a **non-systemic** condition, so prominent **fatigue** and elevated **ESR/CRP** are less characteristic. Imaging in OA classically shows **non-uniform joint space narrowing**, **osteophytes**, and **subchondral sclerosis**, rather than early periarticular osteopenia and marginal erosions.",
+      "whyIncorrectForCase": "This patient has **>1 hour morning stiffness**, **symmetric MCP/PIP and wrist synovitis**, and **DIP sparing**, which is classic for **rheumatoid arthritis** rather than OA. Her constitutional symptoms and inflammatory labs (raised **ESR/CRP**, anemia of chronic disease, possible thrombocytosis) also favor **inflammatory arthritis**, not OA.",
+      "keyDifferencesFromCorrect": [
+        "**Morning stiffness duration** - OA: typically <30 minutes; RA: often >60 minutes with marked morning disability.",
+        "**Joint distribution (hands)** - OA: **DIP** and **1st CMC** commonly; RA: **MCP/PIP** and wrists, usually **DIP spared**.",
+        "**Nature of swelling** - OA: bony enlargement/osteophytes; RA: **soft, warm, tender synovitis** with spindling.",
+        "**Systemic features** - OA: absent; RA: **fatigue**, malaise, and other constitutional symptoms can occur.",
+        "**Inflammatory markers** - OA: usually normal ESR/CRP; RA: frequently elevated **ESR/CRP**.",
+        "**Radiographic pattern** - OA: osteophytes, **subchondral sclerosis**, non-uniform narrowing; RA: **periarticular osteopenia**, uniform narrowing, **marginal erosions**."
+      ],
+      "missingFindings": [
+        "**DIP joint involvement** - OA commonly affects DIP joints; this case explicitly shows **DIP sparing**.",
+        "**Osteophytes/Heberden nodes** - Typical OA bony nodal changes are not described on exam.",
+        "**Non-uniform joint space narrowing** - OA classically shows asymmetric/non-uniform narrowing; case suggests RA-type changes.",
+        "**Subchondral sclerosis** - A hallmark of OA imaging; not reported and RA features are more consistent.",
+        "**Minimal inflammatory labs** - OA usually lacks elevated **ESR/CRP**; this case includes inflammatory markers and anemia of chronic disease."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Systemic lupus erythematosus (SLE)",
+      "description": "Systemic lupus erythematosus (SLE) is a chronic, multisystem autoimmune disease driven by immune complex formation and complement activation. It commonly affects skin, joints, kidneys, blood cells, and serosal membranes, with symptoms that fluctuate in flares and remissions.",
+      "keySymptoms": [
+        "**Arthralgia/arthritis** - Joint pain with inflammatory features; usually non-erosive and often intermittent in flares.",
+        "**Photosensitivity** - Sun exposure provokes rash or systemic symptoms due to immune-mediated skin inflammation.",
+        "**Malar rash** - Fixed erythema over cheeks and nasal bridge, typically sparing nasolabial folds.",
+        "**Oral/nasal ulcers** - Painless mucosal ulcers reflecting immune-mediated epithelial injury during active disease.",
+        "**Serositis** - Pleuritis or pericarditis causing sharp chest pain, often worse with breathing or lying flat.",
+        "**Renal involvement** - Proteinuria or hematuria from lupus nephritis due to immune complex glomerulonephritis.",
+        "**Cytopenias** - Hemolytic anemia, leukopenia, or thrombocytopenia from autoimmune destruction or marrow suppression.",
+        "**Raynaud phenomenon** - Episodic digital color changes from vasospasm, often triggered by cold or stress."
+      ],
+      "clinicalReasoning": "This patient has chronic, symmetric inflammatory small-joint synovitis involving **MCP**/**PIP** joints and **wrists**, with **DIP sparing** and **morning stiffness >1 hour**, which is classic for **rheumatoid arthritis (RA)**. SLE can cause inflammatory joint symptoms, but lupus arthritis is typically **non-erosive**, less characterized by persistent symmetric small-joint synovitis with classic RA distribution, and is usually accompanied by systemic features such as **photosensitive rash**, **oral ulcers**, **serositis**, or **renal** findings. The provided work-up pattern (elevated **ESR/CRP**, possible **RF/ACPA positivity**, and radiographic **marginal erosions/juxta-articular osteopenia**) aligns with RA rather than SLE.",
+      "whyIncorrectForCase": "She lacks hallmark SLE manifestations such as **malar/photosensitive rash**, **oral ulcers**, **serositis**, **renal abnormalities**, or **cytopenias**. Her presentation is dominated by persistent symmetric small-joint synovitis with **DIP sparing** and RA-typical functional morning limitation, favoring **RA** over SLE.",
+      "keyDifferencesFromCorrect": [
+        "**Joint damage pattern** - SLE arthritis is usually **non-erosive**; RA causes **marginal erosions** and joint space narrowing.",
+        "**Autoantibodies** - SLE is associated with **ANA**, **anti-dsDNA**, **anti-Sm**; RA with **RF** and **ACPA**.",
+        "**System involvement** - SLE commonly has **renal/skin/serosal/CNS** disease; RA is primarily **synovial** with possible extra-articular features later.",
+        "**Inflammatory distribution** - RA classically targets **MCP/PIP/wrists** with **DIP sparing**; SLE arthropathy is more variable and often less persistently synovitic.",
+        "**Complement** - Active SLE often shows **low C3/C4** due to consumption; RA does not typically cause hypocomplementemia."
+      ],
+      "missingFindings": [
+        "**Photosensitive rash or malar rash** - Absence reduces likelihood of SLE as the primary diagnosis.",
+        "**Oral/nasal ulcers** - Missing mucosal ulcers argues against common SLE mucocutaneous involvement.",
+        "**Proteinuria/hematuria** - No renal findings provided; lupus nephritis would strongly support SLE.",
+        "**Serositis symptoms** - No pleuritic chest pain or pericarditic features described.",
+        "**Cytopenias** - Case suggests anemia of chronic disease and possible thrombocytosis, not SLE-typical leukopenia/thrombocytopenia.",
+        "**Low complement (C3/C4)** - Not reported; hypocomplementemia would support immune-complex active SLE.",
+        "**ANA/anti-dsDNA/anti-Sm positivity** - Not provided; these are key serologic supports for SLE classification."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Rheumatic fever (rheumatic arthritis)",
+      "description": "Acute rheumatic fever is a post–**Group A Streptococcus** immune-mediated inflammatory disease that can affect joints, heart, skin, and CNS. Its arthritis is typically an acute, **migratory** large-joint arthritis occurring weeks after pharyngitis and is part of the **Jones criteria**.",
+      "keySymptoms": [
+        "**Migratory polyarthritis** - Rapidly shifting pain and swelling between large joints over days, not persistent.",
+        "**Large-joint predominance** - Knees, ankles, elbows, wrists commonly affected; small hand joints less typical.",
+        "**Post-streptococcal timing** - Begins about 2–4 weeks after untreated streptococcal pharyngitis or scarlet fever.",
+        "**Dramatic NSAID response** - Joint symptoms often improve quickly with aspirin or other NSAIDs.",
+        "**Carditis symptoms** - Chest pain, dyspnea, palpitations, new murmur may indicate valvulitis or myocarditis."
+      ],
+      "clinicalReasoning": "Rheumatic fever arthritis is usually an acute-onset, migratory inflammation of large joints following recent **streptococcal pharyngitis**, and it is evaluated using the **Jones criteria** (major/minor criteria plus evidence of GAS infection). While it can cause joint swelling and pain, it typically does not present as a chronic, symmetric small-joint inflammatory arthritis. The patient’s pattern (symmetric **MCP/PIP** and wrist involvement with prolonged **morning stiffness**) is classic for **rheumatoid arthritis**, not rheumatic fever.",
+      "whyIncorrectForCase": "This patient has months of symmetric small-joint synovitis with morning stiffness >1 hour, which is characteristic of **rheumatoid arthritis** rather than acute **migratory** large-joint arthritis. There is no history provided of recent **streptococcal pharyngitis** or other Jones-criteria features to support rheumatic fever.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Rheumatic fever is acute/subacute after GAS infection; **RA** is chronic, progressive inflammatory arthritis.",
+        "**Joint pattern** - Rheumatic fever is **migratory** and favors large joints; **RA** is symmetric and favors **MCP/PIP** and wrists.",
+        "**Morning stiffness** - Prolonged morning stiffness is typical in **RA**; rheumatic fever pain is less classically stiffness-dominant.",
+        "**DIP involvement** - **RA** typically spares **DIP** joints; rheumatic fever has no characteristic MCP/PIP spindling pattern.",
+        "**Serology/immune markers** - Rheumatic fever is supported by **ASO/anti-DNase B** evidence; **RA** by **RF/ACPA** and erosive changes."
+      ],
+      "missingFindings": [
+        "**Recent streptococcal pharyngitis** - Lack of preceding sore throat/scarlet fever history weakens post-GAS diagnosis.",
+        "**Evidence of GAS infection** - No **ASO** or **anti-DNase B** elevation, throat culture, or rapid antigen evidence provided.",
+        "**Migratory large-joint arthritis** - Case shows persistent symmetric small-joint involvement, not shifting large-joint attacks.",
+        "**Jones major criteria features** - No **carditis**, **chorea**, **erythema marginatum**, or **subcutaneous nodules** described.",
+        "**Typical rapid NSAID response** - No report of dramatic improvement with aspirin/NSAIDs, common in rheumatic fever arthritis."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Palindromic rheumatism",
+      "description": "Palindromic rheumatism is an episodic inflammatory arthritis characterized by sudden, recurrent attacks of joint pain and swelling with complete resolution between episodes. It may precede or evolve into **rheumatoid arthritis (RA)**, but by definition does not cause persistent synovitis or progressive erosive damage during symptom-free intervals.",
+      "keySymptoms": [
+        "**Recurrent self-limited attacks** - Sudden flares of mono- or oligoarthritis lasting hours to days, then fully resolve.",
+        "**Complete intercritical recovery** - No persistent joint swelling or stiffness between attacks; function returns to baseline.",
+        "**Migratory joint involvement** - Different joints may be affected in different episodes rather than fixed symmetric pattern.",
+        "**Periarticular soft-tissue swelling** - Swelling may involve tendons or periarticular tissues, not only synovium.",
+        "**Variable serology** - **RF** and **ACPA** can be positive, but diagnosis is primarily clinical and episodic."
+      ],
+      "clinicalReasoning": "This patient has chronic, persistent inflammatory small-joint synovitis with **symmetric** involvement of **MCP**, **PIP**, and **wrists**, plus **morning stiffness >1 hour** and constitutional symptoms (fatigue/weakness). The pattern (small joints, symmetric distribution, **DIP sparing**, early spindling) is classic for **rheumatoid arthritis (RA)** rather than an episodic syndrome. Supporting work-up features described for this case (raised **ESR/CRP**, anemia of chronic disease, possible thrombocytosis, **RF/ACPA** positivity, and radiographic **juxta-articular osteopenia/marginal erosions**) align with established RA pathophysiology and progression. Palindromic rheumatism would require discrete attacks with complete resolution and typically lacks persistent exam and imaging changes.",
+      "whyIncorrectForCase": "Palindromic rheumatism is defined by intermittent attacks with symptom-free intervals, but this patient reports persistent symptoms over months with ongoing morning disability. The exam/imaging/lab profile described (persistent symmetric synovitis with inflammatory markers and possible erosive changes) is much more consistent with **RA** than a purely episodic condition.",
+      "keyDifferencesFromCorrect": [
+        "**Course** - Palindromic rheumatism has episodic flares with full remission; **RA** is persistent, progressive synovitis.",
+        "**Between-attack exam** - Palindromic rheumatism has normal joints between attacks; **RA** shows ongoing tenderness, swelling, and stiffness.",
+        "**Radiographs** - Palindromic rheumatism usually lacks erosions; **RA** can show **marginal erosions** and uniform joint-space loss.",
+        "**Joint pattern** - Palindromic rheumatism is often migratory/variable; **RA** is typically symmetric small-joint (MCP/PIP/wrist) disease.",
+        "**Morning stiffness** - Palindromic rheumatism may not cause daily prolonged stiffness; **RA** commonly causes **>1 hour** stiffness."
+      ],
+      "missingFindings": [
+        "**Discrete episodic attacks with complete resolution** - Required for palindromic rheumatism; patient instead has persistent symptoms.",
+        "**Symptom-free intervals with normal joint exam** - Absence argues against palindromic rheumatism and favors chronic inflammatory arthritis.",
+        "**Lack of erosive/osteopenic radiographic changes** - Palindromic rheumatism typically non-erosive; RA-like changes support RA.",
+        "**Non-fixed joint involvement** - Palindromic rheumatism often changes joints between flares; this case is fixed symmetric MCP/PIP/wrist."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Reactive arthritis",
+      "description": "Reactive arthritis is a **sterile inflammatory arthritis** that typically occurs 1–4 weeks after a **genitourinary** (e.g., Chlamydia) or **gastrointestinal** (e.g., Salmonella, Shigella, Campylobacter) infection. It classically presents as an **asymmetric oligoarthritis** of the lower limbs with characteristic extra-articular features.",
+      "keySymptoms": [
+        "**Asymmetric oligoarthritis** - Usually affects a few joints, predominantly knees/ankles, not symmetric small-hand joints.",
+        "**Post-infectious onset** - Begins after recent diarrhea or urethritis/cervicitis, typically within 1–4 weeks.",
+        "**Enthesitis** - Heel pain from Achilles/plantar fascia inflammation; common and helps distinguish from RA.",
+        "**Dactylitis** - “Sausage digit” swelling involving entire finger/toe, often with tenosynovitis.",
+        "**Inflammatory back pain** - Sacroiliitis can cause buttock pain and morning stiffness improving with activity.",
+        "**Conjunctivitis/uveitis** - Painful red eye or photophobia may accompany arthritis in reactive arthritis.",
+        "**Mucocutaneous lesions** - Keratoderma blennorrhagicum or circinate balanitis may occur in some patients."
+      ],
+      "clinicalReasoning": "This patient has a chronic, progressive **inflammatory polyarthritis** with prominent **morning stiffness >1 hour** and **symmetric** involvement of **MCP**, **PIP**, and **wrists**, with **DIP sparing**—a classic pattern for **rheumatoid arthritis (RA)**. Reactive arthritis, in contrast, is typically an **acute/subacute** arthritis following an infection and most often presents as **asymmetric** lower-extremity oligoarthritis with **enthesitis** and/or **axial** symptoms. The provided work-up features (raised **ESR/CRP**, **anemia of chronic disease**, possible **thrombocytosis**, and RA-type imaging changes such as **marginal erosions** and **juxta-articular osteopenia**) align with RA rather than reactive arthritis. Overall, the distribution, chronicity, and classic small-joint symmetry strongly argue against reactive arthritis.",
+      "whyIncorrectForCase": "There is no history of preceding **GI/GU infection**, and the arthritis pattern is **symmetric small-joint (MCP/PIP/wrist)** rather than **asymmetric lower-limb oligoarthritis** typical of reactive arthritis. The case also emphasizes **DIP sparing**, early **spindling** of PIP joints, and RA-consistent imaging/lab patterns, which are not characteristic of reactive arthritis.",
+      "keyDifferencesFromCorrect": [
+        "**Joint distribution** - Reactive arthritis: asymmetric, lower-limb predominant; **RA**: symmetric MCP/PIP/wrist involvement.",
+        "**Trigger** - Reactive arthritis: follows **GI/GU infection**; **RA**: autoimmune synovitis without required infectious trigger.",
+        "**Extra-articular pattern** - Reactive arthritis: **conjunctivitis/uveitis**, **mucocutaneous lesions**, **enthesitis**; **RA**: nodules, lung/serosal disease, vasculitis (in severe disease).",
+        "**Radiography** - Reactive arthritis: may show enthesophytes/sacroiliitis; **RA**: **marginal erosions**, **uniform joint space narrowing**, **juxta-articular osteopenia**.",
+        "**Serology** - Reactive arthritis: often **HLA-B27** associated, typically **RF/ACPA negative**; **RA**: **RF** and/or **ACPA** often positive.",
+        "**Course** - Reactive arthritis: often self-limited or episodic; **RA**: chronic progressive erosive inflammatory arthritis."
+      ],
+      "missingFindings": [
+        "**Recent diarrhea or urethritis/cervicitis** - Absence of a preceding infection makes reactive arthritis unlikely.",
+        "**Asymmetric lower-extremity oligoarthritis** - Lack of knee/ankle-predominant asymmetric pattern argues against reactive arthritis.",
+        "**Enthesitis (heel pain)** - No Achilles/plantar fascia pain reported; a common hallmark of reactive arthritis.",
+        "**Ocular inflammation** - No **conjunctivitis/uveitis** symptoms (red painful eye, photophobia) described.",
+        "**Mucocutaneous lesions** - No keratoderma blennorrhagicum or circinate balanitis-like findings reported.",
+        "**Axial symptoms** - No inflammatory back/buttock pain suggesting sacroiliitis is mentioned."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Psoriatic arthritis",
+      "description": "Psoriatic arthritis is a chronic **inflammatory arthritis** associated with **psoriasis**, driven by immune dysregulation and enthesitis. It commonly affects peripheral joints and/or the axial skeleton and often shows distinctive patterns such as **DIP involvement**, dactylitis, and nail disease.",
+      "keySymptoms": [
+        "**Inflammatory joint pain** - Pain with swelling and stiffness, often worse after rest and improves with movement.",
+        "**Morning stiffness** - Stiffness on waking, typically prolonged, reflecting active synovial inflammation.",
+        "**DIP joint involvement** - Distal interphalangeal arthritis is common, especially with nail psoriasis.",
+        "**Dactylitis** - Diffuse swelling of an entire finger or toe (“sausage digit”) from tenosynovitis.",
+        "**Enthesitis** - Pain at tendon/ligament insertions, commonly heel pain at Achilles or plantar fascia.",
+        "**Nail changes** - Pitting, onycholysis, or hyperkeratosis supporting psoriasis-associated joint disease.",
+        "**Asymmetric oligoarthritis** - Frequently affects a few joints in an asymmetric distribution early on."
+      ],
+      "clinicalReasoning": "This patient has a classic **rheumatoid arthritis** phenotype: symmetric involvement of **MCP**, **PIP**, and **wrist** joints with **morning stiffness >1 hour** and constitutional symptoms. The described early “spindling” (PIP swelling with **DIP sparing**) is typical for RA rather than psoriatic arthritis. The expected RA work-up findings (elevated **ESR/CRP**, anemia of chronic disease, possible thrombocytosis, and possible **RF/ACPA** positivity) further support RA over psoriatic arthritis.",
+      "whyIncorrectForCase": "Psoriatic arthritis commonly involves the **DIP joints**, shows **dactylitis/enthesitis**, and is linked to **psoriasis/nail disease**, none of which are described here. The patient instead has symmetric **MCP/PIP/wrist** synovitis with **DIP sparing**, which strongly favors RA.",
+      "keyDifferencesFromCorrect": [
+        "**Joint distribution** - Psoriatic arthritis often asymmetric and includes **DIP**; RA is symmetric with **MCP/PIP/wrist** predominance and DIP sparing.",
+        "**Skin/nail disease** - Psoriatic arthritis is associated with **psoriasis** and **nail pitting/onycholysis**; RA is not.",
+        "**Dactylitis/enthesitis** - Common in psoriatic arthritis; uncommon and not defining features of RA.",
+        "**Serology** - Psoriatic arthritis is usually **RF/ACPA negative**; RA often has **RF and/or ACPA** positivity (ACPA more specific).",
+        "**Imaging** - Psoriatic arthritis may show **periostitis**, “**pencil-in-cup**,” and new bone formation; RA shows **juxta-articular osteopenia**, **marginal erosions**, and uniform joint space loss.",
+        "**Axial involvement** - Psoriatic arthritis may involve spine/SI joints; classic RA primarily targets peripheral synovial joints (cervical involvement can occur later)."
+      ],
+      "missingFindings": [
+        "**Psoriasis plaques** - No personal history or exam evidence of psoriasis to support psoriatic arthritis.",
+        "**Nail pitting/onycholysis** - Absent nail findings reduce likelihood of DIP-predominant psoriatic arthritis.",
+        "**DIP arthritis** - Case explicitly notes **DIP sparing**, arguing against psoriatic arthritis.",
+        "**Dactylitis** - No “sausage digit” swelling described; instead spindling of PIP joints suggests RA.",
+        "**Enthesitis** - No heel/Achilles/plantar fascia insertion pain reported, which is typical for psoriatic arthritis.",
+        "**Typical psoriatic imaging** - No mention of new bone formation, periostitis, or pencil-in-cup deformities."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Gout",
+      "description": "**Gout** is an inflammatory arthritis caused by deposition of **monosodium urate crystals** in joints due to hyperuricemia. It typically presents as abrupt, intensely painful, often monoarticular flares with marked erythema and swelling, and may progress to tophaceous disease if untreated.",
+      "keySymptoms": [
+        "**Sudden severe joint pain** - Rapid onset (hours) of extreme pain, often waking patients from sleep.",
+        "**Monoarticular flare** - Usually affects one joint at a time, especially early in disease course.",
+        "**Podagra** - First metatarsophalangeal joint involvement is classic and highly suggestive.",
+        "**Erythema and warmth** - Overlying skin often appears red and hot, mimicking cellulitis.",
+        "**Intercritical periods** - Symptom-free intervals between attacks are typical in early gout.",
+        "**Tophi** - Firm subcutaneous nodules from urate deposition in chronic, long-standing disease."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by **chronic symmetric small-joint synovitis** of the **MCP/PIP joints and wrists** with **morning stiffness >1 hour**, which is characteristic of **rheumatoid arthritis** rather than gout. **Gout** more often causes **episodic**, **abrupt**, and frequently **monoarticular** attacks (classically **podagra**) rather than persistent symmetric polyarthritis of the hands. The described **spindling of PIP joints with DIP sparing** aligns with RA distribution and pattern. Additionally, the provided work-up features (raised **ESR/CRP**, **anemia of chronic disease**, possible **RF/ACPA positivity**, and RA-type radiographic changes) support RA over gout.",
+      "whyIncorrectForCase": "Her symptoms are **subacute/chronic** with **prolonged morning stiffness** and **symmetric MCP/PIP and wrist involvement**, which is not the typical pattern of **gout**. There is no history of **sudden episodic flares**, **podagra**, or **urate crystal** evidence to support gout in this case.",
+      "keyDifferencesFromCorrect": [
+        "**Onset pattern** - Gout is typically **abrupt episodic flares**; **RA** is **insidious/chronic** with persistent inflammatory symptoms.",
+        "**Joint distribution** - Gout often targets **1st MTP**, knees, ankles; **RA** favors **MCP/PIP and wrists** with **DIP sparing**.",
+        "**Morning stiffness** - Gout stiffness is not classically **>1 hour daily**; **RA** commonly has prolonged morning stiffness.",
+        "**Synovial fluid** - Gout shows **needle-shaped, negatively birefringent urate crystals**; **RA** shows inflammatory fluid **without crystals**.",
+        "**Imaging** - Gout classically causes **punched-out erosions with overhanging edges**; **RA** shows **juxta-articular osteopenia**, **uniform joint-space narrowing**, and **marginal erosions**.",
+        "**Serology** - Gout relates to **hyperuricemia** (not diagnostic alone); **RA** often has **RF** and/or **ACPA** positivity."
+      ],
+      "missingFindings": [
+        "**Monosodium urate crystals** - Absence of crystals on aspiration argues strongly against gout as the cause.",
+        "**Podagra** - No first MTP involvement reduces likelihood of classic gout presentation.",
+        "**Abrupt flare history** - Lack of sudden, self-limited attacks with intercritical periods is atypical for gout.",
+        "**Tophi** - No subcutaneous tophi described, which would support chronic gout if present.",
+        "**Hyperuricemia context** - No elevated serum urate or risk-factor context provided; urate elevation would be supportive (not definitive)."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Fibromyalgia syndrome (FMS)",
+      "description": "**Fibromyalgia syndrome (FMS)** is a chronic pain disorder characterized by widespread musculoskeletal pain with fatigue, sleep disturbance, and cognitive symptoms. It is a **central sensitization** condition (pain-processing dysfunction) and is **non-inflammatory**, so objective synovitis, erosions, and inflammatory synovial fluid are not expected.",
+      "keySymptoms": [
+        "**Widespread pain** - Diffuse pain on both sides of body, above and below waist, for ≥3 months.",
+        "**Fatigue** - Persistent tiredness disproportionate to activity; often worsened by poor sleep quality.",
+        "**Non-restorative sleep** - Sleep feels unrefreshing despite adequate duration; commonly associated with insomnia.",
+        "**Cognitive symptoms (\"fibro fog\")** - Subjective memory and concentration difficulties that fluctuate with stress and sleep.",
+        "**Normal joint exam** - Pain/tenderness without objective **synovitis**, warmth, or true joint swelling."
+      ],
+      "clinicalReasoning": "FMS can present with chronic pain and fatigue, and patients may report morning discomfort or stiffness. However, FMS is defined by **widespread soft-tissue pain** and heightened tenderness rather than inflammatory arthritis. Objective inflammatory markers (elevated **ESR/CRP**) and true symmetric small-joint synovitis are not typical for FMS. Therefore, while fatigue overlaps, the pattern and objective findings in this case point away from FMS.",
+      "whyIncorrectForCase": "This patient has **symmetric swollen, warm, tender MCP/PIP joints and wrists** with **morning stiffness >1 hour**, which indicates inflammatory synovitis rather than centralized pain. The described RA-consistent work-up (raised **ESR/CRP**, possible **RF/ACPA** positivity, and erosive/osteopenic radiographic changes) is not explained by FMS.",
+      "keyDifferencesFromCorrect": [
+        "**Pain distribution** - FMS causes widespread pain; **RA** targets **small joints** (MCP/PIP, wrists) in a symmetric pattern.",
+        "**Inflammation** - FMS is **non-inflammatory** with normal ESR/CRP; **RA** shows elevated **acute-phase reactants** and synovitis.",
+        "**Morning stiffness** - FMS stiffness is usually shorter/variable; **RA** classically has **>60 minutes** morning stiffness.",
+        "**Joint exam** - FMS has tenderness without true swelling/warmth; **RA** has objective **swelling, warmth, and tenderness** of joints.",
+        "**Imaging** - FMS has no erosions; **RA** can show **juxta-articular osteopenia**, **marginal erosions**, and **joint space narrowing**.",
+        "**Synovial fluid** - FMS has no inflammatory effusion; **RA** may have inflammatory fluid (WBC 5,000–50,000/µL, neutrophil-predominant)."
+      ],
+      "missingFindings": [
+        "**Widespread pain criteria** - Lack of diffuse pain above/below waist makes FMS criteria less likely here.",
+        "**Normal inflammatory markers** - FMS typically has normal **ESR/CRP**; elevation supports inflammatory arthritis instead.",
+        "**Absence of synovitis** - FMS requires no objective joint inflammation; this patient has clear **synovial swelling/warmth**.",
+        "**Predominant sleep/cognitive syndrome** - Classic FMS features (non-restorative sleep, prominent \"fibro fog\") are not primary here."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Ankylosing spondylitis",
+      "description": "Ankylosing spondylitis is a chronic **seronegative spondyloarthritis** characterized by inflammatory back pain from **sacroiliitis** and progressive spinal stiffness that can lead to **ankylosis**. It commonly affects younger patients and is strongly associated with **HLA-B27**, with possible extra-articular features such as **uveitis** and **enthesitis**.",
+      "keySymptoms": [
+        "**Inflammatory back pain** - Insidious low back pain improving with exercise, worse at night, not rest-related.",
+        "**Morning spinal stiffness** - Prolonged stiffness in back/hips, typically improves as the day progresses.",
+        "**Sacroiliac/buttock pain** - Alternating buttock pain from **sacroiliitis**, often a key early symptom.",
+        "**Enthesitis** - Pain at tendon/ligament insertions (e.g., heel/Achilles), common in spondyloarthritis.",
+        "**Reduced chest expansion** - Costovertebral involvement limits chest expansion and thoracic mobility over time.",
+        "**Acute anterior uveitis** - Painful red eye with photophobia; classic extra-articular manifestation."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by symmetric inflammatory arthritis of the **MCP** and **PIP** joints and **wrists**, with **DIP sparing** and morning stiffness >1 hour—an archetypal pattern for **rheumatoid arthritis (RA)**. Ankylosing spondylitis typically presents with **axial** symptoms (inflammatory low back pain and sacroiliitis) rather than primary small-joint hand synovitis. The described systemic inflammation (raised **ESR/CRP**) is nonspecific and can occur in both conditions, but the joint distribution and functional limitations (brushing teeth/combing hair due to hand stiffness) strongly localize disease to the hands/wrists. The case also aligns with RA work-up expectations (possible **RF/ACPA positivity**, anemia of chronic disease, and erosive symmetric hand changes), which are not characteristic hallmarks of ankylosing spondylitis.",
+      "whyIncorrectForCase": "Ankylosing spondylitis primarily causes **axial** disease (sacroiliac joints/spine) rather than symmetric **small-joint** synovitis of the hands and wrists. This patient has classic RA features (symmetric **MCP/PIP** involvement with **DIP sparing** and prolonged morning stiffness) and no described inflammatory back pain or sacroiliac symptoms.",
+      "keyDifferencesFromCorrect": [
+        "**Primary joint distribution** - Ankylosing spondylitis targets **spine/sacroiliac joints**; **RA** targets **MCP/PIP/wrists** symmetrically.",
+        "**Pattern of arthritis** - Ankylosing spondylitis is often **asymmetric** peripheral arthritis (if present); **RA** is typically **symmetric**.",
+        "**Serology** - Ankylosing spondylitis is usually **RF/ACPA negative**; **RA** often has **RF and/or ACPA positivity**.",
+        "**Imaging hallmark** - Ankylosing spondylitis shows **sacroiliitis** and syndesmophytes; **RA** shows **juxta-articular osteopenia**, **marginal erosions**, and uniform joint space narrowing in hands/wrists.",
+        "**Key extra-articular features** - Ankylosing spondylitis: **uveitis/enthesitis**; **RA**: **rheumatoid nodules**, interstitial lung disease, vasculitis (especially with high **RF** titers).",
+        "**Demographics** - Ankylosing spondylitis more common in younger males; **RA** more common in females (about 3:1)."
+      ],
+      "missingFindings": [
+        "**Inflammatory low back pain** - Absence of axial pain improving with exercise makes ankylosing spondylitis unlikely.",
+        "**Sacroiliac tenderness or buttock pain** - No alternating buttock pain/sacroiliitis symptoms described, a key diagnostic clue.",
+        "**Reduced spinal mobility** - No decreased lumbar flexion or limited chest expansion reported, expected in established disease.",
+        "**Enthesitis** - No heel/Achilles or other insertional tendon pain reported, common in spondyloarthritis.",
+        "**Sacroiliac imaging changes** - No radiographic or MRI evidence of **sacroiliitis**, central to ankylosing spondylitis diagnosis."
+      ]
+    }
+  ]
+}

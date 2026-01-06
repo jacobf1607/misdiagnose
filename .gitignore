@@ -1,0 +1,75 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+*.js.map
+
+# Environment files (IMPORTANT: Never commit API keys!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+server/.env
+rag_textbook/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+*.egg-info/
+.eggs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Large files - textbook source (keep processed data)
+textbooks/*.pdf
+textbooks/*.txt
+
+# User data - exclude sensitive data but keep cases
+server/src/data/users/users.json
+server/src/data/challenges.json
+server/src/data/notifications.json
+server/src/data/feedback.json
+
+# Keep case files (not sensitive, needed for initial deployment)
+# !server/src/data/cases/
+
+# Analytics data
+server/src/data/analytics/

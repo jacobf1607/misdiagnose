@@ -1,0 +1,504 @@
+{
+  "persona": {
+    "name": "Kiran Rao",
+    "age": 38,
+    "gender": "Male",
+    "occupation": "Daily Wage Labourer",
+    "background": "He does physically demanding outdoor work and often lives in crowded conditions with limited access to regular healthcare.",
+    "lifestyle": {
+      "activityLevel": "high",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "stoic",
+      "anxious",
+      "hardworking"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Pneumocystis jirovecii pneumonia (PJP/PCP)",
+      "description": "In HIV infection (typically CD4 <200): subacute fever, dyspnea, nonproductive cough, hypoxemia with increased (A–a) gradient, elevated LDH; CXR may be normal or show bilateral perihilar diffuse symmetric interstitial pattern; CT shows patchy ground-glass opacities."
+    },
+    {
+      "id": "d2",
+      "name": "Pulmonary tuberculosis",
+      "description": "An HIV-associated pulmonary infection that can occur at any CD4 count and is included among AIDS-defining conditions."
+    },
+    {
+      "id": "d3",
+      "name": "Bacterial pneumonia (community-acquired) due to Streptococcus pneumoniae/Haemophilus influenzae",
+      "description": "Rapid onset fever, dyspnea, cough and sputum production with leukocytosis/neutrophilia; radiology may show lobar or diffuse infiltrates."
+    },
+    {
+      "id": "d4",
+      "name": "COVID-19 pneumonia",
+      "description": "Common presentation includes fever, cough, dyspnea and bilateral lung infiltrates; imaging often shows bilateral peripheral/lower-zone ground-glass opacities with/without consolidation; hypoxia may occur."
+    },
+    {
+      "id": "d5",
+      "name": "Legionella pneumonia (Legionnaires’ disease)",
+      "description": "Atypical pneumonia that can present with headache, abdominal pain, diarrhea and vomiting; relative bradycardia is a characteristic feature; hyponatremia may occur and is a marker of severity."
+    },
+    {
+      "id": "d6",
+      "name": "Typhoid fever",
+      "description": "Can present with relative bradycardia and abdominal symptoms (constipation progressing to diarrhea, abdominal distension, right iliac fossa tenderness); may have rose spots and leukopenia with relative lymphocytosis."
+    },
+    {
+      "id": "d7",
+      "name": "Leptospirosis (including Weil’s syndrome)",
+      "description": "Can show raised AST/ALT (up to five times normal), conjugated hyperbilirubinemia and raised alkaline phosphatase; chest radiograph may reveal patchy bronchopneumonia and a small pleural effusion; ECG may show bradycardia."
+    },
+    {
+      "id": "d8",
+      "name": "Brucellosis",
+      "description": "A cause of relapsing/recurrent fever and associated with specific exposure risks (farmers/veterinarians/slaughter-house workers, unpasteurized milk/cheese)."
+    },
+    {
+      "id": "d9",
+      "name": "Miliary tuberculosis",
+      "description": "Associated with cough and dyspnea as a pattern in fever evaluation; also listed among opportunistic infections with declining CD4 count."
+    },
+    {
+      "id": "d10",
+      "name": "Cytomegalovirus (CMV) pneumonitis",
+      "description": "In AIDS patients, cough and dyspnea can be seen with CMV; CMV disease is an AIDS-defining condition (outside liver, spleen, and nodes) and is associated with advanced immunosuppression."
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "I have fever and breathlessness with cough, and I’ve also had loose stools and stomach pain.",
+  "medicalHistory": "No documented chronic illnesses. No prior known HIV diagnosis. No regular medications reported.",
+  "symptoms": "Fever with cough and dyspnea. Associated abdominal pain with diarrhea and vomiting. He also notices that his pulse feels slower than expected during fever (relative bradycardia). He reports headache as an associated symptom.\n\nFrom textbook: and shower heads.\n\nClinical Features\nz Fever, chills, and cough with scanty mucoid sputum. Gastrointestinal symptoms like nausea, abdominal pain, and diarrhea\n\nare common. Mental confusion or delirium may also develop.\nz Uncommon features: Myocarditis, pericarditis and prosthetic valve endocarditis, glomerulonephritis, pancreatitis, and\n\nperitonitis.\n\nInvestigations\nz Chest X-ray: Shows parenchymal lesions progressing from patchy to lobar consolidation. Pleural effusion may be observed\n\nin more ",
+  "relevantFindings": "Vitals show fever with relative bradycardia. Basic labs reveal hyponatremia. Chest imaging shows lobar then multilobar shadowing with an occasional small pleural effusion; cavitation is rare. Oxygen saturation is low (hypoxia).\n\nFrom textbook: and shower heads.\n\nClinical Features\nz Fever, chills, and cough with scanty mucoid sputum. Gastrointestinal symptoms like nausea, abdominal pain, and diarrhea\n\nare common. Mental confusion or delirium may also develop.\nz Uncommon features: Myocarditis, pericarditis and prosthetic valve endocarditis, glomerulonephritis, pancreatitis, and\n\nperitonitis.\n\nInvestigations\nz Chest X-ray: Shows parenchymal lesions progressing from patchy to lobar consolidation. Pleural effusion may be observed\n\nin more ",
+  "redHerrings": "Nonproductive cough and dyspnea (can suggest Pneumocystis jirovecii pneumonia). Bilateral infiltrates and hypoxia (can suggest COVID-19 pneumonia). Abdominal pain and diarrhea with relative bradycardia (can suggest typhoid fever).",
+  "id": "case_1767640677096",
+  "domain": "infectious diseases",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Pneumocystis jirovecii pneumonia (PJP/PCP)",
+      "description": "**Pneumocystis jirovecii pneumonia (PJP/PCP)** is an opportunistic fungal pneumonia classically occurring in patients with significant **cell-mediated immunosuppression** (e.g., advanced HIV, transplant, high-dose steroids). It typically causes subacute, progressive **dyspnea**, **nonproductive cough**, and **hypoxemia** with diffuse interstitial lung involvement rather than lobar consolidation.",
+      "keySymptoms": [
+        "**Progressive dyspnea** - Gradually worsening shortness of breath over days to weeks, often disproportionate to exam.",
+        "**Nonproductive cough** - Dry cough with minimal sputum; purulent or mucoid sputum is less typical.",
+        "**Fever** - Low-grade to moderate fever may occur, but systemic toxemia is usually less prominent.",
+        "**Hypoxemia** - Marked oxygen desaturation, often worse with exertion; increased A–a gradient is common.",
+        "**Pleuritic chest pain (uncommon)** - Usually absent; pleurisy suggests alternative bacterial pneumonias or embolism."
+      ],
+      "clinicalReasoning": "While this patient has **dyspnea** and **hypoxia**, the overall syndrome strongly suggests an atypical bacterial pneumonia with systemic features. The presence of prominent **gastrointestinal symptoms** (diarrhea, abdominal pain, vomiting), **hyponatremia**, and **relative bradycardia** aligns far more with **Legionella pneumonia** than PJP. Additionally, imaging described as **lobar then multilobar shadowing** with occasional small **pleural effusion** is more consistent with Legionella than the diffuse interstitial pattern expected in PJP.",
+      "whyIncorrectForCase": "PJP typically occurs in patients with major **immunosuppression**, which is not indicated in this case. The combination of **relative bradycardia**, **hyponatremia**, and prominent **diarrhea** is classic for **Legionnaires’ disease** and is not characteristic of PJP.",
+      "keyDifferencesFromCorrect": [
+        "**Host risk factors** - PJP is linked to **HIV/AIDS, transplant, steroids**; Legionella often follows contaminated water exposure.",
+        "**Imaging pattern** - PJP usually shows **diffuse bilateral interstitial/ground-glass** changes; Legionella often causes **lobar consolidation** that can become multilobar.",
+        "**Gastrointestinal symptoms** - PJP rarely causes prominent **diarrhea/abdominal pain**; Legionella commonly does.",
+        "**Electrolytes** - **Hyponatremia** is strongly associated with Legionella; it is not a classic hallmark of PJP.",
+        "**Pulse-temperature dissociation** - **Relative bradycardia** supports Legionella; it is not typical for PJP."
+      ],
+      "missingFindings": [
+        "**Immunocompromised state** - Absence of HIV risk/low CD4, transplant, or steroid use makes PJP unlikely.",
+        "**Diffuse bilateral ground-glass opacities** - Lack of typical interstitial/ground-glass imaging argues against PJP.",
+        "**Elevated LDH (supportive)** - Not reported; elevated LDH commonly supports PJP but is nonspecific.",
+        "**Oral thrush/other opportunistic infections** - No concurrent opportunistic signs are provided to support PJP."
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Pulmonary tuberculosis",
+      "description": "Pulmonary tuberculosis is a chronic airborne infection caused by **Mycobacterium tuberculosis** that typically produces a slowly progressive pulmonary illness. It classically presents with constitutional symptoms and chronic respiratory complaints, and may show upper-lobe–predominant disease with cavitation on imaging.",
+      "keySymptoms": [
+        "**Chronic cough** - Usually persistent for weeks, often productive, and may gradually worsen over time.",
+        "**Hemoptysis** - Blood-streaked sputum can occur due to cavitary lung destruction and airway inflammation.",
+        "**Night sweats** - Drenching nocturnal sweating reflects chronic inflammatory cytokine release in active TB.",
+        "**Weight loss** - Unintentional weight loss and anorexia are common constitutional features of chronic TB.",
+        "**Low-grade fever** - Typically prolonged, sometimes intermittent, rather than abrupt high fever with systemic toxicity.",
+        "**Pleuritic chest pain** - Can occur with pleural involvement, often alongside a unilateral pleural effusion."
+      ],
+      "clinicalReasoning": "This patient has an acute febrile respiratory illness with **hypoxia**, lobar-to-multilobar consolidation, and an occasional small **pleural effusion**, which can superficially resemble infectious pneumonia patterns. However, the prominent **gastrointestinal symptoms** (diarrhea, vomiting, abdominal pain), **hyponatremia**, and **relative bradycardia** are characteristic of **Legionella pneumonia** rather than TB. TB more often presents subacutely/chronic with constitutional symptoms and typical radiographic patterns (upper-lobe disease, cavitation). The combination of acute severe pneumonia plus systemic GI features strongly argues against pulmonary TB as the primary diagnosis here.",
+      "whyIncorrectForCase": "The presentation is acute with severe pneumonia, **hyponatremia**, and **relative bradycardia**, which is not typical for pulmonary TB. Imaging described as lobar then multilobar shadowing with rare cavitation fits **Legionella** more than the classic apical/cavitary pattern of TB.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - TB is usually subacute/chronic; **Legionella** often causes abrupt, acute severe pneumonia.",
+        "**Gastrointestinal symptoms** - Prominent diarrhea/vomiting favors **Legionella**; TB less commonly causes acute GI symptoms.",
+        "**Relative bradycardia** - Suggests **Legionella** (pulse-temperature dissociation); not a typical TB feature.",
+        "**Hyponatremia** - Common in **Legionella** (often SIADH); not a classic hallmark of pulmonary TB.",
+        "**Imaging pattern** - TB often upper-lobe predominance and cavitation; **Legionella** shows patchy-to-lobar consolidation, may become multilobar, cavitation is rare.",
+        "**Hypoxia severity** - **Legionella** can cause marked hypoxemic pneumonia; TB hypoxia is usually later or with extensive disease."
+      ],
+      "missingFindings": [
+        "**Chronic duration (weeks to months)** - Absence of prolonged symptoms makes active pulmonary TB less likely.",
+        "**Night sweats and weight loss** - Lack of classic constitutional TB symptoms reduces probability of TB.",
+        "**Hemoptysis** - Not reported; its absence weakens the typical pulmonary TB picture.",
+        "**Upper-lobe cavitation** - Cavitation is described as rare here; TB commonly cavitates, especially in reactivation.",
+        "**TB exposure risk or immunosuppression** - No exposure history or risk factors provided to support TB diagnosis."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Bacterial pneumonia (community-acquired) due to Streptococcus pneumoniae/Haemophilus influenzae",
+      "description": "Community-acquired bacterial pneumonia due to **Streptococcus pneumoniae** or **Haemophilus influenzae** typically presents with acute fever, productive cough, pleuritic chest pain, and focal lung consolidation. It is primarily a respiratory illness and usually lacks prominent systemic features like marked gastrointestinal symptoms or characteristic electrolyte abnormalities.",
+      "keySymptoms": [
+        "**Fever** - Common inflammatory response in bacterial pneumonia, often with tachycardia proportional to temperature.",
+        "**Cough with sputum** - Usually productive with purulent sputum, especially in typical pneumococcal or H. influenzae infection.",
+        "**Pleuritic chest pain** - Sharp pain worsened by inspiration, reflecting pleural irritation near consolidated lung.",
+        "**Dyspnea** - Shortness of breath from impaired gas exchange due to alveolar consolidation and ventilation-perfusion mismatch.",
+        "**Crackles/bronchial breath sounds** - Focal auscultatory signs over consolidated lobes in typical bacterial pneumonia."
+      ],
+      "clinicalReasoning": "The target diagnosis could be considered because the patient has **fever**, **cough**, **dyspnea**, and imaging showing **lobar to multilobar consolidation** with possible **pleural effusion**, which can occur in typical CAP. Hypoxia also supports a significant pneumonic process. However, the overall syndrome is more systemic than expected for routine pneumococcal/H. influenzae pneumonia. The combination of **relative bradycardia**, prominent **gastrointestinal symptoms**, and **hyponatremia** is more characteristic of **Legionella pneumonia** than typical CAP pathogens.",
+      "whyIncorrectForCase": "This patient’s prominent **diarrhea/abdominal pain/vomiting** plus **hyponatremia** and **relative bradycardia** strongly point away from typical **S. pneumoniae/H. influenzae** CAP. These findings align much better with **Legionnaires’ disease**, which often presents with multisystem involvement.",
+      "keyDifferencesFromCorrect": [
+        "**Relative bradycardia** - Uncommon in typical pneumococcal/H. influenzae CAP; classically seen with **Legionella**.",
+        "**Hyponatremia** - Not a typical hallmark of pneumococcal/H. influenzae pneumonia; frequently associated with **Legionella** (often via SIADH-like physiology).",
+        "**Gastrointestinal symptoms** - Diarrhea and abdominal pain are usually mild/absent in typical CAP; common and prominent in **Legionella**.",
+        "**Sputum character** - Typical CAP often has **purulent** sputum; **Legionella** often has scanty **mucoid** sputum or relatively nonproductive cough.",
+        "**Systemic symptoms (headache/confusion)** - Less prominent in routine CAP; **Legionella** more often causes **headache** and can cause **delirium/confusion**."
+      ],
+      "missingFindings": [
+        "**Purulent sputum** - Typical CAP often produces purulent sputum; its absence makes pneumococcal/H. influenzae less likely.",
+        "**Tachycardia proportional to fever** - Typical bacterial infections usually show expected tachycardia; **relative bradycardia** argues against this diagnosis.",
+        "**Predominantly respiratory-only syndrome** - Typical CAP usually lacks marked GI involvement; prominent diarrhea/vomiting suggests an alternative etiology."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "COVID-19 pneumonia",
+      "description": "COVID-19 pneumonia is a viral lower respiratory tract infection caused by **SARS-CoV-2**, producing inflammatory lung injury and hypoxemia. It commonly presents with fever, cough, dyspnea, and systemic symptoms, with imaging often showing bilateral interstitial/ground-glass changes.",
+      "keySymptoms": [
+        "**Fever** - Common early symptom from systemic inflammation; usually accompanied by tachycardia proportional to temperature.",
+        "**Cough** - Typically dry or minimally productive; reflects viral airway irritation rather than purulent bacterial sputum.",
+        "**Dyspnea** - Worsening shortness of breath due to viral pneumonitis and impaired gas exchange.",
+        "**Hypoxia** - Low oxygen saturation from diffuse alveolar-capillary injury; may appear disproportionate to symptoms.",
+        "**Headache** - Frequent systemic symptom in viral infections; can accompany fever and myalgias."
+      ],
+      "clinicalReasoning": "This patient has fever, cough, dyspnea, and hypoxia, which can occur in COVID-19 pneumonia. However, the combination of prominent gastrointestinal symptoms (abdominal pain, diarrhea, vomiting), **hyponatremia**, and **relative bradycardia** is more characteristic of **Legionella pneumonia** than COVID-19. The described radiographic pattern of progression toward **lobar** then **multilobar consolidation** with occasional small pleural effusion also aligns better with Legionella than the typical COVID-19 pattern. Overall, while COVID-19 is a consideration in any febrile hypoxic pneumonia, the syndrome here is a classic Legionella phenotype.",
+      "whyIncorrectForCase": "The presence of **relative bradycardia** with fever and **hyponatremia** strongly points away from COVID-19 and toward **Legionella pneumonia**. Additionally, the imaging description emphasizing **lobar consolidation** (with occasional small pleural effusion) is less typical for COVID-19, which more often shows bilateral ground-glass/interstitial opacities.",
+      "keyDifferencesFromCorrect": [
+        "**Relative bradycardia** - Seen classically in **Legionella**; COVID-19 more often has fever-associated tachycardia.",
+        "**Hyponatremia** - Common in **Legionella** due to SIADH-like physiology; less characteristic in uncomplicated COVID-19.",
+        "**Gastrointestinal symptoms prominence** - **Legionella** frequently causes diarrhea/abdominal pain; COVID-19 GI symptoms occur but are usually less defining.",
+        "**Radiology pattern** - **Legionella** can progress to **lobar** then **multilobar consolidation** with small effusions; COVID-19 typically shows bilateral peripheral **ground-glass** opacities.",
+        "**Sputum character** - **Legionella** often has scanty mucoid sputum; COVID-19 commonly has dry cough without bacterial consolidation features."
+      ],
+      "missingFindings": [
+        "**Typical COVID-19 CT pattern (bilateral peripheral ground-glass opacities)** - Not described; instead lobar/multilobar consolidation is emphasized.",
+        "**Upper respiratory symptoms (anosmia/ageusia, sore throat, rhinorrhea)** - Not reported; their absence reduces support for COVID-19 in this presentation.",
+        "**Epidemiologic/confirmatory evidence (positive SARS-CoV-2 test or exposure)** - Not provided; without it, the Legionella-specific constellation is more compelling."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Legionella pneumonia (Legionnaires’ disease)",
+      "description": "Legionnaires’ disease is an atypical pneumonia caused by **Legionella pneumophila**, typically acquired by inhaling aerosolized contaminated water (e.g., cooling towers, showers). It commonly presents with fever, respiratory symptoms, prominent gastrointestinal complaints, and characteristic lab abnormalities such as **hyponatremia**.",
+      "keySymptoms": [
+        "**Fever** - High fever with systemic toxicity is typical and often disproportionate to chest findings early.",
+        "**Cough with scanty mucoid sputum** - Suggests an atypical pneumonia pattern rather than classic purulent bacterial pneumonia.",
+        "**Dyspnea / hypoxia** - Indicates significant lower respiratory tract involvement and supports pneumonia with impaired gas exchange.",
+        "**Relative bradycardia** - Pulse-temperature dissociation is a classic clue for **Legionella** and some other atypical infections.",
+        "**Diarrhea** - Prominent gastrointestinal symptoms are common in **Legionella** and help distinguish it from typical CAP.",
+        "**Abdominal pain** - Supports systemic/extra-pulmonary involvement frequently seen in **Legionella** infection.",
+        "**Vomiting** - Reinforces the GI-predominant systemic presentation often accompanying **Legionella** pneumonia.",
+        "**Headache** - Common constitutional/neurologic symptom in **Legionella**, reflecting systemic inflammatory involvement."
+      ],
+      "clinicalReasoning": "This presentation fits **Legionella pneumonia** because it combines an atypical pneumonia syndrome (fever, cough, dyspnea with hypoxia) with prominent gastrointestinal symptoms (diarrhea, abdominal pain, vomiting). The presence of **relative bradycardia** during fever is a well-known clinical clue that strongly supports **Legionella** among causes of community-acquired pneumonia. Laboratory **hyponatremia** further points toward **Legionella**. Imaging showing progression from patchy to lobar/multilobar consolidation with occasional small pleural effusion and rare cavitation is consistent with reported radiographic patterns in Legionnaires’ disease."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Typhoid fever",
+      "description": "**Typhoid fever** is a systemic infection caused by **Salmonella enterica serovar Typhi**, typically acquired via contaminated food or water. It classically presents with prolonged fever and gastrointestinal symptoms, and may cause complications such as intestinal hemorrhage or perforation.",
+      "keySymptoms": [
+        "**Stepwise fever** - Gradually rising fever over days, often sustained without prominent early respiratory symptoms.",
+        "**Abdominal pain** - Diffuse discomfort from intestinal inflammation, sometimes with tenderness and bloating.",
+        "**Diarrhea or constipation** - Variable bowel habit; diarrhea more common in some adults, constipation in others.",
+        "**Headache** - Common systemic symptom due to cytokine-mediated illness and dehydration.",
+        "**Relative bradycardia** - Pulse-temperature dissociation can occur, but is not specific to typhoid."
+      ],
+      "clinicalReasoning": "Typhoid fever can explain fever with **abdominal pain**, **diarrhea**, vomiting, and **headache**, and may show **relative bradycardia**. However, the dominant presentation here includes **cough**, **dyspnea**, **hypoxia**, and imaging showing **lobar to multilobar consolidation** with occasional **pleural effusion**, which strongly indicates a primary pneumonia process. Additionally, **hyponatremia** and prominent gastrointestinal symptoms alongside pneumonia are classic for **Legionella pneumonia** rather than enteric fever.",
+      "whyIncorrectForCase": "This patient has clear evidence of **lower respiratory tract infection** with **hypoxia** and radiographic **lobar/multilobar consolidation**, which is not typical for uncomplicated typhoid fever. The combination of pneumonia pattern imaging plus **hyponatremia** and GI symptoms fits **Legionnaires’ disease** far better than typhoid.",
+      "keyDifferencesFromCorrect": [
+        "**Primary site of infection** - Typhoid is primarily **enteric/systemic bacteremia**; Legionella is a **pneumonia** with systemic features.",
+        "**Chest imaging** - Typhoid usually lacks **lobar consolidation**; Legionella commonly shows **patchy progressing to lobar/multilobar consolidation** ± small **pleural effusion**.",
+        "**Hyponatremia** - Not a hallmark of typhoid; **hyponatremia** is a classic supportive clue for **Legionella**.",
+        "**Respiratory severity** - Typhoid rarely causes significant **hypoxia**; Legionella often causes **dyspnea** and **low oxygen saturation**.",
+        "**Sputum/cough pattern** - Typhoid does not typically cause prominent cough; Legionella often has **cough with scanty mucoid sputum**."
+      ],
+      "missingFindings": [
+        "**Rose spots** - Typical typhoid rash on trunk; absence reduces support for typhoid in this presentation.",
+        "**Hepatosplenomegaly** - Common supportive exam finding in typhoid; not reported here.",
+        "**Leukopenia** - Often seen in typhoid; case instead highlights **hyponatremia** and pneumonia findings.",
+        "**Positive blood culture for Salmonella Typhi** - Key confirmatory test; no evidence provided.",
+        "**Predominant enteric course without pneumonia** - Typhoid usually lacks marked **hypoxia** and lobar consolidation seen here."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Leptospirosis (including Weil’s syndrome)",
+      "description": "Leptospirosis is a zoonotic infection caused by **Leptospira** spirochetes, often acquired from water contaminated with animal urine. Severe disease (Weil’s syndrome) features **jaundice**, **acute kidney injury**, and **hemorrhage**, and may include aseptic meningitis.",
+      "keySymptoms": [
+        "**Fever** - Acute febrile illness often abrupt, commonly with rigors and systemic toxicity.",
+        "**Severe myalgia (calf/lumbar)** - Prominent muscle pain, classically in calves and lower back.",
+        "**Headache** - Common and may be intense; can accompany meningeal irritation.",
+        "**Conjunctival suffusion** - Red, non-purulent conjunctiva; a characteristic early clinical clue.",
+        "**Jaundice** - Suggests Weil’s syndrome with hepatic dysfunction and cholestasis.",
+        "**Oliguria/AKI** - Renal involvement causing reduced urine output and rising creatinine.",
+        "**Hemorrhagic tendency** - Epistaxis, hemoptysis, or GI bleeding due to capillary injury and thrombocytopenia.",
+        "**Aseptic meningitis** - Neck stiffness/photophobia may occur in immune phase of illness."
+      ],
+      "clinicalReasoning": "This patient has fever with **cough**, **dyspnea/hypoxia**, **hyponatremia**, and chest imaging showing lobar to multilobar consolidation with occasional small **pleural effusion**, plus prominent **gastrointestinal symptoms** and **relative bradycardia**. That pattern is classic for **Legionella pneumonia (Legionnaires’ disease)**, which commonly causes GI symptoms and hyponatremia alongside pneumonia. Leptospirosis can cause fever and GI upset, but it more typically presents with severe myalgia, conjunctival suffusion, and renal/hepatic involvement rather than a primary lobar pneumonia picture. The respiratory findings here are best explained by an atypical pneumonia syndrome rather than a spirochetal systemic vasculitis.",
+      "whyIncorrectForCase": "Leptospirosis usually features **conjunctival suffusion**, marked **myalgia**, and often **jaundice** and/or **acute kidney injury**, none of which are described. The dominant presentation here is **hypoxic lobar/multilobar pneumonia with hyponatremia and relative bradycardia**, which aligns far better with **Legionella** than leptospirosis.",
+      "keyDifferencesFromCorrect": [
+        "**Primary organ involvement** - Leptospirosis is systemic with **hepatorenal** features; Legionella is primarily **pneumonic** with hypoxia.",
+        "**Laboratory pattern** - Leptospirosis often shows **AKI**, **bilirubin elevation**, thrombocytopenia; Legionella commonly shows **hyponatremia** and elevated inflammatory markers.",
+        "**Characteristic signs** - Leptospirosis: **conjunctival suffusion** and severe **calf myalgia**; Legionella: **relative bradycardia** with fever and prominent GI symptoms.",
+        "**Imaging** - Leptospirosis may cause pulmonary hemorrhage/ARDS; Legionella shows progressive **patchy to lobar/multilobar consolidation** with small effusions and rare cavitation.",
+        "**Exposure history** - Leptospirosis linked to freshwater/animal urine exposure; Legionella linked to aerosolized water (e.g., **cooling towers**, **showers**)."
+      ],
+      "missingFindings": [
+        "**Jaundice** - Absence makes **Weil’s syndrome** unlikely and removes a key hallmark of severe leptospirosis.",
+        "**Acute kidney injury/oliguria** - No renal dysfunction reported; leptospirosis commonly involves kidneys.",
+        "**Conjunctival suffusion** - Not described; this is a classic early bedside clue for leptospirosis.",
+        "**Severe calf/lumbar myalgia** - Not reported; prominent myalgia is typical in leptospirosis.",
+        "**Hemorrhagic manifestations** - No bleeding symptoms noted; severe leptospirosis often has hemorrhagic features."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Brucellosis",
+      "description": "Brucellosis is a zoonotic infection caused by **Brucella** species, typically acquired from unpasteurized dairy or animal exposure. It classically produces an undulating fever syndrome with systemic symptoms and can involve multiple organs, but primary lobar pneumonia with hypoxia is not typical.",
+      "keySymptoms": [
+        "**Undulating fever** - Intermittent fevers with sweats and malaise, often waxing and waning over weeks.",
+        "**Night sweats** - Profuse sweating, sometimes with a characteristic musty odor, reflecting systemic bacteremia.",
+        "**Arthralgia/back pain** - Osteoarticular involvement (sacroiliitis, spondylitis) causing prominent musculoskeletal pain.",
+        "**Hepatosplenomegaly** - Reticuloendothelial involvement leading to enlarged liver/spleen and constitutional symptoms.",
+        "**Fatigue** - Persistent asthenia disproportionate to exam findings, commonly prolonged without treatment.",
+        "**Headache** - Nonspecific systemic symptom; may occur with neurobrucellosis but usually with neurologic signs."
+      ],
+      "clinicalReasoning": "This patient has an acute febrile illness with **cough**, **dyspnea**, and **hypoxia**, plus prominent **gastrointestinal symptoms** (diarrhea, vomiting, abdominal pain). The presence of **relative bradycardia**, **hyponatremia**, and chest imaging showing progression to **lobar/multilobar consolidation** with occasional small **pleural effusion** strongly supports **Legionella pneumonia**. Brucellosis more often presents as a subacute systemic illness with musculoskeletal and reticuloendothelial findings rather than a primary severe pneumonia pattern.",
+      "whyIncorrectForCase": "Brucellosis does not typically cause acute **lobar/multilobar consolidation** with **hypoxia** as the dominant presentation. The combination of **relative bradycardia** and **hyponatremia** with GI symptoms is far more characteristic of **Legionnaires’ disease** than brucellosis.",
+      "keyDifferencesFromCorrect": [
+        "**Primary syndrome** - Brucellosis is a systemic zoonosis; **Legionella** is primarily an atypical pneumonia with systemic features.",
+        "**Exposure risk** - Brucellosis links to unpasteurized dairy/livestock; **Legionella** links to aerosolized water (cooling towers, showers).",
+        "**Chest imaging** - Brucellosis rarely causes lobar consolidation; **Legionella** commonly progresses from patchy to lobar/multilobar consolidation.",
+        "**Electrolytes** - Hyponatremia is not a hallmark of brucellosis; **Legionella** frequently causes **hyponatremia** (often via SIADH).",
+        "**Cardiac pulse-temperature dissociation** - Relative bradycardia is not typical in brucellosis; it is a classic clue for **Legionella**.",
+        "**Respiratory severity** - Brucellosis pneumonia is uncommon and usually mild; **Legionella** can cause severe hypoxic respiratory failure."
+      ],
+      "missingFindings": [
+        "**Unpasteurized dairy or livestock exposure** - Lack of a typical zoonotic exposure makes brucellosis less likely.",
+        "**Osteoarticular pain (sacroiliitis/spondylitis)** - Absence of prominent joint/back pain argues against classic brucellosis.",
+        "**Hepatosplenomegaly** - No enlarged liver/spleen reported; common supportive finding in brucellosis is missing.",
+        "**Chronic/undulating course** - Presentation is acute with severe respiratory involvement rather than weeks of waxing-waning fever."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Miliary tuberculosis",
+      "description": "Miliary tuberculosis is a disseminated form of **tuberculosis** caused by hematogenous spread of **Mycobacterium tuberculosis**. It produces systemic illness with constitutional symptoms and characteristic diffuse micronodular (“miliary”) involvement of lungs and other organs.",
+      "keySymptoms": [
+        "**Prolonged fever** - Typically persistent for weeks with night sweats and progressive constitutional decline.",
+        "**Weight loss** - Common chronic feature reflecting systemic catabolism from disseminated **TB** infection.",
+        "**Night sweats** - Frequent in **TB**, often accompanying prolonged fever and malaise.",
+        "**Chronic cough** - Usually subacute to chronic; may be dry or minimally productive over weeks.",
+        "**Dyspnea** - Can occur with extensive miliary lung involvement, often gradually progressive.",
+        "**Hepatosplenomegaly** - Suggests disseminated disease with reticuloendothelial organ involvement.",
+        "**CNS symptoms** - Headache or confusion may occur with **TB meningitis** or CNS dissemination."
+      ],
+      "clinicalReasoning": "Miliary **TB** is considered when there is prolonged systemic illness with constitutional symptoms and diffuse pulmonary involvement. It often presents with subacute progression rather than abrupt onset, and imaging classically shows innumerable tiny bilateral nodules rather than lobar consolidation. Laboratory findings are nonspecific and may include anemia or abnormal liver tests, but the hallmark is evidence of disseminated **TB** on imaging and microbiology. In this case, the pattern of pneumonia with prominent gastrointestinal symptoms and specific lab/imaging clues points away from miliary **TB**.",
+      "whyIncorrectForCase": "This patient has an acute febrile pneumonia with **relative bradycardia**, **hyponatremia**, hypoxia, and lobar-to-multilobar consolidation with small pleural effusion—features that strongly favor **Legionella pneumonia**. Miliary **TB** would more typically show a subacute course with diffuse micronodular (“miliary”) chest imaging rather than lobar consolidation.",
+      "keyDifferencesFromCorrect": [
+        "**Onset and tempo** - Miliary **TB** is usually subacute/chronic; **Legionella** often presents acutely with high fever.",
+        "**Chest imaging pattern** - Miliary **TB** shows diffuse tiny bilateral nodules; **Legionella** shows patchy-to-lobar consolidation that can become multilobar.",
+        "**Gastrointestinal prominence** - Diarrhea and abdominal pain are classic and common in **Legionella**; less typical as dominant features in miliary **TB**.",
+        "**Relative bradycardia** - Characteristic clue for **Legionella**; not a typical hallmark of miliary **TB**.",
+        "**Hyponatremia** - Common in **Legionella** (often via SIADH); not a defining feature of miliary **TB**.",
+        "**Exposure clues** - **Legionella** linked to aerosolized water sources (e.g., cooling towers, shower heads); miliary **TB** linked to **TB** exposure/reactivation and immunosuppression."
+      ],
+      "missingFindings": [
+        "**Miliary nodules on imaging** - Absence of diffuse micronodular pattern argues strongly against miliary **TB**.",
+        "**Chronic constitutional symptoms** - No reported weight loss or night sweats expected in disseminated **TB**.",
+        "**TB microbiologic evidence** - No AFB smear/culture/NAAT positivity or disseminated organ involvement documented.",
+        "**Hepatosplenomegaly/organ dissemination** - Lack of signs suggesting hematogenous multi-organ **TB** spread."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Cytomegalovirus (CMV) pneumonitis",
+      "description": "**CMV pneumonitis** is a viral lower-respiratory infection caused by cytomegalovirus, typically occurring in patients with significant **immunosuppression**. It presents with progressive **dyspnea**, **nonproductive cough**, hypoxia, and diffuse interstitial lung involvement rather than classic lobar consolidation.",
+      "keySymptoms": [
+        "**Dyspnea** - Progressive shortness of breath from viral pneumonitis causing impaired gas exchange and hypoxemia.",
+        "**Nonproductive cough** - Dry cough is typical due to interstitial inflammation rather than purulent alveolar exudate.",
+        "**Hypoxia** - Low oxygen saturation from diffuse alveolar-capillary injury and ventilation-perfusion mismatch.",
+        "**Fever** - Systemic inflammatory response to viral replication, often prolonged in immunocompromised hosts.",
+        "**Constitutional symptoms** - Malaise and fatigue may dominate, sometimes with minimal sputum production."
+      ],
+      "clinicalReasoning": "This patient has fever, cough, dyspnea, and hypoxia, which can be seen in many pneumonias including viral pneumonitis. However, the combination of **relative bradycardia**, prominent **gastrointestinal symptoms** (diarrhea, abdominal pain, vomiting), and **hyponatremia** strongly suggests **Legionella pneumonia** rather than CMV. Imaging described as progressing from **lobar to multilobar consolidation** with occasional small **pleural effusion** also aligns better with Legionella than the classic diffuse interstitial pattern of CMV. In an otherwise typical 38-year-old without stated immunosuppression, CMV pneumonitis is unlikely.",
+      "whyIncorrectForCase": "**CMV pneumonitis** is classically seen in patients with major **immunosuppression** (e.g., transplant, advanced HIV, high-dose steroids), which is not indicated here. The patient’s **relative bradycardia**, **hyponatremia**, and marked **GI symptoms** are much more characteristic of **Legionnaires’ disease** than CMV.",
+      "keyDifferencesFromCorrect": [
+        "**Host risk profile** - CMV usually requires significant **immunosuppression**; Legionella often affects immunocompetent adults with exposure risks.",
+        "**GI symptoms** - CMV may cause systemic symptoms, but prominent **diarrhea/abdominal pain** strongly favors Legionella.",
+        "**Relative bradycardia** - More typical of **Legionella**; not a classic feature of CMV pneumonitis.",
+        "**Sodium abnormality** - **Hyponatremia** is a well-known clue for Legionella; not a hallmark of CMV pneumonitis.",
+        "**Imaging pattern** - CMV often shows **diffuse interstitial/ground-glass** changes; Legionella commonly progresses to **lobar/multilobar consolidation** with possible small effusions."
+      ],
+      "missingFindings": [
+        "**Immunosuppression history** - Lack of transplant, advanced HIV, chemotherapy, or high-dose steroids makes CMV pneumonitis unlikely.",
+        "**Typical CMV imaging** - Absence of predominant **diffuse interstitial/ground-glass opacities** argues against CMV pneumonitis.",
+        "**CMV viremia evidence** - No mention of **positive CMV PCR/antigenemia** or systemic CMV disease features to support diagnosis."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Legionella pneumonia (Legionnaires’ disease)",
+    "domain": "infectious diseases",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about fever and chills",
+        "reasoning": "Fever with chills is a core clinical feature of Legionnaires’ disease in the textbook and supports an infectious pneumonia syndrome.",
+        "expectedFinding": "History of fever with chills",
+        "importance": "critical",
+        "textbookReference": "“Fever, chills, and cough with scanty mucoid sputum.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about cough and whether sputum is scanty and mucoid",
+        "reasoning": "Legionella pneumonia is presented as an atypical pneumonia with cough and scanty mucoid sputum; this pattern supports Legionella over typical lobar pneumonia with productive/rusty sputum.",
+        "expectedFinding": "Cough with scanty mucoid sputum (or minimal expectoration)",
+        "importance": "important",
+        "textbookReference": "“Fever, chills, and cough with scanty mucoid sputum.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about gastrointestinal symptoms: nausea, abdominal pain, and diarrhea",
+        "reasoning": "GI symptoms are stated to be common in Legionnaires’ disease and provide a clinical clue toward Legionella among CAP etiologies.",
+        "expectedFinding": "Nausea and/or abdominal pain and/or diarrhea accompanying pneumonia symptoms",
+        "importance": "critical",
+        "textbookReference": "“Gastrointestinal symptoms like nausea, abdominal pain, and diarrhea are common.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about mental confusion, delirium, or new confusion",
+        "reasoning": "The textbook notes mental confusion/delirium may develop in Legionella; confusion is also part of pneumonia severity assessment (CURB-65).",
+        "expectedFinding": "Mental confusion or delirium (new onset)",
+        "importance": "important",
+        "textbookReference": "“Mental confusion or delirium may also develop.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about exposure to water droplets from humidifier cooling systems or stagnant water in cisterns/shower heads",
+        "reasoning": "Mode of transmission is described via water droplets from specific sources; exposure history increases suspicion for Legionella.",
+        "expectedFinding": "Exposure to water droplets from infected humidifier cooling systems or stagnant water in cisterns/shower heads",
+        "importance": "helpful",
+        "textbookReference": "“Mode of transmission: Through water droplets originated from infected humidifier cooling systems, and from stagnant water in cisterns and shower heads.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Measure vital signs including temperature, respiratory rate, pulse rate, blood pressure, and oxygen saturation on air",
+        "reasoning": "The textbook emphasizes fever, raised respiratory/pulse rate, low BP (especially sensitive in elderly), and low oxygen saturation/cyanosis/distress in pneumonia; these also guide severity assessment and need for further testing (e.g., ABG when SaO2 <93%).",
+        "expectedFinding": "Fever; raised respiratory rate; possible low blood pressure; low oxygen saturation on air with possible cyanosis/distress",
+        "importance": "critical",
+        "textbookReference": "“Fever… Respiratory and pulse rate may be raised and the blood pressure low… Oxygen saturation on air may be low, and the patient cyanosed and distressed.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Assess pulse–temperature relationship for relative bradycardia",
+        "reasoning": "Relative bradycardia is described as a characteristic feature of Legionnaires’ pneumonia and can help point toward Legionella among CAP causes.",
+        "expectedFinding": "Relative bradycardia",
+        "importance": "important",
+        "textbookReference": "“Relative bradycardia is a characteristic feature of Legionnaires’ pneumonia.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Perform focused chest examination for consolidation signs (percussion and auscultation)",
+        "reasoning": "The textbook details findings during consolidation phase (dullness, tubular bronchial breath sounds, bronchophony/whispering pectoriloquy, coarse crackles) which support pneumonia and guide imaging/testing.",
+        "expectedFinding": "Dullness to percussion with tubular bronchial breath sounds; bronchophony/whispering pectoriloquy; coarse crackles",
+        "importance": "important",
+        "textbookReference": "“During consolidation phase… dull to percussion… tubular bronchial breath sounds… bronchophony and whispering pectoriloquy. Coarse crackles…”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order complete blood count (CBC)",
+        "reasoning": "CBC is part of CAP work-up; in viral and atypical pneumonias total leukocyte count is often low (<5,000/mm3), and CBC helps assess severity (very high or low WBC).",
+        "expectedFinding": "Total leukocyte count often <5,000/mm3 in atypical pneumonia; may support atypical pattern",
+        "importance": "important",
+        "textbookReference": "“In viral and atypical pneumonias, total leukocyte count is often <5,000/mm3.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order urea and electrolytes (including sodium)",
+        "reasoning": "Hyponatremia is listed as a marker of severity and may occur in Legionnaires’ disease; it is also specifically listed under Legionella blood findings.",
+        "expectedFinding": "Hyponatremia",
+        "importance": "important",
+        "textbookReference": "“Hyponatremia… may occur in patients with Legionnaires’ disease.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order urine routine/urinalysis",
+        "reasoning": "The textbook notes proteinuria and microscopic hematuria in Legionella; urine section also notes hematuria may occur in Legionnaires’ disease.",
+        "expectedFinding": "Proteinuria and/or microscopic hematuria (hematuria may occur)",
+        "importance": "helpful",
+        "textbookReference": "“Blood: … proteinuria, and microscopic hematuria.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order chest X-ray",
+        "reasoning": "Chest X-ray is essential to confirm pneumonia and Legionella has described patterns (lobar then multilobar shadowing; occasional small pleural effusion; cavitation rare).",
+        "expectedFinding": "Parenchymal lesions progressing from patchy to lobar consolidation; lobar then multilobar shadowing; occasional small pleural effusion; cavitation rare",
+        "importance": "critical",
+        "textbookReference": "“Chest X-ray: Shows parenchymal lesions progressing from patchy to lobar consolidation… Pleural effusion… in more than one-third… Legionella… lobar and then multilobar shadowing… Cavitation is rare.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order Legionella urinary antigen test (and send respiratory sample for Legionella culture as definitive test)",
+        "reasoning": "Urinary antigen is stated to be second to culture in sensitivity and specificity; culture is definitive and most sensitive but takes 3–5 days. Using urinary antigen provides earlier supportive diagnosis while awaiting culture.",
+        "expectedFinding": "Positive urinary antigen; culture positive for Legionella (definitive) after 3–5 days",
+        "importance": "important",
+        "textbookReference": "“Urinary antigen: Second to culture in terms of both sensitive and specificity.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Pneumococcal pneumonia (lobar pneumonia)",
+        "howToRuleOut": "Look for typical/classical CAP pattern described: sudden onset, productive cough with rusty/blood-tinged sputum, and consider pneumococcal evidence on sputum Gram stain/culture or pneumococcal antigen detection; Legionella more often has scanty mucoid sputum and prominent GI symptoms and may show relative bradycardia.",
+        "textbookReference": "“Rusty sputum may be seen… in patients with S. pneumoniae (pneumococcal pneumonia)”"
+      },
+      {
+        "name": "Mycoplasma pneumoniae (atypical pneumonia)",
+        "howToRuleOut": "Both are atypical; use Legionella clues from textbook (GI symptoms, relative bradycardia, hyponatremia, urinary antigen/culture for Legionella). Mycoplasma is described with dry paroxysmal cough worse at night and constitutional symptoms (headache, sore throat, myalgias).",
+        "textbookReference": "“Cough is dry, paroxysmal, and worse at night.”"
+      },
+      {
+        "name": "Aspiration pneumonia",
+        "howToRuleOut": "Differentiate by history of aspiration risk factors and radiographic distribution in dependent pulmonary segments (lower lobes in upright; superior segments of lower lobes/posterior upper lobes in recumbent). Legionella is linked to water droplet exposure and has GI symptoms and relative bradycardia.",
+        "textbookReference": "“Chest radiograph: Involvement of dependent pulmonary segments by aspiration.”"
+      },
+      {
+        "name": "Pulmonary tuberculosis (TB) as an alternative diagnosis in prolonged/nonresponding cases",
+        "howToRuleOut": "If symptoms have been present for several weeks or fail to respond to standard antibiotics, consider TB per textbook and pursue further investigation; Legionella is an acute pneumonia syndrome with characteristic lab/imaging and specific Legionella tests.",
+        "textbookReference": "“When symptoms have been present for several weeks or have failed to respond to standard antibiotics, the possibility of TB should always be considered.”"
+      }
+    ],
+    "diagnosticApproach": "Suspect Legionella pneumonia in a patient with pneumonia symptoms plus prominent gastrointestinal symptoms (nausea/abdominal pain/diarrhea) and possible mental confusion/delirium, especially with exposure to water droplets from humidifier cooling systems or stagnant water in cisterns/shower heads. On examination, assess vitals and oxygen saturation (hypoxemia/cyanosis/distress), look for relative bradycardia, and perform chest exam for consolidation signs. Order cost-effective baseline tests first (CBC; urea/electrolytes for hyponatremia; urinalysis for proteinuria/microscopic hematuria), confirm pneumonia with chest X-ray (patchy to lobar consolidation; lobar then multilobar shadowing; occasional small pleural effusion; cavitation rare), and then pursue Legionella-specific testing with urinary antigen (second to culture for sensitivity/specificity) while sending culture as the definitive and most sensitive method (3–5 days). Use Gram stain findings of many PMNs with no organisms to support an atypical pneumonia pattern, and differentiate from pneumococcal pneumonia, Mycoplasma pneumonia, aspiration pneumonia, and consider TB if prolonged or nonresponsive to standard antibiotics.",
+    "textbookSources": [
+      "and shower heads.\n\nClinical Features\nz Fever, chills, and cough with scanty mucoid sputum. Gastrointestinal symptoms like nausea, abdominal pain, and diarrhea\n\nare common. Mental confusion or delirium...",
+      "and shower heads.\n\nClinical Features\nz Fever, chills, and cough with scanty mucoid sputum. Gastrointestinal symptoms like nausea, abdominal pain, and diarrhea\n\nare common. Mental confusion or delirium..."
+    ]
+  }
+}

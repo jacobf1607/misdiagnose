@@ -1,0 +1,408 @@
+{
+  "persona": {
+    "name": "Rekha Pillai",
+    "age": 32,
+    "gender": "Female",
+    "occupation": "Software Engineer in Bangalore",
+    "background": "Rekha works long hours with irregular meals and reports that stress and poor sleep often worsen her gut symptoms. She frequently eats at her desk and has recently become anxious about recurring bowel issues.",
+    "lifestyle": {
+      "activityLevel": "low",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "anxious",
+      "detail-oriented",
+      "health-conscious"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Irritable bowel syndrome (IBS)",
+      "description": "Functional bowel disorder where abdominal pain is the key symptom, typically in the lower abdomen/hypogastrium, aggravated by stress/food and relieved temporarily by defecation or passage of flatus, with altered bowel habits (often constipation alternating with diarrhea) and bloating; physical exam usually unremarkable except abdominal tenderness."
+    },
+    {
+      "id": "d2",
+      "name": "Ulcerative colitis",
+      "description": "Inflammatory bowel disease characterized by relapses and remissions; presents with diarrhea that may be nocturnal/postprandial with blood, mucus, and pus, rectal bleeding, urgency/tenesmus and feeling of incomplete evacuation; colonoscopy with mucosal biopsy is the gold standard."
+    },
+    {
+      "id": "d3",
+      "name": "Crohn’s disease",
+      "description": "Chronic disease with exacerbations and remissions; major symptoms include abdominal pain (typically right lower quadrant), diarrhea, and weight loss; may have perianal disease and oral ulcers; colonoscopy may show skip lesions and aphthous/deep ulcers with strictures."
+    },
+    {
+      "id": "d4",
+      "name": "Celiac disease",
+      "description": "Gluten-induced enteropathy with small intestinal malabsorption; symptoms include diarrhea, steatorrhea, weight loss, and consequences such as anemia and edema from protein loss; diagnosis requires duodenal/jejunal biopsy and serologic tests (e.g., IgA antiendomysial, IgA anti-tTG)."
+    },
+    {
+      "id": "d5",
+      "name": "Irritable bowel syndrome—mixed type (IBS-M)",
+      "description": "IBS subtype with alternating diarrhea and constipation; abdominal pain relieved by defecation/flatus (often temporary), sense of incomplete evacuation and repeated attempts at defecation, bloating/distention and possible mucus passage; typically no nocturnal diarrhea."
+    },
+    {
+      "id": "d6",
+      "name": "Infectious colitis (acute diarrhea due to invasive pathogens)",
+      "description": "Acute diarrheal illness where grossly bloody or mucoid stools suggest an inflammatory process; stool may show leukocytes/red cells; history includes duration, food outside, travel or antibiotic use, fever, tenesmus, and dehydration assessment."
+    },
+    {
+      "id": "d7",
+      "name": "Ischemic colitis",
+      "description": "A colitis entity listed as an indication for colonoscopy; considered among differential causes of lower GI symptoms and colonic inflammation."
+    },
+    {
+      "id": "d8",
+      "name": "Diverticular disease",
+      "description": "Diverticular disease is listed as an indication for colonoscopy in unexplained lower GI symptoms or evaluation of colonic pathology."
+    },
+    {
+      "id": "d9",
+      "name": "Colorectal cancer",
+      "description": "A condition to be excluded with colonoscopy in older patients or those with rectal bleeding; also included in occult blood in stool conditions and screening indications."
+    },
+    {
+      "id": "d10",
+      "name": "Microscopic colitis",
+      "description": "A condition to be excluded in diarrhea-predominant patients during IBS evaluation (along with lactose intolerance, bile acid malabsorption, celiac disease, and thyrotoxicosis)."
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "“For months I’ve had lower abdominal pain and bloating, and my stools keep switching between constipation and loose stools. I also often feel like I’m not completely done after going to the toilet.”",
+  "medicalHistory": "No documented chronic gastrointestinal diagnosis. Reports stress and poor sleep related to work, which she feels aggravates symptoms. No other past history provided.",
+  "symptoms": "Recurrent abdominal pain most typically in the lower abdomen/hypogastrium; pain aggravated by emotional stress, poor sleep, and intake of food; temporary relief after defecation or passage of flatus. Altered bowel habits with constipation alternating with diarrhea (mixed pattern). Diarrhea is frequent defecation producing low-volume loose stools and is rare/never at night, with a sense of incomplete evacuation leading to repeated attempts at defecation in a short time span. Constipation with infrequent pellet-like stools; stools may be hard with narrowed caliber. Bloating/feeling of abdominal distention and increased gas/flatulence. Passage of mucus may occur. Postprandial tenesmus may occur due to exaggerated gastrocolic reflex.\n\nFrom textbook: excessive worry, somatization, and neurosis.\nAltered intestinal flora: Bacterial overgrowth (shown by positive lactulose hydrogen breath test) in the small bowel has been\nobserved in IBS patients and may contribute to symptoms.\nAbnormal serotonin pathways: Serotonin is a neurotransmitter that plays an important role in the regulation of GI motility\nand visceral perception.\nPostinfectious IBS: IBS may be induced by initial GI infection by Campylobacter, Salmonella, and Shigella.\nImmune activation",
+  "relevantFindings": "Physical examination usually unremarkable except abdominal tenderness (most often in the left lower quadrant) or a tender, palpable sigmoid colon. Initial investigations aimed at excluding organic disease: full blood count and stool examination for parasites/ova/leukocytes/occult blood. Sigmoidoscopy is usually normal (may be difficult to negotiate rectosigmoid curve due to spasm and may show abundant mucus). Colonoscopy is considered to exclude colorectal cancer in older patients and those with rectal bleeding; in IBS itself it is not expected to show organic pathology.\n\nFrom textbook: excessive worry, somatization, and neurosis.\nAltered intestinal flora: Bacterial overgrowth (shown by positive lactulose hydrogen breath test) in the small bowel has been\nobserved in IBS patients and may contribute to symptoms.\nAbnormal serotonin pathways: Serotonin is a neurotransmitter that plays an important role in the regulation of GI motility\nand visceral perception.\nPostinfectious IBS: IBS may be induced by initial GI infection by Campylobacter, Salmonella, and Shigella.\nImmune activation",
+  "redHerrings": "Passage of mucus and tenesmus can suggest ulcerative colitis; abdominal distension and weight concerns can raise suspicion for malabsorption conditions such as celiac disease (which can present with diarrhea, weight loss, anemia, and edema from protein loss); intermittent diarrhea with concern for infection may suggest infectious colitis (where bloody/mucoid stool and stool leukocytes would support an inflammatory process).",
+  "id": "case_1767641042412",
+  "domain": "gastroenterology",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Irritable bowel syndrome (IBS)",
+      "description": "**Irritable bowel syndrome (IBS)** is a functional gastrointestinal disorder characterized by recurrent abdominal pain associated with defecation and changes in bowel habits. It is a diagnosis based on symptom patterns (e.g., Rome criteria) after excluding organic disease, and it has recognized links to stress, altered gut-brain signaling, and microbiome changes.",
+      "keySymptoms": [
+        "**Recurrent lower abdominal pain** - Chronic hypogastric pain linked to bowel movements, often fluctuating in intensity.",
+        "**Bloating/abdominal distention** - Sensation of fullness with visible or perceived distention and increased intestinal gas.",
+        "**Altered bowel habits** - Change in stool frequency or form, commonly constipation, diarrhea, or alternating patterns.",
+        "**Relief after defecation/flatus** - Pain temporarily improves after stool passage or passing gas, supporting functional etiology.",
+        "**Tenesmus/incomplete evacuation** - Persistent urge or feeling of unfinished defecation causing repeated toilet visits.",
+        "**Mucus in stool** - Passage of mucus without systemic illness; can occur in functional bowel disorders.",
+        "**Stress-related exacerbation** - Symptoms worsen with emotional stress, poor sleep, or postprandial gastrocolic reflex."
+      ],
+      "clinicalReasoning": "Rekha’s presentation strongly supports **IBS**: months of recurrent lower abdominal pain, bloating, and symptom fluctuation with stress and meals, with partial relief after defecation. The bowel pattern includes low-volume loose stools without nocturnal diarrhea and constipation with pellet-like stools, plus incomplete evacuation—features typical of a functional disorder rather than inflammatory disease. Physical exam is usually benign aside from localized tenderness, and initial tests (CBC, stool studies) are used to exclude organic pathology. Proposed mechanisms (altered flora/SIBO, **serotonin** signaling changes, postinfectious triggers, immune activation, and psychosocial factors) are compatible with the symptom profile.",
+      "whyIncorrectForCase": "The label **“IBS”** is too nonspecific for this patient because her history clearly demonstrates **both constipation and diarrhea**, meeting criteria for the **mixed subtype**. The correct diagnosis requires specifying subtype based on predominant stool pattern over time, which here is **IBS-M**.",
+      "keyDifferencesFromCorrect": [
+        "**Subtype specification** - “IBS” is a broad umbrella term; **IBS-M** explicitly documents alternating constipation and diarrhea.",
+        "**Management implications** - Non-subtyped IBS may lead to one-sided therapy; **IBS-M** often needs dual-targeted strategies.",
+        "**Diagnostic precision** - **IBS-M** aligns with Rome stool-form subtyping; “IBS” alone omits required classification."
+      ],
+      "missingFindings": [
+        "**Predominant single bowel pattern** - Absence of consistently constipation-predominant or diarrhea-predominant course argues against non-mixed subtypes.",
+        "**Sustained diarrhea-only course** - Lack of persistent diarrhea predominance (and no nocturnal diarrhea) prevents labeling as IBS-D.",
+        "**Sustained constipation-only course** - Presence of frequent loose stools and urgency prevents labeling as IBS-C."
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Ulcerative colitis",
+      "description": "Ulcerative colitis is a chronic inflammatory bowel disease causing continuous mucosal inflammation starting in the rectum and extending proximally in the colon. It typically presents with inflammatory diarrhea, rectal bleeding, urgency/tenesmus, and systemic inflammatory features during flares.",
+      "keySymptoms": [
+        "**Bloody diarrhea** - Frequent loose stools with visible blood due to colonic mucosal ulceration and inflammation.",
+        "**Urgency** - Sudden compelling need to defecate from rectal inflammation and reduced rectal compliance.",
+        "**Tenesmus** - Painful sensation of incomplete evacuation, classically from active **proctitis**.",
+        "**Nocturnal stools** - Waking from sleep to defecate, suggesting organic inflammatory disease rather than functional disorder.",
+        "**Crampy abdominal pain** - Often left lower quadrant pain accompanying colitis activity and bowel movements.",
+        "**Systemic symptoms** - Fever, fatigue, weight loss, and anorexia may occur with moderate-to-severe inflammation.",
+        "**Extraintestinal manifestations** - Arthritis, uveitis, erythema nodosum, and PSC can accompany colonic inflammation."
+      ],
+      "clinicalReasoning": "Rekha’s presentation is dominated by chronic lower abdominal pain, bloating, and alternating constipation with low-volume loose stools, with symptom fluctuation related to stress, sleep, and meals. The diarrhea is rare/never nocturnal and there is temporary relief after defecation or passage of flatus, which strongly supports a functional bowel disorder pattern. Ulcerative colitis would be expected to cause persistent inflammatory diarrhea with rectal bleeding, urgency, and objective inflammatory findings. Her described course aligns far better with **Irritable bowel syndrome—mixed type (IBS-M)** than with an inflammatory colitis.",
+      "whyIncorrectForCase": "Ulcerative colitis typically causes **bloody**, often **nocturnal** diarrhea with urgency and inflammatory markers, none of which are described here. The alternating constipation/diarrhea pattern with stress-related exacerbations and relief after defecation is characteristic of **IBS-M**, not ulcerative colitis.",
+      "keyDifferencesFromCorrect": [
+        "**Stool pattern** - Ulcerative colitis causes persistent inflammatory diarrhea; **IBS-M** alternates constipation and diarrhea.",
+        "**Nocturnal symptoms** - Nocturnal diarrhea is common in ulcerative colitis; **IBS-M** symptoms are rare/absent at night.",
+        "**Bleeding** - Ulcerative colitis commonly has **hematochezia**; **IBS-M** does not cause rectal bleeding.",
+        "**Pathology** - Ulcerative colitis shows mucosal inflammation/ulcers on **colonoscopy**; **IBS-M** has no structural lesions.",
+        "**Inflammation markers** - Ulcerative colitis often elevates **CRP/ESR** and fecal **calprotectin**; **IBS-M** is typically normal.",
+        "**Response to defecation** - Pain relief after defecation is typical for **IBS-M**; ulcerative colitis pain may persist with inflammation."
+      ],
+      "missingFindings": [
+        "**Rectal bleeding** - Absence of blood makes active ulcerative colitis much less likely.",
+        "**Nocturnal diarrhea** - Lack of nighttime stools argues against organic inflammatory colitis.",
+        "**Systemic inflammation** - No fever, weight loss, or marked fatigue reported to suggest active IBD.",
+        "**Abnormal labs** - No mention of anemia/leukocytosis or elevated inflammatory markers expected in significant colitis.",
+        "**Endoscopic inflammation** - Ulcerative colitis requires mucosal inflammation on sigmoidoscopy/colonoscopy; IBS has normal endoscopy.",
+        "**Positive stool inflammatory markers** - Lack of fecal leukocytes/calprotectin reduces likelihood of inflammatory diarrhea."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Crohn’s disease",
+      "description": "Crohn’s disease is a chronic, relapsing **inflammatory bowel disease (IBD)** that can affect any part of the gastrointestinal tract, most commonly the terminal ileum and colon. It causes **transmural inflammation**, leading to complications such as strictures, fistulas, and malabsorption with systemic inflammatory features.",
+      "keySymptoms": [
+        "**Chronic diarrhea** - Typically persistent, often higher-volume stools; may occur nocturnally with urgency.",
+        "**Abdominal pain** - Often right lower quadrant when ileal disease; may worsen with active inflammation.",
+        "**Weight loss** - Results from reduced intake, malabsorption, and inflammatory catabolism over time.",
+        "**Fever and fatigue** - Systemic inflammatory symptoms reflecting active intestinal inflammation.",
+        "**Rectal bleeding** - Can occur with colonic involvement; more suggestive of organic colitis than IBS.",
+        "**Perianal disease** - Fissures, fistulas, abscesses, or skin tags are characteristic Crohn’s features.",
+        "**Extraintestinal manifestations** - Arthritis, uveitis, erythema nodosum, and aphthous ulcers may occur.",
+        "**Malabsorption** - Ileal disease can cause B12 deficiency, bile salt diarrhea, and nutritional deficits."
+      ],
+      "clinicalReasoning": "Crohn’s disease is considered when abdominal pain and diarrhea are accompanied by **alarm features** such as nocturnal symptoms, weight loss, fever, anemia, rectal bleeding, or elevated inflammatory markers. The condition produces objective evidence of inflammation on labs (e.g., anemia, raised CRP) and endoscopy/imaging (ulcers, skip lesions, strictures). In contrast, this patient’s pattern is stress- and meal-related pain with relief after defecation and alternating constipation/diarrhea, which is typical of a **functional bowel disorder** rather than IBD. The absence of systemic illness and the described normal/near-normal exam and expected normal endoscopy argue against Crohn’s.",
+      "whyIncorrectForCase": "Rekha’s symptoms are classic for **IBS-M**: lower abdominal pain triggered by stress/food, relieved by defecation/flatus, with alternating constipation and low-volume loose stools and incomplete evacuation. Crohn’s disease would be expected to show inflammatory/red-flag features (e.g., nocturnal diarrhea, weight loss, fever, bleeding) and objective abnormalities on testing/endoscopy, which are not described.",
+      "keyDifferencesFromCorrect": [
+        "**Pathophysiology** - Crohn’s is **transmural inflammation**; IBS-M is a **functional disorder** without structural disease.",
+        "**Stool pattern** - Crohn’s usually causes persistent inflammatory diarrhea; IBS-M alternates constipation and diarrhea.",
+        "**Nocturnal symptoms** - Crohn’s diarrhea may wake patients at night; IBS symptoms are rare/never nocturnal.",
+        "**Systemic features** - Crohn’s commonly has weight loss, fever, fatigue; IBS typically lacks systemic signs.",
+        "**Bleeding/anemia** - Crohn’s may cause bleeding and anemia; IBS does not cause anemia or occult blood.",
+        "**Endoscopy** - Crohn’s shows ulcers/skip lesions/strictures; IBS colonoscopy/sigmoidoscopy is usually normal."
+      ],
+      "missingFindings": [
+        "**Nocturnal diarrhea** - Absence argues against inflammatory diarrhea typical of Crohn’s activity.",
+        "**Weight loss** - Lack of unintentional weight loss makes chronic inflammatory disease less likely.",
+        "**Fever** - No febrile episodes reduces likelihood of active systemic inflammation.",
+        "**Rectal bleeding/occult blood** - Not reported; Crohn’s colitis often has bleeding or positive occult blood.",
+        "**Anemia or elevated inflammatory markers** - No suggested lab abnormalities; Crohn’s commonly shows anemia/raised CRP.",
+        "**Perianal disease** - No fissures/fistulas/abscesses described, which are characteristic Crohn’s clues.",
+        "**Endoscopic inflammatory lesions** - IBS is expected to have normal scopes; Crohn’s requires mucosal lesions for diagnosis."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Celiac disease",
+      "description": "Celiac disease is an immune-mediated enteropathy triggered by dietary **gluten** in genetically susceptible individuals. It causes small-intestinal mucosal injury with **malabsorption** and may present with diarrhea, weight loss, anemia, and nutrient deficiencies.",
+      "keySymptoms": [
+        "**Chronic diarrhea** - Persistent, often bulky stools from malabsorption; may occur nocturnally and cause dehydration.",
+        "**Steatorrhea** - Pale, greasy, foul-smelling stools that float due to fat malabsorption in small bowel.",
+        "**Weight loss** - Unintentional weight reduction from impaired nutrient absorption and reduced caloric uptake.",
+        "**Abdominal bloating** - Gas and distension from malabsorbed carbohydrates and altered fermentation in intestine.",
+        "**Iron-deficiency anemia** - Fatigue and pallor from impaired iron absorption in proximal small intestine.",
+        "**Dermatitis herpetiformis** - Intensely pruritic vesicular rash on extensor surfaces linked to gluten sensitivity.",
+        "**Osteopenia/osteoporosis** - Bone pain or fractures from vitamin D and calcium malabsorption over time.",
+        "**Aphthous ulcers** - Recurrent oral ulcers associated with immune dysregulation and micronutrient deficiencies.",
+        "**Elevated transaminases** - Mild **AST/ALT** elevation can accompany untreated celiac disease and normalize with gluten-free diet."
+      ],
+      "clinicalReasoning": "Celiac disease can cause abdominal discomfort and bloating, and it may produce diarrhea due to **malabsorption**. However, the hallmark pattern is chronic malabsorptive symptoms with systemic features (e.g., weight loss, anemia, nutrient deficiencies) rather than stress-related, fluctuating bowel habits. Diagnosis is supported by positive **tTG-IgA** (with total IgA) and confirmed by duodenal biopsy showing **villous atrophy**. In this case, the symptom pattern is more consistent with a functional bowel disorder than an inflammatory or malabsorptive enteropathy.",
+      "whyIncorrectForCase": "This patient has alternating constipation and low-volume loose stools with **tenesmus** and relief after defecation—features typical of **IBS-M**, not celiac malabsorption. There are no provided systemic signs such as weight loss, anemia, or nutrient deficiency that would raise suspicion for celiac disease.",
+      "keyDifferencesFromCorrect": [
+        "**Pain relationship to defecation** - IBS pain often improves after stool/flatus; celiac pain is not characteristically relieved by defecation.",
+        "**Stool characteristics** - IBS diarrhea is typically low-volume, non-nocturnal, urgency/tenesmus-related; celiac diarrhea is more malabsorptive and can be bulky/steatorrheic.",
+        "**Bowel habit pattern** - IBS-M alternates constipation and diarrhea; celiac more commonly causes chronic diarrhea without constipation predominance.",
+        "**Triggers** - IBS symptoms are worsened by **stress**, poor sleep, and meals; celiac symptoms are specifically triggered by **gluten** exposure.",
+        "**Objective findings** - IBS has normal labs/endoscopy; celiac shows positive serology and small-bowel mucosal injury on biopsy.",
+        "**Systemic features** - Celiac commonly has anemia, weight loss, and bone disease; IBS typically lacks systemic malabsorption signs."
+      ],
+      "missingFindings": [
+        "**Weight loss** - Absence of unintentional weight loss makes malabsorptive celiac disease less likely here.",
+        "**Iron-deficiency anemia** - No fatigue/pallor or anemia data provided; anemia would support proximal small-bowel malabsorption.",
+        "**Steatorrhea** - No bulky, greasy, floating stools described; would be expected with significant fat malabsorption.",
+        "**Nocturnal diarrhea** - Diarrhea is rare/never at night in this case; nocturnal symptoms would be more concerning for organic disease.",
+        "**Positive celiac serology** - No **tTG-IgA/EMA** positivity reported; negative tests would argue strongly against celiac disease.",
+        "**Duodenal villous atrophy** - No biopsy evidence of **villous atrophy** or crypt hyperplasia, required for confirmation."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Irritable bowel syndrome—mixed type (IBS-M)",
+      "description": "**Irritable bowel syndrome (IBS)** is a chronic functional bowel disorder characterized by recurrent abdominal pain associated with altered bowel habits. The **mixed type (IBS-M)** features alternating **constipation** and **diarrhea** with no structural disease on routine evaluation.",
+      "keySymptoms": [
+        "**Recurrent lower abdominal pain** - Chronic, stress- and meal-related pain relieved by defecation strongly supports functional bowel disorder.",
+        "**Bloating/abdominal distention** - Common IBS feature reflecting visceral hypersensitivity and altered gas handling without obstructive pathology.",
+        "**Alternating constipation and diarrhea** - Mixed stool pattern is defining for IBS-M and helps subtype the condition.",
+        "**Sense of incomplete evacuation (tenesmus)** - Repeated urge after stool suggests rectosigmoid spasm and dysregulated defecation in IBS.",
+        "**Frequent low-volume loose stools, rarely nocturnal** - Daytime, small-volume diarrhea without nighttime symptoms favors IBS over inflammatory causes.",
+        "**Pellet-like hard stools/narrowed caliber** - Constipation episodes with hard stools indicate slowed transit and functional outlet issues in IBS.",
+        "**Mucus in stool** - Mucus passage can occur in IBS and is not necessarily a marker of inflammation.",
+        "**Symptoms aggravated by emotional stress/poor sleep** - Brain–gut axis dysregulation commonly worsens IBS symptoms with psychosocial triggers."
+      ],
+      "clinicalReasoning": "The presentation matches **IBS-M** because she has months of recurrent lower abdominal pain with clear association to defecation (relief after stool/flatus) and a mixed pattern of **constipation alternating with diarrhea**. The diarrhea is low-volume, rarely/never nocturnal, and accompanied by **incomplete evacuation**, which is typical of IBS rather than inflammatory or infectious etiologies. Examination and expected initial workup are largely unremarkable aside from possible left lower quadrant tenderness, supporting a functional disorder. Proposed mechanisms consistent with IBS include **altered intestinal flora** (possible small bowel bacterial overgrowth), **abnormal serotonin pathways** affecting motility and visceral perception, and **postinfectious/immune activation** contributions, often amplified by **excessive worry/somatization**."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Infectious colitis (acute diarrhea due to invasive pathogens)",
+      "description": "**Infectious colitis** is an acute inflammatory infection of the colon caused by invasive bacteria (e.g., Shigella, Salmonella, Campylobacter). It typically presents with sudden-onset diarrhea and systemic or inflammatory features due to mucosal invasion and colonic inflammation.",
+      "keySymptoms": [
+        "**Acute onset diarrhea** - Sudden frequent loose stools developing over hours to days, not months.",
+        "**Fever** - Elevated temperature reflecting systemic inflammatory response to invasive enteric infection.",
+        "**Bloody stools (dysentery)** - Visible blood from colonic mucosal invasion, ulceration, and inflammation.",
+        "**Severe abdominal cramps** - Prominent crampy pain from acute colonic inflammation and spasm.",
+        "**Nocturnal diarrhea** - Diarrhea that wakes patient from sleep, suggesting organic inflammatory pathology.",
+        "**Fecal leukocytes/occult blood** - Stool inflammatory markers indicating mucosal invasion and colitis."
+      ],
+      "clinicalReasoning": "Infectious colitis is most consistent with an acute diarrheal illness featuring inflammatory signs such as fever, bloody diarrhea, and stool leukocytes. Symptoms are usually continuous over a short course and often follow contaminated food/water exposure or sick contacts. Abdominal pain is typically crampy and accompanies high-volume diarrhea, and symptoms may persist at night. Evaluation focuses on stool studies (culture/PCR, leukocytes, occult blood) and hydration status.",
+      "whyIncorrectForCase": "This patient has **months** of recurrent lower abdominal pain with **alternating constipation and diarrhea**, which is a chronic functional pattern rather than an acute infection. Her diarrhea is **low-volume and rare/never nocturnal**, and there is no mention of **fever, bloody stools, or systemic toxicity** expected in invasive infectious colitis.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Infectious colitis is acute (days); **IBS-M** is chronic and recurrent (months/years).",
+        "**Stool pattern** - Infectious colitis is predominantly diarrhea; **IBS-M** alternates constipation and diarrhea.",
+        "**Nocturnal symptoms** - Infectious colitis may cause nocturnal diarrhea; **IBS-M** typically does not.",
+        "**Inflammatory features** - Infectious colitis often has fever, blood, fecal leukocytes; **IBS-M** lacks inflammation.",
+        "**Pain relationship to defecation** - Infectious colitis pain is inflammatory/crampy; **IBS-M** pain often improves after defecation/flatus.",
+        "**Triggers** - Infectious colitis relates to exposure/ingestion; **IBS-M** worsens with stress, poor sleep, and meals."
+      ],
+      "missingFindings": [
+        "**Fever/systemic toxicity** - Absence argues against invasive bacterial colitis causing systemic inflammation.",
+        "**Gross blood in stool** - Lack of hematochezia makes dysenteric infectious colitis unlikely.",
+        "**Nocturnal diarrhea** - Reported rare/never at night, inconsistent with organic inflammatory colitis.",
+        "**Stool leukocytes/occult blood positivity** - Not reported; inflammatory markers would support infectious colitis.",
+        "**Acute exposure history** - No recent travel, contaminated food, or sick contacts described for acute infection.",
+        "**High-volume watery diarrhea with dehydration** - Patient has low-volume frequent stools and mixed bowel habits instead."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Irritable bowel syndrome—mixed type (IBS-M)",
+    "domain": "gastroenterology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about recurrent abdominal pain frequency (at least 1 day/week in last 3 months) and symptom onset (at least 6 months prior).",
+        "reasoning": "Abdominal pain is the prerequisite key symptom and the Rome IV time course is required for diagnosis.",
+        "expectedFinding": "Recurrent abdominal pain on average ≥1 day/week in last 3 months, with onset ≥6 months before diagnosis.",
+        "importance": "critical",
+        "textbookReference": "“Abdominal pain is the most common key symptom (prerequisite clinical feature) for the diagnosis of IBS.” / “Recurrent abdominal pain on average at least 1 day per week in the last 3 months (with symptom onset at least 6 months prior to diagnosis)”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask whether the abdominal pain is related to defecation and whether it is relieved by defecation or passage of flatus.",
+        "reasoning": "Pain in IBS is characteristically linked to bowel movements and may improve after defecation/flatus.",
+        "expectedFinding": "Pain related to defecation and relieved by defecation or passage of flatus (relief may be temporary).",
+        "importance": "critical",
+        "textbookReference": "“Related to defecation” / “Abdominal symptoms are relieved by defecation or passage of flatus, but this relief may be temporary.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about alternating constipation and diarrhea using Bristol stool form proportions to classify IBS-M.",
+        "reasoning": "IBS subtype classification is based on stool form proportions; IBS-M requires both hard and loose stools in significant proportions.",
+        "expectedFinding": "Alternating constipation and diarrhea with >25% Bristol stool types 1–2 and >25% Bristol stool types 6–7.",
+        "importance": "important",
+        "textbookReference": "“Mixed IBS (IBS-M): They have features of alternating diarrhea and constipation (>25% Bristol stool types 1 or 2; >25% Bristol stool types 6 or 7).”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about supportive bowel symptoms: abnormal stool frequency, straining, urgency, incomplete evacuation, mucus passage, and bloating/distention.",
+        "reasoning": "These symptoms support the diagnosis of IBS and match the patient’s complaint (incomplete evacuation, bloating).",
+        "expectedFinding": "One or more supportive symptoms such as urgency, incomplete evacuation, passing mucus, and bloating/distention (often with abnormal stool frequency/straining).",
+        "importance": "important",
+        "textbookReference": "“Symptoms that support the diagnosis of irritable bowel syndrome: … Urgency … Feeling of incomplete bowel movement … Passing mucus … Bloating or feeling of abdominal distention”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Screen for alarm (red flag) features and key triggers: rectal bleeding, weight loss, unexplained iron deficiency anemia, nocturnal symptoms, fever, and family history of colorectal cancer/IBD/celiac sprue; also ask about emotional stress/poor sleep and food triggers.",
+        "reasoning": "Red flags require evaluation for organic disease; stress/sleep and foods can aggravate IBS symptoms per textbook.",
+        "expectedFinding": "No red flag signs; symptoms may be aggravated by emotional stress/poor sleep and intake of food, with diet/foods precipitating attacks.",
+        "importance": "important",
+        "textbookReference": "“Red flag signs of IBS: … More than minimal rectal bleeding … Weight loss … Unexplained iron deficiency anemia … Nocturnal symptoms … Fever … Family history … colorectal cancer, inflammatory bowel disease (IBD), or celiac sprue” / “Pain may be aggravated by emotional stress or poor sleep, and intake of food.” / “Certain diet/foods may precipitate an attack.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Perform a focused abdominal examination assessing for tenderness (especially left lower quadrant) and for a tender, palpable sigmoid colon.",
+        "reasoning": "Physical examination in IBS is usually unremarkable except for characteristic abdominal tenderness or a tender palpable sigmoid colon.",
+        "expectedFinding": "No diagnostic signs; may have abdominal tenderness (most often left lower quadrant) or a tender, palpable sigmoid colon.",
+        "importance": "important",
+        "textbookReference": "“Physical examination: Usually unremarkable, except for abdominal tenderness (most often in the left lower quadrant) or a tender, palpable sigmoid colon.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Perform a digital rectal examination, particularly if constipation symptoms are prominent, assessing for paradoxical puborectalis contraction or decreased pelvic floor descent when simulating a bowel movement.",
+        "reasoning": "In IBS-C (and constipation features within IBS-M), rectal examination may show pelvic floor dysfunction findings described in the textbook.",
+        "expectedFinding": "May show paradoxical contraction of the puborectalis muscle or decreased descent of the pelvic floor during simulated defecation.",
+        "importance": "helpful",
+        "textbookReference": "“In IBS-C, rectal examination may show paradoxical contraction of the puborectalis muscle or decreased descent of the pelvic floor when simulating a bowel movement.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess for absence of objective abnormal signs beyond localized tenderness (i.e., overall exam is otherwise unremarkable).",
+        "reasoning": "The textbook emphasizes lack of diagnostic signs on examination in IBS; this supports a functional disorder after excluding red flags.",
+        "expectedFinding": "No diagnostic signs apart from possible localized tenderness.",
+        "importance": "helpful",
+        "textbookReference": "“Physical examination: Usually unremarkable…”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order a full blood count (FBC).",
+        "reasoning": "Investigations in IBS aim to exclude organic gastrointestinal diseases; FBC is listed as a basic investigation.",
+        "expectedFinding": "Normal FBC (no evidence suggesting organic disease such as anemia).",
+        "importance": "important",
+        "textbookReference": "“Investigations: Aim of investigations is to exclude organic gastrointestinal diseases. Full blood count”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order stool examination for parasites, ova, leukocytes, and occult blood.",
+        "reasoning": "Stool testing is recommended to exclude infectious/inflammatory causes and occult bleeding as organic disease mimics.",
+        "expectedFinding": "No parasites/ova/leukocytes and negative occult blood.",
+        "importance": "important",
+        "textbookReference": "“Stool examination: For parasites, ova, leukocytes, and occult blood.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Perform sigmoidoscopy if needed to support exclusion of organic disease (expecting normal findings).",
+        "reasoning": "Sigmoidoscopy is usually normal in IBS but may show spasm-related difficulty and abundant mucus; helps exclude organic pathology in appropriate contexts.",
+        "expectedFinding": "Usually normal; may have difficulty negotiating rectosigmoid curve due to spasm and may show abundant mucus.",
+        "importance": "helpful",
+        "textbookReference": "“Sigmoidoscopy: Usually normal. There may be difficulty in negotiating rectosigmoid curve due to spasm… may show abundant mucus.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Consider colonoscopy to exclude colorectal cancer in older patients and those with history of rectal bleeding.",
+        "reasoning": "The textbook specifies colonoscopy should be performed in older patients and those with rectal bleeding to exclude colorectal cancer.",
+        "expectedFinding": "No colorectal cancer (normal/benign findings).",
+        "importance": "helpful",
+        "textbookReference": "“Colonoscopy: Should be performed to exclude colorectal cancer, in older patients and those with history of rectal bleeding.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order barium enema if structural assessment is required (expecting normal or spasticity-related changes).",
+        "reasoning": "Barium enema is described as usually normal in IBS but may show spasticity and characteristic radiographic appearance; used as a later investigation.",
+        "expectedFinding": "Usually normal; may show spasticity of sigmoid, exaggerated haustral markings, and tubular appearance of descending colon.",
+        "importance": "helpful",
+        "textbookReference": "“Barium enema: Usually normal but may show spasticity of sigmoid, exaggerated haustral markings and a tubular appearance of the descending colon.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Colorectal cancer",
+        "howToRuleOut": "If the patient is older or has a history of rectal bleeding, perform colonoscopy to exclude colorectal cancer.",
+        "textbookReference": "“Colonoscopy: Should be performed to exclude colorectal cancer, in older patients and those with history of rectal bleeding.”"
+      },
+      {
+        "name": "Microscopic colitis",
+        "howToRuleOut": "In diarrhea-predominant presentations, perform investigations to exclude microscopic colitis; if excluded and IBS criteria met, IBS is supported.",
+        "textbookReference": "“In diarrhea-predominant patients investigations to exclude microscopic colitis…”"
+      },
+      {
+        "name": "Celiac disease",
+        "howToRuleOut": "In diarrhea-predominant presentations, investigate to exclude celiac disease; absence supports IBS after meeting Rome IV criteria.",
+        "textbookReference": "“In diarrhea-predominant patients investigations to exclude… celiac disease…”"
+      },
+      {
+        "name": "Thyrotoxicosis",
+        "howToRuleOut": "In diarrhea-predominant presentations, investigate to exclude thyrotoxicosis as an organic cause of diarrhea.",
+        "textbookReference": "“In diarrhea-predominant patients investigations to exclude… thyrotoxicosis.”"
+      }
+    ],
+    "diagnosticApproach": "Diagnose IBS-M by first confirming Rome IV criteria: recurrent abdominal pain (prerequisite symptom) on average at least 1 day/week in the last 3 months with onset at least 6 months prior, and pain associated with ≥2 of: related to defecation, change in stool frequency, and change in stool form. Then classify subtype as IBS-M when stool form alternates with >25% Bristol types 1–2 and >25% Bristol types 6–7. Screen for red flag signs (rectal bleeding, weight loss, unexplained iron deficiency anemia, nocturnal symptoms, fever, family history of colorectal cancer/IBD/celiac sprue). Perform physical examination (usually unremarkable) looking for left lower quadrant tenderness or a tender palpable sigmoid colon; consider rectal examination for pelvic floor findings when constipation features are prominent. Order investigations with the aim of excluding organic GI disease: full blood count and stool examination (parasites, ova, leukocytes, occult blood) first; proceed to sigmoidoscopy as needed (usually normal), and reserve colonoscopy for older patients or those with rectal bleeding to exclude colorectal cancer; barium enema may be used later and is usually normal but may show spasticity-related changes.",
+    "textbookSources": [
+      "excessive worry, somatization, and neurosis.\nAltered intestinal flora: Bacterial overgrowth (shown by positive lactulose hydrogen breath test) in the small bowel has been\nobserved in IBS patients and ...",
+      "excessive worry, somatization, and neurosis.\nAltered intestinal flora: Bacterial overgrowth (shown by positive lactulose hydrogen breath test) in the small bowel has been\nobserved in IBS patients and ..."
+    ]
+  }
+}

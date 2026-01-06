@@ -1,0 +1,394 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": 1767641042568,
+  "totalCases": 31,
+  "availableCases": 31,
+  "cases": [
+    {
+      "caseId": "case_1767519413588",
+      "filename": "case_1767519413588.json",
+      "domain": "respiratory",
+      "correctDiagnosis": "Interstitial Lung Disease",
+      "status": "available",
+      "createdAt": 1767519453796,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 5,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767638150323
+    },
+    {
+      "caseId": "case_1767519475939",
+      "filename": "case_1767519475939.json",
+      "domain": "endocrinology",
+      "correctDiagnosis": "Primary Adrenal Insufficiency (Addison's disease)",
+      "status": "available",
+      "createdAt": 1767519512683,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 3,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767637251416
+    },
+    {
+      "caseId": "case_1767519529125",
+      "filename": "case_1767519529125.json",
+      "domain": "hematology",
+      "correctDiagnosis": "Chronic Lymphocytic Leukemia",
+      "status": "available",
+      "createdAt": 1767519570968,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 4,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767636965048
+    },
+    {
+      "caseId": "case_1767519589720",
+      "filename": "case_1767519589720.json",
+      "domain": "dermatology",
+      "correctDiagnosis": "Lichen planus",
+      "status": "available",
+      "createdAt": 1767519625086,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 6,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767637304685
+    },
+    {
+      "caseId": "case_1767638404208",
+      "filename": "case_1767638404208.json",
+      "domain": "dermatology",
+      "correctDiagnosis": "Pityriasis versicolor (Tinea versicolor)",
+      "status": "available",
+      "createdAt": 1767638628319,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true
+    },
+    {
+      "caseId": "case_1767638949732",
+      "filename": "case_1767638949732.json",
+      "domain": "gastroenterology",
+      "correctDiagnosis": "Irritable bowel syndrome—mixed subtype (IBS-M)",
+      "status": "available",
+      "createdAt": 1767639200771,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767640038796
+    },
+    {
+      "caseId": "case_1767638980459",
+      "filename": "case_1767638980459.json",
+      "domain": "endocrinology",
+      "correctDiagnosis": "Myxedema Madness (severe hypothyroidism with neuropsychiatric manifestations)",
+      "status": "available",
+      "createdAt": 1767639229037,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true
+    },
+    {
+      "caseId": "case_1767639016290",
+      "filename": "case_1767639016290.json",
+      "domain": "hematology",
+      "correctDiagnosis": "Myelodysplastic syndrome with multilineage dysplasia (MDS-MLD)",
+      "status": "available",
+      "createdAt": 1767639269653,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true
+    },
+    {
+      "caseId": "case_1767639049408",
+      "filename": "case_1767639049408.json",
+      "domain": "rheumatology",
+      "correctDiagnosis": "Rheumatoid arthritis (RA)",
+      "status": "available",
+      "createdAt": 1767639323482,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true
+    },
+    {
+      "caseId": "case_1767639459867",
+      "filename": "case_1767639459867.json",
+      "domain": "infectious diseases",
+      "correctDiagnosis": "Leptospirosis",
+      "status": "available",
+      "createdAt": 1767639719186,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767640024413
+    },
+    {
+      "caseId": "case_1767639458038",
+      "filename": "case_1767639458038.json",
+      "domain": "endocrinology",
+      "correctDiagnosis": "Addison’s disease (primary adrenal insufficiency)",
+      "status": "available",
+      "createdAt": 1767639719188,
+      "usedBy": [
+        "2xnrCizkUPgv4vJcesh7FuLZ4F13"
+      ],
+      "usedCount": 1,
+      "hasIdealPathway": true,
+      "lastUsedAt": 1767640033663
+    },
+    {
+      "caseId": "case_1767640306187",
+      "filename": "case_1767640306187.json",
+      "domain": "endocrinology",
+      "correctDiagnosis": "Acute Adrenal Crisis/Addisonian Crisis",
+      "status": "available",
+      "createdAt": 1767640306319,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640303044",
+      "filename": "case_1767640303044.json",
+      "domain": "nephrology",
+      "correctDiagnosis": "Poststreptococcal (postinfectious) glomerulonephritis",
+      "status": "available",
+      "createdAt": 1767640306319,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640594226",
+      "filename": "case_1767640594226.json",
+      "domain": "respiratory",
+      "correctDiagnosis": "Bronchiectasis",
+      "status": "available",
+      "createdAt": 1767640598507,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640598390",
+      "filename": "case_1767640598390.json",
+      "domain": "rheumatology",
+      "correctDiagnosis": "Rheumatoid arthritis (RA)",
+      "status": "available",
+      "createdAt": 1767640598508,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640680133",
+      "filename": "case_1767640680133.json",
+      "domain": "dermatology",
+      "correctDiagnosis": "Erythema multiforme",
+      "status": "available",
+      "createdAt": 1767640685564,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640678074",
+      "filename": "case_1767640678074.json",
+      "domain": "respiratory",
+      "correctDiagnosis": "Chronic bronchitis",
+      "status": "available",
+      "createdAt": 1767640685565,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640680437",
+      "filename": "case_1767640680437.json",
+      "domain": "infectious diseases",
+      "correctDiagnosis": "Pneumocystis jirovecii pneumonia",
+      "status": "available",
+      "createdAt": 1767640685566,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640678444",
+      "filename": "case_1767640678444.json",
+      "domain": "neurology",
+      "correctDiagnosis": "Multiple sclerosis (Relapsing-remitting MS)",
+      "status": "available",
+      "createdAt": 1767640685577,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640685430",
+      "filename": "case_1767640685430.json",
+      "domain": "endocrinology",
+      "correctDiagnosis": "Addison’s disease (Primary adrenal insufficiency)",
+      "status": "available",
+      "createdAt": 1767640685578,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640680778",
+      "filename": "case_1767640680778.json",
+      "domain": "neurology",
+      "correctDiagnosis": "Multiple sclerosis (Relapsing-remitting MS, RRMS)",
+      "status": "available",
+      "createdAt": 1767640685579,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640678646",
+      "filename": "case_1767640678646.json",
+      "domain": "cardiology",
+      "correctDiagnosis": "Aortic stenosis",
+      "status": "available",
+      "createdAt": 1767640685579,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640677096",
+      "filename": "case_1767640677096.json",
+      "domain": "infectious diseases",
+      "correctDiagnosis": "Legionella pneumonia (Legionnaires’ disease)",
+      "status": "available",
+      "createdAt": 1767640685580,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640675946",
+      "filename": "case_1767640675946.json",
+      "domain": "respiratory",
+      "correctDiagnosis": "Chronic obstructive pulmonary disease (COPD)",
+      "status": "available",
+      "createdAt": 1767640685581,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767640675950",
+      "filename": "case_1767640675950.json",
+      "domain": "respiratory",
+      "correctDiagnosis": "Chronic obstructive pulmonary disease (COPD)",
+      "status": "available",
+      "createdAt": 1767640685581,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767641033067",
+      "filename": "case_1767641033067.json",
+      "domain": "dermatology",
+      "correctDiagnosis": "Pityriasis versicolor (Tinea versicolor)",
+      "status": "available",
+      "createdAt": 1767641042564,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767641031938",
+      "filename": "case_1767641031938.json",
+      "domain": "infectious diseases",
+      "correctDiagnosis": "Pneumocystis jirovecii pneumonia (PJP/PCP)",
+      "status": "available",
+      "createdAt": 1767641042565,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767641042412",
+      "filename": "case_1767641042412.json",
+      "domain": "gastroenterology",
+      "correctDiagnosis": "Irritable bowel syndrome—mixed type (IBS-M)",
+      "status": "available",
+      "createdAt": 1767641042566,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767641035484",
+      "filename": "case_1767641035484.json",
+      "domain": "cardiology",
+      "correctDiagnosis": "Severe aortic stenosis",
+      "status": "available",
+      "createdAt": 1767641042567,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767641036628",
+      "filename": "case_1767641036628.json",
+      "domain": "hematology",
+      "correctDiagnosis": "Chronic myeloid leukemia (CML), BCR-ABL1 positive",
+      "status": "available",
+      "createdAt": 1767641042567,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    },
+    {
+      "caseId": "case_1767641036854",
+      "filename": "case_1767641036854.json",
+      "domain": "neurology",
+      "correctDiagnosis": "Multiple sclerosis (Relapsing-remitting MS)",
+      "status": "available",
+      "createdAt": 1767641042568,
+      "usedBy": [],
+      "usedCount": 0,
+      "hasIdealPathway": false
+    }
+  ],
+  "generationSettings": {
+    "minPoolSize": 2,
+    "targetPoolSize": 10,
+    "domainsEnabled": [
+      "cardiology",
+      "respiratory",
+      "gastroenterology",
+      "neurology",
+      "nephrology",
+      "hematology",
+      "endocrinology",
+      "rheumatology",
+      "infectious diseases",
+      "dermatology"
+    ]
+  }
+}

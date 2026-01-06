@@ -1,0 +1,505 @@
+{
+  "persona": {
+    "name": "Anjali Gupta",
+    "age": 29,
+    "gender": "Female",
+    "occupation": "Shopkeeper in Delhi",
+    "background": "She runs a small shop in Delhi and spends long hours at work, often under stress. She reports that her skin problems tend to flare during stressful periods.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "anxious",
+      "hardworking",
+      "detail-oriented"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Plaque psoriasis (psoriasis vulgaris), chronic plaque psoriasis",
+      "description": "Noninfectious, chronic papulosquamous, T-cell-mediated inflammatory disorder with well-defined pink-red sharply demarcated plaques covered by silvery scales; extensor surfaces and scalp are typical; Auspitz sign and grattage test may be positive."
+    },
+    {
+      "id": "d2",
+      "name": "Atopic dermatitis (atopic eczema)",
+      "description": "Endogenous eczema with extremely itchy erythematous scaly patches; acute lesions may have small vesicles and severe cases show weeping/crusting; chronic rubbing causes lichenification; flexor distribution is typical."
+    },
+    {
+      "id": "d3",
+      "name": "Seborrheic dermatitis",
+      "description": "Erythematous scaling affecting nasolabial folds, eyebrows, eyelids, and glabella; scalp dandruff is common; may involve external auditory canal and postauricular areas."
+    },
+    {
+      "id": "d4",
+      "name": "Pityriasis versicolor (tinea versicolor)",
+      "description": "Persistent superficial infection by Malassezia furfur causing round/oval scaly macules on upper trunk (often hypopigmented on dark skin, sometimes hyperpigmented on light skin); confirmed by scraping with 'spaghetti and meatballs' appearance."
+    },
+    {
+      "id": "d5",
+      "name": "Erythema multiforme",
+      "description": "Acute self-limiting recurrent cutaneous/mucocutaneous eruption with target-shaped plaques; lesions are symmetrical, acral and centripetal (extremities > face > neck > trunk); may follow herpes infection."
+    },
+    {
+      "id": "d6",
+      "name": "Lichen planus",
+      "description": "Pruritic planar purple polygonal papules/plaques (the '5 P’s'), often on flexor surfaces (especially wrists); may show Wickham’s striae and Koebner phenomenon; oral mucosal involvement can occur."
+    },
+    {
+      "id": "d7",
+      "name": "Vitiligo",
+      "description": "Slowly progressive acquired focal loss of melanocytes causing well-circumscribed depigmented macules/patches, often around body orifices and on hands/feet; may show Koebner phenomenon; patients are very susceptible to sunburn."
+    },
+    {
+      "id": "d8",
+      "name": "Pityriasis alba",
+      "description": "Hypopigmented patches or macules with slight scale mainly on the face (less often neck/trunk/extremities), often in children and with a history of atopy; improves after puberty."
+    },
+    {
+      "id": "d9",
+      "name": "Stevens–Johnson syndrome",
+      "description": "Rare, acute, life-threatening mucocutaneous disease nearly always drug-related with erythematous dusky red atypical targetoid macules that coalesce and evolve into flaccid blisters with epidermal detachment (<10% BSA); mucosa normally involves at least two sites."
+    },
+    {
+      "id": "d10",
+      "name": "Bullous pemphigoid",
+      "description": "Autoimmune blistering disorder typically in elderly; itchy tense bullae with negative Nikolsky sign; mucosal involvement in 10–30%."
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "For the last 2 days, I suddenly developed red ‘ring-like’ spots on my hands and feet that seem to be spreading upward.",
+  "medicalHistory": "She reports a preceding herpetic infection before the skin eruption. No other past history provided.",
+  "symptoms": "Acute onset of a multiforme eruption with macules, papules, vesicles and bullae. Lesions are target-shaped plaques. Distribution is symmetrical, acral and centripetal with extensor aspect involvement (extremities more than face, then neck and trunk).\n\nFrom textbook: 1301\n\nDIFFERENCES BETWEEN PEMPHIGUS VULGARIS AND BULLOUS PEMPHIGOID\nPemphigus vulgaris Bullous pemphigoid\n\nEpidemiology Average age 40–60 Elderly >60\nTime course Chronic, relapsing Chronic, relapsing\nSymptoms Painful Itchy\nMucosal involvement Common 10–30%\nBullae Flaccid, many already ruptured Tense\nNikolsky sign Positive Negative\nAntibodies Autoantibodies against desmoglein 1 and 3 Hemidesmosomal bullous pemphigoid antigens BP230 and BP180\nHistology Suprabasilar clefting, “row of tombstone” pat",
+  "relevantFindings": "On examination, there are classic target lesions with three concentric zones (a dark central dusky red zone, an intermediate light rim, and an outer red zone). Lesions are symmetrical and predominantly acral with centripetal spread and extensor predominance. History suggests herpes-associated erythema multiforme.\n\nFrom textbook: 1301\n\nDIFFERENCES BETWEEN PEMPHIGUS VULGARIS AND BULLOUS PEMPHIGOID\nPemphigus vulgaris Bullous pemphigoid\n\nEpidemiology Average age 40–60 Elderly >60\nTime course Chronic, relapsing Chronic, relapsing\nSymptoms Painful Itchy\nMucosal involvement Common 10–30%\nBullae Flaccid, many already ruptured Tense\nNikolsky sign Positive Negative\nAntibodies Autoantibodies against desmoglein 1 and 3 Hemidesmosomal bullous pemphigoid antigens BP230 and BP180\nHistology Suprabasilar clefting, “row of tombstone” pat",
+  "redHerrings": "Reports itch (can suggest atopic dermatitis or lichen planus). Mentions scaling in some areas (can suggest psoriasis, seborrheic dermatitis, or pityriasis versicolor). Notes that lesions seem to appear at sites of minor trauma/sun-exposed areas (Koebnerization can be seen in erythema multiforme and also in psoriasis/vitiligo/lichen planus).",
+  "id": "case_1767640680133",
+  "domain": "dermatology",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Plaque psoriasis (psoriasis vulgaris), chronic plaque psoriasis",
+      "description": "**Chronic plaque psoriasis** is a chronic, immune-mediated inflammatory dermatosis characterized by well-demarcated erythematous plaques with adherent silvery scale. It typically follows a chronic relapsing course and commonly involves extensor surfaces and the scalp, rather than an acute targetoid eruption.",
+      "keySymptoms": [
+        "**Well-demarcated erythematous plaques** - Sharply bordered red plaques, usually persistent and slowly evolving over weeks to months.",
+        "**Silvery-white scale** - Thick micaceous scale that flakes when scratched; often prominent on extensor plaques.",
+        "**Auspitz sign** - Pinpoint bleeding after scale removal due to exposed dilated dermal capillaries.",
+        "**Chronic relapsing course** - Recurrent flares over months to years rather than abrupt onset over days.",
+        "**Extensor surface predominance** - Commonly affects elbows and knees; may involve scalp and lumbosacral area."
+      ],
+      "clinicalReasoning": "This patient has an **acute onset** (2 days) of **classic target lesions** with **three concentric zones**, symmetrically distributed on acral sites with **centripetal spread**, which is characteristic of **erythema multiforme**. **Plaque psoriasis** typically presents as chronic, stable plaques with scale rather than rapidly appearing targetoid macules/papules with vesicles and bullae. The described morphology (target-shaped plaques, multiforme eruption including vesicles/bullae) and history suggesting **herpes-associated** trigger strongly support **erythema multiforme** over psoriasis.",
+      "whyIncorrectForCase": "The lesions are **target-shaped** with concentric rings and acute evolution, which is not typical of **plaque psoriasis**. Psoriasis would more likely show **chronic scaly plaques** rather than an abrupt acral, symmetric, centripetally spreading multiforme eruption with vesicles/bullae.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Psoriasis is **chronic/relapsing**; **erythema multiforme** is typically **acute** and sudden in onset.",
+        "**Primary morphology** - Psoriasis shows **scaly plaques**; **erythema multiforme** shows **target (iris) lesions** with concentric zones.",
+        "**Distribution pattern** - Psoriasis favors **extensor plaques/scalp**; **erythema multiforme** is often **acral and symmetric** with **centripetal spread**.",
+        "**Triggers** - Psoriasis flares with stress, infection, drugs; **erythema multiforme** classically follows **HSV infection**.",
+        "**Blistering** - Vesicles/bullae are atypical for plaque psoriasis; **erythema multiforme** can include **vesicles and bullae** in a multiforme eruption."
+      ],
+      "missingFindings": [
+        "**Silvery scale** - Absence of thick micaceous scaling argues against **plaque psoriasis** in this presentation.",
+        "**Auspitz sign** - No report of pinpoint bleeding on scale removal; expected supportive sign for psoriasis.",
+        "**Chronic stable plaques** - Lack of long-standing, persistent plaques makes psoriasis unlikely compared with acute EM.",
+        "**Typical sites (scalp/nails)** - No scalp involvement or nail changes (e.g., **pitting**, **onycholysis**) described, reducing likelihood of psoriasis."
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Atopic dermatitis (atopic eczema)",
+      "description": "**Atopic dermatitis** is a chronic, relapsing inflammatory skin disorder characterized by pruritic eczematous lesions and xerosis. It is associated with **atopy** (asthma, allergic rhinitis) and skin barrier dysfunction, often beginning in childhood and fluctuating over time.",
+      "keySymptoms": [
+        "**Pruritus** - Intense itching is the hallmark; scratching perpetuates inflammation and worsens rash.",
+        "**Eczematous plaques** - Ill-defined erythematous patches/plaques with scale, crusting, or oozing during flares.",
+        "**Xerosis** - Generalized dry skin from barrier dysfunction, often persistent even between flares.",
+        "**Lichenification** - Thickened skin with accentuated markings due to chronic rubbing and scratching.",
+        "**Flexural predominance** - Commonly affects antecubital and popliteal fossae in adolescents and adults."
+      ],
+      "clinicalReasoning": "Atopic dermatitis typically presents as a chronic, itchy eczema with xerosis and lichenification, often with a flexural distribution and personal/family history of atopy. Lesions are usually ill-defined eczematous patches rather than discrete targetoid plaques. The patient’s eruption is acute, symmetric, acral, and **target-shaped** with vesicles/bullae, which is far more consistent with **erythema multiforme** (often **herpes-associated**). Therefore, atopic dermatitis does not explain the morphology or rapid onset described.",
+      "whyIncorrectForCase": "This patient has abrupt onset of classic **three-zone target lesions** with acral, centripetal spread, which is characteristic of **erythema multiforme**, not eczema. Atopic dermatitis is usually chronic and pruritic with eczematous, poorly demarcated lesions rather than symmetric targetoid plaques with vesicles/bullae.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion morphology** - Atopic dermatitis shows eczematous patches/lichenification, not fixed **target lesions** of **erythema multiforme**.",
+        "**Time course** - Atopic dermatitis is chronic/relapsing; **erythema multiforme** is typically acute and sudden onset.",
+        "**Distribution** - Atopic dermatitis favors **flexural** areas; **erythema multiforme** is **acral** with centripetal spread and extensor predominance.",
+        "**Triggers** - Atopic dermatitis relates to barrier dysfunction/atopy; **erythema multiforme** is commonly triggered by **HSV** infection.",
+        "**Blistering pattern** - Vesicles/limited bullae may occur in EM target lesions; classic atopic dermatitis is not primarily a targetoid vesiculobullous eruption."
+      ],
+      "missingFindings": [
+        "**Chronic pruritus** - Lack of predominant longstanding itch argues against classic atopic dermatitis flare pattern.",
+        "**Flexural eczema** - No antecubital/popliteal flexural predominance described, which is typical for atopic dermatitis.",
+        "**Xerosis/lichenification** - No generalized dryness or chronic thickened, excoriated plaques mentioned.",
+        "**Relapsing history/atopy** - No history of recurrent eczema or associated atopic conditions provided."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Seborrheic dermatitis",
+      "description": "Seborrheic dermatitis is a chronic, relapsing inflammatory dermatosis affecting sebaceous-rich areas. It presents with erythematous patches and greasy scales, most commonly on the scalp, face, and upper trunk.",
+      "keySymptoms": [
+        "**Greasy scale** - Yellowish, oily scaling on erythematous skin, especially scalp and nasolabial folds.",
+        "**Dandruff** - Diffuse scalp flaking with variable pruritus, often worse with stress or cold weather.",
+        "**Facial involvement** - Erythema and scale around eyebrows, glabella, eyelids, and nasolabial creases.",
+        "**Pruritus** - Mild to moderate itch is common; pain and blistering are not typical.",
+        "**Chronic course** - Recurrent flares over weeks to months rather than sudden onset over days."
+      ],
+      "clinicalReasoning": "Seborrheic dermatitis typically causes scaly erythematous plaques in sebaceous areas (scalp/face/chest) with a chronic relapsing pattern. It does not produce **target lesions**, nor does it present with **vesicles** or **bullae** as a primary morphology. The patient’s eruption is acute, symmetric, acral, and centripetally spreading with classic three-zone targets, which is characteristic of **erythema multiforme** rather than seborrheic dermatitis.",
+      "whyIncorrectForCase": "This patient has acute-onset, symmetric **target-shaped plaques** with **vesicles/bullae** on hands and feet spreading centripetally, which is not the morphology or distribution of seborrheic dermatitis. Seborrheic dermatitis favors scalp and central face with greasy scale, not acral extensor surfaces.",
+      "keyDifferencesFromCorrect": [
+        "**Primary lesion morphology** - Seborrheic dermatitis has erythema with greasy scale; **erythema multiforme** has classic three-zone **target lesions**.",
+        "**Distribution** - Seborrheic dermatitis favors scalp/face/upper trunk; **erythema multiforme** is **acral** with **centripetal** spread and extensor predominance.",
+        "**Time course** - Seborrheic dermatitis is chronic/relapsing; **erythema multiforme** is acute and abrupt in onset.",
+        "**Blistering** - Seborrheic dermatitis does not form **vesicles/bullae**; **erythema multiforme** can show vesicles/bullae within target lesions.",
+        "**Trigger association** - Seborrheic dermatitis relates to Malassezia/sebum and systemic factors; **erythema multiforme** is commonly **herpes-associated**."
+      ],
+      "missingFindings": [
+        "**Greasy yellow scale** - Absence of oily scaling argues strongly against seborrheic dermatitis.",
+        "**Sebaceous-area predominance** - No dominant scalp/nasolabial/eyebrow involvement, expected in seborrheic dermatitis.",
+        "**Chronic relapsing history** - No prior recurrent flares; presentation is sudden over 2 days.",
+        "**Non-target plaques** - Lesions are classic three-zone targets, not diffuse scaly patches typical of seborrheic dermatitis."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Pityriasis versicolor (tinea versicolor)",
+      "description": "**Pityriasis versicolor** is a superficial fungal infection caused by **Malassezia** leading to hypo- or hyperpigmented scaly patches. It typically affects the **trunk and proximal upper limbs**, is often recurrent, and is usually minimally symptomatic.",
+      "keySymptoms": [
+        "**Hypo-/hyperpigmented macules** - Variably colored flat patches that become more noticeable after sun exposure.",
+        "**Fine branny scale** - Subtle superficial scaling that may be accentuated by scratching (evoked scale).",
+        "**Truncal predominance** - Lesions mainly on chest, back, shoulders; acral hands/feet uncommon.",
+        "**Mild pruritus or asymptomatic** - Usually little itch; pain, burning, and tenderness are atypical.",
+        "**Chronic/recurrent course** - Develops gradually over weeks to months and frequently recurs in warm climates."
+      ],
+      "clinicalReasoning": "This patient has an **acute** 2-day onset of **target-shaped plaques** with **macules, papules, vesicles, and bullae** in a **symmetrical acral** distribution with **centripetal spread** and extensor predominance. These features are classic for **erythema multiforme**, especially with a history suggesting **herpes-associated** triggers. In contrast, **pityriasis versicolor** presents as slowly evolving pigmentary macules with fine scale on the trunk, without true target lesions or blistering. Therefore, the morphology, distribution, and time course strongly argue against **tinea versicolor**.",
+      "whyIncorrectForCase": "**Pityriasis versicolor** does not produce **classic three-zone target lesions** or acute vesiculobullous eruptions. It also typically involves the **trunk/proximal limbs**, not **hands and feet** with centripetal spread.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion morphology** - Tinea versicolor causes scaly pigmentary macules; **erythema multiforme** causes **target lesions** with concentric zones.",
+        "**Time course** - Tinea versicolor is **subacute/chronic**; **erythema multiforme** is **acute** and abrupt in onset.",
+        "**Distribution** - Tinea versicolor favors **trunk/shoulders**; **erythema multiforme** is **acral** with centripetal spread.",
+        "**Blistering** - Vesicles/bullae are not typical in tinea versicolor; **erythema multiforme** can be vesiculobullous.",
+        "**Trigger association** - Tinea versicolor relates to heat/oily skin; **erythema multiforme** is often **HSV-associated**."
+      ],
+      "missingFindings": [
+        "**Fine branny scale** - Expected in tinea versicolor; absence favors a non-fungal inflammatory eruption.",
+        "**Truncal hypopigmented/hyperpigmented patches** - Typical primary sites are chest/back; not described here.",
+        "**Gradual onset over weeks** - Tinea versicolor rarely appears suddenly within 48 hours.",
+        "**Positive KOH (spaghetti and meatballs)** - Demonstration of Malassezia hyphae/yeast would support tinea versicolor.",
+        "**Lack of target lesions** - Tinea versicolor should not show three concentric zones characteristic of erythema multiforme."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Erythema multiforme",
+      "description": "Erythema multiforme is an acute, immune-mediated mucocutaneous reaction classically triggered by **herpes simplex virus (HSV)** infection. It presents with sudden onset of symmetric, acral **target (iris) lesions** that may include macules, papules, vesicles, and bullae, often spreading centripetally.",
+      "keySymptoms": [
+        "**Target lesions (three concentric zones)** - Highly characteristic morphology that strongly supports erythema multiforme diagnosis.",
+        "**Acute onset (2 days)** - Sudden eruption favors erythema multiforme over chronic autoimmune blistering disorders.",
+        "**Acral, symmetric distribution** - Typical pattern on hands/feet with bilateral symmetry in erythema multiforme.",
+        "**Centripetal spread** - Lesions starting acrally and moving proximally is classic for erythema multiforme.",
+        "**Extensor predominance** - Common involvement of extensor surfaces helps distinguish from many other rashes.",
+        "**Polymorphous eruption (macules/papules/vesicles/bullae)** - Mixed lesion types are expected in erythema multiforme."
+      ],
+      "clinicalReasoning": "The patient has classic **target lesions** with three concentric zones and an acute, symmetric, predominantly acral eruption with centripetal spread—hallmark features of **erythema multiforme**. The morphology and distribution fit better than autoimmune blistering diseases, which are typically chronic and characterized by either flaccid bullae with mucosal involvement (**pemphigus vulgaris**) or tense pruritic bullae in the elderly (**bullous pemphigoid**). The history suggesting **HSV-associated** disease further supports erythema multiforme as the correct diagnosis."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Lichen planus",
+      "description": "**Lichen planus** is an inflammatory, immune-mediated dermatosis presenting with pruritic, violaceous papules and plaques. It commonly involves flexor wrists/ankles and may affect oral or genital mucosa with a chronic course.",
+      "keySymptoms": [
+        "**Pruritus** - Often prominent itching accompanying papules/plaques, sometimes severe and sleep-disturbing.",
+        "**Violaceous papules** - Flat-topped, purple polygonal papules classically on wrists, ankles, and shins.",
+        "**Wickham striae** - Fine white lacy lines on papules or oral mucosa, best seen with side lighting.",
+        "**Koebner phenomenon** - New lesions appear along scratch lines or sites of minor trauma.",
+        "**Oral involvement** - Reticular white plaques or erosions on buccal mucosa, sometimes painful.",
+        "**Chronic course** - Persists for weeks to months with relapses rather than abrupt 1–3 day onset."
+      ],
+      "clinicalReasoning": "This patient has an acute, symmetric, acral eruption with classic **target lesions** (three concentric zones) and centripetal spread, which is characteristic of **erythema multiforme**. The morphology described (macules, papules, vesicles, and bullae with targetoid plaques) and the history suggesting **herpes-associated** trigger strongly support erythema multiforme. In contrast, **lichen planus** typically presents as pruritic, violaceous, flat-topped papules with **Wickham striae** and a more chronic evolution. Therefore, selecting lichen planus does not align with the lesion morphology, distribution, or time course in this case.",
+      "whyIncorrectForCase": "The patient’s lesions are **target-shaped plaques** with acute onset and acral, centripetal distribution—features typical of **erythema multiforme**, not lichen planus. **Lichen planus** usually shows violaceous, flat-topped papules with **Wickham striae** and a chronic course rather than sudden 2-day spread.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion morphology** - Lichen planus has violaceous flat-topped papules; **erythema multiforme** has classic three-zone **target lesions**.",
+        "**Time course** - Lichen planus is chronic/relapsing; **erythema multiforme** is acute and often self-limited.",
+        "**Distribution** - Lichen planus favors flexor wrists/ankles; **erythema multiforme** is typically acral with centripetal spread and extensor predominance.",
+        "**Trigger association** - Lichen planus is linked to drugs/hepatitis C; **erythema multiforme** is commonly triggered by **HSV** infection.",
+        "**Surface findings** - Lichen planus may show **Wickham striae**; **erythema multiforme** shows concentric color zones and may blister centrally."
+      ],
+      "missingFindings": [
+        "**Violaceous, flat-topped polygonal papules** - Absence of classic purple, planar papules argues against lichen planus.",
+        "**Wickham striae** - No lacy white reticular lines on lesions or oral mucosa described, reducing likelihood.",
+        "**Flexor-predominant distribution** - Case is acral/extensor with centripetal spread, not flexor wrist/ankle predominance.",
+        "**Chronic evolution** - Sudden 2-day onset is inconsistent with the typically gradual, persistent course of lichen planus."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Vitiligo",
+      "description": "**Vitiligo** is an acquired depigmenting disorder caused by loss of functional **melanocytes**, producing well-demarcated milky-white macules and patches. It is typically chronic, noninflammatory, and may be associated with other **autoimmune** diseases.",
+      "keySymptoms": [
+        "**Depigmented macules/patches** - Chalk-white, well-demarcated areas that enlarge slowly over weeks to months.",
+        "**No surface change** - Skin texture remains normal without scale, vesicles, bullae, or crusting.",
+        "**Asymptomatic lesions** - Usually no pain or itch; patients mainly report cosmetic concern.",
+        "**Koebner phenomenon** - New lesions can appear at sites of friction, trauma, or pressure.",
+        "**Leukotrichia** - Whitening of hair within lesions suggests deeper follicular melanocyte loss."
+      ],
+      "clinicalReasoning": "This patient has an acute-onset, symmetric acral eruption with classic three-zone **target lesions** and polymorphous morphology (macules, papules, vesicles, bullae). The centripetal spread and extensor predominance strongly support **erythema multiforme**, especially with a history suggestive of **herpes-associated** triggers. **Vitiligo** does not present with inflammatory target plaques or vesiculobullous lesions and is not typically sudden over 48 hours. Therefore, the morphology and time course are incompatible with vitiligo and align with **erythema multiforme**.",
+      "whyIncorrectForCase": "**Vitiligo** causes chronic, noninflammatory **depigmented** patches, not acute red ring-like **target lesions** with vesicles and bullae. The patient’s rapid 2-day onset with symmetric acral, centripetal spread is classic for **erythema multiforme**, not vitiligo.",
+      "keyDifferencesFromCorrect": [
+        "**Primary lesion color** - Vitiligo is milky-white depigmentation; **erythema multiforme** is erythematous target plaques with dusky centers.",
+        "**Morphology** - Vitiligo has flat macules/patches without blisters; **erythema multiforme** can include papules, vesicles, and bullae.",
+        "**Time course** - Vitiligo evolves gradually and chronically; **erythema multiforme** is acute and abrupt in onset.",
+        "**Distribution pattern** - Vitiligo often affects periorificial areas and friction sites; **erythema multiforme** is typically acral with centripetal spread and extensor predominance.",
+        "**Trigger association** - Vitiligo is autoimmune-associated; **erythema multiforme** is commonly triggered by **HSV** infection or medications."
+      ],
+      "missingFindings": [
+        "**Depigmentation** - Absence of chalk-white, sharply demarcated patches argues strongly against vitiligo.",
+        "**Wood’s lamp accentuation** - No report of bright blue-white fluorescence typical of vitiligo lesions.",
+        "**Chronic progression** - No history of slowly enlarging lesions over months; instead, abrupt 2-day eruption.",
+        "**Lack of inflammation** - Vitiligo lacks erythema and target morphology; this case has classic inflammatory target plaques."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Pityriasis alba",
+      "description": "**Pityriasis alba** is a common, benign, self-limited disorder causing ill-defined hypopigmented patches with fine scale, typically in children and adolescents. It is considered a mild form of eczema and is most noticeable after sun exposure due to contrast with tanned skin.",
+      "keySymptoms": [
+        "**Hypopigmented patches** - Ill-defined lighter areas, often on face, more visible after sun exposure.",
+        "**Fine scale** - Subtle dry, powdery scaling on the surface of lesions, reflecting mild eczema.",
+        "**Mild pruritus** - Itch may be absent or mild; lesions are usually not painful.",
+        "**Facial predominance** - Cheeks and perioral areas are classic; trunk and limbs less common.",
+        "**Chronic/relapsing course** - Evolves over weeks to months, often recurring with dry weather."
+      ],
+      "clinicalReasoning": "This patient has an acute, symmetric acral eruption with classic three-zone **target lesions**, including macules, papules, vesicles, and bullae with centripetal spread—features typical of **erythema multiforme**. The morphology (target plaques) and distribution (hands/feet with extensor predominance) strongly point away from an eczematous hypopigmenting disorder. The history suggesting **herpes-associated erythema multiforme** further supports an immune-mediated acute hypersensitivity pattern rather than a chronic xerotic dermatitis. Therefore, **pityriasis alba** is not an appropriate diagnosis for this presentation.",
+      "whyIncorrectForCase": "**Pityriasis alba** causes chronic, ill-defined hypopigmented scaly patches, not sudden-onset **targetoid** plaques with vesicles/bullae. It also typically affects the face in children, not an acute acral symmetric eruption in an adult.",
+      "keyDifferencesFromCorrect": [
+        "**Onset/course** - Pityriasis alba is gradual and chronic; **erythema multiforme** is acute over days.",
+        "**Primary lesion morphology** - Pityriasis alba has hypopigmented patches with fine scale; **erythema multiforme** has **target lesions** with concentric zones.",
+        "**Distribution** - Pityriasis alba favors face; **erythema multiforme** is **acral** with centripetal spread and extensor predominance.",
+        "**Severity/spectrum** - Pityriasis alba lacks vesicles/bullae; **erythema multiforme** can include vesicles and bullae.",
+        "**Trigger association** - Pityriasis alba relates to atopy/dry skin; **erythema multiforme** commonly follows **HSV** infection."
+      ],
+      "missingFindings": [
+        "**Hypopigmentation** - Absence of lighter patches argues against pityriasis alba as primary process.",
+        "**Fine xerotic scaling** - Lack of subtle dry scale makes an eczematous hypopigmenting disorder unlikely.",
+        "**Facial predominance** - No primary facial involvement; pityriasis alba classically affects cheeks/perioral areas.",
+        "**Chronic evolution** - Only 2 days of symptoms; pityriasis alba typically develops over weeks to months."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Stevens–Johnson syndrome",
+      "description": "**Stevens–Johnson syndrome (SJS)** is a severe, acute **mucocutaneous hypersensitivity reaction**, most often triggered by medications, characterized by widespread epidermal injury. It presents with systemic symptoms and painful skin lesions with prominent **mucosal erosions** and risk of significant morbidity.",
+      "keySymptoms": [
+        "**Prodrome (fever, malaise)** - Flu-like symptoms typically precede rash by 1–3 days in SJS.",
+        "**Painful skin lesions** - Lesions are tender/burning rather than primarily itchy, reflecting epidermal necrosis.",
+        "**Mucosal involvement** - Painful erosions of oral, ocular, or genital mucosa are common and prominent.",
+        "**Atypical target lesions** - Targets are often less well-defined, with two zones and central necrosis.",
+        "**Epidermal detachment** - Blistering with sheet-like skin loss; positive **Nikolsky sign** may occur."
+      ],
+      "clinicalReasoning": "SJS is considered when an acute eruption is accompanied by systemic illness, significant **mucosal involvement**, and widespread epidermal necrosis/detachment. While targetoid lesions can be seen, SJS typically shows **atypical targets** and more truncal/generalized distribution with skin pain. The patient’s presentation instead describes classic **three-zone target lesions** with a symmetric **acral, centripetal** pattern, which is characteristic of **erythema multiforme**. A history suggestive of **herpes-associated erythema multiforme** further supports the correct diagnosis over SJS.",
+      "whyIncorrectForCase": "This patient has classic **three concentric-zone target lesions** with symmetric **acral** predominance and centripetal spread, which fits **erythema multiforme** rather than SJS. SJS would be expected to have prominent **mucosal erosions**, systemic prodrome, and more widespread epidermal detachment, which are not described.",
+      "keyDifferencesFromCorrect": [
+        "**Trigger** - SJS is commonly **drug-induced**; **erythema multiforme** is often **HSV-associated**.",
+        "**Lesion type** - SJS shows **atypical targets** and necrotic macules; EM shows **classic three-zone targets**.",
+        "**Distribution** - SJS is more **generalized/truncal**; EM is **acral** with **centripetal** spread.",
+        "**Mucosal disease** - SJS has **prominent, severe mucositis**; EM has none or mild (major form).",
+        "**Skin pain/detachment** - SJS features **pain** and **epidermal detachment**; EM is usually limited without large detachment."
+      ],
+      "missingFindings": [
+        "**Mucosal erosions** - Absence of oral/ocular/genital erosions argues strongly against SJS in this case.",
+        "**Systemic prodrome** - No reported fever or malaise reduces likelihood of SJS.",
+        "**Widespread epidermal detachment** - No sheet-like skin loss or extensive blistering described for SJS.",
+        "**Truncal predominance** - Case emphasizes acral/extensor distribution rather than trunk-dominant eruption."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Bullous pemphigoid",
+      "description": "**Bullous pemphigoid** is a chronic, relapsing autoimmune subepidermal blistering disorder caused by antibodies against hemidesmosomal proteins (**BP180** and **BP230**). It typically affects the **elderly** and presents with **pruritic**, **tense bullae** on an erythematous or urticarial base, with limited mucosal involvement.",
+      "keySymptoms": [
+        "**Pruritus** - Intense itching often precedes blistering and is a prominent early symptom.",
+        "**Tense bullae** - Firm, fluid-filled blisters that resist rupture due to subepidermal split.",
+        "**Urticarial plaques** - Erythematous, edematous plaques may appear before bullae develop.",
+        "**Limited mucosal involvement** - Oral/genital mucosa affected in only about 10–30% of cases.",
+        "**Negative Nikolsky sign** - Lateral pressure typically does not shear epidermis off in bullous pemphigoid."
+      ],
+      "clinicalReasoning": "A diagnosis of **bullous pemphigoid** is usually considered when an older patient develops a chronic, itchy blistering eruption with **tense bullae** and a **negative Nikolsky sign**. The pathogenesis involves IgG autoantibodies to hemidesmosomal antigens (**BP180/BP230**) producing a **subepidermal** split. Lesions are often widespread on trunk and flexures and may start as urticarial plaques before blistering. This pattern contrasts with acute, targetoid eruptions typical of **erythema multiforme**.",
+      "whyIncorrectForCase": "This 29-year-old has an **acute** symmetric **acral** eruption with classic **three-zone target lesions**, strongly indicating **erythema multiforme** rather than a chronic autoimmune blistering disease. The distribution (hands/feet with centripetal spread) and morphology (target plaques) do not match the typical **tense bullae/urticarial plaques** pattern of bullous pemphigoid.",
+      "keyDifferencesFromCorrect": [
+        "**Age group** - Bullous pemphigoid usually affects **>60**; **erythema multiforme** often affects younger patients.",
+        "**Time course** - Bullous pemphigoid is **chronic/relapsing**; **erythema multiforme** is typically **acute** and self-limited.",
+        "**Primary lesion morphology** - Bullous pemphigoid features **tense bullae/urticarial plaques**; **erythema multiforme** features **target lesions** with concentric zones.",
+        "**Symptoms** - Bullous pemphigoid is characteristically **itchy**; **erythema multiforme** is more often burning/tender and may follow infection.",
+        "**Distribution** - Bullous pemphigoid commonly involves trunk/flexures; **erythema multiforme** is **acral** with **centripetal** spread and extensor predominance.",
+        "**Etiologic association** - Bullous pemphigoid is autoimmune (**BP180/BP230**); **erythema multiforme** is commonly **herpes-associated**."
+      ],
+      "missingFindings": [
+        "**Elderly onset** - Typical presentation is in patients >60; young age makes bullous pemphigoid unlikely.",
+        "**Predominant pruritus** - Marked itching is expected; case emphasizes target lesions and acute spread instead.",
+        "**Tense widespread bullae** - Classic firm bullae are not the dominant described lesion morphology here.",
+        "**Urticarial prebullous phase** - Often precedes bullae in bullous pemphigoid; not described in this case.",
+        "**Supportive autoimmune evidence** - No mention of **BP180/BP230** antibodies or subepidermal blistering on biopsy."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Erythema multiforme",
+    "domain": "dermatology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about a preceding herpetic infection (e.g., recent herpes simplex episode).",
+        "reasoning": "About half of EM patients report a preceding herpetic infection; identifying this supports herpes-associated EM and guides management (acyclovir).",
+        "expectedFinding": "History of preceding herpetic infection.",
+        "importance": "critical",
+        "textbookReference": "“About 50% of patients give history of preceding herpetic infection.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about recent respiratory/systemic infection suggestive of Mycoplasma or other infections (including typhoid), and other infectious triggers.",
+        "reasoning": "Infections are listed as precipitating factors for EM, including Mycoplasma and viral/fungal/rickettsial causes.",
+        "expectedFinding": "Recent infection preceding rash (e.g., Mycoplasma or other infection).",
+        "importance": "important",
+        "textbookReference": "“Precipitating factors… Infections: … Mycoplasma and other bacterial infections (e.g., typhoid)… Viral… Fungal… Rickettsia.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about recent exposure to drugs known to precipitate erythema multiforme (e.g., sulfonamides, penicillins, barbiturates, salicylates, hydantoins, antimalarials, carbamazepine).",
+        "reasoning": "Drug exposure is a listed precipitating factor; identifying a culprit supports diagnosis and is essential for management (discontinuation).",
+        "expectedFinding": "Recent exposure to one of the listed precipitating drugs prior to eruption.",
+        "importance": "important",
+        "textbookReference": "“Exposure to drugs: For example, sulfonamides, penicillins, barbiturates… salicylates, hydantoins, antimalarials, and carbamazepine.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about mucosal symptoms, especially oral involvement (pain, soreness), and whether lesions are few/mild.",
+        "reasoning": "EM minor is cutaneous without mucosal involvement; EM major includes mucosal involvement. Textbook notes mucosal involvement is usually absent; when present, it is few and mildly symptomatic.",
+        "expectedFinding": "Mucosal involvement absent or (if present) few and mildly symptomatic oral lesions.",
+        "importance": "important",
+        "textbookReference": "“EM Minor: Cutaneous without mucous involvement… EM Major (EMM): Cutaneous + mucous involvement… Mucosal (oral mucosa) involvement is usually absent and, when present, lesions are few in number and mildly symptomatic.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about systemic symptoms noted with EM (malaise) and history of recurrence.",
+        "reasoning": "EM is described as acute, self-limiting, and recurrent; malaise is listed among clinical features.",
+        "expectedFinding": "Acute onset with malaise and/or recurrent episodes.",
+        "importance": "helpful",
+        "textbookReference": "“Erythema multiforme (EM) is an uncommon acute, self-limiting, recurrent…” and “Malaise.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Examine the morphology of lesions for classic target lesions (three concentric zones) and look for central bulla/crust.",
+        "reasoning": "Target lesions are characteristic of EM; classic description helps confirm diagnosis clinically.",
+        "expectedFinding": "Classic target lesion with three concentric rings (dark central dusky red zone, intermediate light rim, outer red zone) ± central bulla/crust.",
+        "importance": "critical",
+        "textbookReference": "“Classic target lesion… three concentric distinct zones… dark central… intermediate light rim… outermost red zone… Central circular zone may show bulla formation or crust.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Assess distribution/topography: check for symmetrical, acral, centripetal lesions, predominantly on extensor aspects (extremities > face > neck > trunk), including sun-exposed areas/Koebnerization.",
+        "reasoning": "The textbook specifies a typical distribution pattern for EM; matching pattern supports diagnosis.",
+        "expectedFinding": "Symmetrical acral lesions spreading centripetally; extensor predominance; extremities more than face/neck/trunk; predilection to sun-exposed areas/Koebnerization.",
+        "importance": "important",
+        "textbookReference": "“Lesions are symmetrical, acral, and centripetal in distribution… Extensor aspect: Extremities > face > neck > trunk… Predilection to sun-exposed areas/Koebnerization.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Examine mucosa (especially oral mucosa) for presence/absence and severity of mucosal lesions.",
+        "reasoning": "Classification into EM minor vs EM major depends on mucosal involvement; oral mucosal lesions are usually absent or few/mild when present.",
+        "expectedFinding": "No mucosal lesions (EM minor) OR few, mildly symptomatic oral lesions (EM major).",
+        "importance": "important",
+        "textbookReference": "“EM Minor: Cutaneous without mucous involvement… EM Major (EMM): Cutaneous + mucous involvement… Mucosal (oral mucosa) involvement is usually absent and, when present, lesions are few in number and mildly symptomatic.”"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Check for lymphadenopathy (tender, slightly enlarged).",
+        "reasoning": "Tender, slightly enlarged lymphadenopathy is listed among clinical features of EM.",
+        "expectedFinding": "Tender and slightly enlarged lymph nodes.",
+        "importance": "helpful",
+        "textbookReference": "“Lymphadenopathy: Tender and slightly enlarged.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order a complete blood count (CBC).",
+        "reasoning": "The textbook lists CBC as part of laboratory evaluation in related systemic drug reaction context; for EM, investigation emphasis is limited, but CBC is a basic, cost-effective screening test when systemic features are present.",
+        "expectedFinding": "No specific CBC pattern for EM is provided in the textbook.",
+        "importance": "helpful",
+        "textbookReference": "“Laboratory Features: Complete blood count (CBC)… ”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order liver function tests (LFT).",
+        "reasoning": "Visceral involvement may include liver findings (hepatomegaly, jaundice, asymptomatic hepatitis); LFTs are a cost-effective screen if systemic involvement is suspected.",
+        "expectedFinding": "Evidence of hepatic involvement if present (no specific EM lab thresholds provided).",
+        "importance": "helpful",
+        "textbookReference": "“Visceral involvement… Liver: Hepatomegaly, jaundice, and asymptomatic hepatitis.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order renal function tests (RFT) and urinalysis.",
+        "reasoning": "Visceral involvement may include kidney involvement (acute interstitial nephritis); basic renal tests help assess systemic involvement.",
+        "expectedFinding": "Evidence of renal involvement if present (no specific EM lab thresholds provided).",
+        "importance": "helpful",
+        "textbookReference": "“Visceral involvement… Kidney: Acute interstitial nephritis.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order chest imaging (CXR or CT) if lung symptoms are present.",
+        "reasoning": "Pulmonary involvement is described with CXR/CT evidence of interstitial pneumonitis and/or pleural effusion; imaging is more resource-intensive and should follow symptom-based triage.",
+        "expectedFinding": "CXR/CT evidence of interstitial pneumonitis and/or pleural effusion (if lung involvement).",
+        "importance": "helpful",
+        "textbookReference": "“Lung: … CXR/CT—evidence of interstitial pneumonitis and/or pleural effusion.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Consider a skin biopsy when diagnosis is uncertain.",
+        "reasoning": "The textbook provides biopsy features (spongiosis and dermal infiltrate with eosinophils/edema) in the provided reference; biopsy is typically more invasive/costly than basic labs and is reserved for unclear cases.",
+        "expectedFinding": "Mild spongiosis; lymphocytic infiltrate in superficial dermis with eosinophils and dermal edema.",
+        "importance": "helpful",
+        "textbookReference": "“Skin biopsy: Mild spongiosis, lymphocytic infiltrate in the superficial dermis with eosinophils and dermal edema.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Stevens–Johnson syndrome (SJS)",
+        "howToRuleOut": "SJS is nearly always drug-related and is characterized by <10% BSA detachment; mucous membranes normally involve at least two sites, and lesions are described as erythematous, dusky red, flat, atypical targetoid macules that can progress to flaccid blisters and epidermal detachment.",
+        "textbookReference": "“SJS… nearly always drug-related… ‘minor form of TEN’ with <10% body surface area (BSA) detachment… [mucous membrane] normally involves at least two sites… evolve into flaccid blisters… Detachment of epidermis.”"
+      },
+      {
+        "name": "Toxic epidermal necrolysis (TEN)",
+        "howToRuleOut": "TEN has >30% BSA detachment and no target lesions; Nikolsky sign often positive; begins with severe mucosal erosions and progresses to generalized detachment.",
+        "textbookReference": "“TEN… Detachment of >30% BSA… Nikolsky sign often positive… No target lesions seen… begins with severe mucosal erosions and progresses to diffuse, generalized detachment.”"
+      },
+      {
+        "name": "Pemphigus vulgaris",
+        "howToRuleOut": "Pemphigus vulgaris is chronic/relapsing with painful lesions, common mucosal involvement, flaccid bullae (often ruptured), and positive Nikolsky sign—features not typical of EM target lesions and acute self-limiting course.",
+        "textbookReference": "“Pemphigus vulgaris… Chronic, relapsing… Painful… Mucosal involvement Common… Bullae Flaccid… Nikolsky sign Positive.”"
+      },
+      {
+        "name": "Bullous pemphigoid",
+        "howToRuleOut": "Bullous pemphigoid typically affects elderly, is itchy, has tense bullae, mucosal involvement only 10–30%, and Nikolsky sign negative—distinguishing it from EM with target lesions and typical acral distribution.",
+        "textbookReference": "“Bullous pemphigoid… Elderly >60… Itchy… Bullae Tense… Mucosal involvement 10–30%… Nikolsky sign Negative.”"
+      }
+    ],
+    "diagnosticApproach": "Diagnose erythema multiforme clinically by identifying the characteristic target lesions (three concentric zones, sometimes with central bulla/crust) and the typical distribution (symmetrical, acral, centripetal; extensor predominance; extremities > face > neck > trunk; sun-exposed/Koebnerization). Classify as EM minor (cutaneous without mucosal involvement) versus EM major (cutaneous plus mucosal involvement), noting oral mucosal lesions are usually absent or few and mildly symptomatic when present. Elicit precipitating factors—especially preceding herpetic infection (~50%), other infections (including Mycoplasma), and drug exposures (e.g., sulfonamides, penicillins, barbiturates, salicylates, hydantoins, antimalarials, carbamazepine). Assess for associated features such as malaise and tender, slightly enlarged lymphadenopathy. If systemic involvement is suspected, evaluate organ involvement as described (liver, kidney, lung with CXR/CT findings). Differentiate from SJS/TEN by extent of epidermal detachment, mucosal involvement patterns, and the presence/absence of target lesions (TEN: no target lesions), and from pemphigus vulgaris/bullous pemphigoid using chronicity, symptoms, bulla characteristics, mucosal involvement frequency, and Nikolsky sign.",
+    "textbookSources": [
+      "1301\n\nDIFFERENCES BETWEEN PEMPHIGUS VULGARIS AND BULLOUS PEMPHIGOID\nPemphigus vulgaris Bullous pemphigoid\n\nEpidemiology Average age 40–60 Elderly >60\nTime course Chronic, relapsing Chronic, relapsing\n...",
+      "1301\n\nDIFFERENCES BETWEEN PEMPHIGUS VULGARIS AND BULLOUS PEMPHIGOID\nPemphigus vulgaris Bullous pemphigoid\n\nEpidemiology Average age 40–60 Elderly >60\nTime course Chronic, relapsing Chronic, relapsing\n..."
+    ]
+  }
+}

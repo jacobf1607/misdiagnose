@@ -1,0 +1,922 @@
+/* Coaching Modal Styles */
+
+.coaching-modal {
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.coaching-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--gray-100) 100%);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.coaching-title-section {
+  flex: 1;
+}
+
+.coaching-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 0 0 0.25rem 0;
+}
+
+.coaching-disease {
+  font-size: 0.875rem;
+  color: var(--secondary-dark);
+  font-weight: 500;
+}
+
+.coaching-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-500);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.coaching-close:hover {
+  color: var(--gray-700);
+}
+
+/* Score Bar */
+.coaching-score-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.coaching-score-bar .score-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.coaching-score-bar .score-track {
+  flex: 1;
+  max-width: 120px;
+  height: 8px;
+  background-color: var(--gray-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.coaching-score-bar .score-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+.coaching-score-bar .score-value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Tabs */
+.coaching-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+  padding: 0 1rem;
+}
+
+.coaching-tabs .tab {
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray-500);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.coaching-tabs .tab:hover {
+  color: var(--gray-700);
+}
+
+.coaching-tabs .tab.active {
+  color: var(--secondary);
+  border-bottom-color: var(--primary);
+}
+
+/* Content Area */
+.coaching-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+.tab-content {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Summary Tab - Textbook Style */
+.coaching-summary {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  padding: 1.25rem;
+  background-color: var(--primary-light);
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+  white-space: pre-line;
+  border-left: 4px solid var(--primary);
+}
+
+.coaching-summary strong {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.feedback-section {
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-section h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feedback-section h4::before {
+  content: "";
+  width: 4px;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.feedback-section ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.feedback-section li {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  white-space: pre-line;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.feedback-section li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+.feedback-section li strong {
+  font-weight: 700;
+}
+
+.feedback-section.strengths {
+  background-color: var(--success-light);
+}
+
+.feedback-section.strengths h4 {
+  color: var(--text-primary);
+}
+
+.feedback-section.strengths li {
+  color: var(--text-primary);
+}
+
+.feedback-section.missed {
+  background-color: var(--danger-light);
+}
+
+.feedback-section.missed h4 {
+  color: var(--text-primary);
+}
+
+.feedback-section.missed li {
+  color: var(--text-primary);
+}
+
+.feedback-section.unnecessary {
+  background-color: var(--warning-light);
+}
+
+.feedback-section.unnecessary h4 {
+  color: var(--text-primary);
+}
+
+.feedback-section.unnecessary li {
+  color: var(--text-secondary);
+}
+
+/* Pathway Tab */
+.pathway-intro {
+  padding: 0.75rem;
+  background-color: var(--primary-light);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pathway-intro p {
+  font-size: 0.85rem;
+  color: var(--secondary-dark);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pathway-section {
+  margin-bottom: 1.25rem;
+}
+
+.pathway-section h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin: 0 0 0.5rem 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Pathway Step Card */
+.pathway-step {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border-left: 3px solid;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pathway-step:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.pathway-step.matched {
+  position: relative;
+}
+
+.pathway-step.missed {
+  opacity: 0.7;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-order {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.step-action {
+  flex: 1;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.step-importance {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.step-check {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.step-expand {
+  font-size: 0.6rem;
+  color: var(--gray-400);
+  margin-left: 0.25rem;
+}
+
+.step-details {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+}
+
+.step-details-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step-details-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+.step-details-list li:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.detail-value {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.detail-quote {
+  font-style: italic;
+  color: var(--gray-500);
+}
+
+.step-detail {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  margin-bottom: 0.25rem;
+}
+
+.step-reference {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* Differential Cards */
+.differential-card {
+  padding: 0.75rem;
+  background-color: var(--gray-50);
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.diff-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 0.25rem;
+}
+
+.diff-rule-out {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.diff-reference {
+  font-size: 0.7rem;
+  color: var(--gray-400);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* Comparison Tab */
+.comparison-section {
+  margin-bottom: 1.25rem;
+}
+
+.comparison-section h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin: 0 0 0.5rem 0;
+}
+
+.no-items {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Action List - Bulleted structure for comparison tab */
+.action-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.action-item {
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid;
+}
+
+.action-item.correct {
+  background-color: var(--success-light);
+  border-left-color: var(--success);
+}
+
+.action-item.missed {
+  background-color: var(--danger-light);
+  border-left-color: var(--danger);
+}
+
+.action-item.unnecessary {
+  background-color: var(--warning-light);
+  border-left-color: var(--warning);
+}
+
+.action-item.ordering {
+  background-color: var(--primary-light);
+  border-left-color: var(--primary);
+}
+
+.action-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.375rem;
+}
+
+.action-type-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--gray-500);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.025em;
+}
+
+.action-item.correct .action-type-badge {
+  background-color: var(--success);
+}
+
+.action-item.missed .action-type-badge {
+  background-color: var(--danger);
+}
+
+.action-item.unnecessary .action-type-badge {
+  background-color: var(--warning);
+}
+
+.action-item .action-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.action-details {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  padding-left: 0.5rem;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+.action-label {
+  font-weight: 700;
+  color: var(--gray-700);
+}
+
+.action-item .action-feedback {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  padding-left: 0.5rem;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+.order-comparison {
+  font-size: 0.7rem;
+  color: var(--gray-600);
+  margin-top: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.order-label {
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.order-arrow {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Legacy action-card styles kept for backwards compatibility */
+.action-card {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid;
+}
+
+.action-card.correct {
+  background-color: var(--success-light);
+  border-left-color: var(--success);
+}
+
+.action-card.missed {
+  background-color: var(--danger-light);
+  border-left-color: var(--danger);
+}
+
+.action-card.unnecessary {
+  background-color: var(--warning-light);
+  border-left-color: var(--warning);
+}
+
+.action-card.ordering {
+  background-color: var(--primary-light);
+  border-left-color: var(--primary);
+}
+
+.action-type {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-right: 0.5rem;
+}
+
+.action-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.action-feedback,
+.action-why {
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  margin-top: 0.25rem;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+/* Learning Tab - Textbook Style */
+.learning-section {
+  margin-bottom: 1.5rem;
+}
+
+.learning-section h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.learning-section h4::before {
+  content: "📚";
+  font-size: 1rem;
+}
+
+.learning-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: learning-counter;
+}
+
+.learning-list li {
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  white-space: pre-line;
+  padding: 0.75rem 1rem;
+  padding-left: 2.5rem;
+  background-color: var(--gray-50);
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--primary);
+  position: relative;
+  counter-increment: learning-counter;
+}
+
+.learning-list li::before {
+  content: counter(learning-counter);
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learning-list li strong {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* Textbook Section - Enhanced formatting */
+.textbook-section h4::before {
+  content: "📖";
+}
+
+.textbook-excerpts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.textbook-excerpt {
+  position: relative;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-200);
+  font-size: 0.85rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+}
+
+.textbook-excerpt.is-quote {
+  padding-left: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+  border-left: 3px solid var(--primary);
+}
+
+.excerpt-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  font-family: Georgia, serif;
+  color: var(--primary);
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.excerpt-content {
+  white-space: pre-line;
+}
+
+.excerpt-content strong {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+/* Sources Section - Reference style */
+.sources-section h4::before {
+  content: "📑";
+}
+
+.source-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.source-item {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.source-item:last-child {
+  border-bottom: none;
+}
+
+.source-number {
+  font-weight: 700;
+  color: var(--gray-500);
+  flex-shrink: 0;
+}
+
+.source-text {
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+/* Legacy reading/source cards - kept for backwards compatibility */
+.reading-card,
+.source-card {
+  padding: 1rem;
+  background-color: var(--primary-light);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--secondary-dark);
+  line-height: 1.7;
+  border-left: 3px solid var(--primary);
+}
+
+.reading-card strong {
+  font-weight: 700;
+}
+
+.source-card {
+  background-color: var(--gray-50);
+  color: var(--gray-600);
+  font-style: italic;
+  border-left-color: var(--gray-300);
+}
+
+/* Footer */
+.coaching-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Mobile CoachingModal styles */
+@media (max-width: 768px) {
+  .coaching-modal {
+    max-width: calc(100% - 2rem);
+    max-height: 90vh;
+    margin: 1rem;
+  }
+
+  .coaching-header {
+    padding: 1rem;
+  }
+
+  .coaching-title {
+    font-size: 1.125rem;
+  }
+
+  .coaching-disease {
+    font-size: 0.8125rem;
+  }
+
+  .coaching-score-bar {
+    padding: 0.5rem 1rem;
+  }
+
+  .coaching-score-bar .score-label {
+    font-size: 0.6875rem;
+  }
+
+  /* Tabs - horizontal scroll on mobile */
+  .coaching-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 0.5rem;
+  }
+
+  .coaching-tabs .tab {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .coaching-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .coaching-summary {
+    padding: 1rem;
+    font-size: 0.8125rem;
+    line-height: 1.7;
+  }
+
+  .feedback-section {
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feedback-section h4 {
+    font-size: 0.8125rem;
+  }
+
+  .feedback-section li {
+    font-size: 0.8rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.625rem;
+  }
+
+  /* Pathway Tab */
+  .pathway-intro {
+    padding: 0.625rem;
+  }
+
+  .pathway-intro p {
+    font-size: 0.8rem;
+  }
+
+  .pathway-section h4 {
+    font-size: 0.8rem;
+  }
+
+  .pathway-step {
+    padding: 0.5rem 0.625rem;
+  }
+
+  .step-action {
+    font-size: 0.75rem;
+  }
+
+  .step-importance {
+    font-size: 0.6rem;
+  }
+
+  .step-details-list li {
+    padding-left: 0.5rem;
+  }
+
+  .detail-label {
+    font-size: 0.65rem;
+  }
+
+  .detail-value {
+    font-size: 0.7rem;
+  }
+
+  /* Comparison Tab */
+  .action-item {
+    padding: 0.625rem 0.75rem;
+  }
+
+  .action-type-badge {
+    font-size: 0.55rem;
+  }
+
+  .action-item .action-name {
+    font-size: 0.8rem;
+  }
+
+  .action-item .action-feedback {
+    font-size: 0.7rem;
+  }
+
+  /* Learning Tab */
+  .learning-list li {
+    padding: 0.625rem 0.75rem 0.625rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  .learning-list li::before {
+    left: 0.5rem;
+    top: 0.625rem;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.625rem;
+  }
+
+  /* Footer */
+  .coaching-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .coaching-footer .btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}

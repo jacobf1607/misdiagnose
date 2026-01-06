@@ -1,0 +1,34 @@
+{
+  "id": "sample",
+  "persona": {
+    "name": "Margaret Chen",
+    "age": 52,
+    "gender": "Female",
+    "occupation": "High school English teacher",
+    "background": "Married with two adult children. Very active in her community and church. Recently started a new diet regimen to lose weight. Has been under significant work stress due to curriculum changes.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": false,
+      "alcohol": "social"
+    },
+    "personalityTraits": ["articulate", "slightly anxious", "detail-oriented"]
+  },
+  "diagnoses": [
+    {"id": "d1", "name": "Tension Headache", "description": "Headache caused by muscle tension, often stress-related"},
+    {"id": "d2", "name": "Migraine", "description": "Severe recurring headache often with nausea and light sensitivity"},
+    {"id": "d3", "name": "Hypertension", "description": "High blood pressure that can cause headaches"},
+    {"id": "d4", "name": "Hypothyroidism", "description": "Underactive thyroid causing fatigue and other symptoms"},
+    {"id": "d5", "name": "Iron Deficiency Anemia", "description": "Low iron causing fatigue and weakness"},
+    {"id": "d6", "name": "Type 2 Diabetes", "description": "Metabolic disorder affecting blood sugar"},
+    {"id": "d7", "name": "Depression", "description": "Mental health condition causing fatigue and other symptoms"},
+    {"id": "d8", "name": "Sleep Apnea", "description": "Sleep disorder causing poor rest and daytime fatigue"},
+    {"id": "d9", "name": "Chronic Fatigue Syndrome", "description": "Persistent unexplained fatigue"},
+    {"id": "d10", "name": "Vitamin B12 Deficiency", "description": "Nutritional deficiency causing fatigue and neurological symptoms"}
+  ],
+  "correctDiagnosisId": "d4",
+  "initialComplaint": "Doctor, I've been having these terrible headaches for the past few weeks. They seem to come and go, but lately they've been getting worse. I'm also feeling more tired than usual, even though I'm sleeping okay. I thought maybe it was just stress from work, but it's really starting to worry me.",
+  "medicalHistory": "No significant past medical history. Mother had thyroid problems. Last checkup was 2 years ago, everything was normal then. Started a low-carb diet 3 months ago.",
+  "symptoms": "Bilateral dull headaches (not throbbing), fatigue despite adequate sleep, unexplained weight gain of 8 pounds over 3 months despite dieting, feeling cold more than usual, constipation, dry skin, some hair thinning noticed when brushing, mild muscle aches, difficulty concentrating at work, slightly hoarse voice in the mornings",
+  "relevantFindings": "If asked about: neck feels a bit full/swollen, skin is dry and cool to touch, hair is brittle, reflexes are slightly slow, mild bradycardia (slow heart rate), slightly elevated cholesterol mentioned at last checkup",
+  "redHerrings": "Recent work stress (might suggest tension headache or depression), new diet (might suggest nutritional deficiency), occasional glass of wine with dinner (not relevant), sometimes wakes up at night (might suggest sleep apnea but actually due to feeling cold)"
+}

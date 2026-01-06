@@ -1,0 +1,508 @@
+{
+  "persona": {
+    "name": "Vijaya Deshmukh",
+    "age": 62,
+    "gender": "Female",
+    "occupation": "Small Business Owner in Indore",
+    "background": "She runs a small retail shop and often stands for long hours. Over the last few years she has reduced physical activity because exertion brings on symptoms.",
+    "lifestyle": {
+      "activityLevel": "low",
+      "smoking": "unknown",
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "stoic",
+      "anxious about health",
+      "detail-oriented"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Chronic stable angina pectoris",
+      "description": "Paroxysmal, recurrent substernal/precordial constricting discomfort due to transient myocardial ischemia; brought on by exertion/emotion and relieved by rest or sublingual glyceryl trinitrate."
+    },
+    {
+      "id": "d2",
+      "name": "Acute coronary syndrome (myocardial infarction/unstable angina)",
+      "description": "Severe chest discomfort often radiating to left shoulder/neck/arm, typically lasting >20 minutes and may not respond to sublingual GTN; may be associated with breathlessness, nausea/vomiting, collapse/syncope."
+    },
+    {
+      "id": "d3",
+      "name": "Acute pericarditis",
+      "description": "Sharp, constant or pleuritic substernal pain that may be relieved by sitting up and leaning forward; ECG classically shows diffuse ST elevation with PR depression."
+    },
+    {
+      "id": "d4",
+      "name": "Myocarditis (acute myocarditis)",
+      "description": "May present with heart failure, acute myocardial infarction-like picture, or sudden cardiac death; ECG changes common but nonspecific; troponin/CK may be raised early; echo may show LV dysfunction and global hypokinesia."
+    },
+    {
+      "id": "d5",
+      "name": "Aortic stenosis",
+      "description": "Severe AS produces exertional symptoms such as angina/syncope/dyspnea; exam may show parvus et tardus pulse, apicocarotid delay, heaving LV apex, and a harsh diamond-shaped ejection systolic murmur radiating to the carotids with late peaking in severe AS."
+    },
+    {
+      "id": "d6",
+      "name": "Aortic regurgitation (chronic)",
+      "description": "Chronic AR has high-volume collapsing (water-hammer) pulse with wide pulse pressure and peripheral signs; LV impulse laterally displaced; long high-pitched regurgitant murmur."
+    },
+    {
+      "id": "d7",
+      "name": "Pulmonary embolism",
+      "description": "Can present with heaviness/tightness chest pain (whole chest if massive or focal if segmental) with dyspnea and unstable vital signs if massive."
+    },
+    {
+      "id": "d8",
+      "name": "Pulmonary arterial hypertension",
+      "description": "Insidious onset with exertional dyspnea, fatigue, palpitations and near-syncope/syncope; exam may show loud P2, narrow splitting, pulmonary ejection sound, and tricuspid pansystolic murmur if TR present."
+    },
+    {
+      "id": "d9",
+      "name": "Constrictive pericarditis",
+      "description": "Causes venous congestion with elevated JVP, often Kussmaul’s sign and a pericardial knock early in diastole; imaging may show pericardial thickening."
+    },
+    {
+      "id": "d10",
+      "name": "Tricuspid regurgitation",
+      "description": "Backflow into right atrium causing raised JVP with giant v wave (cv wave), edema/ascites/hepatomegaly with systolic pulsations; blowing pansystolic murmur at lower-left sternal border increased during inspiration (De Carvallo’s sign)."
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "“For the last several months I get a tight, heavy feeling in the chest when I walk or climb stairs, and a couple of times I felt like I might faint while walking.”",
+  "medicalHistory": "No documented prior cardiac diagnosis. No known prior stroke. Medication history not provided.",
+  "symptoms": "Exertional chest discomfort described as tight/heavy and occurring with physical activity. Near-syncope/syncope episodes on exertion. Exertional dyspnea is present as part of her symptom cluster (dyspnea/PND are recognized symptom patterns in symptomatic severe aortic stenosis).\n\nFrom textbook: aortic stenosis and mitral regurgitation presented in Table 1.74.\n\nTABLE 1.74:  Differences between aortic stenosis and mitral regurgitation.\nFeatures Aortic stenosis Mitral regurgitation\nSite of systolic murmur Aortic area + Apex Apex\nNature of murmur and its relation with A2 Usually ejection-mid systolic. Stops before A2 Pan systolic. Continues till A2\n\nPost-VPC intensity Increases No change/decreases\nCarotid pulse Slow rising, low volume Quick rising high volume\n\n(VPC: Ventricular premature c",
+  "relevantFindings": "Pulse: parvus and tardus (slow rising, late peaking, low amplitude) with apicocarotid delay. Blood pressure: low systolic and pulse pressures (systolic decapitation). Apex beat: thrusting/heaving LV type apex beat; palpable LV S4. Carotids: carotid shudder (thrill in carotids). Auscultation: harsh/rough diamond-shaped (crescendo–decrescendo) ejection systolic murmur best heard at the base (aortic area) with radiation to the neck/carotids and late peaking suggesting severe AS; second heart sound A2 may be soft/single in rheumatic AS and paradoxical splitting may be present in severe AS.\n\nFrom textbook: aortic stenosis and mitral regurgitation presented in Table 1.74.\n\nTABLE 1.74:  Differences between aortic stenosis and mitral regurgitation.\nFeatures Aortic stenosis Mitral regurgitation\nSite of systolic murmur Aortic area + Apex Apex\nNature of murmur and its relation with A2 Usually ejection-mid systolic. Stops before A2 Pan systolic. Continues till A2\n\nPost-VPC intensity Increases No change/decreases\nCarotid pulse Slow rising, low volume Quick rising high volume\n\n(VPC: Ventricular premature c",
+  "redHerrings": "Chest pain that sounds ischemic (could suggest stable angina or acute coronary syndrome). Exertional near-syncope/syncope (could suggest pulmonary arterial hypertension). Dyspnea (could suggest heart failure syndromes or myocarditis).",
+  "id": "case_1767640678646",
+  "domain": "cardiology",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Chronic stable angina pectoris",
+      "description": "Chronic stable angina pectoris is predictable **exertional chest discomfort** caused by transient myocardial ischemia, usually from fixed **coronary artery disease**. Symptoms are typically relieved by rest or nitrates and are not primarily driven by valvular outflow obstruction.",
+      "keySymptoms": [
+        "**Exertional chest tightness/pressure** - Substernal heaviness triggered by activity, improves with rest, reflects demand–supply mismatch.",
+        "**Radiation to arm/neck/jaw** - Pain may spread along typical dermatomes due to shared spinal afferent pathways.",
+        "**Shortness of breath on exertion** - Anginal equivalent from ischemia-induced LV diastolic dysfunction and elevated filling pressures.",
+        "**Diaphoresis/nausea** - Autonomic activation accompanying ischemic discomfort, more common with more intense episodes.",
+        "**Predictable threshold pattern** - Similar exertion level reproducibly provokes symptoms over weeks to months without progression."
+      ],
+      "clinicalReasoning": "This patient’s chest discomfort is exertional, which can resemble chronic stable angina. However, the bedside cardiovascular findings strongly indicate **severe aortic stenosis**: **parvus et tardus** pulse with **apicocarotid delay**, low systolic/pulse pressure, **heaving LV apex** with palpable **S4**, **carotid shudder**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the neck with **late peaking**. Exertional near-syncope is a classic symptom complex of symptomatic severe **aortic stenosis** (angina–syncope–dyspnea triad). Therefore, the symptom mechanism is more consistent with fixed LV outflow obstruction than primary coronary ischemia.",
+      "whyIncorrectForCase": "Chronic stable angina does not explain the hallmark physical signs of **aortic stenosis** (e.g., **parvus et tardus**, **carotid thrill/shudder**, late-peaking **ejection systolic murmur** radiating to carotids). Exertional near-syncope in this setting is better explained by fixed outflow obstruction and inability to augment cardiac output than by uncomplicated stable angina.",
+      "keyDifferencesFromCorrect": [
+        "**Murmur site and radiation** - Stable angina has no characteristic murmur; **aortic stenosis** has an **ejection systolic murmur** at aortic area radiating to carotids.",
+        "**Murmur shape and timing vs A2** - Angina: none; **aortic stenosis**: **crescendo–decrescendo** murmur that typically stops before **A2** and may be late-peaking when severe.",
+        "**Carotid pulse** - Angina: usually normal upstroke unless other disease; **aortic stenosis**: **slow-rising, low-volume (parvus et tardus)** pulse with **apicocarotid delay**.",
+        "**Syncope mechanism** - Angina: syncope is not typical and suggests arrhythmia/other cause; **aortic stenosis**: exertional syncope from fixed obstruction and reduced cerebral perfusion.",
+        "**Post-VPC intensity** - Angina: no murmur change; **aortic stenosis**: murmur intensity **increases after VPC** (post-extrasystolic potentiation).",
+        "**Apex findings** - Angina: may have normal apex; **aortic stenosis**: **heaving/thrusting LV apex** and palpable **S4** from concentric LV hypertrophy."
+      ],
+      "missingFindings": [
+        "**No typical ischemic radiation pattern documented** - Lack of classic arm/jaw radiation reduces specificity for stable angina in this presentation.",
+        "**No clear relief with rest/nitrates provided** - Stable angina classically improves promptly with rest or nitroglycerin; not established here.",
+        "**No evidence of normal carotid upstroke** - Stable angina should not produce **parvus et tardus**; its presence argues against angina as primary diagnosis.",
+        "**No absence of valvular signs** - Stable angina would not cause **carotid shudder**, **heaving apex**, or late-peaking **ejection murmur**; these are present."
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Acute coronary syndrome (myocardial infarction/unstable angina)",
+      "description": "**Acute coronary syndrome (ACS)** is myocardial ischemia from acute plaque rupture and coronary thrombosis, presenting as **unstable angina** or **myocardial infarction**. It typically causes acute or accelerating chest pain at rest or minimal exertion and requires urgent ECG/troponin-based evaluation.",
+      "keySymptoms": [
+        "**Chest pain/pressure** - Acute retrosternal pressure, often prolonged, may occur at rest or minimal exertion.",
+        "**Radiation** - Pain may radiate to left arm, neck, jaw, or back due to shared visceral afferents.",
+        "**Autonomic symptoms** - Diaphoresis, nausea, and pallor commonly accompany ischemic chest discomfort in ACS.",
+        "**Dyspnea** - Shortness of breath can be an anginal equivalent, especially in older adults and women.",
+        "**Syncope** - Can occur from malignant arrhythmias or hemodynamic compromise during acute ischemia."
+      ],
+      "clinicalReasoning": "This patient’s symptoms are exertional, but the overall pattern and examination strongly indicate **fixed outflow obstruction** rather than acute coronary thrombosis. She has classic severe **aortic stenosis** signs: **parvus et tardus** pulse with **apicocarotid delay**, **low pulse pressure**, **heaving LV apex** with palpable **S4**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the carotids with late peaking. ACS is primarily a clinical syndrome of acute ischemia and does not produce these characteristic valvular and pulse findings. Near-syncope on exertion is a hallmark symptom triad of severe **aortic stenosis** (angina, syncope, dyspnea).",
+      "whyIncorrectForCase": "Her chest tightness is chronic and exertional over months, whereas **ACS** typically presents with new, worsening, or rest pain over hours to days. The physical exam is dominated by findings specific to **aortic stenosis** (ejection murmur to carotids, **parvus et tardus**, **S4**), which ACS does not explain.",
+      "keyDifferencesFromCorrect": [
+        "**Murmur timing/shape** - ACS has no specific systolic ejection murmur; **aortic stenosis** has harsh **crescendo–decrescendo** murmur ending before **A2**.",
+        "**Murmur location/radiation** - ACS lacks consistent focal radiation; **aortic stenosis** is loudest at **aortic area** and radiates to **neck/carotids**.",
+        "**Carotid pulse** - ACS usually has normal upstroke unless shock; **aortic stenosis** causes **slow-rising, low-volume (parvus et tardus)** pulse.",
+        "**Hemodynamics** - ACS may cause hypotension only if large MI; **aortic stenosis** often shows **low systolic and pulse pressure (systolic decapitation)** chronically.",
+        "**Cardiac palpation** - ACS may have transient S4 or signs of failure; **aortic stenosis** classically has **heaving LV apex** and palpable **LV S4** from concentric hypertrophy.",
+        "**Symptom trigger pattern** - ACS commonly includes rest pain/unstable pattern; **aortic stenosis** symptoms are classically exertional and reproducible."
+      ],
+      "missingFindings": [
+        "**Rest or crescendo angina** - Absence of rest pain or rapidly worsening pattern makes **unstable angina/MI** less likely.",
+        "**Prolonged pain episode (>20 minutes)** - No report of sustained, unrelenting chest pain typical of MI.",
+        "**Diaphoresis/nausea** - Lack of prominent autonomic symptoms reduces likelihood of acute ischemic syndrome.",
+        "**New ischemic ECG changes** - No evidence provided of ST-segment/T-wave changes expected in ACS evaluation.",
+        "**Elevated cardiac troponin** - No biomarker evidence of myocardial necrosis supporting myocardial infarction."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Acute pericarditis",
+      "description": "**Acute pericarditis** is inflammation of the pericardial sac, most often viral/idiopathic, causing acute chest pain and a characteristic pericardial friction rub. It typically presents with pleuritic, positional pain and may produce diffuse ST-segment elevation with PR depression on ECG.",
+      "keySymptoms": [
+        "**Pleuritic chest pain** - Sharp pain worse with inspiration/coughing and improved by shallow breathing.",
+        "**Positional chest pain** - Worsens supine and improves when sitting up and leaning forward.",
+        "**Pericardial friction rub** - Scratchy, triphasic sound best at left sternal border, varies with position.",
+        "**Fever** - Low-grade fever may accompany viral or inflammatory pericardial involvement.",
+        "**Dyspnea** - Usually from pain-limited inspiration rather than fixed outflow obstruction."
+      ],
+      "clinicalReasoning": "The target diagnosis (**acute pericarditis**) classically causes **acute**, pleuritic, positional chest pain with a **pericardial friction rub** and supportive ECG changes. In this case, symptoms are **exertional** tight/heavy chest discomfort with exertional near-syncope, which is a classic symptom triad pattern for **severe aortic stenosis**. The examination shows **parvus et tardus** pulse, **apicocarotid delay**, **carotid thrill/shudder**, and a harsh **crescendo–decrescendo ejection systolic murmur** radiating to the neck with late peaking—findings that localize to valvular outflow obstruction rather than pericardial inflammation. Therefore, the overall syndrome and physical signs strongly support **aortic stenosis** and argue against pericarditis.",
+      "whyIncorrectForCase": "Her chest discomfort is **exertional tight/heavy** rather than **pleuritic/positional**, and the course is over **months** rather than an acute inflammatory onset. The presence of **parvus et tardus**, **carotid shudder**, and a late-peaking **ejection systolic murmur** radiating to the carotids is incompatible with isolated acute pericarditis.",
+      "keyDifferencesFromCorrect": [
+        "**Pain quality/trigger** - Pericarditis causes **sharp pleuritic positional** pain; **aortic stenosis** causes **exertional pressure/tightness** (angina-like).",
+        "**Auscultation hallmark** - Pericarditis has a **pericardial friction rub**; **aortic stenosis** has a **harsh crescendo–decrescendo ejection systolic murmur** at the aortic area radiating to carotids.",
+        "**Pulse contour** - Pericarditis usually has no specific carotid upstroke abnormality; **aortic stenosis** shows **slow-rising low-volume (parvus et tardus)** pulse with **apicocarotid delay**.",
+        "**Syncope mechanism** - Pericarditis rarely causes exertional syncope; **aortic stenosis** causes **exertional syncope/near-syncope** from fixed LV outflow obstruction.",
+        "**Second heart sound** - Pericarditis does not typically cause a soft/single **A2**; **severe aortic stenosis** may have **soft/single A2** and **paradoxical splitting**."
+      ],
+      "missingFindings": [
+        "**Pericardial friction rub** - Absence of a rub makes acute pericarditis much less likely clinically.",
+        "**Pleuritic, positional chest pain** - Lack of pain varying with breathing/position argues against pericardial inflammation.",
+        "**Diffuse ST elevation/PR depression (ECG)** - Typical ECG pattern is not suggested; would be expected in many cases.",
+        "**Pericardial effusion signs** - No features such as **muffled heart sounds** or **raised JVP** suggesting effusion/tamponade physiology."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Myocarditis (acute myocarditis)",
+      "description": "**Acute myocarditis** is an inflammatory injury of the myocardium, most often post-viral, causing acute ventricular dysfunction and arrhythmias. It typically presents with acute chest pain, dyspnea, palpitations, and systemic viral symptoms, and can mimic acute coronary syndromes.",
+      "keySymptoms": [
+        "**Viral prodrome** - Fever, malaise, myalgias, and upper respiratory symptoms preceding cardiac complaints by days.",
+        "**Acute chest pain** - Often pleuritic or ischemic-like pain occurring at rest, not strictly exertional.",
+        "**Dyspnea** - New or rapidly progressive shortness of breath from acute LV dysfunction and pulmonary congestion.",
+        "**Palpitations/arrhythmias** - Sensation of rapid or irregular heartbeat due to myocardial irritability and conduction disease.",
+        "**Syncope** - Sudden fainting from malignant ventricular arrhythmias or advanced AV block in severe cases."
+      ],
+      "clinicalReasoning": "This patient’s dominant pattern is **exertional angina**, **exertional dyspnea**, and **exertional near-syncope**, which is classic for fixed outflow obstruction such as **severe aortic stenosis**. The exam strongly supports AS: **parvus et tardus** pulse with **apicocarotid delay**, **low systolic/pulse pressure**, **heaving LV apex** with **S4**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the carotids with **late peaking**. In contrast, acute myocarditis is usually an acute/subacute illness with systemic inflammatory features and signs of acute myocardial injury or heart failure rather than a chronic, progressive exertional symptom complex with classic valvular findings. Therefore, myocarditis is not the best explanation for the presentation.",
+      "whyIncorrectForCase": "The course is **several months** with exertional symptoms and classic AS physical signs, whereas **acute myocarditis** typically presents more abruptly and often follows a viral illness. The patient’s hallmark findings (**parvus et tardus**, carotid shudder, late-peaking ejection murmur radiating to neck) indicate **valvular outflow obstruction**, not myocardial inflammation.",
+      "keyDifferencesFromCorrect": [
+        "**Murmur pattern** - Myocarditis has no fixed valvular ejection murmur; **aortic stenosis** has a harsh **crescendo–decrescendo** systolic murmur radiating to carotids.",
+        "**Carotid pulse** - Myocarditis does not cause **parvus et tardus**; **aortic stenosis** causes slow-rising, low-volume pulse with **apicocarotid delay**.",
+        "**Symptom trigger** - Myocarditis symptoms are often at rest/variable and systemic; **aortic stenosis** symptoms are classically **exertional** (angina, syncope, dyspnea).",
+        "**S4/heaving apex mechanism** - Myocarditis more often causes **S3** with dilated, failing LV; **aortic stenosis** causes concentric LVH with **heaving apex** and **S4**.",
+        "**Blood pressure pattern** - Myocarditis may have hypotension in shock but not typical **systolic decapitation**; **aortic stenosis** often has low systolic and narrow pulse pressure."
+      ],
+      "missingFindings": [
+        "**Viral prodrome** - No fever, myalgias, or recent infection history is provided to support myocarditis.",
+        "**Acute onset** - Symptoms are chronic/progressive over months rather than abrupt/subacute inflammatory presentation.",
+        "**Myocardial injury evidence** - No troponin rise, ECG ST-T changes, or new conduction block described.",
+        "**Heart failure signs typical of myocarditis** - No new S3 gallop, acute pulmonary edema, or rapidly progressive cardiomyopathy features noted.",
+        "**Non-valvular exam pattern** - The presence of **carotid shudder** and **late-peaking ejection murmur** argues for AS, not myocarditis."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Aortic stenosis",
+      "description": "**Aortic stenosis** is obstruction to left ventricular outflow due to narrowing of the aortic valve. It causes a fixed stroke volume with pressure overload, leading to concentric LV hypertrophy, reduced systolic/pulse pressure, and exertional symptoms from inability to augment cardiac output.",
+      "keySymptoms": [
+        "**Exertional chest tightness/heaviness (angina)** - Fixed outflow limits coronary perfusion reserve; LV hypertrophy increases oxygen demand during exertion.",
+        "**Exertional near-syncope/syncope** - Fixed cardiac output cannot rise with exercise, causing cerebral hypoperfusion and presyncope/fainting.",
+        "**Exertional dyspnea** - Elevated LV diastolic pressure from hypertrophy causes pulmonary venous congestion during activity.",
+        "**Parvus et tardus carotid pulse** - Slow-rising, low-volume upstroke reflects delayed ejection across a severely narrowed aortic valve.",
+        "**Apicocarotid delay** - Delay between LV impulse and carotid upstroke indicates prolonged LV ejection time in severe stenosis.",
+        "**Narrow pulse pressure / low systolic pressure** - Reduced forward stroke volume produces systolic decapitation and diminished pulse pressure.",
+        "**Heaving (thrusting) LV apex beat** - Pressure overload from stenosis causes concentric LV hypertrophy producing a sustained, forceful apex.",
+        "**Palpable LV S4** - A stiff hypertrophied LV generates a presystolic gallop from atrial contraction into noncompliant ventricle.",
+        "**Carotid shudder (thrill)** - Turbulent high-velocity systolic flow across stenotic valve transmits vibration to carotid arteries.",
+        "**Ejection systolic murmur at aortic area radiating to neck** - Harsh crescendo–decrescendo murmur with carotid radiation is classic for aortic stenosis.",
+        "**Late-peaking systolic murmur** - Later peak in systole correlates with more severe obstruction and prolonged ejection time.",
+        "**Soft/single A2 or paradoxical splitting** - Reduced aortic valve excursion delays/softens A2; severe AS can cause paradoxical splitting."
+      ],
+      "clinicalReasoning": "The symptom triad pattern of **exertional angina**, **exertional syncope/near-syncope**, and **exertional dyspnea** strongly supports symptomatic severe **aortic stenosis** due to fixed cardiac output and LV hypertrophy. Examination shows classic hemodynamic signs: **parvus et tardus** with **apicocarotid delay**, **narrow pulse pressure**, and a sustained **heaving LV apex** with **S4**, all indicating pressure overload. Auscultation reveals a harsh **crescendo–decrescendo ejection systolic murmur** maximal at the **aortic area** with **carotid radiation** and **late peaking**, which is characteristic of severe AS. These findings also distinguish it from **mitral regurgitation**, which typically has a **pan-systolic** apical murmur continuing to **A2** and a brisk, high-volume carotid pulse."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Aortic regurgitation (chronic)",
+      "description": "**Chronic aortic regurgitation (AR)** is due to incompetent aortic valve closure causing diastolic backflow from aorta to left ventricle. Over time it produces **LV volume overload**, progressive **LV dilation**, and a **wide pulse pressure** with hyperdynamic circulation; symptoms appear when compensation fails.",
+      "keySymptoms": [
+        "**Exertional dyspnea** - LV volume overload elevates filling pressures during activity, causing breathlessness and reduced exercise tolerance.",
+        "**Palpitations** - Hyperdynamic circulation and increased stroke volume can produce awareness of forceful heartbeats.",
+        "**Angina** - Reduced diastolic aortic pressure lowers coronary perfusion despite increased LV oxygen demand.",
+        "**Orthopnea/PND** - Decompensated LV failure increases pulmonary venous pressures, worsening when supine or at night.",
+        "**Fatigue** - Low effective forward output during exertion leads to early tiredness and reduced functional capacity."
+      ],
+      "clinicalReasoning": "This patient’s symptom cluster (exertional chest tightness, exertional dyspnea, and near-syncope) is classic for **symptomatic severe aortic stenosis (AS)** rather than AR. The examination shows **parvus et tardus** pulse with **apicocarotid delay**, **low systolic and pulse pressures**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the carotids with **late peaking**—all strongly indicating severe AS. In chronic AR, the pulse is typically **bounding** with **wide pulse pressure**, and the hallmark murmur is a **high‑pitched early diastolic decrescendo** along the left sternal border. Therefore, AR does not explain the dominant hemodynamic and auscultatory findings in this case.",
+      "whyIncorrectForCase": "The patient has **slow-rising low-volume pulse (parvus et tardus)** and **low pulse pressure**, which contradict the **bounding pulse and wide pulse pressure** expected in chronic AR. The murmur described is **ejection systolic** at the **aortic area** with carotid radiation and late peaking, not the **early diastolic** murmur of AR.",
+      "keyDifferencesFromCorrect": [
+        "**Pulse character** - Chronic AR causes **bounding/quick-rising** pulse; AS causes **parvus et tardus** with **apicocarotid delay**.",
+        "**Pulse pressure/BP** - Chronic AR typically has **wide pulse pressure**; AS often has **low systolic and narrow pulse pressure (systolic decapitation)**.",
+        "**Primary murmur timing** - Chronic AR has **early diastolic decrescendo** murmur; AS has **crescendo–decrescendo ejection systolic** murmur.",
+        "**Murmur site/radiation** - AR best at **left sternal border** (aortic regurgitant flow); AS best at **aortic area** with **radiation to carotids**.",
+        "**Key symptom pattern** - AR more often presents with **palpitations** and heart failure symptoms; AS classically causes **angina, syncope/near-syncope, exertional dyspnea**."
+      ],
+      "missingFindings": [
+        "**Wide pulse pressure** - Its absence argues against chronic AR, which typically lowers diastolic pressure markedly.",
+        "**Bounding (water-hammer) pulse** - Not present; chronic AR usually produces a brisk, high-volume pulse.",
+        "**Early diastolic decrescendo murmur** - Not reported; this is the hallmark auscultatory finding of AR.",
+        "**Peripheral signs of AR** - No hyperdynamic signs (e.g., prominent arterial pulsations) described, reducing likelihood of significant AR."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Pulmonary embolism",
+      "description": "**Pulmonary embolism (PE)** is acute obstruction of the pulmonary arterial tree, usually by thrombus from deep veins. It causes sudden ventilation–perfusion mismatch and increased pulmonary vascular resistance, potentially leading to right heart strain and hemodynamic collapse.",
+      "keySymptoms": [
+        "**Sudden dyspnea** - Abrupt shortness of breath developing over minutes to hours, often without wheeze.",
+        "**Pleuritic chest pain** - Sharp pain worse with inspiration or coughing due to pulmonary infarction/pleuritis.",
+        "**Hemoptysis** - Coughing blood from pulmonary infarction; usually small-volume and associated with pleuritic pain.",
+        "**Syncope** - Transient loss of consciousness in massive PE from acute right ventricular failure and low output.",
+        "**Tachycardia** - Common compensatory response; heart rate often >100 with acute PE.",
+        "**Hypoxemia** - Low oxygen saturation from V/Q mismatch; may be disproportionate to chest exam findings."
+      ],
+      "clinicalReasoning": "This patient’s symptoms are chronic and exertional: chest tightness/heaviness with walking/climbing stairs plus exertional near-syncope. Her exam is dominated by classic **severe aortic stenosis** findings: **parvus et tardus** pulse with **apicocarotid delay**, low pulse pressure, **heaving LV apex**, **S4**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the aortic area radiating to the carotids with late peaking. **PE** typically presents acutely with dyspnea, pleuritic pain, tachycardia, and hypoxemia rather than a fixed outflow murmur and abnormal carotid upstroke. Therefore PE does not explain the cardinal auscultatory and pulse findings, while **aortic stenosis** does.",
+      "whyIncorrectForCase": "Her course is “several months” with exertional angina/near-syncope, which is characteristic of **symptomatic severe aortic stenosis**, not the usually abrupt onset of **PE**. The presence of **parvus et tardus**, **carotid shudder**, and an aortic **ejection systolic murmur** radiating to the neck strongly localizes pathology to the aortic valve, not the pulmonary vasculature.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - **PE** is typically sudden/acute; **aortic stenosis** causes progressive exertional symptoms over months/years.",
+        "**Chest pain quality** - **PE** often causes pleuritic pain; **aortic stenosis** causes exertional pressure/tightness (angina-like).",
+        "**Pulse character** - **PE** does not cause **parvus et tardus**; **aortic stenosis** causes slow-rising, low-volume carotid pulse.",
+        "**Murmur** - **PE** has no classic aortic ejection murmur; **aortic stenosis** has harsh crescendo–decrescendo murmur radiating to carotids.",
+        "**Hemodynamics** - **PE** may cause acute hypotension with tachycardia; **aortic stenosis** often shows low systolic/pulse pressure with LV heave and **S4**.",
+        "**Cardiac chamber findings** - **PE** suggests acute right heart strain; **aortic stenosis** shows LV pressure overload (heaving apex, **S4**)."
+      ],
+      "missingFindings": [
+        "**Acute onset dyspnea** - Lack of abrupt breathlessness argues against typical acute **PE** presentation.",
+        "**Pleuritic chest pain** - No sharp inspiratory pain reported, which is common in **PE** with infarction.",
+        "**Tachycardia** - No persistent tachycardia described; **PE** commonly presents with sinus tachycardia.",
+        "**Hypoxemia** - No low oxygen saturation/cyanosis noted; **PE** often produces unexplained desaturation.",
+        "**DVT features** - No unilateral leg swelling/pain or risk-factor clues suggesting thromboembolism source.",
+        "**Right heart strain signs** - No raised JVP, loud P2, or acute RV findings described to support **PE**."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Pulmonary arterial hypertension",
+      "description": "**Pulmonary arterial hypertension (PAH)** is a progressive disorder with elevated pulmonary arterial pressure due to pulmonary arteriolar remodeling. It increases right ventricular afterload, leading to **right heart failure**, exertional limitation, and sometimes syncope.",
+      "keySymptoms": [
+        "**Exertional dyspnea** - Breathlessness with activity from reduced pulmonary vascular reserve and impaired cardiac output.",
+        "**Exertional syncope** - Fainting during exertion due to fixed pulmonary flow and inability to augment output.",
+        "**Fatigue/weakness** - Low forward flow and reduced oxygen delivery during activity cause early exhaustion.",
+        "**Chest pain (angina-like)** - Right ventricular ischemia from pressure overload can cause exertional chest discomfort.",
+        "**Peripheral edema/ascites** - Right heart failure leads to systemic venous congestion and fluid retention signs."
+      ],
+      "clinicalReasoning": "Although **exertional dyspnea** and **near-syncope on exertion** can occur in **PAH**, the physical examination here localizes pathology to the **aortic valve/LV outflow tract**. The patient has **parvus et tardus** pulse with **apicocarotid delay**, a **carotid thrill (shudder)**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the neck with **late peaking**, all classic for **severe aortic stenosis**. PAH typically produces right-sided findings (loud **P2**, RV heave) rather than LV heave and carotid pulse abnormalities.",
+      "whyIncorrectForCase": "This patient’s hallmark signs—**slow-rising low-volume pulse**, **carotid shudder**, and **late-peaking ejection systolic murmur** radiating to the carotids—are not explained by **PAH**. The exam instead strongly indicates a fixed **LV outflow obstruction** consistent with **aortic stenosis**.",
+      "keyDifferencesFromCorrect": [
+        "**Murmur location/radiation** - PAH: may have **tricuspid regurgitation** murmur at left lower sternal border; AS: loudest at **aortic area** radiating to **carotids**.",
+        "**Second heart sound** - PAH: typically **loud P2** (accentuated pulmonic component); AS: **soft/absent A2** and possible **paradoxical splitting** in severe disease.",
+        "**Pulse contour** - PAH: usually normal systemic upstroke; AS: **parvus et tardus** with **apicocarotid delay**.",
+        "**Ventricular impulse** - PAH: **right ventricular heave**; AS: **heaving/thrusting LV apex** with possible palpable **S4**.",
+        "**Hemodynamics** - PAH: elevated pulmonary artery pressures with right-sided strain; AS: fixed obstruction causing low **systolic** and **pulse pressure** (systolic decapitation)."
+      ],
+      "missingFindings": [
+        "**Loud P2** - Its absence argues against significant pulmonary arterial pressure elevation typical of PAH.",
+        "**Right ventricular heave** - Lack of a parasternal RV lift makes primary right-sided pressure overload unlikely.",
+        "**Tricuspid regurgitation murmur** - No holosystolic LLSB murmur with inspiratory augmentation to suggest PAH-related TR.",
+        "**Raised JVP** - No evidence of elevated jugular venous pressure expected with advanced PAH/right heart strain.",
+        "**Peripheral edema/ascites** - No systemic venous congestion signs that commonly accompany clinically significant PAH."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Constrictive pericarditis",
+      "description": "**Constrictive pericarditis** is a chronic inflammatory condition where a thickened, fibrotic (often calcified) pericardium restricts diastolic filling of the heart. This produces predominant **right-sided heart failure** physiology with elevated systemic venous pressures and reduced cardiac output, especially during exertion.",
+      "keySymptoms": [
+        "**Progressive dyspnea** - Exertional breathlessness from impaired ventricular filling and reduced stroke volume.",
+        "**Fatigue/exercise intolerance** - Low cardiac output limits exertional capacity and causes early tiredness.",
+        "**Peripheral edema** - Leg swelling due to chronically elevated systemic venous pressure.",
+        "**Abdominal distension/ascites** - Hepatic congestion and fluid accumulation from right-sided venous hypertension.",
+        "**Orthopnea/PND (less prominent)** - Can occur, but systemic congestion often dominates over pulmonary edema.",
+        "**Chest discomfort (atypical)** - Usually non-anginal; may relate to inflammation rather than fixed outflow obstruction."
+      ],
+      "clinicalReasoning": "This patient’s symptom triad is classic for symptomatic **severe aortic stenosis**: exertional **angina-like chest tightness**, exertional **near-syncope**, and exertional **dyspnea**. The examination strongly supports **fixed LV outflow obstruction**: **parvus et tardus** pulse with **apicocarotid delay**, low systolic/pulse pressure, **heaving LV apex** with **S4**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the carotids with late peaking. Constrictive pericarditis instead produces signs of **systemic venous congestion** and characteristic diastolic findings rather than a carotid-radiating ejection murmur and slow-rising pulse.",
+      "whyIncorrectForCase": "The case lacks hallmark features of **constrictive pericarditis** such as **raised JVP**, **Kussmaul sign**, **peripheral edema/ascites**, and a **pericardial knock**. Instead, the presence of **parvus et tardus**, **carotid thrill**, and a late-peaking **ejection systolic murmur** radiating to the neck is far more consistent with **aortic stenosis**.",
+      "keyDifferencesFromCorrect": [
+        "**Murmur timing/quality** - Constrictive pericarditis typically has a **pericardial knock (early diastolic)**, not a harsh **ejection systolic** murmur of **aortic stenosis**.",
+        "**Pulse character** - Constrictive pericarditis does not cause **parvus et tardus**; **aortic stenosis** causes slow-rising, low-volume carotid upstroke with **apicocarotid delay**.",
+        "**Dominant physiology** - Constrictive pericarditis causes **impaired diastolic filling** with **right-sided congestion**; **aortic stenosis** causes **fixed LV outflow obstruction** and pressure overload.",
+        "**Key bedside signs** - Constrictive pericarditis features **elevated JVP**, **Kussmaul sign**, and often **hepatomegaly/ascites**; **aortic stenosis** features **carotid shudder**, **heaving apex**, and **S4**.",
+        "**Blood pressure pattern** - Constrictive pericarditis may show normal pulse pressure; **aortic stenosis** often shows **low systolic and narrow pulse pressure (systolic decapitation)**."
+      ],
+      "missingFindings": [
+        "**Raised JVP** - Expected due to systemic venous hypertension; not described in this patient.",
+        "**Kussmaul sign** - Inspiratory rise in JVP is characteristic; absence argues against constriction.",
+        "**Peripheral edema/ascites** - Common in constrictive pericarditis from right-sided failure; not present here.",
+        "**Pericardial knock** - Early diastolic sound typical of constriction; instead there is **S4** and an ejection murmur.",
+        "**Hepatomegaly/congestive hepatopathy** - Frequent with chronic constriction; not reported.",
+        "**Pulsus paradoxus (sometimes)** - May be present in pericardial disease; the case instead highlights **parvus et tardus**."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Tricuspid regurgitation",
+      "description": "**Tricuspid regurgitation (TR)** is systolic backflow of blood from the right ventricle into the right atrium due to tricuspid valve incompetence. It most often results from **right ventricular dilation** (functional TR) secondary to **pulmonary hypertension** or left-sided heart disease, producing systemic venous congestion.",
+      "keySymptoms": [
+        "**Fatigue** - Reduced forward cardiac output and venous congestion cause low energy and exercise intolerance.",
+        "**Peripheral edema** - Elevated systemic venous pressure leads to ankle swelling that worsens through the day.",
+        "**Abdominal distension/ascites** - Chronic venous congestion causes fluid accumulation in the peritoneal cavity.",
+        "**Right upper quadrant discomfort** - Congestive hepatomegaly stretches liver capsule causing dull aching pain.",
+        "**Pulsations in the neck** - Prominent systolic venous waves may be noticed due to regurgitant flow."
+      ],
+      "clinicalReasoning": "This patient’s dominant syndrome is **exertional angina-like chest tightness**, **exertional near-syncope**, and **exertional dyspnea**, which is classic for symptomatic **severe aortic stenosis**. The exam strongly supports left-sided outflow obstruction: **parvus et tardus** pulse with **apicocarotid delay**, low systolic/pulse pressure, a **heaving LV apex** with **S4**, and a harsh **crescendo–decrescendo ejection systolic murmur** at the **aortic area** radiating to the **carotids** with late peaking. TR instead produces a **holosystolic murmur** best at the **left lower sternal border** that increases with inspiration and is accompanied by **right-sided congestion** findings. Therefore, TR does not explain the key symptom pattern or the hallmark arterial pulse and murmur characteristics present here.",
+      "whyIncorrectForCase": "TR typically causes **systemic venous congestion** (edema, hepatomegaly, ascites, raised JVP) rather than exertional **angina/syncope** from fixed LV outflow obstruction. The patient’s murmur is an **ejection systolic** murmur at the **base** radiating to the **carotids** with **parvus et tardus**, which is inconsistent with TR.",
+      "keyDifferencesFromCorrect": [
+        "**Murmur timing/shape** - TR is **pan/holosystolic**; **aortic stenosis** is **ejection (crescendo–decrescendo)** and ends before **A2**.",
+        "**Murmur location** - TR is loudest at **left lower sternal border**; **aortic stenosis** is loudest at **aortic area** and may be heard at apex.",
+        "**Radiation** - TR radiates to **right sternal border/epigastrium**; **aortic stenosis** radiates to **carotids/neck**.",
+        "**Respiratory variation** - TR increases with **inspiration (Carvallo sign)**; **aortic stenosis** typically does not show this pattern.",
+        "**Pulse character** - TR does not cause **parvus et tardus**; **aortic stenosis** causes **slow-rising, low-volume** carotid pulse with **apicocarotid delay**.",
+        "**Hemodynamic syndrome** - TR causes **right-sided failure** signs; **aortic stenosis** causes **fixed LV outflow obstruction** with exertional **syncope/angina/dyspnea**."
+      ],
+      "missingFindings": [
+        "**Raised JVP with prominent v waves** - Typical of TR; not described, arguing against significant right-sided regurgitation.",
+        "**Pansystolic murmur at left lower sternal border** - Expected in TR; instead murmur is **ejection systolic** at the **aortic area**.",
+        "**Carvallo sign (inspiratory augmentation)** - Classic for TR; no inspiratory increase is reported.",
+        "**Pulsatile hepatomegaly** - Suggests severe TR with systolic hepatic pulsations; not present in the case.",
+        "**Peripheral edema/ascites** - Common TR congestion features; absent from the presentation.",
+        "**Right ventricular heave** - Supports RV volume overload from TR; exam instead shows **heaving LV apex** and **S4**."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Aortic stenosis",
+    "domain": "cardiology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about exertional breathlessness and reduced exercise tolerance (including orthopnea/PND).",
+        "reasoning": "Dyspnea/exercise intolerance is part of the symptomatic triad and reflects cardiac decompensation/heart failure in aortic stenosis; symptoms are a good index of severity.",
+        "expectedFinding": "Exertional dyspnea and/or orthopnea/PND suggesting heart failure symptoms in AS.",
+        "importance": "critical",
+        "textbookReference": "“Symptomatic triad of aortic stenosis… (1) breathlessness (dyspnea)… Heart failure: Orthopnea and paroxysmal nocturnal dyspnea (PND).”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about chest pain/angina (especially exertional).",
+        "reasoning": "Angina is a cardinal symptom of AS due to mismatch in myocardial oxygen demand–supply ratio or coexistent CAD.",
+        "expectedFinding": "Typical exertional angina in a patient suspected of AS.",
+        "importance": "important",
+        "textbookReference": "“Angina is typical exertional and is due to mismatch in myocardial oxygen demand-supply ratio, or coexistent coronary artery disease (CAD).”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about exertional syncope or presyncope (near-fainting) and its triggers (walking/exertion).",
+        "reasoning": "Exertional syncope is a cardinal symptom of AS due to failure of cardiac output to rise with exertion leading to fall in BP.",
+        "expectedFinding": "Exertional syncope/presyncope episodes consistent with fixed outflow obstruction.",
+        "importance": "critical",
+        "textbookReference": "“Exertional syncope (or presyncope): Due to failure of cardiac output to rise to meet demand, leading to a fall in BP.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask whether the patient has been asymptomatic until a murmur was found incidentally during routine examination, and clarify duration/progression of symptoms over months.",
+        "reasoning": "AS is commonly diagnosed in asymptomatic patients during routine clinical examination; symptom onset helps judge severity and prognosis.",
+        "expectedFinding": "History of incidental murmur earlier and gradual development of exertional symptoms (months).",
+        "importance": "helpful",
+        "textbookReference": "“It is commonly diagnosed in asymptomatic patients during routine clinical examination.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Auscultate for an ejection mid-systolic (crescendo–decrescendo/diamond-shaped) murmur best heard in the aortic area, radiating to the neck (carotids), and assess relation to A2 (stops before A2).",
+        "reasoning": "The characteristic murmur pattern and radiation are key bedside identifiers of AS; relation to A2 helps differentiate from pansystolic MR.",
+        "expectedFinding": "Harsh/rough ejection mid-systolic murmur at aortic area radiating to carotids; stops before A2; late peaking suggests severe AS.",
+        "importance": "critical",
+        "textbookReference": "“Ejection mid-systolic murmur… radiates to the neck (to carotids arteries)… Best heard in the base of heart (aortic area)… diamond-shaped (crescendo decrescendo)… with late peaking in severe AS.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Palpate carotid pulse for slow-rising, low-volume pulse (parvus et tardus) and check for carotid shudder; assess for apico-carotid delay.",
+        "reasoning": "Pulse contour (slow rising, low volume) and apico-carotid delay are classic signs; apico-carotid delay indicates severe AS.",
+        "expectedFinding": "Parvus and tardus pulse; carotid shudder; apico-carotid delay (severe AS).",
+        "importance": "important",
+        "textbookReference": "“Parvus and tardus pulse: Slow rising, late peaking, and low amplitude… Carotid shudder… Apico-carotid delay is seen in severe aortic stenosis.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess apex beat character and presence of S4 (palpable/auscultatory).",
+        "reasoning": "AS causes LV pressure overload leading to heaving/thrusting apex; severe AS is associated with S4.",
+        "expectedFinding": "Thrusting/heaving LV type apex beat; S4 (especially in severe AS).",
+        "importance": "important",
+        "textbookReference": "“Apex beat: Thrusting/heaving LV type apex beat due to LV pressure overload… Palpable LV S4… Severe… S4.”"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Assess second heart sound (A2) for softness/single S2 and look for paradoxical split S2 in suspected severe AS.",
+        "reasoning": "A2 changes and paradoxical split S2 are severity markers in AS.",
+        "expectedFinding": "Soft A2; paradoxical (reversed) split S2 in severe AS.",
+        "importance": "helpful",
+        "textbookReference": "“S2-A2: Soft… In severe AS, paradoxical (reversed) split of second heart sound A2.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order a 12-lead ECG.",
+        "reasoning": "ECG can show LV hypertrophy and rhythm/conduction abnormalities described in AS (AF; AV conduction defects/IVCD in calcific AS).",
+        "expectedFinding": "Left ventricular hypertrophy; possible atrial fibrillation (10–15%); possible AV conduction defects/IVCD (5% of calcific AS).",
+        "importance": "important",
+        "textbookReference": "“ECG: Left ventricular hypertrophy… Atrial fibrillation in 10–15%… AV conduction defects and IVCD in 5% of calcific AS.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order a chest X-ray.",
+        "reasoning": "Chest X-ray may show concentric LVH effects (rounding of apex with normal/small heart), post-stenotic dilatation of ascending aorta, and valve calcification.",
+        "expectedFinding": "Rounding of apex due to concentric LVH with normal/small heart; prominent dilation of ascending aorta; possible aortic valve calcification.",
+        "importance": "helpful",
+        "textbookReference": "“Chest X-ray: Rounding of apex due to concentric left ventricular hypertrophy… Prominent dilation of ascending aorta… Calcification of aortic valve (if present).”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order transthoracic echocardiography to evaluate severity and gradient across the aortic valve.",
+        "reasoning": "Echo is the key noninvasive test to evaluate severity and gradient in AS.",
+        "expectedFinding": "Quantification of severity and gradient across the aortic valve consistent with AS.",
+        "importance": "critical",
+        "textbookReference": "“Echocardiography: Helps in evaluation of severity and gradient across the aortic valve.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order Doppler (echocardiographic Doppler) to detect severity of stenosis and associated aortic regurgitation.",
+        "reasoning": "Doppler is specifically noted as useful for detecting severity and identifying associated AR.",
+        "expectedFinding": "Doppler evidence of stenosis severity; detection of associated aortic regurgitation if present.",
+        "importance": "important",
+        "textbookReference": "“Doppler: Useful for detecting the severity of stenosis and associated aortic regurgitation.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "If needed, order cardiac CT/cardiac MR to assess thoracic aorta for aneurysm, dissection, or coarctation.",
+        "reasoning": "Advanced imaging may be required to assess associated thoracic aortic pathology.",
+        "expectedFinding": "Assessment for presence/absence of aneurysm, dissection, or coarctation of thoracic aorta.",
+        "importance": "helpful",
+        "textbookReference": "“Cardiac magnetic resonance and cardiac CT: They may be required for assessing the presence of aneurysm, dissection, or coarctation of thoracic aorta.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Mitral regurgitation",
+        "howToRuleOut": "Use murmur characteristics and pulse findings: MR is pansystolic at apex and continues till A2; post-VPC intensity shows no change/decreases; carotid pulse is quick rising high volume. AS is ejection mid-systolic, stops before A2, post-VPC intensity increases, and carotid pulse is slow rising low volume.",
+        "textbookReference": "“Aortic stenosis… ejection-mid systolic. Stops before A2… Post-VPC intensity increases… Carotid pulse slow rising, low volume… Mitral regurgitation… Pan systolic. Continues till A2… No change/decreases… Quick rising high volume.”"
+      },
+      {
+        "name": "Aortic regurgitation with associated systolic murmur (e.g., functional systolic murmur across aortic valve)",
+        "howToRuleOut": "Look for AR peripheral signs and pulse pressure features: AR has bounding/collapsing pulses and wide pulse pressure; AS typically has low systolic and pulse pressures with parvus et tardus (unless coexistent AR/HTN). Also Doppler helps detect associated AR.",
+        "textbookReference": "“Peripheral pulses… bounding, or collapsing… increased/wide pulse pressure… In AS… Low systolic and pulse pressures… Parvus and tardus pulse… Doppler… associated aortic regurgitation.”"
+      },
+      {
+        "name": "Pulmonary stenosis (as another cause of ejection systolic murmur)",
+        "howToRuleOut": "Recognize that pulmonary stenosis is listed among causes of mid-systolic/ejection systolic murmurs; differentiate by localizing murmur to aortic area with carotid radiation and AS pulse findings (parvus et tardus).",
+        "textbookReference": "“Mid-systolic/ejection systolic murmurs: Aortic stenosis… Pulmonary stenosis…”"
+      }
+    ],
+    "diagnosticApproach": "1) Elicit textbook symptom triad and heart failure symptoms: exertional dyspnea/exercise intolerance (± orthopnea/PND), exertional angina, and exertional syncope/presyncope. 2) Perform focused cardiovascular exam: identify ejection mid-systolic (crescendo–decrescendo) murmur at aortic area radiating to carotids and stopping before A2; assess severity markers (late peaking murmur, soft A2/paradoxical split S2, S4, apico-carotid delay, anacrotic/parvus et tardus pulse). 3) Order investigations in cost-effective sequence: ECG (LVH/AF/conduction defects), chest X-ray (concentric LVH effects, post-stenotic ascending aorta dilatation, valve calcification), then echocardiography to evaluate severity and gradient; add Doppler to grade stenosis and detect associated AR. 4) If needed, use cardiac CT/CMR to assess thoracic aorta (aneurysm/dissection/coarctation). 5) Differentiate from similar conditions using Table 1.74 (especially MR) and pulse/BP features (AS low-volume slow-rising pulse vs AR bounding/wide pulse pressure).",
+    "textbookSources": [
+      "aortic stenosis and mitral regurgitation presented in Table 1.74.\n\nTABLE 1.74:  Differences between aortic stenosis and mitral regurgitation.\nFeatures Aortic stenosis Mitral regurgitation\nSite of syst...",
+      "aortic stenosis and mitral regurgitation presented in Table 1.74.\n\nTABLE 1.74:  Differences between aortic stenosis and mitral regurgitation.\nFeatures Aortic stenosis Mitral regurgitation\nSite of syst..."
+    ]
+  }
+}

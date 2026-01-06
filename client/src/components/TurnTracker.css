@@ -1,0 +1,79 @@
+.turn-tracker {
+  padding: 1rem 1.25rem;
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.turn-info,
+.score-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.turn-label,
+.score-label {
+  font-size: 0.688rem;
+  font-weight: 500;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.turn-count {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.turn-count.low {
+  color: var(--danger);
+}
+
+.score-count {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: right;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: var(--gray-200);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.low {
+  background-color: var(--danger);
+}
+
+.status-badge {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.status-badge.won {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+}
+
+.status-badge.lost {
+  background-color: var(--danger-light);
+  color: var(--danger-dark);
+}

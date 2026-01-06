@@ -1,0 +1,504 @@
+{
+  "persona": {
+    "name": "Usha Banerjee",
+    "age": 62,
+    "gender": "Female",
+    "occupation": "School Teacher in Chennai",
+    "background": "Usha has been teaching for decades and finds it increasingly difficult to keep up with classroom activities and stair climbing. She lives in Chennai and has had long-term exposure to tobacco smoke.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": true,
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "conscientious",
+      "anxious",
+      "resilient"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Chronic obstructive pulmonary disease (COPD)",
+      "description": "A preventable and treatable pulmonary disease characterized by progressive airflow limitation that is not fully reversible and associated with an abnormal inflammatory response to noxious particles or gases."
+    },
+    {
+      "id": "d2",
+      "name": "Chronic bronchitis",
+      "description": "Defined as chronic productive cough for 3 months in each of two successive years in a patient in whom other causes of chronic cough have been excluded."
+    },
+    {
+      "id": "d3",
+      "name": "Emphysema",
+      "description": "Abnormal and permanent enlargement of airspaces distal to the terminal bronchioles with destruction of airspace walls, without obvious fibrosis."
+    },
+    {
+      "id": "d4",
+      "name": "Bronchial asthma",
+      "description": "A disorder characterized by episodes of airway narrowing with variable (often reversible) airflow obstruction and bronchial inflammation."
+    },
+    {
+      "id": "d5",
+      "name": "Bronchiectasis",
+      "description": "A chronic condition with persistent productive cough and copious, continuously purulent (often foul-smelling) sputum; may have recurrent hemoptysis and infective exacerbations."
+    },
+    {
+      "id": "d6",
+      "name": "Community-acquired pneumonia",
+      "description": "An acute respiratory illness with inflammation and exudative solidification of lung parenchyma, causing consolidation and typical symptoms/signs with at least one opacity on chest X-ray."
+    },
+    {
+      "id": "d7",
+      "name": "Bronchopneumonia",
+      "description": "Widespread focal/patchy acute suppurative inflammation centered on bronchioles and bronchi with spread to surrounding alveoli; often bilateral and more in lower lobes."
+    },
+    {
+      "id": "d8",
+      "name": "Aspiration pneumonia",
+      "description": "Develops due to abnormal entry of fluid/particulate substances or secretions into lower airways; can be chemical pneumonitis or bacterial aspiration pneumonia."
+    },
+    {
+      "id": "d9",
+      "name": "Interstitial lung disease (ILD)/Diffuse parenchymal lung disease",
+      "description": "Presents with cough and dyspnea (often dry cough in chronic disease) and examination may show crackles ('velcro rales'); PFTs typically show restrictive defect with impaired gas transfer."
+    },
+    {
+      "id": "d10",
+      "name": "Pulmonary sarcoidosis",
+      "description": "Characterized radiographically by stages including bilateral hilar lymphadenopathy (BHL) with/without pulmonary infiltrates; lung function may show atypical restrictive defect with reduced TLC/FEV1/FVC and reduced gas transfer."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "I’ve had a long-standing morning cough with sputum, and I get breathless when I walk on level ground—it's been slowly getting worse.",
+  "medicalHistory": "Long-term cigarette smoking. No other past illnesses provided.",
+  "symptoms": "Impressive history of cough, sputum production, and exertional dyspnea. Cough initially seasonal in winter and especially in the mornings ('morning cough'/'smoker’s cough'), later increasing in frequency, severity, and duration. Sputum usually scanty, mucoid and more in the mornings; may be occasionally blood stained (hemoptysis) or frankly purulent during 'mucopurulent relapses' with fever. Breathlessness is insidious in onset due to airflow obstruction and is aggravated by infection, excessive smoking, and adverse atmospheric conditions; she reports needing to walk slower than others her age or stop for breath while walking at her own pace on level ground (mMRC grade 2). She also notes wheezing and tightness in the chest during relapses.\n\nFrom textbook: symptoms in COPD are impressive history of cough, sputum production, and exertional\ndyspnea (breathlessness).\n1. Cough: Initially, the cough is present only in the winter seasons (often referred as “winter cough” or “smoker’s cough”),\n\nespecially in the mornings (“morning cough”). Later, cough increases in frequency, severity, and duration.\n2. Sputum: Usually scanty, mucoid and more in the mornings. It may be occasionally blood stained (hemoptysis) or frankly\n\npurulent (“mucopurulent relapse”).\n",
+  "relevantFindings": "Early stages may be normal on examination with no respiratory distress at rest. On chest auscultation: vesicular breath sounds with prolonged expiration; inspiratory and expiratory rhonchi; crepitations that disappear or change in location/intensity after coughing; forced expiratory time >4 seconds. Chest X-ray may show features of hyperinflation (increased lung volumes and flattening of the diaphragm) and may show bullae/paucity of parenchymal markings/hyperlucency if emphysema is present; chronic bronchitis may show no characteristic abnormality. Pulmonary function tests show decreased maximal airflow rates during forced expiration (persistent airflow limitation).\n\nFrom textbook: symptoms in COPD are impressive history of cough, sputum production, and exertional\ndyspnea (breathlessness).\n1. Cough: Initially, the cough is present only in the winter seasons (often referred as “winter cough” or “smoker’s cough”),\n\nespecially in the mornings (“morning cough”). Later, cough increases in frequency, severity, and duration.\n2. Sputum: Usually scanty, mucoid and more in the mornings. It may be occasionally blood stained (hemoptysis) or frankly\n\npurulent (“mucopurulent relapse”).\n",
+  "redHerrings": "Occasional blood-stained sputum could suggest bronchiectasis (hemoptysis with exacerbations) or pulmonary tuberculosis (cough with upper zone fine crepitations/post-tussive crepitations). Wheezing and chest tightness could suggest bronchial asthma. Fever during mucopurulent relapse could suggest pneumonia/bronchopneumonia.",
+  "id": "case_1767640675950",
+  "domain": "respiratory",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Chronic obstructive pulmonary disease (COPD)",
+      "description": "**Chronic obstructive pulmonary disease (COPD)** is a chronic, progressive lung disease characterized by persistent airflow limitation due to small-airway disease and/or emphysema. It typically presents with long-standing **cough**, **sputum production**, and gradually worsening **exertional dyspnea**, often with intermittent infective exacerbations.",
+      "keySymptoms": [
+        "**Chronic morning cough** - Classic “smoker’s/winter cough” pattern suggests chronic airway inflammation and mucus hypersecretion.",
+        "**Sputum production (scanty, mucoid; worse in mornings)** - Supports chronic bronchitis phenotype and impaired mucociliary clearance in COPD.",
+        "**Progressive exertional dyspnea** - Insidious breathlessness reflects persistent airflow obstruction and reduced expiratory flow reserve.",
+        "**mMRC grade 2 limitation** - Needing to slow/stop on level ground indicates clinically significant functional impact of COPD.",
+        "**Wheeze and chest tightness during relapses** - Episodic bronchospasm and airway narrowing commonly accompany COPD exacerbations.",
+        "**Mucopurulent relapses with fever** - Suggests infective exacerbations causing increased sputum purulence and symptom worsening.",
+        "**Occasional hemoptysis** - Can occur with inflamed bronchial mucosa during exacerbations; warrants evaluation for alternate causes."
+      ],
+      "clinicalReasoning": "Usha Banerjee’s long-standing **morning cough** that began seasonally (“winter cough”) and progressed in frequency and duration, along with chronic **mucoid sputum**, is highly characteristic of COPD (especially chronic bronchitis). Her slowly worsening **exertional dyspnea** (mMRC grade 2) indicates persistent airflow limitation rather than an acute process. Examination findings such as **prolonged expiration**, **rhonchi**, variable **crepitations** that change after coughing, and increased **forced expiratory time** support obstructive physiology. The expected investigations—CXR hyperinflation (± emphysematous changes) and PFT evidence of persistent reduced expiratory airflow—align with the diagnosis of **COPD**."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Chronic bronchitis",
+      "description": "Chronic bronchitis is a COPD phenotype defined by chronic productive cough for at least 3 months in each of 2 consecutive years. It reflects airway inflammation and mucus hypersecretion, often with recurrent infective exacerbations and variable airflow limitation.",
+      "keySymptoms": [
+        "**Chronic productive cough** - Persistent cough with sputum on most days, classically for months over years.",
+        "**Morning sputum** - Scanty mucoid sputum is often worse on waking due to overnight secretion pooling.",
+        "**Mucopurulent relapse** - Episodes of purulent sputum with fever suggest infective exacerbations of airway disease.",
+        "**Wheeze** - Airflow narrowing from inflamed, mucus-filled bronchi can cause expiratory wheeze.",
+        "**Hemoptysis** - Blood-streaked sputum may occur from inflamed bronchial mucosa during exacerbations."
+      ],
+      "clinicalReasoning": "The patient has a long-standing morning cough with mucoid sputum and intermittent mucopurulent relapses, which are compatible with chronic bronchitis symptoms. However, her progressively worsening exertional dyspnea (mMRC grade 2) and examination features of persistent airflow obstruction (prolonged expiration, rhonchi, forced expiratory time >4 seconds) point to COPD as the overarching diagnosis. Chronic bronchitis alone is a clinical subtype and does not fully explain the persistent airflow limitation without confirming the chronic cough duration criteria. Overall, the pattern is best explained by COPD with chronic bronchitic features rather than isolated chronic bronchitis.",
+      "whyIncorrectForCase": "This case is best labeled **COPD** because there is evidence of persistent airflow limitation and progressive exertional dyspnea, not just chronic sputum production. Also, the diagnostic definition of **chronic bronchitis** (productive cough ≥3 months/year for 2 consecutive years) is not explicitly established in the history provided.",
+      "keyDifferencesFromCorrect": [
+        "**Core definition** - Chronic bronchitis is a clinical phenotype; **COPD** is defined by persistent airflow limitation on spirometry.",
+        "**Primary symptom emphasis** - Chronic bronchitis emphasizes **productive cough**; **COPD** emphasizes progressive **exertional dyspnea** with airflow obstruction.",
+        "**Imaging tendency** - Chronic bronchitis may have no characteristic CXR abnormality; **COPD** may show **hyperinflation** and possible **bullae** if emphysema coexists.",
+        "**Physiology** - Chronic bronchitis may have variable obstruction; **COPD** requires persistent reduced expiratory flow (e.g., reduced FEV1/FVC)."
+      ],
+      "missingFindings": [
+        "**Chronicity criterion (3 months for 2 years)** - Without meeting this definition, chronic bronchitis cannot be confidently diagnosed.",
+        "**Isolated bronchitic picture without persistent airflow limitation** - Presence of prolonged expiration and forced expiratory time >4 seconds suggests COPD-level obstruction.",
+        "**Absence of progressive exertional dyspnea** - Chronic bronchitis alone may not cause mMRC grade 2 dyspnea unless COPD is present."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Emphysema",
+      "description": "**Emphysema** is a COPD phenotype characterized by permanent enlargement of distal airspaces with alveolar wall destruction, causing loss of elastic recoil. It typically presents with progressive exertional dyspnea and hyperinflation, often with relatively less sputum than chronic bronchitis.",
+      "keySymptoms": [
+        "**Exertional dyspnea** - Progressive breathlessness from reduced elastic recoil and airflow limitation, worse with infections.",
+        "**Chronic cough** - May occur but is often less prominent than in chronic bronchitis-dominant COPD presentations.",
+        "**Sputum production** - Usually scant; large-volume daily sputum suggests chronic bronchitis rather than pure emphysema.",
+        "**Wheeze/chest tightness** - Episodic airflow narrowing during exacerbations can cause wheeze and chest tightness.",
+        "**Hemoptysis** - Occasional blood-streaked sputum may occur, but warrants evaluation for infection or malignancy."
+      ],
+      "clinicalReasoning": "This patient has a long-standing **morning cough** with **sputum production** and gradually progressive **exertional dyspnea** (mMRC grade 2), which is classic for **COPD** overall. Examination features such as **prolonged expiration**, **rhonchi**, and increased **forced expiratory time** support persistent airflow obstruction. While emphysema can contribute to dyspnea and hyperinflation, the prominent chronic productive cough pattern points to COPD with a chronic bronchitis component rather than isolated emphysema. Therefore, labeling the case specifically as emphysema is too narrow and not best supported by the symptom profile.",
+      "whyIncorrectForCase": "The dominant presentation is chronic productive **morning cough** with mucopurulent relapses, which is more typical of **chronic bronchitis–predominant COPD** than isolated **emphysema**. The case description supports **COPD** as the correct umbrella diagnosis rather than a single phenotype without confirmatory evidence (e.g., CT-dominant emphysema).",
+      "keyDifferencesFromCorrect": [
+        "**Diagnostic scope** - **Emphysema** is a phenotype within **COPD**, whereas **COPD** encompasses chronic bronchitis and emphysema.",
+        "**Sputum burden** - **Emphysema** usually has scant sputum; this case has long-standing sputum with relapses.",
+        "**Primary symptom emphasis** - **Emphysema** classically emphasizes dyspnea; this case emphasizes cough plus sputum early.",
+        "**Imaging confirmation** - **Emphysema** often needs CT/X-ray hyperlucency/bullae prominence; COPD can be diagnosed by spirometry with symptoms."
+      ],
+      "missingFindings": [
+        "**CT evidence of emphysema** - No CT description of alveolar destruction/bullae predominance to support emphysema phenotype.",
+        "**Predominant hyperinflation signs** - Hyperinflation is mentioned as possible, but not clearly documented as dominant finding.",
+        "**Minimal sputum history** - Absence of a “dry” dyspnea-predominant course argues against isolated emphysema."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Bronchial asthma",
+      "description": "**Bronchial asthma** is a chronic inflammatory airway disorder characterized by **variable, usually reversible airflow obstruction** and **airway hyperresponsiveness**. Patients typically have episodic symptoms that fluctuate over time and improve with bronchodilators or spontaneously.",
+      "keySymptoms": [
+        "**Wheeze** - Episodic musical expiratory sounds due to bronchoconstriction, often varying day-to-day.",
+        "**Chest tightness** - Intermittent constricting chest sensation, commonly worse at night or early morning.",
+        "**Dyspnea** - Sudden or episodic breathlessness triggered by allergens, exercise, cold air, or infections.",
+        "**Cough (often nocturnal)** - Dry or minimally productive cough, frequently worse at night or early morning.",
+        "**Symptom variability** - Marked fluctuation with symptom-free intervals; improves with bronchodilator therapy."
+      ],
+      "clinicalReasoning": "Although she reports **wheezing** and **chest tightness** during relapses, her dominant pattern is a long-standing **morning cough** with **chronic sputum production** and progressively worsening exertional dyspnea. This course suggests persistent, progressive airflow limitation rather than the typical asthma pattern of variable, reversible obstruction. Examination findings like **prolonged expiration**, **rhonchi**, and increased **forced expiratory time** can occur in both, but the overall chronic productive cough phenotype aligns better with **COPD**. Without evidence of significant reversibility or classic episodic triggers, **asthma** is less likely as the primary diagnosis.",
+      "whyIncorrectForCase": "This patient has chronic, progressive symptoms with **morning productive cough** and persistent exertional limitation (mMRC 2), which is more typical of **COPD** than **asthma**. Asthma usually shows prominent **variability** and **reversibility**, not a slowly progressive chronic bronchitic pattern.",
+      "keyDifferencesFromCorrect": [
+        "**Airflow limitation** - Asthma is typically **reversible/variable**; **COPD** is **persistent and progressive**.",
+        "**Cough and sputum** - Asthma cough is often **dry/nocturnal**; **COPD** commonly has **chronic morning sputum**.",
+        "**Course** - Asthma has **episodic attacks with symptom-free intervals**; **COPD** has **gradual worsening over years**.",
+        "**Triggers** - Asthma is strongly linked to **allergens/exercise/cold air**; **COPD** worsens with **infections, smoking, pollutants**.",
+        "**Imaging** - Asthma chest X-ray often normal; **COPD** may show **hyperinflation** and **flattened diaphragm/bullae**."
+      ],
+      "missingFindings": [
+        "**Documented bronchodilator reversibility** - Lack of clear improvement in spirometry after bronchodilator argues against asthma.",
+        "**Marked symptom variability** - No history of fluctuating symptoms with symptom-free periods typical of asthma.",
+        "**Predominantly nocturnal/early-morning attacks** - Symptoms described are chronic morning cough and progressive dyspnea, not classic nocturnal asthma.",
+        "**Atopic history** - No reported allergic rhinitis, eczema, or allergen-related symptom pattern supporting asthma."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Bronchiectasis",
+      "description": "**Bronchiectasis** is a chronic condition characterized by irreversible dilatation of bronchi due to recurrent infection and impaired mucus clearance. It typically causes persistent cough with large-volume purulent sputum and recurrent infective exacerbations, sometimes with hemoptysis.",
+      "keySymptoms": [
+        "**Chronic productive cough** - Persistent daily cough due to retained secretions in dilated bronchi, often long-standing.",
+        "**Copious purulent sputum** - Large-volume, foul-smelling, mucopurulent sputum, often worse on waking and with posture.",
+        "**Recurrent infections** - Frequent febrile episodes with worsening sputum purulence and systemic malaise over years.",
+        "**Hemoptysis** - Blood-streaked sputum or frank bleeding from inflamed, fragile bronchial vessels.",
+        "**Pleuritic chest pain** - Occasional sharp pain during infective exacerbations, related to peripheral airway inflammation.",
+        "**Wheeze** - Variable airflow obstruction from mucus plugging, sometimes mimicking asthma during exacerbations.",
+        "**Dyspnea** - Breathlessness occurs later, usually proportional to disease extent and recurrent infections."
+      ],
+      "clinicalReasoning": "This patient has chronic cough, sputum, and exertional dyspnea, which can overlap with **bronchiectasis**. However, her sputum is described as usually scanty and mucoid with occasional mucopurulent relapses, which is more typical of **COPD/chronic bronchitis** than classic bronchiectasis. The examination pattern provided (prolonged expiration, diffuse rhonchi, forced expiratory time >4 seconds) and imaging expectation of hyperinflation point toward persistent airflow limitation rather than focal suppurative airway disease. Overall, the symptom evolution (seasonal “**morning cough**” progressing slowly) aligns better with **COPD** than bronchiectasis.",
+      "whyIncorrectForCase": "Typical **bronchiectasis** features—daily copious purulent sputum and recurrent infective exacerbations as the dominant pattern—are not described; her sputum is usually scanty and mucoid. The provided findings emphasize **airflow obstruction** and **hyperinflation**, supporting **COPD** rather than bronchiectasis.",
+      "keyDifferencesFromCorrect": [
+        "**Sputum volume/quality** - Bronchiectasis usually causes copious, purulent, sometimes foul sputum; **COPD** often has scanty mucoid sputum with intermittent purulence.",
+        "**Disease pattern** - Bronchiectasis is primarily a chronic suppurative airway disease with recurrent infections; **COPD** is progressive airflow limitation often worsened by infections.",
+        "**Auscultation** - Bronchiectasis commonly has coarse crackles that may persist; **COPD** typically has prolonged expiration with diffuse wheeze/rhonchi.",
+        "**Imaging** - Bronchiectasis shows bronchial dilatation (tram-tracks/signet ring on CT); **COPD** shows hyperinflation and may show bullae/emphysema.",
+        "**Pulmonary function** - Bronchiectasis may be obstructive/mixed and variable; **COPD** shows persistent, not fully reversible airflow obstruction."
+      ],
+      "missingFindings": [
+        "**High-resolution CT bronchiectasis signs** - No report of bronchial dilatation (signet-ring/tram-track) to support bronchiectasis.",
+        "**Copious daily purulent sputum** - Absence of large-volume, persistent purulent sputum makes bronchiectasis less likely.",
+        "**Frequent recurrent febrile exacerbations** - Only occasional mucopurulent relapses are described, not recurrent infections as baseline.",
+        "**Persistent coarse crackles** - Case notes crepitations that change/disappear after coughing, not typical persistent crackles of bronchiectasis.",
+        "**Localized chest signs** - No focal findings (e.g., basal localized crackles) suggesting segmental disease distribution."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Community-acquired pneumonia",
+      "description": "**Community-acquired pneumonia (CAP)** is an acute infection of the lung parenchyma acquired outside hospitals or long-term care facilities. It typically presents with a short duration of systemic symptoms and new radiographic infiltrates due to alveolar inflammation and consolidation.",
+      "keySymptoms": [
+        "**Acute cough** - New or rapidly worsening cough developing over days, often with infectious prodrome.",
+        "**Fever** - Elevated temperature with chills/rigors reflecting acute systemic inflammatory response to infection.",
+        "**Purulent sputum** - Thick yellow-green sputum suggesting bacterial infection rather than chronic baseline mucoid sputum.",
+        "**Pleuritic chest pain** - Sharp pain worse on inspiration or coughing due to pleural inflammation.",
+        "**Dyspnea (acute)** - Sudden or subacute breathlessness from impaired gas exchange in consolidated lung segments.",
+        "**Malaise/fatigue** - Prominent constitutional symptoms occurring early in illness with reduced appetite and weakness.",
+        "**Hemoptysis (occasionally)** - Small-volume blood-streaked sputum can occur from inflamed, friable airways."
+      ],
+      "clinicalReasoning": "CAP is primarily an **acute** lower respiratory tract infection characterized by fever, systemic toxicity, and new focal chest findings with a corresponding **new infiltrate** on chest X-ray. While cough, sputum, dyspnea, and occasional hemoptysis can occur in CAP, the hallmark is a relatively short symptomatic course (days) rather than years. In this patient, the history strongly suggests **chronic airflow limitation** with intermittent infective exacerbations rather than a single acute pneumonic episode. The described examination pattern (prolonged expiration, rhonchi, variable crepitations after coughing) aligns better with **obstructive airway disease** than alveolar consolidation.",
+      "whyIncorrectForCase": "Usha’s symptoms are long-standing and slowly progressive (morning cough with mucoid sputum and exertional dyspnea), which is not typical for **CAP**, an acute illness. She lacks a consistent acute febrile presentation and there is no mention of a new focal **chest X-ray infiltrate**, making CAP unlikely as the primary diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - CAP is acute (days), whereas **COPD** causes chronic, progressive cough/sputum and exertional dyspnea over years.",
+        "**Primary pathology** - CAP involves **alveolar consolidation/infection**, while **COPD** is **persistent airflow limitation** from airway inflammation and emphysema.",
+        "**Systemic features** - CAP commonly has prominent **fever and toxicity**; **COPD** may be afebrile except during exacerbations.",
+        "**Chest examination** - CAP often has focal **bronchial breath sounds** and **dullness**; **COPD** shows **prolonged expiration**, diffuse rhonchi, and hyperinflation signs.",
+        "**Imaging** - CAP requires a new **lobar/segmental infiltrate**; **COPD** may show **hyperinflation**, flattened diaphragm, bullae, or even normal X-ray in chronic bronchitis.",
+        "**Pulmonary function tests** - CAP does not cause persistent obstructive spirometry; **COPD** shows reduced expiratory flows with persistent obstruction."
+      ],
+      "missingFindings": [
+        "**New radiographic infiltrate** - CAP diagnosis typically requires a new consolidation/infiltrate on chest X-ray; not provided here.",
+        "**Acute high fever/rigors** - Persistent or prominent fever is expected in CAP; this case emphasizes chronic symptoms with only relapse-associated fever.",
+        "**Focal consolidation signs** - Dullness to percussion, increased vocal fremitus, and bronchial breathing are typical; exam instead suggests obstruction.",
+        "**Acute onset over days** - CAP usually begins abruptly/subacutely; this patient reports a long-standing, slowly worsening course.",
+        "**Marked systemic toxicity** - Anorexia, severe malaise, and prostration often accompany CAP; not a dominant feature in this presentation."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Bronchopneumonia",
+      "description": "**Bronchopneumonia** is an acute bacterial infection causing patchy inflammation and consolidation of bronchioles and adjacent alveoli. It typically presents with a short history of fever, productive cough, and systemic toxicity, often with new infiltrates on chest imaging.",
+      "keySymptoms": [
+        "**Acute fever** - Sudden onset high temperature with chills, reflecting active infectious inflammation in lung parenchyma.",
+        "**Productive cough** - New or rapidly worsening cough producing purulent sputum over days, not months to years.",
+        "**Pleuritic chest pain** - Sharp pain worse on deep inspiration or coughing due to pleural irritation near consolidation.",
+        "**Systemic toxicity** - Malaise, anorexia, myalgias, and fatigue suggesting acute infection rather than chronic airway disease.",
+        "**Tachypnea and dyspnea** - Rapid breathing and shortness of breath developing acutely with impaired gas exchange.",
+        "**Localized crackles** - Focal inspiratory crepitations over affected segments that persist and do not clear with coughing."
+      ],
+      "clinicalReasoning": "This patient’s dominant pattern is **chronic** cough with morning sputum and slowly progressive exertional dyspnea (mMRC grade 2), which is classic for **COPD** with persistent airflow limitation. Bronchopneumonia is usually **acute** with prominent fever and systemic symptoms, and examination often reveals **localized** crackles/bronchial breathing with radiographic consolidation. Her described relapses with fever and purulence are better explained as **infective exacerbations of COPD** rather than a primary bronchopneumonia diagnosis. The examination features provided (prolonged expiration, rhonchi, variable crepitations after cough, increased forced expiratory time) align with **airflow obstruction**, not alveolar consolidation.",
+      "whyIncorrectForCase": "Her symptoms are long-standing and progressive over time, whereas **bronchopneumonia** typically develops over days with acute systemic illness. The described obstructive signs (prolonged expiration, wheeze/rhonchi, variable crepitations after coughing) fit **COPD** rather than focal consolidation.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Bronchopneumonia is acute (days); **COPD** is chronic and slowly progressive (months/years).",
+        "**Primary pathology** - Bronchopneumonia involves **alveolar infection/consolidation**; **COPD** involves **airflow obstruction** from small airway disease/emphysema.",
+        "**Sputum pattern** - Bronchopneumonia usually causes consistently **purulent** sputum; **COPD** often has **scanty mucoid morning sputum** with episodic purulence during exacerbations.",
+        "**Auscultation** - Bronchopneumonia tends to have **localized persistent crackles/bronchial breathing**; **COPD** shows **prolonged expiration** with diffuse **wheeze/rhonchi** and crackles that may change after coughing.",
+        "**Imaging** - Bronchopneumonia shows **new patchy infiltrates/consolidation**; **COPD** may show **hyperinflation**, flattened diaphragm, and bullae (or normal CXR in chronic bronchitis).",
+        "**Pulmonary function tests** - Bronchopneumonia does not cause persistent obstruction; **COPD** shows **persistent airflow limitation** with reduced expiratory flow rates."
+      ],
+      "missingFindings": [
+        "**Acute high-grade fever** - Lack of sustained acute febrile illness argues against bronchopneumonia as primary diagnosis.",
+        "**New focal consolidation on chest X-ray** - No report of patchy infiltrates or lobular consolidation expected in bronchopneumonia.",
+        "**Bronchial breath sounds** - Absence of bronchial breathing reduces likelihood of alveolar consolidation.",
+        "**Persistent localized crackles** - Crepitations that disappear/change after cough suggest secretions, not fixed pneumonic crepitations.",
+        "**Acute systemic toxicity** - No prominent acute malaise/anorexia consistent with active bronchopneumonia presentation."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Aspiration pneumonia",
+      "description": "**Aspiration pneumonia** is an infectious pneumonitis caused by inhalation of oropharyngeal or gastric contents into the lower airways. It typically presents as an acute illness with focal lung infection, often in patients with impaired airway protection or swallowing dysfunction.",
+      "keySymptoms": [
+        "**Acute cough** - Sudden onset cough developing over hours to days after an aspiration event.",
+        "**Fever** - Systemic temperature elevation reflecting acute bacterial infection following aspiration of contaminated material.",
+        "**Purulent sputum** - Thick, yellow-green sputum suggesting bacterial pneumonia rather than chronic mucoid production.",
+        "**Pleuritic chest pain** - Sharp pain worsened by breathing or coughing due to pleural inflammation.",
+        "**Dyspnea** - New or rapidly worsening shortness of breath from acute alveolar infection and inflammation.",
+        "**Risk factors for aspiration** - Stroke, dysphagia, reduced consciousness, GERD, vomiting, or poor dentition predispose strongly.",
+        "**Crackles over dependent lobes** - Focal inspiratory crackles, often right lower lobe, consistent with aspiration distribution.",
+        "**Hypoxemia** - Low oxygen saturation due to ventilation-perfusion mismatch from consolidated lung segments."
+      ],
+      "clinicalReasoning": "Aspiration pneumonia is usually an **acute** lower respiratory infection occurring after aspiration, producing **fever**, **toxic symptoms**, and **focal chest signs** with a new infiltrate on imaging. The case instead describes a long-standing, progressive pattern of **chronic cough**, **morning mucoid sputum**, and **exertional dyspnea** with **wheeze** and **prolonged expiration**, which aligns with **persistent airflow limitation**. Examination features like **rhonchi**, prolonged expiratory phase, and **forced expiratory time >4 seconds** point toward obstructive physiology rather than acute consolidation. The overall trajectory and described relapses are more consistent with **COPD with infective exacerbations** than aspiration-related pneumonia.",
+      "whyIncorrectForCase": "This patient’s symptoms are **chronic and slowly progressive** (years of morning cough and exertional dyspnea), not an acute post-aspiration febrile illness. There is no provided history of **aspiration risk** (dysphagia, altered sensorium, vomiting) or focal consolidation signs typical of aspiration pneumonia.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Aspiration pneumonia is acute/subacute; **COPD** is chronic, progressive with intermittent exacerbations.",
+        "**Primary pathophysiology** - Aspiration pneumonia causes **alveolar infection/consolidation**; **COPD** causes **airflow obstruction** from small airway disease/emphysema.",
+        "**Sputum pattern** - Aspiration pneumonia often has **purulent sputum** early; **COPD** commonly has **scanty mucoid morning sputum** with purulence during relapses.",
+        "**Auscultation** - Aspiration pneumonia favors **localized crackles/bronchial breathing**; **COPD** favors **prolonged expiration** and **diffuse rhonchi/wheeze**.",
+        "**Imaging** - Aspiration pneumonia shows **dependent-lobe infiltrates**; **COPD** may show **hyperinflation**, flattened diaphragms, and possible bullae.",
+        "**Pulmonary function tests** - Aspiration pneumonia does not cause persistent obstruction; **COPD** shows **persistent airflow limitation** (reduced expiratory flows)."
+      ],
+      "missingFindings": [
+        "**Aspiration risk history** - No dysphagia, stroke, reduced consciousness, vomiting, or GERD-related aspiration event described.",
+        "**Acute fever/toxicity** - Lack of sustained fever and systemic illness argues against an acute pneumonia presentation.",
+        "**Focal consolidation signs** - No bronchial breath sounds, egophony, or localized dullness suggesting lobar involvement.",
+        "**New dependent infiltrate on chest X-ray** - Case emphasizes **hyperinflation** features rather than acute dependent-lobe opacities.",
+        "**Acute hypoxemic respiratory compromise** - No report of sudden hypoxemia or rapid deterioration typical of pneumonia."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Interstitial lung disease (ILD)/Diffuse parenchymal lung disease",
+      "description": "Interstitial lung disease (ILD) is a heterogeneous group of disorders characterized by inflammation and/or fibrosis of the lung interstitium, leading to reduced lung compliance and impaired gas exchange. Patients typically develop progressive exertional dyspnea with a dry cough, and pulmonary function tests usually show a restrictive pattern with reduced diffusion capacity.",
+      "keySymptoms": [
+        "**Progressive exertional dyspnea** - Gradually worsening breathlessness, often prominent early due to reduced lung compliance.",
+        "**Dry cough** - Typically non-productive cough; sputum production is usually minimal or absent.",
+        "**Fine inspiratory crackles** - Classically “Velcro” end-inspiratory crackles, often bibasal and persistent.",
+        "**Systemic features** - Fatigue, weight loss, fevers, arthralgia may occur depending on ILD subtype.",
+        "**Clubbing** - Digital clubbing can be present in fibrotic ILD and suggests chronic parenchymal disease.",
+        "**Hypoxemia on exertion** - Oxygen desaturation with activity is common due to diffusion impairment."
+      ],
+      "clinicalReasoning": "ILD is considered when there is progressive exertional dyspnea with a predominantly **dry cough**, restrictive physiology, and imaging showing **reticular opacities** or **honeycombing**. Examination often reveals persistent **fine end-inspiratory crackles** rather than widespread wheeze/rhonchi. In this case, the symptom pattern is dominated by long-standing **productive morning cough** with **mucoid sputum** and episodic **mucopurulent relapses**, which is more typical of chronic airway disease. The described examination and investigations point toward **airflow obstruction** and **hyperinflation**, not restriction and fibrosis.",
+      "whyIncorrectForCase": "This patient has a classic chronic bronchitic/COPD history: **morning productive cough**, **sputum**, wheeze during relapses, and **persistent airflow limitation**. ILD usually causes a **dry cough**, restrictive PFTs, and crackles that do not clear with coughing—features not supported here.",
+      "keyDifferencesFromCorrect": [
+        "**Cough character** - ILD is usually **dry**; COPD commonly has **chronic productive** cough with sputum.",
+        "**Pulmonary function tests** - ILD shows **restriction** (low FVC, normal/high FEV1/FVC) with low DLCO; COPD shows **obstruction** (low FEV1/FVC) and air trapping.",
+        "**Auscultation** - ILD: persistent **fine end-inspiratory crackles**; COPD: **prolonged expiration**, **rhonchi/wheeze**, variable crackles that change after coughing.",
+        "**Chest X-ray/CT pattern** - ILD: **reticular opacities**, **ground-glass**, **honeycombing**; COPD: **hyperinflation**, **flattened diaphragm**, possible **bullae/hyperlucency**.",
+        "**Pathophysiology** - ILD is primarily **parenchymal fibrosis/inflammation**; COPD is **airway obstruction** with emphysema/chronic bronchitis."
+      ],
+      "missingFindings": [
+        "**Dry cough predominance** - Absence of a dry cough and presence of chronic sputum argue against ILD.",
+        "**Persistent Velcro crackles** - No report of fixed bibasal fine crackles; instead crackles change/disappear after coughing.",
+        "**Restrictive spirometry** - Case describes **decreased maximal airflow rates during forced expiration** (obstruction), not restriction.",
+        "**Interstitial imaging changes** - No mention of reticular infiltrates, ground-glass change, or honeycombing; instead hyperinflation features are expected.",
+        "**Clubbing** - No digital clubbing described, which can support fibrotic ILD when present.",
+        "**Reduced lung volumes** - ILD typically reduces lung volumes; this case suggests **increased lung volumes** (hyperinflation)."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Pulmonary sarcoidosis",
+      "description": "**Pulmonary sarcoidosis** is a multisystem granulomatous disease characterized by noncaseating granulomas, commonly affecting the lungs and intrathoracic lymph nodes. It often presents with constitutional symptoms, dry cough, and characteristic bilateral hilar lymphadenopathy on chest imaging.",
+      "keySymptoms": [
+        "**Dry cough** - Typically nonproductive cough rather than chronic morning mucoid sputum production.",
+        "**Exertional dyspnea** - Progressive breathlessness due to interstitial lung involvement and reduced diffusion capacity.",
+        "**Chest tightness** - Nonspecific symptom; may occur but is not usually relapse-driven with purulence.",
+        "**Constitutional symptoms** - Fever, fatigue, and weight loss may occur, especially with active systemic disease.",
+        "**Erythema nodosum** - Tender red nodules on shins suggesting acute sarcoid (Löfgren syndrome).",
+        "**Ocular symptoms** - Uveitis causing eye pain, redness, and photophobia can accompany pulmonary disease."
+      ],
+      "clinicalReasoning": "Sarcoidosis can cause **progressive exertional dyspnea** and cough, but the cough is classically **dry** and associated with interstitial lung disease patterns. Typical evaluation is driven by chest imaging showing **bilateral hilar lymphadenopathy** and/or parenchymal infiltrates, plus supportive tests (e.g., reduced **DLCO**). In contrast, this patient’s long-standing **morning cough** with **mucoid sputum**, episodic **mucopurulent relapses**, **wheeze**, and exam signs of **airflow obstruction** align more with obstructive airway disease than granulomatous interstitial disease.",
+      "whyIncorrectForCase": "This patient has a chronic **productive morning cough** with **mucoid/purulent sputum** and wheezy relapses, which is far more typical of **COPD** than sarcoidosis. The provided findings emphasize **persistent airflow limitation** and **hyperinflation**, not **bilateral hilar lymphadenopathy** or interstitial infiltrates expected in sarcoidosis.",
+      "keyDifferencesFromCorrect": [
+        "**Cough character** - Sarcoidosis is usually **dry**; **COPD** commonly has chronic **productive** morning cough.",
+        "**Primary physiology** - Sarcoidosis tends toward **restrictive** changes and reduced **DLCO**; **COPD** shows **obstruction** with reduced expiratory flows.",
+        "**Imaging pattern** - Sarcoidosis often shows **bilateral hilar lymphadenopathy**/interstitial nodules; **COPD** shows **hyperinflation**, flattened diaphragms, and possible **bullae**.",
+        "**Auscultation** - Sarcoidosis may have fine crackles; **COPD** commonly has **prolonged expiration** and **rhonchi/wheeze**.",
+        "**Systemic involvement** - Sarcoidosis frequently has **extra-pulmonary** features (skin/eye); **COPD** is primarily respiratory with exacerbations."
+      ],
+      "missingFindings": [
+        "**Bilateral hilar lymphadenopathy** - Key chest X-ray/CT clue for sarcoidosis; not described in this case.",
+        "**Interstitial parenchymal infiltrates/nodules** - Typical sarcoid lung involvement; case instead suggests hyperinflation.",
+        "**Restrictive spirometry pattern** - Sarcoidosis often shows reduced lung volumes; case notes decreased forced expiratory airflow consistent with obstruction.",
+        "**Reduced DLCO disproportionate to obstruction** - Common in interstitial sarcoid; not provided or suggested here.",
+        "**Extra-pulmonary signs (uveitis/erythema nodosum)** - Support sarcoidosis diagnosis; absent from the history provided."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Chronic obstructive pulmonary disease (COPD)",
+    "domain": "respiratory",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about chronic cough pattern (e.g., ‘winter cough/smoker’s cough’, especially ‘morning cough’) and whether it has increased in frequency, severity, and duration over time.",
+        "reasoning": "COPD classically presents with a long-standing cough that begins seasonally and later becomes more frequent and persistent.",
+        "expectedFinding": "History of cough initially in winter seasons and especially in mornings, later increasing in frequency/severity/duration.",
+        "importance": "critical",
+        "textbookReference": "“Initially, the cough is present only in the winter seasons… especially in the mornings (‘morning cough’). Later, cough increases in frequency, severity, and duration.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about sputum characteristics (scanty vs increased, mucoid, morning predominance) and whether there are episodes of purulent sputum (‘mucopurulent relapse’) or blood staining (hemoptysis).",
+        "reasoning": "Sputum is typically scanty and mucoid, more in mornings; purulence suggests mucopurulent relapse and hemoptysis can occur.",
+        "expectedFinding": "Scanty mucoid morning sputum; occasional blood staining or purulent episodes.",
+        "importance": "important",
+        "textbookReference": "“Usually scanty, mucoid and more in the mornings. It may be occasionally blood stained… or frankly purulent (‘mucopurulent relapse’).”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about exertional dyspnea (insidious onset, slowly progressive) and grade severity using the modified MRC (mMRC) dyspnea scale.",
+        "reasoning": "Breathlessness in COPD is insidious, due to airflow obstruction, and severity assessment is recommended using mMRC.",
+        "expectedFinding": "Exertional dyspnea that is insidious and progressive; mMRC grade consistent with symptoms (e.g., breathless walking on level ground).",
+        "importance": "critical",
+        "textbookReference": "“Breathlessness: It is relatively insidious in onset and is due to airflow obstruction… Breathlessness severity can be assessed by the modified MRC dyspnea scale.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about aggravating factors for breathlessness (infection, excessive smoking, adverse atmospheric conditions).",
+        "reasoning": "These are textbook-listed aggravators that support COPD symptom behavior and help identify exacerbating influences.",
+        "expectedFinding": "Breathlessness worsens with infection, excessive smoking, or adverse atmospheric conditions.",
+        "importance": "helpful",
+        "textbookReference": "“It is aggravated by infection, excessive smoking, and adverse atmospheric conditions.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about other associated symptoms: fever during mucopurulent relapses, wheezing, and tightness in the chest.",
+        "reasoning": "These are additional COPD symptoms described in the textbook and may indicate relapses/exacerbation tendency.",
+        "expectedFinding": "Fever during mucopurulent relapses and/or wheezing/tightness in chest.",
+        "importance": "helpful",
+        "textbookReference": "“Other symptoms: Fever during mucopurulent relapses, wheezing, and tightness in the chest.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Assess for respiratory distress at rest: respiratory rate and use of accessory muscles of respiration.",
+        "reasoning": "In early COPD, examination may be normal with no distress and no accessory muscle use; documenting this helps stage clinical impression.",
+        "expectedFinding": "Early stages: no respiratory distress at rest, normal respiratory rate, accessory muscles not acting.",
+        "importance": "important",
+        "textbookReference": "“In the early stages, patients are entirely normal on physical examination. At rest, there is no respiratory distress, respiratory rate is normal and accessory muscles of respiration are not acting.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Auscultate lungs for vesicular breath sounds with prolonged expiration and for inspiratory/expiratory rhonchi; check for crepitations that change/disappear after coughing.",
+        "reasoning": "These are key auscultatory signs of COPD described in the textbook.",
+        "expectedFinding": "Vesicular breath sounds with prolonged expiration; inspiratory and expiratory rhonchi; crepitations that disappear or change after coughing.",
+        "importance": "critical",
+        "textbookReference": "“Auscultation: (i) Vesicular breath sounds with prolonged expiration; (ii) inspiratory and expiratory rhonchi; (iii) crepitations that either disappear or change… after coughing.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Measure forced expiratory time (FET).",
+        "reasoning": "A prolonged forced expiratory time is a bedside sign of airflow obstruction in COPD per the textbook.",
+        "expectedFinding": "Forced expiratory time >4 seconds.",
+        "importance": "important",
+        "textbookReference": "“forced expiratory time >4 seconds.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order spirometry/pulmonary function tests (PFTs) to assess airflow limitation (FEV1, FVC, FEV1/FVC ratio, PEF) and lung volumes (TLC, RV) and diffusion (gas transfer factor for carbon monoxide).",
+        "reasoning": "The textbook describes PFT findings in COPD as decreased maximal airflow rates during forced expiration and lists characteristic changes in spirometry, lung volumes, and diffusion.",
+        "expectedFinding": "Reduced FEV1, reduced FVC, reduced FEV1/FVC ratio, reduced PEF; increased TLC and RV; reduced gas transfer factor for carbon monoxide (diffusion).",
+        "importance": "critical",
+        "textbookReference": "“Pulmonary function tests… show decreased maximal airflow rates during forced expiration… Reduced: FEV1, FVC, FEV1: FVC ratio, and PEF… Increased: TLC, RV… Gas transfer factor for carbon monoxide (diffusion) is reduced.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order chest X-ray to assist classification/type and to identify complications (e.g., cardiac failure) and other complications of smoking (e.g., lung cancer).",
+        "reasoning": "Chest X-ray may help classify COPD type and is essential to identify complications, though it does not reliably indicate severity of airflow limitation.",
+        "expectedFinding": "Possible emphysema features (bullae, paucity of parenchymal markings/hyperlucency) and hyperinflation (increased lung volumes, flattened diaphragm); chronic bronchitis may show no characteristic abnormality; may reveal complications such as cardiac failure or lung cancer.",
+        "importance": "important",
+        "textbookReference": "“Chest X-ray: May assist in the classification of the type of COPD… There are no reliable radiographic signs that indicate the severity… Features of emphysema… bullae… hyperlucency… Features of hyperinflation… flattening of the diaphragm… Chronic bronchitis: No characteristic abnormality… Essential to identify complications such as cardiac failure… (e.g., lung cancer).”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order arterial blood gas (ABG) study to demonstrate resting or exertional hypoxemia (especially during exacerbation evaluation and to decide need for LTOT).",
+        "reasoning": "ABG is specifically recommended in the textbook to demonstrate hypoxemia and is important in exacerbations and LTOT decision-making.",
+        "expectedFinding": "Resting or exertional hypoxemia on ABG.",
+        "importance": "important",
+        "textbookReference": "“Arterial blood gases (ABG) study: To demonstrate resting or exertional hypoxemia. It is important in the evaluation of patients with exacerbation and decide need for LTOT.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order blood tests: hemoglobin level and PCV (for secondary polycythemia) and serum bicarbonate (as an indirect indicator of chronic hypercapnia in patients with normal kidney function).",
+        "reasoning": "The textbook notes persistent hypoxemia can elevate Hb/PCV and bicarbonate can indirectly identify chronic hypercapnia.",
+        "expectedFinding": "Elevated hemoglobin/PCV due to persistent hypoxemia; elevated serum bicarbonate suggesting chronic hypercapnia (with normal kidney function).",
+        "importance": "helpful",
+        "textbookReference": "“Hemoglobin level and PCV may be elevated due to persistent hypoxemia (secondary polycythemia)… an elevated serum bicarbonate may indirectly identify chronic hypercapnia.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order high-resolution CT (HRCT) chest if needed to detect, characterize, and quantify emphysema.",
+        "reasoning": "HRCT is described as useful for detection/characterization/quantification of emphysema and is more advanced imaging after CXR and PFTs.",
+        "expectedFinding": "HRCT evidence of emphysema (detection/characterization/quantification).",
+        "importance": "helpful",
+        "textbookReference": "“High-resolution CT scans (HRCT): Useful in detection, characterization, and quantification of emphysema.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Bronchial asthma",
+        "howToRuleOut": "Differentiate by typical pattern: asthma usually begins in children/young adults, symptoms vary over hours/days and are triggered (exercise/dust/allergens) with spontaneous or treatment-related improvement; COPD usually occurs in older individuals with continuous symptoms, unrelated to triggers, and is slowly progressive despite therapy. Spirometry: asthma shows reversibility and normal between symptoms, whereas COPD shows persistent airflow limitation with FEV1/FVC <0.7. Chest X-ray: asthma normal vs COPD hyperinflation.",
+        "textbookReference": "“Bronchial asthma… Usually children and young adults… Vary from time to time… Triggers… Symptoms improve spontaneously or with treatment… Spirometry Reversibility… normal between symptoms… COPD… Usually older individuals… Usually continuous symptoms… Unrelated to triggers… Slowly progressive despite therapy… Spirometry FEV1/FVC<0.7 and persistent airflow limitation… Chest X-ray Normal (asthma) Hyperinflation (COPD).”"
+      },
+      {
+        "name": "Chronic bronchitis without chronic airflow obstruction (i.e., not COPD unless obstruction present)",
+        "howToRuleOut": "Confirm whether chronic airflow obstruction is present: the textbook states disease is considered COPD only if chronic airflow obstruction occurs. Chronic bronchitis is defined by chronic productive cough for 3 months in each of two successive years with other causes excluded; chest X-ray may show no characteristic abnormality, so spirometry/PFTs are needed to establish obstruction.",
+        "textbookReference": "“Disease is considered COPD, only if chronic airflow obstruction occurs.”"
+      },
+      {
+        "name": "Pulmonary tuberculosis (PTB)",
+        "howToRuleOut": "Use time course and examination: PTB can cause dyspnea over months to years and may have fine crepitations in upper parts (apices), especially post-tussive; COPD early examination may be normal and typical auscultation is prolonged expiration with rhonchi and FET >4 seconds. (If PTB suspected, typical chest radiograph changes should prompt further investigation.)",
+        "textbookReference": "“Months to years (slow onset): Pulmonary tuberculosis (PTB), COPD…” / “Most common sign is fine crepitations in the upper part (apices)… better heard… after coughing (post-tussive crepitations).”"
+      }
+    ],
+    "diagnosticApproach": "Suspect COPD in an older patient with the textbook triad of chronic cough (often ‘winter/morning cough’), morning-predominant sputum (scanty mucoid; may become purulent in ‘mucopurulent relapse’), and insidious, progressive exertional dyspnea (grade with mMRC). Perform focused respiratory examination: note that early COPD may be normal at rest, then look for vesicular breath sounds with prolonged expiration, inspiratory/expiratory rhonchi, crepitations that change/disappear after coughing, and forced expiratory time >4 seconds. Confirm chronic airflow obstruction with pulmonary function tests (reduced FEV1, FVC, FEV1/FVC ratio, PEF; increased TLC/RV; reduced diffusion). Use chest X-ray to assist classification/type and to identify complications (e.g., cardiac failure) and other smoking-related complications (e.g., lung cancer), recognizing it does not reliably grade severity. Use ABG to demonstrate resting/exertional hypoxemia (especially during exacerbations and for LTOT decisions) and supportive blood tests (Hb/PCV, bicarbonate). If needed, use HRCT to detect/characterize/quantify emphysema. Differentiate from asthma using the textbook contrasts (age of onset, symptom variability/triggers, reversibility, CXR, and spirometry).",
+    "textbookSources": [
+      "symptoms in COPD are impressive history of cough, sputum production, and exertional\ndyspnea (breathlessness).\n1. Cough: Initially, the cough is present only in the winter seasons (often referred as “w...",
+      ")\nQ.  Write short essay/note on COPD (chronic obstructive pulmonary disease), COLD (chronic obstructive lung disease), or\nCOAD (chronic obstructive airway disease).\nQ.  CT2.1 Define and classify obstr..."
+    ]
+  }
+}

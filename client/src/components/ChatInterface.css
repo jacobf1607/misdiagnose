@@ -1,0 +1,237 @@
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Empty state - input at top */
+.chat-interface.chat-empty {
+  justify-content: flex-start;
+}
+
+.chat-interface.chat-empty .chat-messages {
+  flex: 0 0 auto;
+  padding-top: 2rem;
+}
+
+.chat-hint {
+  text-align: center;
+  color: var(--gray-600);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chat-hint-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat-hint-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.chat-hint-text {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.chat-message {
+  max-width: 85%;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-message.player {
+  align-self: flex-end;
+}
+
+.chat-message.patient {
+  align-self: flex-start;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.message-role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.quality-badge {
+  font-size: 0.688rem;
+  font-weight: 600;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.quality-badge.quality-high {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+}
+
+.quality-badge.quality-medium {
+  background-color: var(--warning-light);
+  color: var(--text-primary);
+}
+
+.quality-badge.quality-low {
+  background-color: var(--danger-light);
+  color: var(--danger-dark);
+}
+
+.message-content {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  line-height: 1.5;
+  font-size: 0.938rem;
+}
+
+.chat-message.player .message-content {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  border-bottom-right-radius: 0.25rem;
+}
+
+.chat-message.patient .message-content {
+  background-color: var(--gray-100);
+  color: var(--gray-800);
+  border-bottom-left-radius: 0.25rem;
+}
+
+.typing-indicator {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.25rem 0;
+}
+
+.typing-indicator span {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--gray-400);
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.chat-input-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--gray-200);
+  background-color: var(--gray-50);
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 1.5rem;
+  font-size: 0.938rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.chat-input:focus {
+  border-color: var(--primary);
+}
+
+.chat-input:disabled {
+  background-color: var(--gray-100);
+  cursor: not-allowed;
+}
+
+.send-btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 1.5rem;
+}
+
+/* Mobile ChatInterface styles */
+.mobile-panel .chat-interface {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+}
+
+.mobile-panel .chat-messages {
+  flex: 1;
+  padding: 0.75rem;
+  min-height: 0;
+}
+
+.mobile-panel .chat-message {
+  max-width: 90%;
+}
+
+.mobile-panel .message-content {
+  padding: 0.625rem 0.875rem;
+  font-size: 0.9375rem;
+}
+
+.mobile-panel .chat-input-form {
+  padding: 0.75rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0));
+  background: var(--background);
+  border-top: 1px solid var(--gray-200);
+}
+
+.mobile-panel .chat-input {
+  padding: 0.625rem 1rem;
+  font-size: 1rem; /* Prevents iOS zoom */
+}
+
+.mobile-panel .send-btn {
+  padding: 0.625rem 1rem;
+  min-width: 60px;
+}

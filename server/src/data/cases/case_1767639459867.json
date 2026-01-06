@@ -1,0 +1,503 @@
+{
+  "persona": {
+    "name": "Suresh Nair",
+    "age": 41,
+    "gender": "Male",
+    "occupation": "Plumber in Kanpur",
+    "background": "He works long hours repairing drains and water lines, often standing in contaminated water during monsoon-related flooding. He has had frequent minor skin cuts at work.",
+    "lifestyle": {
+      "activityLevel": "high",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "stoic",
+      "practical",
+      "anxious about missing work"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Leptospirosis",
+      "description": "A zoonotic infection; severe disease can show characteristic marked elevations of bilirubin with only mild transaminase elevation (Weil’s syndrome), and chest radiograph may show patchy bronchopneumonia with small pleural effusion; ECG may show bradycardia/low voltage/nonspecific ST-T changes."
+    },
+    {
+      "id": "d2",
+      "name": "Typhoid fever",
+      "description": "Systemic febrile illness that may show rose spots, mild hepatosplenomegaly, and relative bradycardia; stools may become loose/greenish later; blood culture is the gold standard (best in first week)."
+    },
+    {
+      "id": "d3",
+      "name": "Community-acquired pneumococcal pneumonia (Streptococcus pneumoniae)",
+      "description": "CAP with fever, dyspnea, cough and sputum; may have pleuritic chest pain and consolidation signs; blood culture may be positive in hospitalized patients."
+    },
+    {
+      "id": "d4",
+      "name": "Legionnaires’ pneumonia (Legionella pneumoniae)",
+      "description": "CAP that may present with headache/abdominal pain/diarrhea/vomiting; relative bradycardia can occur; hyponatremia may be seen."
+    },
+    {
+      "id": "d5",
+      "name": "Pulmonary tuberculosis",
+      "description": "TB is associated with night sweats and weight loss; TB can occur at any CD4 count in HIV and is included among AIDS-defining conditions."
+    },
+    {
+      "id": "d6",
+      "name": "Pneumocystis jirovecii pneumonia (PJP/PCP)",
+      "description": "In HIV patients (typically CD4 <200): subacute fever, dyspnea, nonproductive cough, hypoxemia with increased A–a gradient, elevated LDH; CXR may be normal or show bilateral perihilar diffuse symmetric interstitial pattern; CT shows patchy ground-glass opacities."
+    },
+    {
+      "id": "d7",
+      "name": "Cryptosporidiosis, chronic (>1 month)",
+      "description": "An AIDS-defining gastrointestinal condition characterized by chronic diarrhea lasting more than one month."
+    },
+    {
+      "id": "d8",
+      "name": "Esophageal candidiasis",
+      "description": "An AIDS-defining condition; candidiasis of esophagus is associated with advanced immunosuppression (commonly at CD4 100–200)."
+    },
+    {
+      "id": "d9",
+      "name": "Mycobacterium avium complex (MAC) infection",
+      "description": "In advanced HIV: can cause fever, weight loss, abdominal pain, diarrhea, lymphadenopathy, hepatosplenomegaly; anemia and elevated ALP may be seen; blood culture can help diagnose."
+    },
+    {
+      "id": "d10",
+      "name": "COVID-19",
+      "description": "Common manifestation includes fever, cough, dyspnea with bilateral lung infiltrates; imaging may show bilateral peripheral/lower-zone ground-glass opacities and/or consolidation."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "I’ve had high fever for several days and now my eyes look yellow. I also feel very weak and a bit short of breath.",
+  "medicalHistory": "No documented chronic illnesses. No known prior HIV diagnosis. No recent dental extraction or urinary catheterization reported. Occupational exposure includes frequent contact with contaminated water and mud during plumbing work.",
+  "symptoms": "Fever for about a week with progressive jaundice and malaise/weakness. New cough and shortness of breath. (Pattern fits leptospirosis with possible Weil’s syndrome and pulmonary involvement.)\n\nFrom textbook: fever, and neck\n\nstiffness may suggest meningitis. The CSF is usually\nshow normal number of cells in the first 7 days of\nillness, although the organisms may be seen. With\nthe onset of antibodies (during immune phase) in the\nserum aseptic meningitis develops in about 90% of\npatients, with abnormalities in CSF (refer investigations\nbelow).\n\n Other manifestations which are less frequent include\nchange in the level of consciousness, encephalitis, cranial\nnerve palsies, and acute dilatation of the g",
+  "relevantFindings": "Liver function tests: conjugated hyperbilirubinemia with only mild elevation of AST and ALT (up to five times normal) and raised alkaline phosphatase (marked bilirubin with mild transaminase elevation is characteristic of Weil’s syndrome). Creatinine phosphokinase (CPK) elevated (can help differentiate leptospirosis from viral hepatitis). Chest radiograph: patchy bronchopneumonia with a small pleural effusion. ECG: bradycardia/low voltage and nonspecific ST-T wave changes.\n\nFrom textbook: in the world.\n\nSource of Infection\nLeptospirosis is ubiquitous in wildlife and in many domestic animals. Reservoirs of organisms include rodents (most\nfrequent), foxes, skunks, dogs, and domestic livestock. Many animals shed the organism into the urine in massive numbers\nfor long period but infection is asymptomatic in these animals. Outbreaks of leptospirosis may occur with flooding.\n\nMode of Transmission\nz Direct contact: Human infection occur either by direct contact with urine or tissue of a",
+  "redHerrings": "Relative bradycardia and abdominal symptoms could suggest typhoid fever. Fever with cough/dyspnea and infiltrates could suggest community-acquired pneumonia (including pneumococcal, Legionella) or COVID-19. Weight loss/night sweats history (if present on questioning) could point toward pulmonary tuberculosis. Chronic diarrhea on extended history could raise concern for HIV-related opportunistic infections such as cryptosporidiosis or MAC.",
+  "id": "case_1767639459867",
+  "domain": "infectious diseases",
+  "idealPathway": {
+    "diseaseName": "Leptospirosis",
+    "domain": "infectious diseases",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about exposure risk: direct contact with urine/tissue of infected animals (especially rodents) or prolonged immersion in potentially contaminated fresh water; ask about flooding exposure.",
+        "reasoning": "Textbook emphasizes animal reservoirs, urine shedding, and outbreaks with flooding; transmission occurs via cuts/abraded skin or mucous membranes and is favored by prolonged immersion in contaminated water.",
+        "expectedFinding": "History of contact with animal urine/tissue or contaminated water/soil/vegetation, especially after flooding, within the incubation window.",
+        "importance": "critical",
+        "textbookReference": "“Reservoirs… include rodents (most frequent)… Outbreaks… may occur with flooding… Transmission may occur through cuts… and mucous membranes… Prolonged immersion in contaminated water favors invasion.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about high-grade fever with chills and rigors, with malaise/weakness.",
+        "reasoning": "Fever with systemic symptoms is a common early (leptospiremic phase) presentation and supports clinical suspicion.",
+        "expectedFinding": "High-grade fever with chills/rigors and malaise/weakness during first week.",
+        "importance": "important",
+        "textbookReference": "“Fever: Usually high-grade with chills and rigors. May be accompanied by malaise and weakness.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about severe headache (retro-orbital or occipital).",
+        "reasoning": "Severe headache is a commonly encountered symptom in the leptospiremic phase and also helps assess for meningeal involvement when paired with neck stiffness.",
+        "expectedFinding": "Retro-orbital or occipital severe headache.",
+        "importance": "important",
+        "textbookReference": "“Severe headache: Retro-orbital or occipital.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about severe myalgia with marked tenderness (thighs/lumbar areas—calf and back) and possible cutaneous hyperesthesia.",
+        "reasoning": "Myalgia is present in most patients and is described as severe with characteristic muscle group tenderness, supporting leptospirosis suspicion.",
+        "expectedFinding": "Severe myalgia with calf/back or thigh/lumbar tenderness ± cutaneous hyperesthesia.",
+        "importance": "important",
+        "textbookReference": "“Myalgia… is severe… muscles of the thighs and lumbar areas (calf and back) show severe tenderness… may show cutaneous hyperesthesia.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about biphasic illness (apparent recovery after first week followed by worsening for 2–5 days) and symptoms suggesting meningitis (headache, fever, neck stiffness).",
+        "reasoning": "The textbook describes a biphasic course and notes meningitis is more common in the immune phase; neck stiffness with headache/fever suggests meningitis.",
+        "expectedFinding": "History of initial improvement then worsening; headache/fever with neck stiffness during immune phase.",
+        "importance": "helpful",
+        "textbookReference": "“first… phase… followed by a period of apparent recovery, after which the symptoms worsen again for another 2–5 days (immune phase)… Presence of headache, fever, and neck stiffness may suggest meningitis.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Examine eyes for conjunctival suffusion/congestion and assess for jaundice.",
+        "reasoning": "Conjunctival suffusion is described as a very helpful and notable sign; jaundice is the first manifestation of severe leptospirosis (Weil’s syndrome).",
+        "expectedFinding": "Pericorneal reddening/hyperemia without exudate (conjunctival suffusion) ± jaundice (often deep in severe disease).",
+        "importance": "critical",
+        "textbookReference": "“Conjunctival suffusion/congestion… is very helpful and notable sign… pericorneal reddening… without exudate… The first manifestation of severe leptospirosis is usually jaundice.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Assess for meningeal signs, especially neck stiffness, and evaluate mental status.",
+        "reasoning": "Neck stiffness with headache/fever suggests meningitis; other CNS manifestations include altered consciousness, encephalitis, cranial nerve palsies, seizures.",
+        "expectedFinding": "Neck stiffness; possible altered level of consciousness (if CNS involvement).",
+        "importance": "important",
+        "textbookReference": "“Presence of headache, fever, and neck stiffness may suggest meningitis… Other manifestations… change in the level of consciousness, encephalitis, cranial nerve palsies.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Examine for hemorrhagic manifestations (purpura, petechiae on oral/vaginal/conjunctival mucosa, bruising) and assess respiratory status for pulmonary syndrome.",
+        "reasoning": "Weil’s syndrome includes hemorrhagic manifestations and pulmonary syndrome (ARDS, pulmonary hemorrhage, pneumonia, effusion).",
+        "expectedFinding": "Purpura/petechiae/bruising; signs of respiratory distress consistent with ARDS/pulmonary involvement.",
+        "importance": "important",
+        "textbookReference": "“Hemorrhagic manifestations are common… purpura, petechiae… bruising… Pulmonary syndrome: ARDS, pulmonary hemorrhage, pneumonia, and effusion.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order urine examination (urinalysis).",
+        "reasoning": "Early illness shows microscopic hematuria, pyuria, and proteinuria; supports diagnosis and assesses renal involvement.",
+        "expectedFinding": "Microscopic hematuria, pyuria, and proteinuria.",
+        "importance": "important",
+        "textbookReference": "“During early part of the illness shows microscopic hematuria, pyuria, and proteinuria.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order blood tests: CBC with differential, ESR/CRP, renal function (BUN) and electrolytes (including potassium), coagulation studies (PT), creatinine phosphokinase (CPK), and liver function tests (AST/ALT, bilirubin, alkaline phosphatase).",
+        "reasoning": "Textbook lists characteristic abnormalities: neutrophilia with shift to left, thrombocytopenia in severe infection, raised ESR/CRP, raised BUN and hyperkalemia in renal failure, prolonged PT reversible with vitamin K, elevated CPK (helps differentiate from viral hepatitis), and LFT pattern (Weil’s: marked bilirubin with mild transaminase elevation).",
+        "expectedFinding": "Neutrophilia (>70%) with shift to left; ± anemia; ± thrombocytopenia; raised ESR/CRP; raised BUN and hyperkalemia if renal failure; prolonged PT reversible with vitamin K; elevated CPK (often in first week); LFTs: raised AST/ALT (up to 5×), conjugated hyperbilirubinemia, raised ALP; in Weil’s: marked bilirubin with mild transaminase elevation.",
+        "importance": "critical",
+        "textbookReference": "“polymorphonuclear leukocytosis… neutrophilia… very frequent… Thrombocytopenia in severe infection… Raised… ESR and… CRP… Raised BUN and hyperkalemia… Coagulation… prolonged prothrombin time… reversible with vitamin K… CPK… elevated… helps in differentiating leptospirosis from viral hepatitis… LFT… raised AST and ALT… conjugated hyperbilirubinemia… Marked elevations of bilirubin and mild elevated transaminases… in Weil’s syndrome.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order chest radiograph.",
+        "reasoning": "Pulmonary involvement may show patchy bronchopneumonia and small pleural effusion; relevant given shortness of breath and Weil’s pulmonary syndrome.",
+        "expectedFinding": "Patchy bronchopneumonia and/or small pleural effusion.",
+        "importance": "important",
+        "textbookReference": "“Chest radiograph may reveal patchy bronchopneumonia and a small pleural effusion.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order serological testing for leptospirosis (IgM by MAT; IgM ELISA/immunofluorescent; rapid immunochromatographic tests).",
+        "reasoning": "IgM antibodies detected during immune (second) phase; ELISA/immunofluorescent are easy/rapid; rapid tests are specific but moderately sensitive in first week.",
+        "expectedFinding": "Positive IgM antibodies (especially during immune phase).",
+        "importance": "important",
+        "textbookReference": "“IgM antibodies may be detected… by microscopic agglutination test (MAT), during the immune (second) phase… IgM ELISA… immunofluorescent… rapid immunochromatographic tests are specific but… moderate sensitivity in the first week.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Confirmatory microbiology based on illness day: culture (Fletcher’s medium) of blood/CSF in first week; urine culture from second week onwards; consider PCR (blood early symptomatic disease; urine from eighth day).",
+        "reasoning": "Textbook specifies optimal timing by phase and notes culture may take weeks; PCR detects leptospiral DNA with timing guidance.",
+        "expectedFinding": "Positive culture from appropriate specimen by timing and/or positive PCR in blood early or urine from day 8.",
+        "importance": "helpful",
+        "textbookReference": "“culture… of the blood or CSF during the first week… or of the urine from the second week onwards… Detection of leptospiral DNA by PCR in blood during early symptomatic disease and in urine from the eighth day of illness.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Viral hepatitis",
+        "howToRuleOut": "Use CPK in the first week: elevated CPK supports leptospirosis and helps differentiate it from viral hepatitis; also note leptospirosis/Weil’s pattern of marked bilirubin with only mild transaminase elevation.",
+        "textbookReference": "“CPK are elevated… during the first week… helps in differentiating leptospirosis from viral hepatitis… Marked elevations of bilirubin and mild elevated transaminases… in Weil’s syndrome.”"
+      },
+      {
+        "name": "Aseptic meningitis (non-leptospiral)",
+        "howToRuleOut": "Use timing and CSF profile described for leptospirosis: in first 7 days CSF may have normal cell count though organisms may be seen; during immune phase aseptic meningitis develops in ~90% with CSF abnormalities (cell count increased but <500/mm3 with neutrophil predominance; normal glucose; protein normal/raised).",
+        "textbookReference": "“CSF… normal number of cells in the first 7 days… With the onset of antibodies… aseptic meningitis develops in about 90%… CSF… Cell counts are increased (but <500/mm3) with predominance of neutrophils… glucose… normal.”"
+      },
+      {
+        "name": "Community-acquired pneumonia (CAP)",
+        "howToRuleOut": "Chest radiograph in leptospirosis may show patchy bronchopneumonia and small pleural effusion; interpret alongside leptospirosis-specific systemic features/signs (e.g., conjunctival suffusion, jaundice, renal/hemorrhagic features) and leptospiral serology/culture/PCR.",
+        "textbookReference": "“Chest radiograph may reveal patchy bronchopneumonia and a small pleural effusion… Conjunctival suffusion… very helpful… The first manifestation… usually jaundice.”"
+      }
+    ],
+    "diagnosticApproach": "Suspect leptospirosis in a patient with acute high-grade fever (often with chills/rigors), severe headache, severe myalgia (calf/back or thigh/lumbar tenderness), and the notable sign of conjunctival suffusion—especially with exposure risk (animal urine/rodents, contaminated water, flooding) and an incubation of ~7–14 days (range 1–30). Assess for biphasic course and immune-phase complications (meningitis, iridocyclitis) and screen urgently for severe leptospirosis/Weil’s syndrome (deep jaundice developing day 5–9, renal failure with oliguria/anuria, hemorrhagic manifestations, pulmonary syndrome/ARDS, CNS involvement). Start with cost-effective tests: urinalysis and blood work (CBC with differential, ESR/CRP, renal function/electrolytes, coagulation/PT, CPK, LFTs), then chest radiograph if respiratory symptoms. Confirm with leptospiral serology (IgM—MAT/ELISA/immunofluorescent; note reduced sensitivity in first week for rapid tests) and phase-appropriate microbiology: culture (blood/CSF in first week; urine from second week) and PCR (blood early; urine from day 8). Differentiate from viral hepatitis using elevated CPK and the characteristic Weil’s pattern of marked bilirubin with mild transaminase elevation.",
+    "textbookSources": [
+      "fever, and neck\n\nstiffness may suggest meningitis. The CSF is usually\nshow normal number of cells in the first 7 days of\nillness, although the organisms may be seen. With\nthe onset of antibodies (duri...",
+      "in the world.\n\nSource of Infection\nLeptospirosis is ubiquitous in wildlife and in many domestic animals. Reservoirs of organisms include rodents (most\nfrequent), foxes, skunks, dogs, and domestic live..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Leptospirosis",
+      "description": "**Leptospirosis** is a zoonotic infection caused by *Leptospira* spirochetes, typically acquired from water or soil contaminated with animal urine. Severe disease (**Weil’s syndrome**) features **jaundice**, **acute kidney injury**, hemorrhagic/pulmonary involvement, and systemic toxicity, often with only modest transaminase elevation despite marked hyperbilirubinemia.",
+      "keySymptoms": [
+        "**High fever (≈1 week)** - Acute febrile illness is classic early leptospiremia before immune-phase complications develop.",
+        "**Progressive jaundice** - Disproportionate conjugated hyperbilirubinemia suggests **Weil’s syndrome** rather than primary hepatocellular hepatitis.",
+        "**Marked weakness/malaise** - Prominent systemic toxicity is common and correlates with severe multisystem involvement.",
+        "**Cough and shortness of breath** - Pulmonary involvement ranges from bronchopneumonia to hemorrhage; predicts severe leptospirosis.",
+        "**Patchy bronchopneumonia + small pleural effusion (CXR)** - Supports pulmonary leptospirosis and helps explain dyspnea and cough.",
+        "**Conjugated hyperbilirubinemia with mild AST/ALT rise** - Characteristic pattern in **Weil’s syndrome** (bilirubin high, enzymes only mildly elevated).",
+        "**Raised alkaline phosphatase** - Cholestatic pattern aligns with leptospiral hepatic dysfunction rather than viral hepatitis alone.",
+        "**Elevated CPK** - Suggests muscle involvement (myositis/rhabdomyolysis) and helps distinguish from viral hepatitis.",
+        "**ECG bradycardia/low voltage, nonspecific ST-T changes** - Compatible with leptospiral myocarditis or systemic inflammatory effects."
+      ],
+      "clinicalReasoning": "The combination of an acute febrile illness followed by progressive **jaundice** with a cholestatic pattern (marked **conjugated hyperbilirubinemia** but only mild AST/ALT elevation) strongly supports **Weil’s syndrome** due to **leptospirosis**. The elevated **CPK** favors leptospiral myositis and helps differentiate this presentation from viral hepatitis, where transaminases are typically much higher. New **cough/shortness of breath** with patchy bronchopneumonia and a small pleural effusion suggests pulmonary leptospiral involvement, a recognized severe manifestation. ECG abnormalities (bradycardia/low voltage, nonspecific ST-T changes) further fit possible cardiac involvement seen in systemic leptospiral infection."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Typhoid fever",
+      "description": "Typhoid fever is a systemic infection caused by **Salmonella enterica** serovar **Typhi**, typically acquired via contaminated food or water. It classically produces prolonged fever with abdominal symptoms and may cause complications such as intestinal bleeding or perforation if untreated.",
+      "keySymptoms": [
+        "**Stepwise prolonged fever** - Gradual daily rise in temperature over first week, often persistent without treatment.",
+        "**Abdominal pain** - Diffuse discomfort from ileal and mesenteric lymphoid inflammation during bacteremia.",
+        "**Diarrhea or constipation** - Variable bowel pattern; constipation early, diarrhea later in many adults.",
+        "**Rose spots** - Faint salmon-colored macules on trunk appearing transiently during second week.",
+        "**Relative bradycardia** - Pulse-temperature dissociation (Faget sign) sometimes seen in enteric fever."
+      ],
+      "clinicalReasoning": "This patient has a week of high fever, but the dominant evolution is **progressive jaundice** with marked **conjugated hyperbilirubinemia** and only mild **AST/ALT** elevation, which is characteristic of **Weil’s syndrome** from **leptospirosis** rather than enteric fever. The elevated **CPK** supports leptospiral myositis and helps distinguish it from viral hepatitis and typical typhoid presentations. Additionally, the chest radiograph shows **patchy bronchopneumonia** with a **pleural effusion**, aligning with pulmonary involvement seen in severe leptospirosis. ECG changes (bradycardia/low voltage, nonspecific ST-T changes) can occur in systemic infections, but the overall pattern strongly favors leptospirosis over typhoid.",
+      "whyIncorrectForCase": "Typhoid fever usually centers on gastrointestinal features (abdominal pain, diarrhea/constipation) and systemic toxicity, not prominent **conjugated jaundice** with only mild transaminase elevation. The combination of **jaundice + elevated CPK + pulmonary infiltrates/effusion** is much more consistent with **leptospirosis** than typhoid.",
+      "keyDifferencesFromCorrect": [
+        "**Jaundice pattern** - Typhoid rarely causes marked cholestatic jaundice; **leptospirosis** often causes **conjugated hyperbilirubinemia** with mild AST/ALT rise.",
+        "**Muscle involvement (CPK)** - Elevated **CPK** is typical in **leptospirosis** (myositis); not a classic typhoid feature.",
+        "**Pulmonary findings** - **Leptospirosis** can cause pneumonitis/hemorrhage and pleural effusions; typhoid more often causes minimal respiratory findings.",
+        "**Exposure source** - Typhoid is fecal–oral (food/water); **leptospirosis** is linked to animal urine and contaminated water, often after flooding.",
+        "**Complications** - Typhoid classically risks intestinal hemorrhage/perforation; **leptospirosis** risks **renal failure**, **jaundice**, and pulmonary complications."
+      ],
+      "missingFindings": [
+        "**Gastrointestinal syndrome** - Lack of prominent abdominal pain and diarrhea/constipation makes typhoid less likely.",
+        "**Rose spots** - No reported trunk rash; their absence reduces support for typhoid (though not required).",
+        "**Hepatosplenomegaly** - Not described; commonly present in typhoid due to reticuloendothelial involvement.",
+        "**Leukopenia pattern** - Typical typhoid may show leukopenia; no CBC pattern provided to support it.",
+        "**Enteric complications** - No signs of GI bleeding, peritonitis, or severe abdominal tenderness expected in complicated typhoid."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Community-acquired pneumococcal pneumonia (Streptococcus pneumoniae)",
+      "description": "**Pneumococcal pneumonia** is an acute bacterial infection of the lung parenchyma caused by **Streptococcus pneumoniae**. It typically presents with abrupt fever and respiratory symptoms, and may cause lobar consolidation and pleural effusion, but it does not primarily cause marked jaundice or disproportionate hyperbilirubinemia.",
+      "keySymptoms": [
+        "**Acute fever** - Sudden high temperature with chills, often starting abruptly over hours to one day.",
+        "**Productive cough** - Cough producing purulent or rust-colored sputum due to alveolar inflammation and exudate.",
+        "**Pleuritic chest pain** - Sharp pain worsened by deep breathing from pleural irritation near consolidation.",
+        "**Dyspnea** - Shortness of breath from impaired gas exchange in consolidated or inflamed lung segments.",
+        "**Lobar consolidation** - Focal lung involvement causing bronchial breath sounds, dullness, and increased fremitus."
+      ],
+      "clinicalReasoning": "This patient has fever and new cough/shortness of breath with a chest radiograph showing patchy bronchopneumonia and a small pleural effusion, which can superficially resemble community-acquired bacterial pneumonia. However, the dominant systemic picture is progressive **jaundice** with **conjugated hyperbilirubinemia** and only mild **AST/ALT** elevation, a pattern not explained by pneumococcal pneumonia. The elevated **CPK** and ECG changes (bradycardia/low voltage, nonspecific ST-T changes) suggest a multisystem infectious process rather than isolated lung infection. Overall, the presentation fits **leptospirosis (Weil’s syndrome) with pulmonary involvement** better than primary pneumococcal pneumonia.",
+      "whyIncorrectForCase": "Pneumococcal pneumonia does not typically cause prominent **conjugated hyperbilirubinemia** with only mild transaminase elevation or elevated **CPK**. The patient’s jaundice and multisystem findings point to **leptospirosis** with hepatic and possible renal/muscle involvement, with pneumonia-like lung findings as a complication.",
+      "keyDifferencesFromCorrect": [
+        "**Jaundice pattern** - Pneumococcal pneumonia rarely causes marked conjugated hyperbilirubinemia; **leptospirosis** classically does (Weil’s syndrome).",
+        "**Transaminases** - Pneumonia does not produce the characteristic mild AST/ALT rise with disproportionate bilirubin seen in **leptospirosis**.",
+        "**CPK elevation** - Not typical for pneumococcal pneumonia; **leptospirosis** commonly causes myositis with elevated **CPK**.",
+        "**Multisystem involvement** - Pneumococcal disease is primarily pulmonary; **leptospirosis** affects liver, kidneys, muscle, meninges, and lungs.",
+        "**Epidemiology/exposure** - Pneumococcal pneumonia is spread person-to-person; **leptospirosis** is linked to animal urine and flooding/water exposure."
+      ],
+      "missingFindings": [
+        "**Lobar consolidation** - Classic pneumococcal pneumonia often shows lobar consolidation rather than patchy bronchopneumonia.",
+        "**Rust-colored sputum** - A traditional pneumococcal clue; not described in this patient.",
+        "**Primary respiratory syndrome** - Pneumococcal pneumonia usually has respiratory symptoms as the main complaint, not progressive jaundice.",
+        "**Leukocytosis with neutrophilia** - Common in pneumococcal pneumonia; not provided and would be expected if primary diagnosis.",
+        "**Absence of marked jaundice** - Significant jaundice is atypical for pneumococcal pneumonia and argues against it here."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Legionnaires’ pneumonia (Legionella pneumoniae)",
+      "description": "**Legionnaires’ disease** is an atypical pneumonia caused by **Legionella pneumophila**, typically acquired by inhaling aerosolized contaminated water. It commonly presents with fever and pneumonia plus systemic features (e.g., gastrointestinal and neurologic symptoms) and can cause **hyponatremia** and elevated inflammatory markers.",
+      "keySymptoms": [
+        "**High fever** - Often abrupt, with rigors; prominent systemic toxicity out of proportion to exam findings.",
+        "**Cough** - Usually nonproductive initially; can progress with dyspnea and hypoxemia in severe cases.",
+        "**Shortness of breath** - Reflects pneumonia severity; may worsen rapidly, especially in older/comorbid patients.",
+        "**Diarrhea** - Common extrapulmonary clue; watery stools and abdominal discomfort may precede respiratory symptoms.",
+        "**Confusion** - Encephalopathy can occur; neurologic symptoms are more common than in typical pneumonias.",
+        "**Hyponatremia** - SIADH-like picture; supportive lab clue frequently associated with Legionella infection."
+      ],
+      "clinicalReasoning": "This patient has fever with new cough and shortness of breath and a chest radiograph showing patchy bronchopneumonia with a small pleural effusion, which can be seen in **atypical pneumonia** including **Legionella**. However, the dominant syndrome is progressive **jaundice** with **conjugated hyperbilirubinemia** and only mild AST/ALT elevation—more consistent with **Weil’s syndrome** from **leptospirosis** than primary pneumonia. The elevated **CPK** and ECG changes (bradycardia/low voltage, nonspecific ST-T changes) also align better with systemic spirochetal infection and multiorgan involvement than isolated Legionella pneumonia.",
+      "whyIncorrectForCase": "Legionnaires’ disease does not typically cause marked **conjugated hyperbilirubinemia** with only mild transaminase elevation as a leading feature. The overall pattern (fever → jaundice, elevated **CPK**, systemic involvement with pulmonary findings) fits **leptospirosis** far better than a primary Legionella pneumonia.",
+      "keyDifferencesFromCorrect": [
+        "**Primary organ pattern** - Legionella is primarily a **pneumonia**; leptospirosis is a systemic zoonosis with **hepatorenal** involvement.",
+        "**Jaundice mechanism** - Legionella may cause mild LFT abnormalities; leptospirosis causes disproportionate **hyperbilirubinemia** with mild AST/ALT rise (Weil’s).",
+        "**Exposure history** - Legionella links to aerosolized water systems (hotels, cooling towers); leptospirosis links to animal urine, rodents, flooding, contaminated water.",
+        "**Muscle involvement** - Legionella can raise CK but less characteristically; leptospirosis commonly causes **myositis** with elevated **CPK**.",
+        "**Meningeal phase** - Legionella rarely causes aseptic meningitis; leptospirosis commonly has **aseptic meningitis** in the immune phase.",
+        "**Renal pattern** - Legionella may cause AKI via sepsis/rhabdo; leptospirosis classically causes **AKI** with systemic vasculitis/tubulointerstitial injury."
+      ],
+      "missingFindings": [
+        "**Hyponatremia** - Common supportive clue for Legionella; not provided in this case data.",
+        "**Prominent gastrointestinal symptoms** - Diarrhea/abdominal pain are typical for Legionella; not described here.",
+        "**Neurologic symptoms (confusion)** - Frequently reported in Legionella; not noted in this presentation.",
+        "**Water-system exposure** - Recent hotel stay, spa, cooling tower exposure supports Legionella; no such history given.",
+        "**Legionella testing positivity** - Urinary antigen or PCR would support Legionella; no confirmatory testing mentioned."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Pulmonary tuberculosis",
+      "description": "Pulmonary tuberculosis is a chronic infection by **Mycobacterium tuberculosis** that primarily affects the lungs and typically presents with subacute to chronic constitutional and respiratory symptoms. It often causes progressive cough, weight loss, night sweats, and may show characteristic radiographic findings such as upper-lobe infiltrates or cavitation.",
+      "keySymptoms": [
+        "**Chronic cough** - Persistent cough for weeks, often productive, sometimes with blood-streaked sputum.",
+        "**Fever and night sweats** - Low-grade, prolonged fever with drenching night sweats and systemic inflammation.",
+        "**Weight loss** - Unintentional weight loss and anorexia developing over weeks to months.",
+        "**Hemoptysis** - Coughing up blood due to cavitary disease or bronchial erosion.",
+        "**Pleuritic chest pain** - Sharp pain with breathing, more typical with pleural involvement or effusion."
+      ],
+      "clinicalReasoning": "This patient has an acute febrile illness (~1 week) with progressive **jaundice**, marked **conjugated hyperbilirubinemia** with only mild **AST/ALT** elevation, and elevated **CPK**, which strongly favors **leptospirosis (Weil’s syndrome)** rather than tuberculosis. The chest radiograph shows patchy bronchopneumonia with a small effusion, which can occur in leptospirosis due to pulmonary involvement, including hemorrhage or pneumonitis. TB generally presents over weeks to months with chronic cough, weight loss, and typical radiographic patterns (upper-lobe disease/cavitation), not abrupt jaundice-dominant systemic illness. ECG changes like **bradycardia/low voltage** are nonspecific and do not specifically support TB in this context.",
+      "whyIncorrectForCase": "Pulmonary tuberculosis does not explain the prominent acute **jaundice** with a Weil’s-pattern liver profile (marked bilirubin with mild transaminase rise) and elevated **CPK**. The timeline is too acute for typical TB, and the imaging description is more consistent with acute infectious pneumonitis than classic TB patterns.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - TB is subacute/chronic (weeks–months); **leptospirosis** is often acute over days to 1–2 weeks.",
+        "**Jaundice pattern** - TB rarely causes marked **conjugated hyperbilirubinemia**; **Weil’s syndrome** commonly does.",
+        "**Muscle involvement** - Elevated **CPK** supports myositis in **leptospirosis**; it is not a typical TB feature.",
+        "**Pulmonary findings** - TB classically shows upper-lobe infiltrates/cavitation; **leptospirosis** can cause diffuse pneumonitis/hemorrhage or patchy bronchopneumonia.",
+        "**Exposure source** - TB spreads via airborne droplets; **leptospirosis** is linked to animal urine/floodwater exposure."
+      ],
+      "missingFindings": [
+        "**Chronic constitutional symptoms** - No weeks-long weight loss, night sweats, or prolonged cough typical of TB.",
+        "**Typical TB radiography** - No reported upper-lobe cavitation, apical infiltrates, or miliary pattern.",
+        "**TB microbiologic evidence** - No sputum **AFB smear/culture** or **NAAT** positivity provided.",
+        "**TB risk context** - No stated close contact, prior TB, immunosuppression, or high-risk exposure history."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Pneumocystis jirovecii pneumonia (PJP/PCP)",
+      "description": "**Pneumocystis jirovecii pneumonia (PJP/PCP)** is an opportunistic fungal pneumonia seen mainly in patients with advanced immunosuppression (e.g., untreated HIV, transplant, chronic steroids). It typically causes subacute, progressive hypoxemic respiratory failure with diffuse interstitial lung involvement rather than prominent jaundice or hepatic dysfunction.",
+      "keySymptoms": [
+        "**Progressive dyspnea** - Gradually worsening shortness of breath over days to weeks, often disproportionate to exam.",
+        "**Nonproductive cough** - Dry cough with minimal sputum, reflecting interstitial rather than alveolar infection.",
+        "**Fever** - Low to moderate fever is common, usually without marked systemic jaundice features.",
+        "**Hypoxemia** - Oxygen desaturation, often worse with exertion, due to impaired gas exchange.",
+        "**Pleuritic chest pain (less common)** - Can occur but is not a dominant feature compared with dyspnea and hypoxemia."
+      ],
+      "clinicalReasoning": "This patient has fever with progressive **jaundice**, profound **malaise**, and laboratory evidence of **conjugated hyperbilirubinemia** with only mild **AST/ALT** elevation—classic for **Weil’s syndrome** from **leptospirosis**. The elevated **CPK** supports leptospiral myositis and helps distinguish it from viral hepatitis. While he has cough and shortness of breath, the chest radiograph shows **patchy bronchopneumonia with small pleural effusion**, which is not the typical diffuse interstitial pattern of PJP. The ECG changes (bradycardia/low voltage, nonspecific ST-T changes) can be seen in systemic infections like leptospirosis rather than being characteristic of PJP.",
+      "whyIncorrectForCase": "PJP primarily presents as a subacute hypoxemic pneumonia in immunocompromised patients and does not explain the prominent **conjugated jaundice** with mild transaminase elevation. The imaging described (patchy bronchopneumonia with **pleural effusion**) is atypical for PJP, which usually shows diffuse interstitial/ground-glass changes and rarely effusions.",
+      "keyDifferencesFromCorrect": [
+        "**Core syndrome** - PJP is primarily pulmonary; **leptospirosis** is a systemic zoonosis causing hepatic/renal dysfunction.",
+        "**Jaundice pattern** - PJP does not cause **conjugated hyperbilirubinemia**; leptospirosis can cause marked bilirubin with mild AST/ALT rise.",
+        "**Risk factors** - PJP requires significant immunosuppression (e.g., low CD4); leptospirosis is linked to animal urine/floodwater exposure.",
+        "**Radiology** - PJP typically shows diffuse bilateral interstitial/ground-glass opacities; leptospirosis may show patchy infiltrates and can have effusions/hemorrhage.",
+        "**Laboratory clues** - Elevated **CPK** supports leptospiral myositis; it is not a typical defining feature of PJP."
+      ],
+      "missingFindings": [
+        "**Immunosuppression history** - No HIV/AIDS, transplant, chemotherapy, or chronic high-dose steroid exposure provided.",
+        "**Diffuse bilateral ground-glass opacities** - Chest radiograph instead shows patchy bronchopneumonia and small pleural effusion.",
+        "**Marked hypoxemia/A–a gradient elevation** - Not documented; PJP usually has significant oxygenation impairment.",
+        "**Elevated LDH** - Common supportive lab finding in PJP; not reported here.",
+        "**Oral thrush/other opportunistic infections** - Often coexist in advanced immunodeficiency; not described in this case."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Cryptosporidiosis, chronic (>1 month)",
+      "description": "**Cryptosporidiosis** is an intestinal protozoal infection (Cryptosporidium spp.) causing watery diarrhea, often self-limited in immunocompetent hosts. **Chronic cryptosporidiosis** (>1 month) typically occurs in **immunocompromised** patients (e.g., advanced HIV) and can cause profound dehydration, weight loss, and malabsorption.",
+      "keySymptoms": [
+        "**Watery diarrhea** - Profuse non-bloody stools lasting days; chronicity suggests immunosuppression.",
+        "**Abdominal cramps** - Crampy abdominal pain from intestinal epithelial infection and inflammation.",
+        "**Nausea/vomiting** - Gastrointestinal upset may accompany diarrheal illness and worsen dehydration.",
+        "**Weight loss** - Chronic diarrhea causes caloric loss, malabsorption, and reduced intake.",
+        "**Dehydration** - Fluid losses lead to orthostasis, tachycardia, and electrolyte abnormalities.",
+        "**Low-grade fever** - Mild fever can occur but is usually not the dominant feature."
+      ],
+      "clinicalReasoning": "The patient’s presentation is dominated by **high fever** for a week, **progressive jaundice**, marked weakness, and new **cough/shortness of breath** with chest X-ray showing **patchy bronchopneumonia/pleural effusion**. Labs show **conjugated hyperbilirubinemia** with only mild **AST/ALT** elevation and elevated **CPK**, a pattern that aligns with systemic infection affecting liver and muscle rather than a primary intestinal protozoal illness. Cryptosporidiosis primarily causes **chronic watery diarrhea** (especially in immunocompromised hosts) and does not explain the characteristic **Weil’s syndrome**-like hepatic pattern or pulmonary involvement described here.",
+      "whyIncorrectForCase": "This patient has **jaundice with conjugated hyperbilirubinemia**, elevated **CPK**, and **pulmonary findings**, which are not typical of chronic cryptosporidiosis. The case lacks the hallmark symptom of cryptosporidiosis—persistent **watery diarrhea** for >1 month—making this diagnosis unlikely.",
+      "keyDifferencesFromCorrect": [
+        "**Primary syndrome** - Cryptosporidiosis causes chronic diarrheal illness; **leptospirosis** causes systemic febrile illness with jaundice and organ dysfunction.",
+        "**Hepatic pattern** - Cryptosporidiosis rarely causes marked jaundice; leptospirosis causes **marked bilirubin** with mild **transaminase** rise (Weil’s pattern).",
+        "**Pulmonary involvement** - Cryptosporidiosis typically lacks pneumonia/effusions; leptospirosis can cause **pulmonary hemorrhage/ARDS** or bronchopneumonia-like changes.",
+        "**Muscle injury** - Elevated **CPK** supports leptospirosis-associated myositis; cryptosporidiosis does not characteristically raise CPK.",
+        "**Risk context** - Chronic cryptosporidiosis strongly suggests **immunosuppression**; leptospirosis relates to animal urine/floodwater exposure and zoonotic transmission."
+      ],
+      "missingFindings": [
+        "**Chronic watery diarrhea (>4 weeks)** - Core diagnostic feature; absence strongly argues against chronic cryptosporidiosis.",
+        "**Immunocompromised state (e.g., advanced HIV)** - Usually required for chronic disease; not suggested in this case.",
+        "**Stool oocysts/antigen positivity** - Expected confirmatory evidence; no stool-based findings are provided.",
+        "**Malabsorption/weight loss** - Common in chronic cryptosporidiosis; patient instead has jaundice and systemic features."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Esophageal candidiasis",
+      "description": "**Esophageal candidiasis** is an opportunistic fungal infection of the esophagus caused by **Candida** species, most often in patients with **HIV/AIDS**, **chemotherapy**, **transplant immunosuppression**, or **systemic corticosteroid** use. It typically presents with painful swallowing and retrosternal discomfort rather than systemic jaundice and multi-organ dysfunction.",
+      "keySymptoms": [
+        "**Odynophagia** - Pain with swallowing due to inflamed, ulcerated esophageal mucosa from Candida overgrowth.",
+        "**Dysphagia** - Sensation of food sticking, reflecting esophageal inflammation and plaques impairing bolus transit.",
+        "**Retrosternal chest pain** - Burning or pressure-like discomfort behind sternum, worsened by swallowing.",
+        "**Oral thrush** - White, scrapable plaques in mouth; supports Candida but may be absent in isolated cases.",
+        "**Immunosuppression history** - HIV, neutropenia, transplant, steroids, or diabetes predispose to invasive Candida infection."
+      ],
+      "clinicalReasoning": "This patient has a **week-long high fever** with progressive **jaundice**, profound **malaise**, and new **cough/shortness of breath**, suggesting a systemic infectious syndrome with hepatic and pulmonary involvement. The labs show **conjugated hyperbilirubinemia with only mild AST/ALT elevation** and elevated **alkaline phosphatase**, a classic pattern for **Weil’s syndrome** (severe **leptospirosis**) rather than a primary mucosal fungal infection. Elevated **CPK** further supports leptospirosis (myositis/rhabdomyolysis) and helps distinguish it from **viral hepatitis**. Imaging and ECG abnormalities (patchy bronchopneumonia/effusion, **bradycardia/low voltage**) fit systemic leptospiral disease with cardiopulmonary involvement, not isolated esophageal candidiasis.",
+      "whyIncorrectForCase": "**Esophageal candidiasis** would primarily cause **odynophagia/dysphagia** and possibly oral thrush, which are not reported here. It does not explain the combination of **high fever**, **conjugated jaundice with mild transaminase rise**, elevated **CPK**, and **pulmonary infiltrates/effusion**.",
+      "keyDifferencesFromCorrect": [
+        "**Primary syndrome** - Esophageal candidiasis is localized mucosal infection; **leptospirosis** is systemic zoonosis with multi-organ involvement.",
+        "**Key symptoms** - Candidiasis causes **odynophagia/dysphagia**; leptospirosis causes **fever**, **jaundice**, **myalgias/weakness**, and can cause **dyspnea/hemoptysis**.",
+        "**Laboratory pattern** - Candidiasis lacks characteristic LFT pattern; leptospirosis shows **marked bilirubin** with **mild AST/ALT elevation** and may elevate **CPK**.",
+        "**Pulmonary findings** - Candidiasis rarely causes lung infiltrates; leptospirosis can cause **bronchopneumonia**, **pleural effusion**, or **pulmonary hemorrhage**.",
+        "**Epidemiology/risk** - Candidiasis strongly linked to **immunosuppression**; leptospirosis linked to **animal urine exposure** and **flooding** environments."
+      ],
+      "missingFindings": [
+        "**Odynophagia** - Absence of painful swallowing argues strongly against esophageal mucosal Candida infection.",
+        "**Dysphagia** - No reported swallowing difficulty, which is a core presenting complaint in esophageal candidiasis.",
+        "**Oral thrush** - No oral white plaques noted; while not mandatory, it commonly accompanies esophageal disease.",
+        "**Immunosuppression** - No history of **HIV**, chemotherapy, transplant, or steroid use provided to support opportunistic Candida.",
+        "**Endoscopic pseudomembranes** - No evidence of endoscopic white plaques/ulcerations that confirm esophageal candidiasis."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Mycobacterium avium complex (MAC) infection",
+      "description": "**Mycobacterium avium complex (MAC)** is an opportunistic nontuberculous mycobacterial infection that most often causes disseminated disease in advanced **HIV/AIDS** or chronic lung disease in older adults. It typically presents with subacute-to-chronic constitutional symptoms and, in disseminated cases, systemic illness with anemia and elevated alkaline phosphatase rather than abrupt jaundice after a short febrile prodrome.",
+      "keySymptoms": [
+        "**Chronic fever** - Usually weeks to months of low-grade fever, not abrupt one-week high fever.",
+        "**Night sweats** - Common constitutional symptom in disseminated MAC, often persistent and drenching.",
+        "**Weight loss** - Progressive unintentional weight loss is typical, reflecting chronic systemic infection.",
+        "**Chronic cough** - Pulmonary MAC causes long-standing cough, sputum, and fatigue in structural lung disease.",
+        "**Disseminated disease symptoms** - Abdominal pain, diarrhea, and profound fatigue in advanced immunosuppression.",
+        "**Anemia** - Common in disseminated MAC due to bone marrow involvement and chronic inflammation."
+      ],
+      "clinicalReasoning": "This patient has an acute febrile illness (~1 week) followed by progressive **jaundice**, marked **conjugated hyperbilirubinemia** with only mild **AST/ALT** elevation, elevated **CPK**, and pulmonary findings (patchy bronchopneumonia/effusion) with ECG changes. That pattern is classic for **leptospirosis (Weil’s syndrome)** with possible pulmonary involvement, not for MAC. MAC generally presents subacutely in the setting of significant immunocompromise (especially **CD4 < 50**) or chronic lung disease, and does not characteristically produce abrupt cholestatic jaundice with high bilirubin and mild transaminase rise. The combination of jaundice + renal/muscle involvement markers (e.g., **CPK**) + pulmonary findings aligns far more strongly with leptospiral systemic vasculitic illness.",
+      "whyIncorrectForCase": "MAC infection rarely presents as an acute one-week febrile illness with prominent **conjugated jaundice** and only mild transaminase elevations. The case features a classic **Weil’s syndrome** biochemical pattern and systemic involvement (pulmonary/ECG/CPK) that is not typical for MAC.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - MAC is subacute/chronic; **Leptospirosis** is often abrupt with rapid systemic progression.",
+        "**Host risk** - MAC strongly associated with advanced **HIV/AIDS** or chronic lung disease; **Leptospirosis** follows animal urine/floodwater exposure.",
+        "**Jaundice pattern** - MAC rarely causes marked cholestatic jaundice; **Leptospirosis** causes high bilirubin with mild **AST/ALT** rise.",
+        "**Muscle involvement** - Elevated **CPK** supports **Leptospirosis** (myositis/rhabdomyolysis tendency), not typical for MAC.",
+        "**Pulmonary picture** - MAC lung disease is chronic nodular/bronchiectatic or cavitary; **Leptospirosis** can cause acute pneumonitis/hemorrhage/effusions.",
+        "**Cardiac findings** - **Leptospirosis** can cause myocarditis/ECG changes; MAC cardiac involvement is uncommon."
+      ],
+      "missingFindings": [
+        "**Advanced immunosuppression (e.g., CD4 < 50)** - Key predisposing factor for disseminated MAC; not suggested here.",
+        "**Chronic weight loss** - Expected in MAC but not described in this acute presentation.",
+        "**Night sweats** - Common in MAC; not reported in this case.",
+        "**Generalized lymphadenopathy/hepatosplenomegaly** - Often seen in disseminated MAC; not provided.",
+        "**Mycobacterial culture/PCR positivity** - Diagnosis requires AFB culture/PCR from blood/sputum; not indicated by current data.",
+        "**Chronic radiographic pattern** - MAC typically shows cavitary disease or nodular bronchiectasis, not acute patchy bronchopneumonia."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "COVID-19",
+      "description": "COVID-19 is an acute respiratory infection caused by SARS-CoV-2, ranging from mild upper respiratory symptoms to severe viral pneumonia and systemic inflammation. It commonly presents with fever, cough, dyspnea, and may cause hypoxemia and multisystem complications in severe disease.",
+      "keySymptoms": [
+        "**Fever** - Common early symptom reflecting systemic inflammatory response to acute SARS-CoV-2 infection.",
+        "**Dry cough** - Typical respiratory symptom due to airway and alveolar inflammation from viral infection.",
+        "**Shortness of breath** - Suggests lower respiratory tract involvement, pneumonia, or evolving hypoxemic respiratory failure.",
+        "**Myalgia/fatigue** - Systemic symptoms from cytokine-mediated inflammation, often prominent in early illness.",
+        "**Anosmia/ageusia** - Relatively specific early feature from viral effects on olfactory epithelium and nerves.",
+        "**Sore throat/rhinorrhea** - Upper respiratory symptoms that may precede or accompany lower respiratory disease."
+      ],
+      "clinicalReasoning": "This patient has fever and new cough with shortness of breath, which can occur in COVID-19 pneumonia. However, the dominant systemic picture is progressive **jaundice** with **conjugated hyperbilirubinemia** and only mild **AST/ALT** elevation, which is not typical for COVID-19. The combination of marked jaundice, elevated **CPK**, and cardiopulmonary findings (e.g., **bradycardia/low voltage ECG**) aligns better with **leptospirosis (Weil’s syndrome)** with possible pulmonary involvement than with primary SARS-CoV-2 infection. COVID-19 can cause mild transaminase elevations, but profound cholestatic jaundice as a core feature is uncommon.",
+      "whyIncorrectForCase": "COVID-19 does not typically present with prominent **conjugated hyperbilirubinemia** and only mild **transaminase** elevation as the main syndrome. The pattern of severe jaundice with systemic illness and elevated **CPK** is more characteristic of **leptospirosis (Weil’s syndrome)** than COVID-19.",
+      "keyDifferencesFromCorrect": [
+        "**Jaundice pattern** - COVID-19 usually causes mild **AST/ALT** rise; leptospirosis causes marked **conjugated hyperbilirubinemia** with mild transaminase elevation.",
+        "**Muscle injury** - Elevated **CPK** is a supportive clue for leptospirosis; it is not a typical defining COVID-19 discriminator.",
+        "**Multisystem syndrome** - Leptospirosis classically causes **hepatorenal** involvement and can cause **aseptic meningitis**; COVID-19 is primarily respiratory with variable systemic effects.",
+        "**Epidemiology/exposure** - Leptospirosis links to animal urine/floodwater exposure; COVID-19 spreads via respiratory droplets/aerosols.",
+        "**Cardiac findings** - **Bradycardia/low voltage, nonspecific ST-T changes** can be seen in leptospirosis-related myocarditis; COVID-19 more often features tachycardia with hypoxia or myocarditis without cholestatic jaundice."
+      ],
+      "missingFindings": [
+        "**Anosmia/ageusia** - Absence reduces specificity for COVID-19 compared with other febrile respiratory illnesses.",
+        "**Typical viral URI prodrome** - No prominent sore throat/rhinorrhea reported, making classic mild COVID-19 less supported.",
+        "**Predominant hypoxemia/ground-glass opacities** - Case describes patchy bronchopneumonia with small effusion rather than classic COVID-19 imaging pattern.",
+        "**COVID-19 exposure/test positivity** - No history of contact, outbreak linkage, or positive SARS-CoV-2 testing provided."
+      ]
+    }
+  ]
+}

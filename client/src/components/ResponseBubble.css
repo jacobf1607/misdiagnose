@@ -1,0 +1,81 @@
+.response-bubble {
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, var(--gray-100) 0%, var(--primary-light) 100%);
+  border-left: 3px solid var(--primary);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bubble-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.elimination-badge {
+  font-size: 0.688rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--danger);
+  color: white;
+  border-radius: 9999px;
+}
+
+.utterance {
+  font-size: 1rem;
+  color: var(--gray-800);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.result-indicator {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.result-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.result-yes,
+.result-high,
+.result-positive {
+  background-color: var(--success);
+  color: white;
+}
+
+.result-no,
+.result-normal,
+.result-negative,
+.result-low {
+  background-color: var(--danger);
+  color: white;
+}
+
+.result-unknown {
+  background-color: var(--warning);
+  color: var(--text-primary);
+}

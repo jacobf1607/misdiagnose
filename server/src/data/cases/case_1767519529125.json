@@ -1,0 +1,443 @@
+{
+  "persona": {
+    "name": "Sanjay Gupta",
+    "age": 58,
+    "gender": "Male",
+    "occupation": "Accountant in Ahmedabad",
+    "background": "A meticulous accountant who has been working long hours during tax season. Recently noticed feeling more tired than usual despite getting adequate sleep.",
+    "lifestyle": {
+      "activityLevel": "low",
+      "smoking": false,
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "detail-oriented",
+      "health-conscious",
+      "analytical"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Chronic Myeloid Leukemia",
+      "description": "Myeloproliferative neoplasm with overproduction of myeloid cells, marked splenomegaly and Philadelphia chromosome"
+    },
+    {
+      "id": "d2",
+      "name": "Polycythemia Vera",
+      "description": "Primary myeloproliferative neoplasm with increased red cell mass and low erythropoietin levels"
+    },
+    {
+      "id": "d3",
+      "name": "Primary Myelofibrosis",
+      "description": "Myeloproliferative neoplasm with bone marrow fibrosis and extramedullary hematopoiesis"
+    },
+    {
+      "id": "d4",
+      "name": "Essential Thrombocythemia",
+      "description": "Myeloproliferative neoplasm characterized by sustained thrombocytosis"
+    },
+    {
+      "id": "d5",
+      "name": "Chronic Lymphocytic Leukemia",
+      "description": "Tumor of mature-looking lymphocytes accumulating in blood, bone marrow and lymphoid organs"
+    },
+    {
+      "id": "d6",
+      "name": "Multiple Myeloma",
+      "description": "Malignant plasma cell neoplasm derived from a single clone"
+    },
+    {
+      "id": "d7",
+      "name": "Myelodysplastic Syndrome",
+      "description": "Clonal stem cell disorder with progressive cytopenias and dysplasia"
+    },
+    {
+      "id": "d8",
+      "name": "Aplastic Anemia",
+      "description": "Bone marrow failure syndrome with pancytopenia and hypocellular marrow"
+    },
+    {
+      "id": "d9",
+      "name": "Iron Deficiency Anemia",
+      "description": "Microcytic hypochromic anemia due to inadequate iron for hemoglobin synthesis"
+    },
+    {
+      "id": "d10",
+      "name": "Hairy Cell Leukemia",
+      "description": "B-cell chronic leukemia with characteristic hairy projections and massive splenomegaly"
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "I've been feeling unusually tired for the past few months and noticed some swollen glands in my neck that don't seem to be going away.",
+  "medicalHistory": "Generally healthy with no significant past medical history. No family history of blood disorders or cancers.",
+  "symptoms": "Fatigue and loss of weight over 3-4 months. Painless generalized lymphadenopathy initially affecting cervical nodes. Nodes are rubbery, discrete, nontender, small and mobile. No fever, night sweats or significant bleeding. Mild degree of splenomegaly on examination.\n\nFrom textbook: • Peripheral smear and bone marrow showing >30% cells\ndisease transforms into acute myeloblastic leukemia. simulating acute leukemia\n\n Lymphoid blast crisis that occurs in 30% when the • Basophils may increase to 20%.\ndisease transforms into acute lymphoblastic leukemia. • Thrombocytopenia may result in bleeding episodes.\n\nTreatment of blast crisis is the same as that for acute\nmyeloblastic or lymphoblastic leukemia. Complications of Box 9.14: Complications of chronic myelogenous leukemia.\nchro",
+  "relevantFindings": "Hemoglobin below 13 g/dL with slowly developing anemia. Total leukocyte count may show lymphocytosis. Peripheral smear shows mature-looking small round lymphocytes. Mild splenomegaly and hepatomegaly may be present. Patient is over 50 years of age with male predominance.\n\nFrom textbook: • Peripheral smear and bone marrow showing >30% cells\ndisease transforms into acute myeloblastic leukemia. simulating acute leukemia\n\n Lymphoid blast crisis that occurs in 30% when the • Basophils may increase to 20%.\ndisease transforms into acute lymphoblastic leukemia. • Thrombocytopenia may result in bleeding episodes.\n\nTreatment of blast crisis is the same as that for acute\nmyeloblastic or lymphoblastic leukemia. Complications of Box 9.14: Complications of chronic myelogenous leukemia.\nchro",
+  "redHerrings": "The fatigue could suggest anemia of various causes. Lymphadenopathy might point toward infections or other lymphomas. Weight loss could suggest various malignancies. The insidious onset might be confused with other chronic conditions.",
+  "id": "case_1767519529125",
+  "domain": "hematology",
+  "idealPathway": {
+    "diseaseName": "Chronic Lymphocytic Leukemia",
+    "domain": "hematology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about fatigue, loss of weight, and anorexia",
+        "reasoning": "These are the most common nonspecific symptoms that lead to diagnosis in 75% of patients who are not asymptomatic",
+        "expectedFinding": "Patient reports progressive fatigue and unexplained weight loss over months",
+        "importance": "critical",
+        "textbookReference": "Nonspecific symptoms: This includes fatigue, loss of weight, and anorexia"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about recurrent infections, particularly respiratory infections",
+        "reasoning": "CLL patients develop recurrent infections due to hypogammaglobulinemia, which is a key presenting feature",
+        "expectedFinding": "History of frequent infections with Streptococcus pneumonia, Staphylococcus, Haemophilus influenzae, or herpes zoster",
+        "importance": "important",
+        "textbookReference": "Recurrent infections: Develop due to hypogammaglobulinemia. Streptococcus pneumonia, Staphylococcus, and Haemophilus influenzae cause most of the infections. Herpes zoster is also common"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about painless swollen lymph nodes, starting in neck",
+        "reasoning": "Painless generalized lymphadenopathy is a characteristic feature, typically starting with cervical nodes",
+        "expectedFinding": "Patient reports painless, gradually enlarging lymph nodes, initially in neck area",
+        "importance": "important",
+        "textbookReference": "Painless generalized lymphadenopathy: Initially, the cervical lymph nodes are enlarged and in later stages there may be generalized lymphadenopathy"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about symptoms of anemia - shortness of breath, weakness",
+        "reasoning": "Slowly developing anemia is a presenting symptom due to immune hemolysis and bone marrow infiltration",
+        "expectedFinding": "Progressive shortness of breath on exertion and weakness over months",
+        "importance": "important",
+        "textbookReference": "Slowly developing anemia: Due to immune hemolysis and bone marrow infiltration"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about bleeding manifestations",
+        "reasoning": "Important to assess but bleeding manifestations are uncommon in CLL, helping differentiate from other leukemias",
+        "expectedFinding": "Minimal or no bleeding symptoms reported",
+        "importance": "helpful",
+        "textbookReference": "Bleeding manifestations: They are uncommon"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Palpate all lymph node groups for lymphadenopathy",
+        "reasoning": "Lymphadenopathy is a key physical finding in CLL with characteristic features",
+        "expectedFinding": "Rubbery, discrete, nontender, small, and mobile lymph nodes, initially cervical then generalized",
+        "importance": "critical",
+        "textbookReference": "Involved nodes are rubbery, discrete, nontender, small, and mobile"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Examine for splenomegaly and hepatomegaly",
+        "reasoning": "Organomegaly occurs in CLL but is mild compared to other leukemias",
+        "expectedFinding": "Mild splenomegaly and hepatomegaly may be present but not prominent",
+        "importance": "important",
+        "textbookReference": "Splenomegaly and hepatomegaly: Mild degree is observed in very few cases"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess for pallor and general appearance",
+        "reasoning": "Anemia is common due to marrow failure and autoimmune hemolysis",
+        "expectedFinding": "Pallor consistent with chronic anemia",
+        "importance": "helpful",
+        "textbookReference": "Hemoglobin: Usually below 13 g/dL and as the disease progresses, it may decrease below 10 g/dL"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order complete blood count with differential",
+        "reasoning": "Essential first test to identify characteristic lymphocytosis and other cytopenias",
+        "expectedFinding": "Total leukocyte count 20-50 × 10⁹/L with >50% mature lymphocytes, absolute lymphocyte count >5,000 × 10⁹/L",
+        "importance": "critical",
+        "textbookReference": "Total leukocyte count is increased and varies from 20 × 10⁹/L to 50 × 10⁹/L... absolute lymphocyte count should be more than 5,000 × 10⁹/L"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order peripheral blood smear examination",
+        "reasoning": "Identifies characteristic lymphocytes and smudge cells pathognomonic of CLL",
+        "expectedFinding": "Mature lymphocytes >50% of WBCs and presence of smudge cells (basket cells)",
+        "importance": "critical",
+        "textbookReference": "Smudge cells or basket cells are disintegrated lymphocytes and are due to the rupture of neoplastic lymphocytes while making the peripheral smear due to its fragile nature"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order flow cytometry immunophenotyping",
+        "reasoning": "Confirms diagnosis by identifying characteristic B-cell markers with aberrant T-cell antigen",
+        "expectedFinding": "Positive for CD19, CD20, CD23 with aberrant expression of CD5, evidence of light chain restriction",
+        "importance": "important",
+        "textbookReference": "Positive for B-cell surface antigens (CD19, CD20, CD23) Aberrant expression of T-cell antigen CD5 Evidence of monoclonality in the form of 'light chain restriction'"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order Direct Coombs test",
+        "reasoning": "Identifies autoimmune hemolytic anemia which occurs in 15-20% of CLL patients",
+        "expectedFinding": "May be positive in patients with autoimmune hemolytic anemia",
+        "importance": "important",
+        "textbookReference": "About 15–20% of patients manifest autoimmune hemolytic anemia and have positive direct Coombs test"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order bone marrow aspirate and biopsy if diagnosis unclear",
+        "reasoning": "Shows characteristic lymphocytic infiltration but not always necessary for diagnosis",
+        "expectedFinding": "Hypercellular marrow with infiltration by mature lymphocytes",
+        "importance": "helpful",
+        "textbookReference": "It is involved in all cases of CLL and its infiltration by mature lymphocytes results in hypercellular marrow"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Acute Lymphoblastic Leukemia",
+        "howToRuleOut": "ALL shows blast cells >20% on peripheral smear and bone marrow, whereas CLL shows mature lymphocytes. Flow cytometry shows different immunophenotype",
+        "textbookReference": "Lymphoid cells ≤55% prolymphocytes... It shows numerous blast cells"
+      },
+      {
+        "name": "Chronic Myeloid Leukemia",
+        "howToRuleOut": "CML shows shift to left with granulocytes at all stages, basophilia, Philadelphia chromosome positive, very low LAP score, whereas CLL shows mature lymphocytes",
+        "textbookReference": "Shift to left (shift to immaturity) with granulocytes at all stages... There is increase in basophils (<20%)"
+      },
+      {
+        "name": "Reactive Lymphocytosis",
+        "howToRuleOut": "Reactive lymphocytosis lacks monoclonality on flow cytometry, has normal immunophenotype, and lymphocyte count usually <5,000/µL",
+        "textbookReference": "Evidence of monoclonality in the form of 'light chain restriction'... absolute lymphocyte count should be more than 5,000 × 10⁹/L"
+      },
+      {
+        "name": "Non-Hodgkin Lymphoma",
+        "howToRuleOut": "NHL typically presents with bulky lymphadenopathy, extranodal involvement, and different immunophenotype on flow cytometry",
+        "textbookReference": "Involved nodes are rubbery, discrete, nontender, small, and mobile"
+      }
+    ],
+    "diagnosticApproach": "Begin with detailed history focusing on fatigue, weight loss, and recurrent infections. Examine for characteristic painless, rubbery lymphadenopathy and mild organomegaly. Order CBC with differential as first test to identify lymphocytosis >5,000/µL. Confirm with peripheral smear showing mature lymphocytes and pathognomonic smudge cells. Use flow cytometry to demonstrate characteristic B-cell markers (CD19, CD20, CD23) with aberrant CD5 expression and light chain restriction for definitive diagnosis. Stage using Binet or Rai criteria based on presence of anemia, thrombocytopenia, and extent of lymphoid involvement.",
+    "textbookSources": [
+      "• Peripheral smear and bone marrow showing >30% cells\ndisease transforms into acute myeloblastic leukemia. simulating acute leukemia\n\n Lymphoid blast crisis that occurs in 30% when the • Basophils ma...",
+      ", terminal deoxynucleotidyl transferase/TdT), myeloid markers (cMPO, CD13, CD33, CD117,\nCD15), monocytic markers (CD64, CD14, CD11b,CD11c, lysozyme), erythroid (CD71, CD235a), megakaryocytic (CD41,\nCD..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Chronic Myeloid Leukemia",
+      "description": "**Chronic Myeloid Leukemia** is a myeloproliferative neoplasm characterized by excessive production of granulocytes due to **BCR-ABL1 chromosomal translocation**. Typically affects bone marrow and leads to abnormal white blood cell proliferation.",
+      "keySymptoms": [
+        "**Splenomegaly** - Enlarged spleen resulting from massive accumulation of leukemic cells causing significant organ distension",
+        "**Philadelphia Chromosome** - Genetic marker indicating specific chromosomal translocation unique to this leukemia type",
+        "**Basophilia** - Increased basophil count signaling progression of disease and potential blast crisis"
+      ],
+      "clinicalReasoning": "Chronic Myeloid Leukemia would present with significant leukocytosis and characteristic cytogenetic abnormalities. The patient's symptoms partially align, but specific genetic testing would confirm the diagnosis. Bone marrow examination would reveal specific cellular changes.",
+      "whyIncorrectForCase": "Patient's lymphocyte presentation and clinical course more closely match Chronic Lymphocytic Leukemia. Genetic markers and cellular characteristics do not align with CML.",
+      "keyDifferencesFromCorrect": [
+        "**Cell Lineage** - CML involves myeloid cells, while CLL involves lymphoid cells",
+        "**Genetic Marker** - BCR-ABL1 translocation present in CML, absent in CLL",
+        "**Progression** - CML has more aggressive blast crisis compared to indolent CLL"
+      ],
+      "missingFindings": [
+        "**BCR-ABL1 Translocation** - Absence of this specific genetic mutation rules out CML",
+        "**Myeloid Predominance** - Lack of myeloid cell proliferation contradicts CML diagnosis"
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "**Polycythemia Vera**",
+      "description": "**Polycythemia vera** is a myeloproliferative disorder characterized by abnormal red blood cell production and increased blood viscosity due to a JAK2 mutation.",
+      "keySymptoms": [
+        "**Erythrocytosis** - excessive production of red blood cells leading to increased hematocrit",
+        "**Thrombosis** - increased risk of blood clots in various body systems",
+        "**Splenomegaly** - enlarged spleen due to increased cell proliferation"
+      ],
+      "clinicalReasoning": "Polycythemia vera is a clonal stem cell disorder involving excessive red blood cell production, typically occurring in older adults with specific genetic mutations that drive uncontrolled hematopoiesis.",
+      "whyIncorrectForCase": "This patient presents with lymphadenopathy and lymphocytic findings, which are inconsistent with polycythemia vera's characteristic red blood cell proliferation. The clinical presentation aligns more closely with a lymphoproliferative disorder.",
+      "keyDifferencesFromCorrect": [
+        "**Cell Line Involvement** - PV affects red blood cells, unlike CLL which involves lymphocytes",
+        "**Genetic Mutation** - JAK2 mutation in PV vs. different genetic alterations in CLL",
+        "**Primary Cell Proliferation** - Red cell overproduction vs. lymphocyte accumulation"
+      ],
+      "missingFindings": [
+        "**Normal Red Cell Count** - No evidence of significant red blood cell elevation",
+        "**Lymphocytic Predominance** - Lacks lymphocyte-specific proliferation",
+        "**Lack of JAK2 Mutation** - No molecular marker characteristic of polycythemia vera"
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "**Primary Myelofibrosis**",
+      "description": "**Primary Myelofibrosis** is a chronic myeloproliferative neoplasm characterized by progressive bone marrow fibrosis, ineffective hematopoiesis, and extramedullary hematopoiesis.",
+      "keySymptoms": [
+        "**Splenomegaly** - Progressive enlargement of spleen due to extramedullary hematopoiesis",
+        "**Bone Marrow Fibrosis** - Replacement of normal bone marrow with fibrous tissue",
+        "**Constitutional Symptoms** - Fatigue, weight loss, and night sweats"
+      ],
+      "clinicalReasoning": "While the patient presents with some non-specific symptoms like fatigue and lymphadenopathy, the clinical picture does not fully align with primary myelofibrosis. The patient's presentation is more consistent with a lymphoproliferative disorder.",
+      "whyIncorrectForCase": "The patient lacks definitive evidence of bone marrow fibrosis and shows lymphocytic predominance, which is characteristic of chronic lymphocytic leukemia rather than primary myelofibrosis.",
+      "keyDifferencesFromCorrect": [
+        "**Cell Lineage** - Myelofibrosis involves myeloid cells, while CLL involves lymphoid cells",
+        "**Bone Marrow Changes** - Myelofibrosis shows extensive fibrosis, not seen in this case"
+      ],
+      "missingFindings": [
+        "**JAK2 Mutation** - Typical genetic marker for myelofibrosis not mentioned",
+        "**Significant Bone Marrow Fibrosis** - No evidence of extensive marrow scarring"
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Essential Thrombocythemia",
+      "description": "**Essential Thrombocythemia** is a myeloproliferative neoplasm characterized by sustained platelet overproduction without a clear underlying cause.",
+      "keySymptoms": [
+        "**Thrombocytosis** - persistent platelet count elevated above 450,000/μL",
+        "**Microvascular symptoms** - mild bleeding or clotting complications",
+        "**Splenomegaly** - potential mild enlargement of the spleen"
+      ],
+      "clinicalReasoning": "Essential Thrombocythemia represents a clonal disorder of megakaryocyte proliferation, typically diagnosed through exclusion of other myeloproliferative disorders and specific molecular marker testing.",
+      "whyIncorrectForCase": "This patient presents with lymphadenopathy and fatigue more consistent with a lymphoproliferative disorder rather than a platelet-specific condition. The clinical picture does not match Essential Thrombocythemia's typical presentation.",
+      "keyDifferencesFromCorrect": [
+        "**Lymph Node Involvement** - Not characteristic in Essential Thrombocythemia",
+        "**Cell Line Affected** - Platelets vs lymphocytes",
+        "**Age and Gender Patterns** - Different epidemiological profile"
+      ],
+      "missingFindings": [
+        "**Platelet Count Elevation** - No significant thrombocytosis documented",
+        "**JAK2 Mutation** - Typically present in Essential Thrombocythemia",
+        "**Bone Marrow Findings** - Inconsistent with Essential Thrombocythemia pathology"
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "**Chronic Lymphocytic Leukemia**",
+      "description": "**Chronic Lymphocytic Leukemia** is a slow-progressing blood cancer characterized by the accumulation of abnormal lymphocytes in the blood, bone marrow, and lymphatic system, predominantly affecting older adults.",
+      "keySymptoms": [
+        "**Lymphadenopathy** - Painless, rubbery lymph node swelling, particularly in neck region indicating abnormal lymphocyte proliferation",
+        "**Fatigue** - Reflects reduced healthy blood cell production and increasing abnormal lymphocyte population",
+        "**Weight Loss** - Indicates systemic metabolic changes associated with progressive lymphoproliferative disorder",
+        "**Splenomegaly** - Enlarged spleen suggests accumulation of abnormal lymphocytes in lymphoid tissues"
+      ],
+      "clinicalReasoning": "Patient's age (58), male gender, gradual symptom progression, painless lymphadenopathy, and peripheral blood findings of mature small lymphocytes strongly suggest Chronic Lymphocytic Leukemia. The presentation matches classic clinical features, with mature lymphocyte proliferation and slow disease evolution characteristic of this malignancy."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Multiple Myeloma",
+      "description": "**Multiple Myeloma** is a cancer of plasma cells that accumulates in bone marrow, causing multiple destructive bone lesions and impacting blood cell production.",
+      "keySymptoms": [
+        "**Bone Pain** - Persistent pain in bones, especially spine and ribs",
+        "**Hypercalcemia** - Elevated calcium levels due to bone destruction",
+        "**Renal Impairment** - Kidney damage from abnormal protein production",
+        "**Anemia** - Reduced red blood cell production in bone marrow"
+      ],
+      "clinicalReasoning": "Diagnosis requires specific plasma cell proliferation in bone marrow, monoclonal protein (M-spike) in serum, and characteristic bone lesions. Patient symptoms and clinical presentation must align with specific diagnostic criteria.",
+      "whyIncorrectForCase": "This patient presents with lymphoid characteristics and lymphadenopathy, which are inconsistent with Multiple Myeloma's typical plasma cell pathology. The clinical picture more closely resembles a lymphoproliferative disorder.",
+      "keyDifferencesFromCorrect": [
+        "**Cell Origin** - Multiple Myeloma involves plasma cells, not lymphocytes",
+        "**Lymphadenopathy** - Not a primary feature of Multiple Myeloma",
+        "**Age Demographics** - Different typical patient profiles"
+      ],
+      "missingFindings": [
+        "**Bone Lesions** - No evidence of destructive bone changes",
+        "**M-Protein** - No serum monoclonal protein detected",
+        "**Plasma Cell Proliferation** - Lack of plasma cell marrow infiltration"
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Myelodysplastic Syndrome",
+      "description": "**Myelodysplastic Syndrome** is a group of disorders characterized by ineffective blood cell production in the bone marrow, leading to reduced blood cell counts and potential progression to acute leukemia.",
+      "keySymptoms": [
+        "**Cytopenias** - Reduced blood cell counts in one or more cell lines",
+        "**Bone marrow dysplasia** - Abnormal appearance and development of blood cell precursors",
+        "**Increased risk of leukemia** - Potential transformation to acute myeloid leukemia"
+      ],
+      "clinicalReasoning": "The diagnosis requires evidence of bone marrow dysfunction with specific morphological changes and persistent cytopenias, typically in older patients with no clear underlying cause of blood cell abnormalities.",
+      "whyIncorrectForCase": "The patient presents with lymphocytic features and lymphadenopathy, which are not characteristic of Myelodysplastic Syndrome. The clinical picture more closely matches Chronic Lymphocytic Leukemia.",
+      "keyDifferencesFromCorrect": [
+        "**Cell lineage** - MDS affects myeloid cells, while CLL involves lymphocytes",
+        "**Lymphadenopathy** - Not typical in MDS, prominent in CLL",
+        "**Age and presentation** - MDS has different clinical progression compared to CLL"
+      ],
+      "missingFindings": [
+        "**Myeloid dysplasia** - No evidence of specific myeloid cell abnormalities",
+        "**Bone marrow biopsy findings** - Lack of characteristic MDS morphological changes",
+        "**Specific genetic markers** - Missing MDS-associated cytogenetic abnormalities"
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "**Aplastic Anemia**",
+      "description": "A rare bone marrow failure syndrome characterized by decreased production of all blood cell lines, leading to pancytopenia and increased risk of infections and bleeding.",
+      "keySymptoms": [
+        "**Pancytopenia** - severe reduction of red blood cells, white blood cells, and platelets",
+        "**Bone Marrow Hypocellularity** - markedly reduced cell production in bone marrow",
+        "**Fatigue** - result of severely reduced red blood cell production"
+      ],
+      "clinicalReasoning": "Aplastic anemia presents with pancytopenia and bone marrow failure, typically showing a hypocellular marrow with significant reduction in hematopoietic cells. The condition requires careful differential diagnosis from other hematologic disorders.",
+      "whyIncorrectForCase": "This patient presents with lymphadenopathy and characteristics more consistent with a lymphoproliferative disorder. Aplastic anemia lacks the lymph node involvement seen in this case.",
+      "keyDifferencesFromCorrect": [
+        "**Lymphadenopathy** - present in Chronic Lymphocytic Leukemia, absent in Aplastic Anemia",
+        "**Cellular Findings** - CLL shows lymphocyte proliferation, Aplastic Anemia shows bone marrow hypocellularity",
+        "**Age Distribution** - CLL common in older adults, Aplastic Anemia can occur at any age"
+      ],
+      "missingFindings": [
+        "**Lymphocyte Proliferation** - not observed in Aplastic Anemia",
+        "**Splenomegaly** - minimal in Aplastic Anemia, significant in this patient's presentation",
+        "**Lymph Node Involvement** - absent in Aplastic Anemia"
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Iron Deficiency Anemia",
+      "description": "**Iron Deficiency Anemia** is a condition characterized by insufficient iron to produce adequate hemoglobin, resulting in reduced oxygen-carrying capacity of blood.",
+      "keySymptoms": [
+        "**Fatigue** - generalized weakness due to reduced oxygen delivery to tissues",
+        "**Pallor** - pale skin and mucous membranes from low hemoglobin levels",
+        "**Shortness of breath** - decreased oxygen-carrying capacity of blood"
+      ],
+      "clinicalReasoning": "Iron Deficiency Anemia typically presents with progressive fatigue, reduced hemoglobin, and characteristic microcytic, hypochromic red blood cells. Diagnosis requires comprehensive blood work and assessment of iron stores.",
+      "whyIncorrectForCase": "This patient's presentation with lymphadenopathy, splenomegaly, and systemic symptoms is more consistent with a hematologic malignancy than simple iron deficiency. The complex clinical picture suggests **Chronic Lymphocytic Leukemia**.",
+      "keyDifferencesFromCorrect": [
+        "**Lymphadenopathy** - absent in iron deficiency, prominent in CLL",
+        "**Bone marrow findings** - normal in iron deficiency, abnormal in CLL",
+        "**Age and gender predisposition** - different for each condition"
+      ],
+      "missingFindings": [
+        "**Lymph node enlargement** - critical finding in CLL, not in iron deficiency",
+        "**Abnormal white blood cell count** - characteristic of leukemia",
+        "**Splenomegaly** - indicating systemic disease beyond simple nutritional deficiency"
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Hairy Cell Leukemia",
+      "description": "**Hairy Cell Leukemia** is a rare B-cell lymphoproliferative disorder characterized by abnormal lymphocytes with distinctive 'hairy' cytoplasmic projections.",
+      "keySymptoms": [
+        "**Pancytopenia** - reduction in all blood cell types leading to fatigue and infection risk",
+        "**Splenomegaly** - enlargement of the spleen causing abdominal discomfort",
+        "**Bone marrow infiltration** - prevents normal blood cell production"
+      ],
+      "clinicalReasoning": "Hairy Cell Leukemia presents with unique morphological features and specific clinical manifestations that distinguish it from other lymphoproliferative disorders. It typically affects middle-aged males and has a distinct pattern of bone marrow involvement.",
+      "whyIncorrectForCase": "The patient's clinical presentation more closely matches Chronic Lymphocytic Leukemia, with generalized lymphadenopathy and gradual onset of symptoms. Hairy Cell Leukemia has more specific and aggressive clinical characteristics.",
+      "keyDifferencesFromCorrect": [
+        "**Cell Morphology** - Hairy Cell Leukemia has characteristic 'hairy' lymphocytes, unlike CLL's smooth lymphocytes",
+        "**Age Distribution** - Hairy Cell Leukemia typically affects younger patients compared to CLL",
+        "**Treatment Response** - Different therapeutic approaches for each condition"
+      ],
+      "missingFindings": [
+        "**TRAP Stain Negativity** - Absence of tartrate-resistant acid phosphatase positive cells",
+        "**Lack of Classic Hairy Cell Characteristics** - No specific morphological features seen in this case",
+        "**Different Immunophenotype** - Molecular markers inconsistent with typical Hairy Cell Leukemia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+.feedback-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.feedback-modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.feedback-modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--secondary);
+}
+
+.feedback-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--gray-500);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.feedback-close-btn:hover {
+  color: var(--secondary);
+}
+
+.feedback-modal form {
+  padding: 1.5rem;
+}
+
+.feedback-context-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.feedback-case-info {
+  color: var(--gray-500);
+  font-weight: 400;
+}
+
+.feedback-case-summary {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.feedback-case-summary p {
+  margin: 0.25rem 0;
+  color: var(--gray-700);
+}
+
+.feedback-case-summary .correct {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.feedback-case-summary .incorrect {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.feedback-form-group {
+  margin-bottom: 1rem;
+}
+
+.feedback-form-group label {
+  display: block;
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
+}
+
+.feedback-form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.feedback-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+.feedback-form-group textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.feedback-error {
+  background: var(--danger-light);
+  color: var(--danger);
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.feedback-modal-footer {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.feedback-success {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.feedback-success-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--success);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+}
+
+.feedback-success h3 {
+  margin: 0 0 0.5rem;
+  color: var(--secondary);
+}
+
+.feedback-success p {
+  margin: 0;
+  color: var(--gray-600);
+}
+
+/* Floating Feedback Button */
+.feedback-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--secondary);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  z-index: 1000;
+}
+
+.feedback-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-button:active {
+  transform: scale(1.05);
+}
+
+.feedback-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* In-header feedback link */
+.feedback-link {
+  color: var(--gray-300);
+  font-size: 0.875rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+.feedback-link:hover {
+  color: var(--primary);
+}
+
+/* Feedback Button Wrapper & Tooltip */
+.feedback-button-wrapper {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+.feedback-button-wrapper .feedback-button {
+  position: relative;
+  bottom: auto;
+  right: auto;
+}
+
+.feedback-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: 0;
+  background: var(--secondary, #1e293b);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: tooltipFadeIn 0.3s ease-out;
+}
+
+.feedback-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--secondary, #1e293b);
+  transform: rotate(45deg);
+}
+
+.feedback-tooltip span:first-child {
+  font-weight: 500;
+}
+
+.feedback-tooltip span:last-of-type {
+  opacity: 0.8;
+}
+
+.feedback-tooltip-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.feedback-tooltip-close:hover {
+  color: white;
+}
+
+.feedback-button.with-tooltip {
+  animation: pulse 2s infinite;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .feedback-modal {
+    max-height: 100vh;
+    border-radius: 12px 12px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: none;
+  }
+
+  .feedback-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .feedback-button-wrapper {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .feedback-tooltip {
+    right: -0.5rem;
+  }
+}

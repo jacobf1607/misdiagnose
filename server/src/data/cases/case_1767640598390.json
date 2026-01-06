@@ -1,0 +1,80 @@
+{
+  "persona": {
+    "name": "Mohan Chatterjee",
+    "age": 62,
+    "gender": "Male",
+    "occupation": "Shopkeeper in Delhi",
+    "background": "He runs a small grocery shop and spends long hours standing and using his hands for packing and counting money. He has been avoiding morning work because of increasing hand stiffness.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "practical",
+      "stoic",
+      "worry-prone"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Rheumatoid arthritis (RA)",
+      "description": "Chronic inflammatory, usually symmetric polyarthritis that commonly starts in small joints (MCP, PIP, MTP) with morning stiffness >1 hour; DIP is characteristically spared; may have pitting edema (“boxing glove” appearance), erosions and extra-articular disease especially in RF/ACPA-positive patients."
+    },
+    {
+      "id": "d2",
+      "name": "Osteoarthritis (OA)",
+      "description": "Noninflammatory degenerative arthritis typically in older age with joint pain worsened by activity; morning stiffness <30 minutes; commonly affects large weight-bearing joints and PIP/DIP (with sparing of MCP); joints are cool/hard on palpation."
+    },
+    {
+      "id": "d3",
+      "name": "Remitting seronegative symmetrical synovitis with pitting edema (RS3PE)",
+      "description": "An inflammatory polyarthritis listed among causes of acute polyarthritis; may present with very acute onset polyarthritis with pitting edema, more commonly in old age."
+    },
+    {
+      "id": "d4",
+      "name": "Palindromic rheumatism",
+      "description": "Intermittent relapsing and remitting episodes of pain, stiffness and swelling lasting hours to days with symptom-free periods; may progress to rheumatoid arthritis later."
+    },
+    {
+      "id": "d5",
+      "name": "Rheumatic fever (rheumatic arthritis)",
+      "description": "Acute, migratory arthritis predominantly affecting major joints (e.g., knee), rarely small joints; asymmetrical; morning stiffness may be mild; diagnosed using Jones criteria and associated with ASO antibodies."
+    },
+    {
+      "id": "d6",
+      "name": "Systemic lupus erythematosus (SLE)",
+      "description": "Autoimmune disease with immune complex and complement activation; can have arthritis (typically non-erosive) with systemic involvement such as malar rash, oral ulcers, photosensitivity, renal involvement; ANA and anti-dsDNA associated."
+    },
+    {
+      "id": "d7",
+      "name": "Reactive arthritis",
+      "description": "Inflammatory arthritis that tends to be asymmetric and usually involves lower extremities; suggested by recent gastrointestinal or genitourinary infection along with conjunctivitis and oral ulcers."
+    },
+    {
+      "id": "d8",
+      "name": "Psoriatic arthritis",
+      "description": "Inflammatory arthritis that can be mono or polyarticular and symmetric or asymmetric; may involve DIP/PIP/MCP; associated with psoriatic skin and nail changes; can show enthesitis and dactylitis (“sausage digits”)."
+    },
+    {
+      "id": "d9",
+      "name": "Ankylosing spondylitis",
+      "description": "Chronic inflammatory disorder primarily affecting axial skeleton (sacroiliac joints and spine) with inflammatory back pain improving with exercise and worse with rest; often begins in second or third decade; associated with HLA-B27."
+    },
+    {
+      "id": "d10",
+      "name": "Fibromyalgia syndrome (FMS)",
+      "description": "Chronic widespread pain for >3 months above and below the waist with axial pain and tenderness at ≥11 of 18 tender points; physical exam otherwise normal; subjective swelling may occur without objective synovitis."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "“For the last few months my hands feel stiff every morning for more than an hour, and both wrists and finger joints swell and hurt. It’s hard to brush my teeth or comb my hair early in the day.”",
+  "medicalHistory": "No documented prior rheumatologic diagnosis. No confirmed history provided of recent gastrointestinal/genitourinary infection. No known chronic infections reported in the current story.",
+  "symptoms": "Subacute/chronic onset of joint pain with swelling and stiffness. Morning stiffness lasting more than 1 hour. Symmetric involvement starting in small joints of the hands (metacarpophalangeal and proximal interphalangeal joints) and wrists, with difficulty performing routine early-morning activities such as brushing teeth and combing hair. Generalized fatigue and weakness consistent with systemic features of inflammatory arthritis.\n\nFrom textbook: ) are involved in the disease progression.\nB cells, CD4+ T cells, compliment mediated immune activation play a contributory role.\n\nClinical Features\nQ.  Enumerate the clinical features of rheumatoid arthritis.\nz Gender: Female to male ratio is 3:1.\nz Age: Most common age of onset is between 30 and 50 years, but the disease can occur at any age. In women in late\n\nchildbearing years and in men during sixth to eighth decade.\n\nOnset\nThe presenting symptoms result from inflammation of the joints, ten",
+  "relevantFindings": "Examination: Symmetric swollen, warm, tender small joints of hands and wrists with synovial thickening; pitting edema over dorsum of hands giving a “boxing glove” appearance. Pattern: DIP joints are spared. Labs/markers: Raised ESR/CRP consistent with active inflammatory disease; anemia of chronic disease may be present; thrombocytosis may be present. Serology: Rheumatoid factor and/or ACPA may be positive (seropositive disease associated with more severe and extra-articular disease). Imaging: X-ray of affected joints may show symmetrical involvement with soft tissue swelling, juxta-articular osteoporosis, marginal erosions, and uniform joint space narrowing; deformities can occur over time (e.g., ulnar deviation, swan-neck). Synovial fluid (if aspirated): inflammatory range WBC about 5,000–50,000/μL with ~two-thirds neutrophils, no crystals or organisms.\n\nFrom textbook: throcyte sedimentation rate)\n\nCHAPTER 8: Rheumatology and Connective Tissue Disorders 675\n\nz The Disease Activity Score in 28 joints (DAS28) is used to grade severity of RA.\nz Simplified Disease Activity Index (SDAI) and Clinical Disease Activity Index (CDAI) are also used in monitoring.\nz Above criteria yields a score of 0–10. A score of ≥6 required for definitive diagnosis of RA.\nz A score of <6/10 are not classifiable as RA, but their status to be reassessed over time.\nz A clinician should co",
+  "redHerrings": "Pitting edema of the hands could suggest RS3PE (acute onset in old age) rather than RA. Intermittent prior brief episodes of joint pain and swelling with symptom-free periods could suggest palindromic rheumatism. Generalized musculoskeletal pain and fatigue without objective synovitis could suggest fibromyalgia. If asked about rashes/oral ulcers/photosensitivity or renal symptoms, those would point more toward SLE, but these are not established in the initial presentation.",
+  "id": "case_1767640598390",
+  "domain": "rheumatology",
+  "precomputedExplanations": []
+}

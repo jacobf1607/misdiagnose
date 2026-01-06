@@ -1,0 +1,538 @@
+{
+  "persona": {
+    "name": "Ashok Banerjee",
+    "age": 62,
+    "gender": "Male",
+    "occupation": "Daily Wage Labourer",
+    "background": "He continues physically demanding daily-wage work despite progressive ill health and poor access to regular medical care. He has had gradual weight loss and difficulty recovering from minor illnesses.",
+    "lifestyle": {
+      "activityLevel": "high",
+      "smoking": "unknown",
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "stoic",
+      "anxious",
+      "reserved"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Addison’s disease (primary adrenal insufficiency)",
+      "description": "Chronic adrenocortical insufficiency due to progressive destruction of the adrenal cortex; cardinal features include hypotension, pigmentation, and history of adrenal crisis following stress."
+    },
+    {
+      "id": "d2",
+      "name": "Acute adrenal crisis (Addisonian crisis)",
+      "description": "Acute adrenocortical insufficiency presenting with hypotension/shock out of proportion to illness, dehydration, acute abdomen, unexplained hypoglycemia and fever."
+    },
+    {
+      "id": "d3",
+      "name": "Myxedema madness (severe hypothyroidism with neuropsychiatric manifestations)",
+      "description": "Severe hypothyroidism with hypothermia and neuropsychiatric manifestations such as depression, confusion, disorientation, and rarely psychosis with delusions/hallucinations."
+    },
+    {
+      "id": "d4",
+      "name": "Subclinical hypothyroidism",
+      "description": "Increased serum TSH with normal serum free T4; more prevalent in women and elderly persons and can progress to overt hypothyroidism."
+    },
+    {
+      "id": "d5",
+      "name": "Acute adrenal insufficiency",
+      "description": "Primary adrenal failure may present acutely with hypotension and acute circulatory failure with shock, dehydration, and electrolyte abnormalities such as hyponatremia and hyperkalemia."
+    },
+    {
+      "id": "d6",
+      "name": "Sick euthyroid syndrome (nonthyroidal illness state)",
+      "description": "Changes in thyroid function tests in systemic illness/surgery/fasting not caused by primary thyroid or pituitary dysfunction; commonly low T3; treatment with thyroxine is not recommended."
+    },
+    {
+      "id": "d7",
+      "name": "Thyrotoxicosis/Hyperthyroidism (including Graves’ disease)",
+      "description": "State of circulating thyroid hormone excess with hypermetabolic features such as palpitations, weight loss, tremor, and heat intolerance; Graves’ may have goiter and orbitopathy."
+    },
+    {
+      "id": "d8",
+      "name": "Cushing’s syndrome",
+      "description": "Clinical syndrome of cortisol excess; features include central obesity, hypertension, proximal myopathy, purplish striae, bruising, glucose intolerance, and neuropsychiatric symptoms."
+    },
+    {
+      "id": "d9",
+      "name": "Primary hyperparathyroidism",
+      "description": "Autonomous PTH secretion with hypercalcemia and hypophosphatemia; symptoms classically include “moans, bones, stones, abdominal groans” and psychiatric manifestations."
+    },
+    {
+      "id": "d10",
+      "name": "Subclinical hyperthyroidism",
+      "description": "Normal serum free T4 and T3 with subnormal TSH (<0.5 mU/L); may normalize or progress; cardiac effects include resting tachycardia and atrial fibrillation; noncardiac effects include osteoporosis."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "“For months I feel very tired and weak, I’ve lost weight, and I get dizzy when I stand up. Since a few days I’m vomiting and cannot work.”",
+  "medicalHistory": "Slow recovery from recent minor illness and progressive fatigue with weight loss. No other documented chronic diagnoses available.",
+  "symptoms": "Fatigue and weight loss (most prominent). Gastrointestinal symptoms including nausea and vomiting. Features suggestive of postural hypotension with dizziness. Salt craving. Poor appetite/anorexia. Possible fasting hypoglycemia symptoms (unexplained weakness).\n\nFrom textbook: : Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ.  Write a short essay/note on major clinical signs of Addison’s disease.\nz Clinical features are produced due to the deficiency of glucocorticoid, mineralocorticoid, and androgen as well as\n\nexcess of ACTH.\nz Fatigue and weight loss are the most prominent symptoms.\nz Primary adrenal failure may pres",
+  "relevantFindings": "Examination: Hypotension with postural component; dehydration. Skin pigmentation of exposed areas/pressure areas (e.g., elbows, knees, knuckles, palmar creases, mucous membranes). Investigations suggestive of primary adrenal insufficiency: hyponatremia and hyperkalemia with metabolic acidosis; hypoglycemia; plasma ACTH elevated. Early morning (6 am) cortisol low (level <3 µg/dL suggestive). ACTH (cosyntropin) stimulation test: failure of rise in plasma cortisol after 0.25 mg synthetic ACTH. Peripheral blood may show mild anemia and mild eosinophilia; blood urea may be elevated.\n\nFrom textbook: : Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ.  Write a short essay/note on major clinical signs of Addison’s disease.\nz Clinical features are produced due to the deficiency of glucocorticoid, mineralocorticoid, and androgen as well as\n\nexcess of ACTH.\nz Fatigue and weight loss are the most prominent symptoms.\nz Primary adrenal failure may pres",
+  "redHerrings": "Neuropsychiatric symptoms such as depression/confusion (could suggest severe hypothyroidism/myxedema madness). Weight loss could also fit thyrotoxicosis. Nonspecific symptoms like fatigue and poor concentration could also occur with primary hyperparathyroidism or sick euthyroid syndrome in systemic illness.",
+  "id": "case_1767639458038",
+  "domain": "endocrinology",
+  "idealPathway": {
+    "diseaseName": "Addison’s disease (primary adrenal insufficiency)",
+    "domain": "endocrinology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about fatigue and weight loss (including anorexia).",
+        "reasoning": "These are stated as the most prominent symptoms and reflect glucocorticoid deficiency.",
+        "expectedFinding": "Prominent fatigue with unintentional weight loss/anorexia.",
+        "importance": "critical",
+        "textbookReference": "“Fatigue and weight loss are the most prominent symptoms.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about dizziness on standing/postural symptoms and salt craving.",
+        "reasoning": "Chronic primary adrenal failure may present with postural hypotension features and salt craving due to mineralocorticoid deficiency.",
+        "expectedFinding": "Postural dizziness and salt craving.",
+        "importance": "important",
+        "textbookReference": "“Chronic: … features suggestive of postural hypotension and salt craving.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about gastrointestinal symptoms: nausea, vomiting, diarrhea or constipation.",
+        "reasoning": "GI symptoms are listed under glucocorticoid deficiency and are part of chronic illness features; vomiting is also a key crisis symptom.",
+        "expectedFinding": "Nausea/vomiting ± diarrhea/constipation.",
+        "importance": "important",
+        "textbookReference": "“Fatigue… anorexia, nausea, vomiting, diarrhea or constipation…”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about prior episodes suggestive of Addisonian crisis after stress (infection/trauma/surgery/dehydration) or slow recovery from illness.",
+        "reasoning": "A previous history of adrenal crisis following stress or slow recovery from illness is a cardinal feature; crisis is triggered by stressors.",
+        "expectedFinding": "History of hypotension/shock out of proportion to illness after stress, or slow recovery from illness.",
+        "importance": "critical",
+        "textbookReference": "“Cardinal features… previous history of acute adrenal crisis following stress, or slow recovery from illness.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about associated autoimmune diseases (Hashimoto’s thyroiditis/primary atrophic hypothyroidism, pernicious anemia, type 1 diabetes mellitus, primary ovarian failure, hypoparathyroidism) and features suggesting polyglandular autoimmune syndrome.",
+        "reasoning": "Addison’s disease is associated with other autoimmune diseases; identifying them supports autoimmune primary adrenal insufficiency and prompts broader evaluation.",
+        "expectedFinding": "History of one or more associated autoimmune diseases (e.g., Hashimoto’s thyroiditis) or syndromic combinations (Type I/II polyglandular autoimmune syndrome).",
+        "importance": "helpful",
+        "textbookReference": "“Other autoimmune diseases associated with Addison’s disease: Hashimoto’s thyroiditis… pernicious anemia, type 1 diabetes mellitus…”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Measure blood pressure including assessment for hypotension/postural hypotension.",
+        "reasoning": "Hypotension is a cardinal feature and reflects mineralocorticoid deficiency; acute presentation may include shock.",
+        "expectedFinding": "Hypotension and/or postural drop with dizziness.",
+        "importance": "critical",
+        "textbookReference": "“Cardinal features… Hypotension…”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Inspect for hyperpigmentation of exposed/pressure areas and mucous membranes (including palms and oral mucosa).",
+        "reasoning": "Skin pigmentation is nearly always present in primary adrenal insufficiency due to ACTH excess; helps distinguish from secondary AI.",
+        "expectedFinding": "Pigmentation of exposed areas/pressure points (elbows, knees, knuckles), palmar creases, mucous membranes/oral pigmentation; pigmentation in recent scars/perineum/axillae/areolae.",
+        "importance": "important",
+        "textbookReference": "“Skin pigmentation is nearly always present in primary adrenal insufficiency (but not in secondary).”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess hydration status and look for features of acute adrenal crisis (dehydration, abdominal tenderness/‘acute abdomen’, fever, confusion/coma).",
+        "reasoning": "Primary adrenal failure may present acutely with dehydration, acute abdomen, unexplained fever and shock out of proportion to illness.",
+        "expectedFinding": "Dehydration with abdominal tenderness/acute abdomen and/or fever; altered sensorium in severe cases.",
+        "importance": "important",
+        "textbookReference": "“Acute: Hypotension… dehydration, an ‘acute abdomen’, unexplained hypoglycemia, and unexplained fever (Addisonian crisis)”"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "In females, examine for reduced axillary and pubic hair (and ask/assess for loss of libido).",
+        "reasoning": "Adrenal androgen deficiency manifests as decreased axillary/pubic hair and loss of libido in females.",
+        "expectedFinding": "Decreased axillary hair and decreased pubic hair in females; reduced libido in females.",
+        "importance": "helpful",
+        "textbookReference": "“Adrenal androgen deficiency: Decreased axillary hair in females… Decreased pubic hair in females… Loss of libido in females.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order basic labs: serum electrolytes, glucose, and blood urea (especially if acutely unwell).",
+        "reasoning": "Addisonian crisis and chronic adrenal insufficiency are associated with hyponatremia, hyperkalemia, hypoglycemia, and elevated blood urea/azotemia; these are rapid, cost-effective initial tests.",
+        "expectedFinding": "Hyponatremia, hyperkalemia, hypoglycemia, and elevated blood urea/azotemia.",
+        "importance": "important",
+        "textbookReference": "“Laboratory Findings: Hyponatremia… Hyperkalemia… Azotemia… Hypoglycemia.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order early morning (6 am) serum cortisol.",
+        "reasoning": "First-line confirmation step is demonstrating inappropriately low cortisol secretion; specific cutoffs are provided.",
+        "expectedFinding": "6 am cortisol <3 µg/dL suggestive of adrenal insufficiency; >11 µg/dL excludes AI.",
+        "importance": "critical",
+        "textbookReference": "“Early morning (6 am) cortisol… Levels <3 µg/dL is suggestive… Levels >11 µg/dL exclude AI.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order plasma ACTH level.",
+        "reasoning": "Helps determine whether cortisol deficiency is primary (adrenal) versus central; ACTH is elevated in adrenal insufficiency and pigmentation is linked to ACTH excess.",
+        "expectedFinding": "Elevated plasma ACTH level in adrenal insufficiency (supporting primary AI when combined with clinical pigmentation).",
+        "importance": "important",
+        "textbookReference": "“Plasma ACTH level: Elevated in adrenal insufficiency.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Perform ACTH stimulation test with synthetic ACTH (cosyntropin) 0.25 mg (standard high-dose test) with cortisol response measurement.",
+        "reasoning": "Confirms adrenal insufficiency by demonstrating failure of cortisol rise after ACTH stimulation.",
+        "expectedFinding": "Failure of rise in plasma cortisol following administration of 0.25 mg synthetic ACTH (cosyntropin).",
+        "importance": "important",
+        "textbookReference": "“ACTH stimulation test: There is failure of rise in plasma cortisol level following the administration of 0.25 mg… cosyntropin.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "If evaluating cause: order adrenal autoantibodies (ACA and anti-21-OH-hydroxylase antibody) and, when tuberculous adrenalitis is suspected, imaging for adrenal calcification and chest radiograph.",
+        "reasoning": "After confirming AI and determining primary vs central, the textbook recommends determining the underlying cause; autoimmune markers support autoimmune adrenal insufficiency, and TB adrenalitis may show pulmonary TB evidence and adrenal calcification on imaging.",
+        "expectedFinding": "Positive ACA/anti-21-OH-hydroxylase antibodies (autoimmune); or chest radiograph evidence of pulmonary TB and adrenal calcification on plain abdomen radiograph/CT/MRI (TB adrenalitis).",
+        "importance": "helpful",
+        "textbookReference": "“Adrenal autoantibodies: ACA… and anti-21-OH-hydroxylase antibody.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Secondary (central) adrenal insufficiency",
+        "howToRuleOut": "Differentiate by clinical pigmentation pattern and testing strategy: pigmentation is nearly always present in primary adrenal insufficiency but not in secondary; evaluate for secretion of other pituitary hormones in central AI.",
+        "textbookReference": "“Skin pigmentation is nearly always present in primary adrenal insufficiency (but not in secondary).”"
+      },
+      {
+        "name": "Acute adrenal crisis (Addisonian crisis) versus chronic presentation",
+        "howToRuleOut": "Identify acute features (shock out of proportion to illness, dehydration, acute abdomen, unexplained fever, unexplained hypoglycemia) and supportive labs (hyponatremia, hyperkalemia, azotemia, hypoglycemia).",
+        "textbookReference": "“Acute: Hypotension and acute circulatory failure with shock out of proportion… dehydration, an ‘acute abdomen’, unexplained hypoglycemia, and unexplained fever (Addisonian crisis)”"
+      },
+      {
+        "name": "Tuberculous adrenalitis causing Addison’s disease (etiologic differential within primary AI)",
+        "howToRuleOut": "Use radiographic evaluation: chest radiograph may show evidence of pulmonary tuberculosis; plain abdomen radiograph/CT/MRI may show adrenal calcification.",
+        "textbookReference": "“Radiograph: In patients with tuberculous adrenalitis: Chest radiograph may show evidences of pulmonary tuberculosis… CT scan, and MRI scan may show calcification in the adrenal gland.”"
+      },
+      {
+        "name": "Autoimmune adrenal insufficiency (etiologic differential within primary AI, including polyglandular autoimmune syndromes)",
+        "howToRuleOut": "Look for associated autoimmune diseases (Hashimoto’s thyroiditis, pernicious anemia, type 1 diabetes mellitus, etc.) and confirm with adrenal autoantibodies (ACA, anti-21-OH-hydroxylase).",
+        "textbookReference": "“Other autoimmune diseases associated with Addison’s disease: Hashimoto’s thyroiditis… pernicious anemia, type 1 diabetes mellitus…”"
+      }
+    ],
+    "diagnosticApproach": "Use the textbook’s three-step investigation process for adrenocortical insufficiency: (1) Suspect primary adrenal insufficiency clinically (fatigue and weight loss; chronic postural hypotension and salt craving; pigmentation; or acute crisis with shock out of proportion, dehydration, acute abdomen, unexplained hypoglycemia/fever). (2) Confirm adrenal insufficiency by demonstrating inappropriately low cortisol secretion (early morning 6 am cortisol: <3 µg/dL suggestive; >11 µg/dL excludes; random cortisol in ill patient 20 µg/dL reassuring; or morning salivary cortisol cutoffs). (3) Determine whether cortisol deficiency is primary or central using plasma ACTH (elevated in adrenal insufficiency) and ACTH stimulation testing (failure of cortisol rise after 0.25 mg cosyntropin). (4) Determine the underlying cause with targeted tests (adrenal autoantibodies for autoimmune disease; radiographs/CT/MRI for tuberculous adrenalitis showing pulmonary TB evidence and adrenal calcification) and assess for associated autoimmune diseases; if central AI is suspected, evaluate other pituitary hormone secretion.",
+    "textbookSources": [
+      ": Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ....",
+      ": Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ...."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Addison’s disease (primary adrenal insufficiency)",
+      "description": "**Addison’s disease** is **primary adrenal insufficiency** due to destruction/dysfunction of the adrenal cortex causing deficient **cortisol** and **aldosterone** (often with low adrenal androgens). The resulting **glucocorticoid/mineralocorticoid deficiency** and compensatory rise in **ACTH** produce constitutional symptoms, **hyperpigmentation**, electrolyte disturbances, and **postural hypotension**, and can culminate in an **adrenal crisis** with vomiting and dehydration.",
+      "keySymptoms": [
+        "**Fatigue/weakness** - Chronic **cortisol deficiency** reduces energy, causes myopathy, and is a hallmark symptom.",
+        "**Weight loss/anorexia** - Low **cortisol** and chronic illness decrease appetite and promote catabolism and weight loss.",
+        "**Postural dizziness/orthostatic hypotension** - **Aldosterone deficiency** causes salt wasting and volume depletion leading to orthostasis.",
+        "**Nausea/vomiting** - Common GI manifestation; can signal worsening insufficiency or impending **adrenal crisis**.",
+        "**Salt craving** - Reflects renal sodium loss from **mineralocorticoid deficiency** and compensatory craving for salt.",
+        "**Hyperpigmentation** - Elevated **ACTH** (and MSH activity) increases melanin in pressure/exposed areas and mucosa.",
+        "**Dehydration** - Due to sodium and water loss from low **aldosterone**, worsening hypotension and renal perfusion.",
+        "**Hypoglycemia symptoms** - **Cortisol deficiency** impairs gluconeogenesis, predisposing to fasting hypoglycemia and weakness."
+      ],
+      "clinicalReasoning": "The presentation of months of prominent **fatigue** and **weight loss**, with **salt craving**, poor appetite, and recent **vomiting** strongly suggests chronic adrenal hormone deficiency. Examination showing **hypotension with a postural component**, **dehydration**, and characteristic **hyperpigmentation** points to **primary** (not secondary) adrenal insufficiency because hyperpigmentation implies elevated **ACTH**. The reported labs (hyponatremia, hyperkalemia, metabolic acidosis, hypoglycemia) fit **aldosterone** and **cortisol** deficiency, and a low early-morning cortisol with elevated **ACTH** plus failure to rise on **cosyntropin stimulation** confirms **Addison’s disease**."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Acute adrenal crisis (Addisonian crisis)",
+      "description": "An **acute adrenal crisis** is a life-threatening emergency due to sudden, severe deficiency of **cortisol** (often with **aldosterone** deficiency). It typically presents with abrupt **shock**, severe **vomiting/abdominal pain**, and marked **electrolyte** and **glucose** derangements, often triggered by infection, surgery, or stopping steroids.",
+      "keySymptoms": [
+        "**Sudden collapse/shock** - Rapid onset severe hypotension with poor perfusion requiring urgent IV fluids and steroids.",
+        "**Severe vomiting/abdominal pain** - Acute gastrointestinal distress causing dehydration and inability to tolerate oral intake.",
+        "**Altered sensorium** - Confusion, lethargy, or coma from hypotension, hypoglycemia, or electrolyte abnormalities.",
+        "**Hypoglycemia** - Low glucose causing sweating, tremor, weakness, or neuroglycopenic symptoms.",
+        "**Hyponatremia** - Low sodium from aldosterone deficiency and excess ADH, worsening weakness and confusion.",
+        "**Hyperkalemia** - High potassium from mineralocorticoid deficiency, risking arrhythmias and muscle weakness.",
+        "**Precipitating stressor** - Infection, trauma, surgery, or steroid withdrawal commonly triggers abrupt decompensation."
+      ],
+      "clinicalReasoning": "This patient has strong evidence of chronic **primary adrenal insufficiency**: months of **fatigue**, **weight loss**, **salt craving**, **hyperpigmentation**, and **postural hypotension** with labs showing **hyponatremia**, **hyperkalemia**, **metabolic acidosis**, and low 6 am **cortisol** with elevated **ACTH** and failed **cosyntropin** response. These findings confirm Addison’s disease as the underlying disorder. Although he has recent vomiting and dehydration, the overall presentation is dominated by a chronic course with classic stigmata of Addison’s rather than a sudden catastrophic deterioration. Therefore labeling the primary diagnosis as an acute **Addisonian crisis** is not the best fit for this case framing.",
+      "whyIncorrectForCase": "An **acute adrenal crisis** is defined by abrupt, severe decompensation (often **shock**/altered mental status) usually with a clear precipitating stressor; this case primarily describes a chronic Addison’s phenotype with confirmatory endocrine testing. His recent vomiting suggests worsening but the vignette does not emphasize acute circulatory collapse or a trigger typical of crisis.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Crisis is abrupt and rapidly progressive; **Addison’s disease** typically evolves over months with chronic symptoms.",
+        "**Hemodynamic severity** - Crisis often presents with **shock** refractory to fluids; Addison’s commonly has **postural hypotension** without frank shock.",
+        "**Trigger** - Crisis usually follows infection/surgery/trauma or steroid withdrawal; Addison’s may present without an acute precipitant.",
+        "**Clinical focus** - Crisis is an emergency syndrome; Addison’s is the underlying chronic endocrine diagnosis confirmed by **ACTH stimulation** failure.",
+        "**Neurologic status** - Crisis may include **delirium/coma**; Addison’s usually has preserved mentation unless severely decompensated."
+      ],
+      "missingFindings": [
+        "**Frank shock** - No clear evidence of severe hypotension with end-organ hypoperfusion requiring resuscitation is provided.",
+        "**Altered mental status** - Crisis commonly causes confusion or reduced consciousness; not described here.",
+        "**Identifiable precipitating event** - No infection, surgery, trauma, or steroid withdrawal trigger is mentioned."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Myxedema madness (severe hypothyroidism with neuropsychiatric manifestations)",
+      "description": "**Myxedema madness** refers to severe **hypothyroidism** presenting with prominent **neuropsychiatric symptoms** (e.g., psychosis, delirium) in the setting of systemic hypothyroid features. It is typically associated with slowed metabolism, **hypothermia**, **bradycardia**, and characteristic myxedematous skin changes rather than adrenal-crisis physiology.",
+      "keySymptoms": [
+        "**Psychosis/delirium** - Acute confusion, hallucinations, or paranoia occurring in severe untreated hypothyroidism.",
+        "**Depressed mentation** - Marked slowing of thinking, somnolence, and reduced responsiveness due to low thyroid hormone.",
+        "**Cold intolerance** - Feeling unusually cold from reduced thermogenesis and decreased basal metabolic rate.",
+        "**Weight gain** - Increased weight from fluid retention and slowed metabolism (not true fat gain alone).",
+        "**Constipation** - Reduced gut motility causing infrequent, hard stools and abdominal discomfort.",
+        "**Dry coarse skin** - Rough, cool, dry skin with reduced sweating and impaired skin turnover.",
+        "**Facial puffiness (myxedema)** - Nonpitting edema from glycosaminoglycan deposition in skin and soft tissues.",
+        "**Bradycardia** - Slow heart rate from reduced sympathetic tone and decreased cardiac output.",
+        "**Hypothermia** - Low body temperature in severe cases, especially in myxedema coma spectrum.",
+        "**Hyponatremia** - Dilutional low sodium from impaired free-water clearance and increased ADH activity."
+      ],
+      "clinicalReasoning": "Myxedema madness is considered when severe **hypothyroidism** is accompanied by prominent **psychiatric or cognitive changes** plus systemic hypothyroid signs (e.g., **bradycardia**, **hypothermia**, **constipation**, **dry skin**, **facial puffiness**). Laboratory support typically includes markedly elevated **TSH** with low **free T4** (primary hypothyroidism) and may show **hyponatremia**. While fatigue can occur, the overall pattern is usually metabolic slowing rather than **postural hypotension**, **hyperkalemia**, and **ACTH-driven hyperpigmentation**.",
+      "whyIncorrectForCase": "This patient’s presentation and investigations strongly indicate **primary adrenal insufficiency**: **hyperpigmentation**, **postural hypotension**, **hyponatremia + hyperkalemia + metabolic acidosis**, **hypoglycemia**, **high ACTH**, and failure to respond to **cosyntropin**. Myxedema madness would be expected to feature prominent **neuropsychiatric symptoms** and classic hypothyroid signs (e.g., **bradycardia**, **hypothermia**, **constipation**, **myxedematous facies**), which are not described.",
+      "keyDifferencesFromCorrect": [
+        "**Skin changes** - Myxedema causes **nonpitting edema/dry coarse skin**; Addison’s causes **ACTH-related hyperpigmentation** of creases/mucosa.",
+        "**Blood pressure physiology** - Myxedema more often has low-normal BP without marked **orthostatic hypotension**; Addison’s commonly has **postural hypotension** from mineralocorticoid loss.",
+        "**Potassium/acid-base** - Myxedema usually does not cause **hyperkalemia** or **metabolic acidosis**; Addison’s often causes both due to aldosterone deficiency.",
+        "**Hormone pattern** - Myxedema: abnormal **TSH/free T4**; Addison’s: low **AM cortisol**, high **ACTH**, and no cortisol rise after **ACTH stimulation**.",
+        "**GI pattern** - Myxedema tends toward **constipation**; Addison’s commonly has **nausea/vomiting** and salt craving.",
+        "**Weight trend** - Myxedema often causes **weight gain**; Addison’s classically causes **weight loss**."
+      ],
+      "missingFindings": [
+        "**Neuropsychiatric manifestations (psychosis/delirium)** - Core feature of myxedema madness; not reported in this case.",
+        "**Bradycardia** - Expected in severe hypothyroidism; case instead emphasizes hypotension/orthostasis typical of Addison’s.",
+        "**Hypothermia** - Common in severe hypothyroidism; not described and would support myxedema spectrum.",
+        "**Myxedematous facies/nonpitting edema** - Characteristic of severe hypothyroidism; not present in the examination findings.",
+        "**Constipation** - Typical hypothyroid GI symptom; case highlights **vomiting** and anorexia instead.",
+        "**Thyroid labs (high TSH, low free T4)** - Required to support hypothyroidism; provided labs instead support adrenal failure (low cortisol, high ACTH, failed cosyntropin)."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Subclinical hypothyroidism",
+      "description": "**Subclinical hypothyroidism** is defined by an elevated **TSH** with a normal free **T4**, often with mild or no symptoms. It is frequently autoimmune (e.g., **Hashimoto thyroiditis**) and is usually detected on screening rather than by acute systemic illness.",
+      "keySymptoms": [
+        "**Mild fatigue** - Gradual low energy may occur, but usually without severe systemic dehydration or vomiting.",
+        "**Weight gain tendency** - Metabolic slowing more often causes weight gain, not prominent unintentional weight loss.",
+        "**Cold intolerance** - Sensitivity to cold is typical, contrasting with adrenal-related volume depletion symptoms.",
+        "**Constipation** - Reduced gut motility is common; persistent vomiting is not a typical presenting feature.",
+        "**Dry skin/hair changes** - Coarse skin and hair loss can occur, but do not explain electrolyte crises.",
+        "**Bradycardia** - Slowed heart rate may be present, unlike shock-like hypotension from adrenal failure."
+      ],
+      "clinicalReasoning": "This patient has chronic **fatigue** and **weight loss** with **postural hypotension**, **dehydration**, **salt craving**, and acute **vomiting**—a pattern strongly suggestive of **primary adrenal insufficiency** rather than mild thyroid dysfunction. The provided investigations (low 6 am **cortisol**, elevated **ACTH**, failure to respond to **cosyntropin**) directly confirm **Addison’s disease**. Additionally, **hyponatremia**, **hyperkalemia**, and **metabolic acidosis** indicate **mineralocorticoid deficiency**, which is not explained by subclinical hypothyroidism.",
+      "whyIncorrectForCase": "Subclinical hypothyroidism does not cause **hyperkalemia**, **metabolic acidosis**, or a failed **ACTH stimulation test**. It also would not typically present with marked **postural hypotension**, **salt craving**, and **hyperpigmentation**.",
+      "keyDifferencesFromCorrect": [
+        "**Hormone pattern** - Subclinical hypothyroidism: high **TSH** with normal **free T4**; Addison’s: low **cortisol** with high **ACTH**.",
+        "**Blood pressure physiology** - Subclinical hypothyroidism rarely causes severe **orthostatic hypotension**; Addison’s causes volume depletion from **aldosterone deficiency**.",
+        "**Electrolytes/acid-base** - Subclinical hypothyroidism usually has normal potassium and acid-base; Addison’s causes **hyponatremia**, **hyperkalemia**, and **metabolic acidosis**.",
+        "**Pigmentation** - Subclinical hypothyroidism does not cause **hyperpigmentation**; Addison’s does via excess **ACTH** (and **MSH** activity).",
+        "**Acute GI crisis** - Subclinical hypothyroidism is not associated with adrenal-crisis-like vomiting/dehydration; Addison’s can decompensate with **vomiting** and shock."
+      ],
+      "missingFindings": [
+        "**Elevated TSH with normal free T4** - Required to diagnose subclinical hypothyroidism; not provided and not suggested by this presentation.",
+        "**Cold intolerance** - Typical hypothyroid symptom; patient instead has features of adrenal volume depletion and crisis.",
+        "**Constipation** - Common in hypothyroidism; this case emphasizes vomiting, anorexia, and dehydration.",
+        "**Bradycardia** - Often seen in hypothyroidism; case centers on hypotension with postural drop and dehydration.",
+        "**Non-pigmented skin** - Hypothyroidism does not cause ACTH-driven pigmentation; this patient has classic hyperpigmentation."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Acute adrenal insufficiency",
+      "description": "**Acute adrenal insufficiency** (adrenal crisis) is a sudden, life-threatening deficiency of adrenal hormones causing shock and severe metabolic derangements. It typically presents abruptly (hours–days), often triggered by infection, surgery, trauma, or abrupt steroid withdrawal, and requires immediate parenteral glucocorticoids and fluids.",
+      "keySymptoms": [
+        "**Sudden severe hypotension/shock** - Rapid onset circulatory collapse with poor perfusion, often refractory without steroids.",
+        "**Severe vomiting/abdominal pain** - Acute gastrointestinal distress that can mimic an acute abdomen.",
+        "**Acute dehydration** - Rapid volume depletion from vomiting and mineralocorticoid deficiency leading to collapse.",
+        "**Altered mental status** - Confusion, lethargy, or coma due to hypoglycemia, hypotension, and electrolyte imbalance.",
+        "**Hypoglycemia** - Low glucose causing sweating, weakness, and neuroglycopenic symptoms, especially during stress.",
+        "**Hyponatremia** - Acute sodium loss and water retention causing weakness, nausea, and possible seizures.",
+        "**Hyperkalemia** - Potassium retention leading to muscle weakness and potentially dangerous cardiac arrhythmias."
+      ],
+      "clinicalReasoning": "This patient has months of **fatigue**, **weight loss**, **salt craving**, **hyperpigmentation**, and **postural hypotension**, which strongly indicates chronic **primary adrenal insufficiency (Addison’s disease)** rather than a purely acute process. The lab pattern of **hyponatremia**, **hyperkalemia**, **metabolic acidosis**, **hypoglycemia**, and **elevated ACTH** with a low 6 AM cortisol supports primary adrenal failure. Failure to rise in cortisol after **cosyntropin (ACTH) stimulation** confirms adrenal gland dysfunction. The recent vomiting likely represents an intercurrent worsening on a chronic baseline rather than a de novo acute adrenal crisis diagnosis.",
+      "whyIncorrectForCase": "The target diagnosis implies a primarily abrupt, trigger-associated presentation, but this patient has a long prodrome of classic Addison’s features (months of **fatigue**, **weight loss**, **hyperpigmentation**, **salt craving**). His findings are best explained by chronic **primary adrenal insufficiency**, with possible acute decompensation, not an isolated acute adrenal insufficiency diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - Acute adrenal insufficiency is abrupt (hours–days); Addison’s disease is chronic with months of progressive symptoms.",
+        "**Core phenotype** - Acute crisis emphasizes shock/acute collapse; Addison’s emphasizes **hyperpigmentation**, **salt craving**, and chronic weight loss.",
+        "**Diagnostic framing** - Acute adrenal insufficiency is often a complication/episode; Addison’s disease is the underlying primary disorder.",
+        "**Typical triggers** - Acute crisis commonly follows infection/surgery/trauma or steroid withdrawal; Addison’s may be autoimmune or infiltrative without an acute trigger.",
+        "**Baseline signs** - Acute crisis may occur without longstanding pigmentation/weight loss; Addison’s typically has these baseline chronic signs."
+      ],
+      "missingFindings": [
+        "**Clear acute precipitating event** - No documented infection, surgery, trauma, or abrupt steroid withdrawal to explain a primary acute crisis.",
+        "**Abrupt onset without chronic prodrome** - The presence of months-long symptoms argues against a purely acute presentation.",
+        "**Predominant shock/critical illness picture** - While hypotensive, the case is dominated by chronic Addisonian features rather than sudden catastrophic collapse."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Sick euthyroid syndrome (nonthyroidal illness state)",
+      "description": "Sick euthyroid syndrome is a transient alteration in **thyroid function tests** during acute or chronic systemic illness without intrinsic thyroid disease. It typically shows low **T3** (often with low/normal **TSH**) and resolves when the underlying illness improves.",
+      "keySymptoms": [
+        "**Underlying systemic illness** - Occurs during severe infection, trauma, surgery, starvation, or critical illness.",
+        "**No primary thyroid symptoms** - Usually lacks classic hyperthyroid or hypothyroid symptom pattern.",
+        "**Biochemical pattern (not symptom-driven)** - Diagnosed by low **T3** with variable **T4/TSH** changes.",
+        "**Reversibility** - Thyroid tests normalize after recovery from the precipitating nonthyroidal illness."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by features of **primary adrenal insufficiency**: months of **fatigue**, **weight loss**, **salt craving**, **postural hypotension**, dehydration, and hyperpigmentation. The investigation pattern (low 6 am **cortisol**, elevated **ACTH**, and failure to respond to **cosyntropin**) directly confirms Addison’s disease. Sick euthyroid syndrome is a laboratory phenomenon seen in systemic illness and would not explain the hallmark endocrine and electrolyte findings here. Therefore, labeling this as nonthyroidal illness would miss a life-threatening adrenal disorder.",
+      "whyIncorrectForCase": "Sick euthyroid syndrome does not cause **hyperpigmentation**, **salt craving**, or **ACTH-dependent** findings. The patient has definitive evidence of **primary adrenal failure** (low cortisol, high ACTH, no cortisol rise after cosyntropin), which is not explained by nonthyroidal illness.",
+      "keyDifferencesFromCorrect": [
+        "**Pathophysiology** - Sick euthyroid: altered peripheral thyroid hormone metabolism during illness; Addison’s: **adrenal cortex destruction/insufficiency** with low cortisol/aldosterone.",
+        "**Key hormones** - Sick euthyroid: abnormal **T3/T4/TSH**; Addison’s: low **cortisol** with high **ACTH** and low **aldosterone** effect.",
+        "**Skin findings** - Sick euthyroid: no characteristic pigmentation; Addison’s: **hyperpigmentation** of pressure areas, palmar creases, mucosa.",
+        "**Electrolytes/acid-base** - Sick euthyroid: no typical Na/K pattern; Addison’s: **hyponatremia**, **hyperkalemia**, **metabolic acidosis**.",
+        "**Hemodynamics** - Sick euthyroid: hypotension not a defining feature; Addison’s: **postural hypotension** and dehydration from mineralocorticoid deficiency.",
+        "**Diagnostic test** - Sick euthyroid: thyroid panel changes without gland disease; Addison’s: failed **ACTH (cosyntropin) stimulation test**."
+      ],
+      "missingFindings": [
+        "**Abnormal thyroid function tests (low T3 ± low/normal TSH)** - Required to support sick euthyroid syndrome; not provided here.",
+        "**Severe precipitating systemic illness** - Typically ICU-level illness/major stressor drives sick euthyroid; presentation instead fits chronic adrenal failure.",
+        "**Resolution with recovery** - Sick euthyroid normalizes after illness improves; this case shows persistent endocrine deficiency needing replacement."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Thyrotoxicosis/Hyperthyroidism (including Graves’ disease)",
+      "description": "**Thyrotoxicosis** is a clinical syndrome caused by excess circulating thyroid hormone, most commonly from **Graves’ disease**. It produces a hypermetabolic state with adrenergic overactivity affecting cardiovascular, neuromuscular, and gastrointestinal systems.",
+      "keySymptoms": [
+        "**Weight loss** - Unintentional weight loss despite increased appetite from increased basal metabolic rate.",
+        "**Heat intolerance** - Feeling excessively warm and sweating due to increased thermogenesis.",
+        "**Palpitations** - Awareness of rapid heartbeat from increased beta-adrenergic sensitivity and tachyarrhythmias.",
+        "**Tremor** - Fine tremor from sympathetic overactivity, often noticeable with outstretched hands.",
+        "**Anxiety/irritability** - Restlessness and emotional lability due to CNS stimulation by thyroid hormone.",
+        "**Increased bowel frequency/diarrhea** - Accelerated gut motility causing frequent stools rather than constipation.",
+        "**Proximal muscle weakness** - Difficulty climbing stairs or rising from a chair due to thyrotoxic myopathy.",
+        "**Goiter** - Diffuse thyroid enlargement (common in Graves’) sometimes with bruit from increased vascularity.",
+        "**Eye signs (Graves’ orbitopathy)** - Proptosis, lid retraction, gritty eyes from autoimmune orbital inflammation."
+      ],
+      "clinicalReasoning": "Thyrotoxicosis typically presents with hyperadrenergic symptoms (tachycardia, tremor, heat intolerance) and a hypermetabolic picture (weight loss often with increased appetite). GI symptoms may occur, but they are usually **diarrhea** or increased stool frequency rather than persistent vomiting with dehydration. Blood pressure in thyrotoxicosis often shows **systolic hypertension** with widened pulse pressure, not prominent **postural hypotension**. Electrolytes in thyrotoxicosis do not characteristically show **hyponatremia with hyperkalemia** and metabolic acidosis.",
+      "whyIncorrectForCase": "This patient’s hallmark findings—**postural hypotension**, **hyperpigmentation**, **hyponatremia**, **hyperkalemia**, **hypoglycemia**, and **elevated ACTH** with failed **cosyntropin** response—strongly indicate **primary adrenal insufficiency** rather than thyroid hormone excess. Classic thyrotoxic features such as **heat intolerance, tremor, palpitations, goiter, and ophthalmopathy** are not described.",
+      "keyDifferencesFromCorrect": [
+        "**Skin pigmentation** - Thyrotoxicosis does not cause diffuse hyperpigmentation; Addison’s has ACTH-driven pigmentation.",
+        "**Electrolytes** - Thyrotoxicosis usually lacks hyperkalemia/metabolic acidosis; Addison’s causes **hyponatremia, hyperkalemia, acidosis**.",
+        "**Blood pressure pattern** - Thyrotoxicosis often causes widened pulse pressure; Addison’s causes **hypotension** and **orthostatic drop**.",
+        "**Glucose** - Thyrotoxicosis more often causes glucose intolerance; Addison’s can cause **fasting hypoglycemia**.",
+        "**Hormonal testing** - Thyrotoxicosis shows low TSH/high T4/T3; Addison’s shows **low cortisol**, **high ACTH**, and no rise with **ACTH stimulation**.",
+        "**Salt craving** - Not typical in thyrotoxicosis; common in Addison’s due to mineralocorticoid deficiency."
+      ],
+      "missingFindings": [
+        "**Tachycardia/atrial fibrillation** - Expected in thyrotoxicosis; absence makes thyroid excess less likely.",
+        "**Heat intolerance and sweating** - Core hyperthyroid symptoms not reported in this presentation.",
+        "**Fine tremor and hyperreflexia** - Typical adrenergic signs are not described.",
+        "**Goiter/thyroid bruit** - Lack of thyroid enlargement or bruit argues against Graves’ disease.",
+        "**Graves’ eye disease** - No proptosis, lid lag, or ocular irritation reported.",
+        "**Widened pulse pressure/systolic hypertension** - Case instead shows hypotension with orthostatic component."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Cushing’s syndrome",
+      "description": "Cushing’s syndrome is a state of chronic **glucocorticoid excess** from exogenous steroids or endogenous cortisol overproduction. It causes characteristic metabolic, cardiovascular, musculoskeletal, and skin changes due to prolonged high cortisol exposure.",
+      "keySymptoms": [
+        "**Weight gain (central obesity)** - Progressive truncal fat accumulation with relatively thin limbs over months to years.",
+        "**Moon facies** - Rounded, plethoric facial appearance from fat redistribution and fluid retention.",
+        "**Dorsocervical fat pad** - 'Buffalo hump' due to abnormal fat deposition at upper back/neck.",
+        "**Proximal muscle weakness** - Difficulty rising from chair or climbing stairs due to steroid myopathy.",
+        "**Easy bruising** - Capillary fragility and dermal thinning leads to bruises with minimal trauma.",
+        "**Purple striae** - Wide violaceous abdominal striae from collagen breakdown and skin stretching.",
+        "**Hypertension** - Cortisol-mediated vascular sensitivity and mineralocorticoid effects elevate blood pressure.",
+        "**Hyperglycemia** - Increased gluconeogenesis and insulin resistance causing diabetes or impaired glucose tolerance.",
+        "**Osteoporosis** - Bone loss with fractures or back pain due to inhibited osteoblast function.",
+        "**Infections** - Immunosuppression increases risk of bacterial, fungal, and opportunistic infections.",
+        "**Mood and sleep changes** - Depression, irritability, anxiety, or insomnia from neuropsychiatric effects.",
+        "**Menstrual/androgen changes** - Oligomenorrhea and hirsutism in women from adrenal androgen excess."
+      ],
+      "clinicalReasoning": "Cushing’s syndrome typically presents with signs of **cortisol excess** such as central weight gain, **hypertension**, **hyperglycemia**, proximal myopathy, and characteristic skin changes (thin skin, bruising, purple striae). Electrolytes may show **hypokalemic metabolic alkalosis** in some etiologies (especially ectopic ACTH), rather than hyperkalemia. The case instead shows features of **cortisol and aldosterone deficiency** with weight loss, postural hypotension, dehydration, hypoglycemia, and hyperkalemic metabolic acidosis.",
+      "whyIncorrectForCase": "This patient has **weight loss**, **postural hypotension**, **hyperkalemia**, **hyponatremia**, and **low morning cortisol** with **high ACTH**, which indicates **primary adrenal insufficiency**, not cortisol excess. Cushing’s would be expected to cause weight gain, hypertension, and hyperglycemia rather than salt craving, pigmentation, and adrenal crisis-like vomiting.",
+      "keyDifferencesFromCorrect": [
+        "**Cortisol level** - Cushing’s has high cortisol; Addison’s has low cortisol (often <3 µg/dL at 6 am).",
+        "**ACTH pattern** - Cushing’s may have low ACTH (adrenal) or high ACTH (pituitary/ectopic); Addison’s has high ACTH from loss of negative feedback.",
+        "**Body habitus** - Cushing’s causes central weight gain; Addison’s causes weight loss and anorexia.",
+        "**Blood pressure** - Cushing’s commonly causes hypertension; Addison’s causes hypotension with postural drop.",
+        "**Electrolytes/acid-base** - Cushing’s may cause hypokalemia and alkalosis; Addison’s causes hyperkalemia and metabolic acidosis with hyponatremia.",
+        "**Glucose** - Cushing’s causes hyperglycemia; Addison’s can cause fasting hypoglycemia and weakness.",
+        "**Skin** - Cushing’s causes thin skin, bruising, purple striae; Addison’s causes **hyperpigmentation** (pressure areas, palmar creases, mucosa) from high ACTH.",
+        "**Dynamic testing** - Cushing’s requires cortisol suppression/production testing; Addison’s shows failed rise on **ACTH (cosyntropin) stimulation**."
+      ],
+      "missingFindings": [
+        "**Central obesity** - Absence of truncal weight gain argues strongly against Cushing’s syndrome.",
+        "**Hypertension** - Patient has hypotension with postural component, opposite of expected Cushing’s physiology.",
+        "**Hyperglycemia/diabetes** - Case suggests hypoglycemia rather than cortisol-driven hyperglycemia.",
+        "**Purple striae and easy bruising** - No evidence of thin skin, bruising, or violaceous striae typical of cortisol excess.",
+        "**Moon facies/buffalo hump** - No fat redistribution features described; instead there is wasting/weight loss.",
+        "**Hypokalemia with alkalosis** - Case shows hyperkalemia with metabolic acidosis, inconsistent with many Cushing’s etiologies."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Primary hyperparathyroidism",
+      "description": "**Primary hyperparathyroidism** is autonomous overproduction of **parathyroid hormone (PTH)**, usually from a single adenoma, causing chronic **hypercalcemia**. It classically produces renal, skeletal, and neuropsychiatric manifestations and is confirmed by elevated or inappropriately normal **PTH** in the setting of high calcium.",
+      "keySymptoms": [
+        "**Hypercalcemia symptoms** - Polyuria, polydipsia, constipation, dehydration, and confusion from elevated serum calcium levels.",
+        "**Nephrolithiasis** - Recurrent kidney stones due to hypercalciuria; may cause colicky flank pain and hematuria.",
+        "**Bone pain/fractures** - Increased bone resorption causing osteopenia, fractures, and subperiosteal bone changes.",
+        "**Neuropsychiatric changes** - Fatigue, depression, cognitive slowing, and weakness related to hypercalcemia effects.",
+        "**Gastrointestinal complaints** - Constipation, abdominal pain, nausea; sometimes pancreatitis or peptic ulcer association."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by **fatigue**, **weight loss**, **salt craving**, **postural hypotension**, **hyperpigmentation**, and biochemical features of **primary adrenal insufficiency** (e.g., **hyponatremia**, **hyperkalemia**, **metabolic acidosis**, **hypoglycemia**, and elevated **ACTH**). In contrast, **primary hyperparathyroidism** typically presents with **hypercalcemia**-driven symptoms (stones, bones, abdominal groans, psychiatric overtones) and does not cause **hyperkalemia** or **ACTH-mediated pigmentation**. The failure to increase cortisol on **ACTH (cosyntropin) stimulation testing** directly supports adrenal failure rather than a parathyroid disorder. Overall, the physiology and lab pattern align with loss of **cortisol** and **aldosterone**, not excess **PTH**.",
+      "whyIncorrectForCase": "The case shows hallmark findings of **Addison’s disease**: **hyperpigmentation**, **postural hypotension**, **hyponatremia**, **hyperkalemia**, low morning **cortisol**, and high **ACTH** with failed cosyntropin response. **Primary hyperparathyroidism** would instead be driven by **hypercalcemia** and elevated/inappropriately normal **PTH**, which are not described here.",
+      "keyDifferencesFromCorrect": [
+        "**Electrolytes** - Primary hyperparathyroidism causes **hypercalcemia** (often low phosphate), whereas Addison’s causes **hyponatremia** and **hyperkalemia**.",
+        "**Blood pressure physiology** - Primary hyperparathyroidism does not cause **aldosterone deficiency**; Addison’s causes **volume depletion** and **postural hypotension**.",
+        "**Skin findings** - No **ACTH-driven hyperpigmentation** in hyperparathyroidism; Addison’s commonly has pigmentation of creases/mucosa/pressure areas.",
+        "**Glucose** - Hyperparathyroidism is not associated with **hypoglycemia**; Addison’s can cause fasting **hypoglycemia** from cortisol deficiency.",
+        "**Dynamic testing** - Hyperparathyroidism is evaluated with **PTH–calcium** relationship; Addison’s is confirmed by **low cortisol** and failed **ACTH stimulation**."
+      ],
+      "missingFindings": [
+        "**Hypercalcemia** - Required driver of symptoms in primary hyperparathyroidism; not reported and case fits other electrolyte pattern.",
+        "**Elevated or inappropriately normal PTH** - Key diagnostic requirement; no PTH abnormality is provided.",
+        "**Hypophosphatemia** - Common biochemical accompaniment (PTH-mediated phosphate wasting); not described.",
+        "**Nephrolithiasis/nephrocalcinosis** - Typical clinical clue (stones); absent from history and exam details.",
+        "**Skeletal manifestations** - Bone pain, fragility fractures, or osteoporosis pattern expected; not present in this case."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Subclinical hyperthyroidism",
+      "description": "Subclinical hyperthyroidism is defined by a persistently low or suppressed **TSH** with normal circulating **free T4** and **T3** levels. Many patients are asymptomatic or have mild adrenergic symptoms, and the condition is often detected on routine thyroid function testing.",
+      "keySymptoms": [
+        "**Low TSH with normal T4/T3** - Biochemical hallmark; symptoms may be absent despite suppressed pituitary TSH.",
+        "**Palpitations** - Increased beta-adrenergic tone can cause awareness of heartbeat and tachyarrhythmias.",
+        "**Heat intolerance** - Mild excess thyroid effect increases thermogenesis, causing discomfort in warm environments.",
+        "**Tremor/anxiety** - Adrenergic overactivity may produce fine tremor, nervousness, and irritability.",
+        "**Weight loss** - Increased basal metabolic rate can cause weight loss, usually with preserved appetite.",
+        "**Atrial fibrillation risk** - Especially in older adults, suppressed TSH increases AF and stroke risk."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by **fatigue**, **weight loss**, **postural hypotension**, **dehydration**, **salt craving**, and **vomiting**, which strongly suggests **primary adrenal insufficiency** rather than thyroid hormone excess. The investigation pattern described—**hyponatremia**, **hyperkalemia**, **metabolic acidosis**, **hypoglycemia**, and markedly elevated **ACTH** with low morning **cortisol** and failed **cosyntropin** response—localizes pathology to the adrenal cortex. Subclinical hyperthyroidism is primarily a biochemical diagnosis and does not explain the electrolyte pattern or ACTH–cortisol findings. Overall, the case fits an **Addisonian** picture, potentially progressing to **adrenal crisis** given vomiting and inability to work.",
+      "whyIncorrectForCase": "Subclinical hyperthyroidism does not cause **hyperkalemia**, **metabolic acidosis**, or a failed **ACTH stimulation test**; these point to adrenal failure. The patient’s **hyperpigmentation**, **salt craving**, and **orthostatic hypotension** are classic for **Addison’s disease**, not thyroid dysfunction.",
+      "keyDifferencesFromCorrect": [
+        "**Electrolytes** - Subclinical hyperthyroidism typically has normal sodium/potassium; Addison’s causes **hyponatremia** and **hyperkalemia**.",
+        "**Blood pressure** - Subclinical hyperthyroidism may cause systolic hypertension or tachycardia; Addison’s causes **hypotension** with **postural drop**.",
+        "**Skin findings** - Hyperthyroidism may cause warm, moist skin; Addison’s causes **hyperpigmentation** of pressure areas and mucosa.",
+        "**Glucose** - Subclinical hyperthyroidism does not cause fasting **hypoglycemia**; Addison’s can due to **cortisol deficiency**.",
+        "**Hormonal axis** - Subclinical hyperthyroidism is **low TSH** with normal T4/T3; Addison’s is **low cortisol** with high **ACTH** and no cosyntropin response.",
+        "**GI symptoms mechanism** - Hyperthyroidism more often causes increased bowel frequency; Addison’s can cause **nausea/vomiting** and abdominal pain, especially in crisis."
+      ],
+      "missingFindings": [
+        "**Suppressed TSH** - Required to diagnose subclinical hyperthyroidism; not provided and not suggested by adrenal-pattern labs.",
+        "**Normal free T4 and T3** - Needed to confirm “subclinical” status; absent in this case description.",
+        "**Tachycardia/palpitations** - Common hyperthyroid features; case emphasizes **hypotension** and dehydration instead.",
+        "**Heat intolerance and tremor** - Typical adrenergic symptoms; not reported in the history or examination.",
+        "**Goiter or thyroid nodules** - Often present in Graves/toxic nodular disease; no thyroid enlargement described.",
+        "**Atrial fibrillation** - Important complication in older adults; not mentioned and does not explain electrolyte abnormalities."
+      ]
+    }
+  ]
+}

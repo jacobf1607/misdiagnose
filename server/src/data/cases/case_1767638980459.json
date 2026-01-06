@@ -1,0 +1,538 @@
+{
+  "persona": {
+    "name": "Vijaya Deshmukh",
+    "age": 62,
+    "gender": "Female",
+    "occupation": "Software Engineer in Bangalore",
+    "background": "She works long hours with irregular meals and recently had a hospital admission for a systemic infection. Family members report a recent decline in her cognition and mood.",
+    "lifestyle": {
+      "activityLevel": "low",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "detail-oriented",
+      "anxious",
+      "reserved"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Myxedema Madness (severe hypothyroidism with neuropsychiatric manifestations)",
+      "description": "Severe hypothyroidism presenting with hypothermia and neuropsychiatric manifestations such as depression; rarely in elderly, dementia/psychosis/confusion/disorientation with delusions/hallucinations; may develop shortly after starting thyroid hormone replacement."
+    },
+    {
+      "id": "d2",
+      "name": "Subclinical Hypothyroidism",
+      "description": "Increased serum TSH with normal serum free T4; prevalent in women and elderly; can have neuropsychiatric manifestations and increased risk for Alzheimer disease."
+    },
+    {
+      "id": "d3",
+      "name": "Sick Euthyroid Syndrome/Nonthyroid Illness State (NTIS)",
+      "description": "Thyroid function changes in systemic illness/surgery/fasting not caused by primary thyroid or pituitary dysfunction; commonly low T3; TSH usually normal; treatment with thyroxine is not recommended."
+    },
+    {
+      "id": "d4",
+      "name": "Addison’s Disease (Primary Adrenal Insufficiency)",
+      "description": "Chronic adrenocortical insufficiency with prominent fatigue and weight loss; may have postural hypotension and salt craving; pigmentation is nearly always present in primary (not secondary)."
+    },
+    {
+      "id": "d5",
+      "name": "Acute Adrenal Crisis (Addisonian Crisis)",
+      "description": "Acute presentation with hypotension and circulatory failure/shock out of proportion to current illness, dehydration, acute abdomen, unexplained hypoglycemia, and unexplained fever."
+    },
+    {
+      "id": "d6",
+      "name": "Cushing’s Syndrome",
+      "description": "Features include central obesity, moon face, buffalo hump, hypertension, purplish striae, bruising, proximal myopathy, glucose intolerance/diabetes, and neuropsychiatric symptoms (depression/euphoria/psychosis/irritability)."
+    },
+    {
+      "id": "d7",
+      "name": "Ectopic ACTH Secretion",
+      "description": "May cause impaired glucose tolerance (gluconeogenesis), hypokalemic alkalosis (mineralocorticoid activity of cortisol), and skin pigmentation."
+    },
+    {
+      "id": "d8",
+      "name": "Primary Hyperparathyroidism",
+      "description": "Often asymptomatic hypercalcemia; classical symptoms include 'moans, bones, stones, abdominal groans' with psychiatric manifestations (lethargy, fatigue, depression, memory loss, confusion, stupor, coma), renal stones/polyuria/polydipsia, constipation/nausea/vomiting/peptic ulcers/pancreatitis."
+    },
+    {
+      "id": "d9",
+      "name": "Subclinical Hyperthyroidism",
+      "description": "Normal free T4 and T3 with subnormal TSH (<0.5 mU/L); may normalize or progress; cardiac effects include resting tachycardia and atrial fibrillation; noncardiac effects include osteoporosis and increased fracture risk; may be associated with dementia."
+    },
+    {
+      "id": "d10",
+      "name": "Type 2 Diabetes Mellitus",
+      "description": "Gradual onset over months to years with polyuria, polydipsia, nocturia, blurred vision, unexplained weakness or weight loss; often detected on routine blood/urine testing; can present with chronic complications."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "“I’ve been feeling very low and confused lately, and my family says I’m not myself. I also feel unusually cold.”",
+  "medicalHistory": "Recent hospitalization for systemic illness (infection) with poor oral intake. Family reports she recently started thyroid hormone replacement and soon after developed worsening confusion.",
+  "symptoms": "Hypothermia with neuropsychiatric manifestations: depression; in an elderly patient with severe hypothyroidism she has become confused and disoriented with striking hallucinations and delusions. Symptoms began shortly after starting thyroid hormone replacement.\n\nFrom textbook: ia\n\n1016 CHAPTER 13: Endocrinology\n\nMyxedema Madness\nz Patient presents with hypothermia and neuropsychiatric manifestations.\nz Neuropsychiatric manifestations: Include:\n\n Depression is common in hypothyroidism.\n Rarely, elderly patient with severe hypothyroidism may become frankly demented, psychotic, confused, disoriented,\n\nsometimes with striking delusions and hallucinations.\nz It may develop shortly after starting T replacement.\n\n4\nz Laboratory findings:\n\n Hypoglycemia and hyponatremia, i",
+  "relevantFindings": "Laboratory findings consistent with severe hypothyroidism: hyponatremia, hypoglycemia, increased CO2, decreased WBC count and hematocrit, increased CPK. ECG shows reduced voltage. Blood gases reveal respiratory acidosis with hypoxia and hypercapnia. EEG shows slow waves with decreased amplitude (triphasic waves may be present). CSF analysis shows elevated protein (<100 mg/dL).\n\nFrom textbook: ia\n\n1016 CHAPTER 13: Endocrinology\n\nMyxedema Madness\nz Patient presents with hypothermia and neuropsychiatric manifestations.\nz Neuropsychiatric manifestations: Include:\n\n Depression is common in hypothyroidism.\n Rarely, elderly patient with severe hypothyroidism may become frankly demented, psychotic, confused, disoriented,\n\nsometimes with striking delusions and hallucinations.\nz It may develop shortly after starting T replacement.\n\n4\nz Laboratory findings:\n\n Hypoglycemia and hyponatremia, i",
+  "redHerrings": "Recent systemic illness could suggest sick euthyroid syndrome (NTIS). Confusion with low sodium and low glucose could also suggest acute adrenal crisis. Psychiatric symptoms and memory issues could point toward primary hyperparathyroidism ('moans') or subclinical hypothyroidism. Palpitations/tachycardia are not reported, but if present would raise consideration of subclinical hyperthyroidism.",
+  "id": "case_1767638980459",
+  "domain": "endocrinology",
+  "idealPathway": {
+    "diseaseName": "Myxedema Madness (severe hypothyroidism with neuropsychiatric manifestations)",
+    "domain": "endocrinology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about feeling unusually cold and/or documented low body temperature (hypothermia).",
+        "reasoning": "Myxedema madness presents with hypothermia and is a key hallmark of severe hypothyroid decompensation.",
+        "expectedFinding": "History of feeling unusually cold or noted low temperature consistent with hypothermia.",
+        "importance": "critical",
+        "textbookReference": "“Myxedema Madness: Patient presents with hypothermia and neuropsychiatric manifestations.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about neuropsychiatric symptoms: depression, confusion, disorientation, dementia, psychosis, delusions, hallucinations.",
+        "reasoning": "Neuropsychiatric manifestations define myxedema madness and can range from depression to frank psychosis/dementia, especially in elderly patients with severe hypothyroidism.",
+        "expectedFinding": "Depression or (rarely) frank dementia/psychosis with confusion, disorientation, delusions and hallucinations.",
+        "importance": "critical",
+        "textbookReference": "“Rarely, elderly patient with severe hypothyroidism may become frankly demented, psychotic, confused, disoriented, sometimes with striking delusions and hallucinations.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about recent initiation of thyroid hormone (T4) replacement and timing of symptom onset after starting therapy.",
+        "reasoning": "Myxedema madness may develop shortly after starting T4 replacement, so temporal association helps support the diagnosis and avoid misattribution to primary psychiatric illness.",
+        "expectedFinding": "Neuropsychiatric symptoms developing shortly after starting T4 replacement.",
+        "importance": "important",
+        "textbookReference": "“It may develop shortly after starting T4 replacement.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about symptoms/signs of hypothyroidism: lethargy/somnolence, weight gain, cold intolerance, hoarse voice, cognitive dysfunction, constipation, depression/psychosis.",
+        "reasoning": "Myxedema madness occurs in the context of severe hypothyroidism; eliciting broader hypothyroid symptom burden supports the underlying endocrine diagnosis.",
+        "expectedFinding": "Multiple hypothyroid symptoms (e.g., lethargy/somnolence, weight gain, cold intolerance, cognitive dysfunction, constipation, depression/psychosis).",
+        "importance": "important",
+        "textbookReference": "“Clinical features of hypothyroidism… Lethargy, somnolence, weight gain… Cold intolerance… cognitive dysfunction… constipation… depression, psychosis.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about possible precipitating illness/events and drug exposures in a poorly controlled hypothyroid patient (infection, myocardial infarction, hypothermia, surgery; drugs such as amiodarone, β-blockers, diuretics, anesthetic agents, barbiturates, lithium, narcotics, phenothiazines).",
+        "reasoning": "Severe hypothyroid decompensation can be precipitated by acute events or drugs; identifying these supports diagnosis and guides evaluation for triggers.",
+        "expectedFinding": "Recent precipitating event/illness or exposure to listed drugs.",
+        "importance": "helpful",
+        "textbookReference": "“It can be precipitated by an acute event… such as infection, myocardial infarction, hypothermia, surgery, drugs (amiodarone, β-blockers… lithium, narcotics, and phenothiazines)…”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Measure core temperature and assess for cool, pale skin.",
+        "reasoning": "Hypothermia is central to myxedema coma/madness; cool pale skin is a warning sign in severe hypothyroid decompensation.",
+        "expectedFinding": "Hypothermia with cool, pale skin.",
+        "importance": "critical",
+        "textbookReference": "“Warning signs: Presence of cool pale skin (due to hypothermia—body temperature may be as low as 25°C)”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Perform a focused mental status examination for altered sensorium and neuropsychiatric features (confusion, disorientation, psychosis).",
+        "reasoning": "Myxedema madness is characterized by neuropsychiatric manifestations and may overlap with decreased mentation seen in severe hypothyroidism.",
+        "expectedFinding": "Altered sensorium and/or confusion, disorientation, psychosis.",
+        "importance": "important",
+        "textbookReference": "“Myxedema Madness… neuropsychiatric manifestations… confused, disoriented… delusions and hallucinations.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess cardiovascular status for bradycardia and hypotension.",
+        "reasoning": "Severe hypothyroidism/myxedema decompensation is associated with bradycardia and hypotension, supporting severity assessment.",
+        "expectedFinding": "Bradycardia and/or hypotension.",
+        "importance": "important",
+        "textbookReference": "“Other features are bradycardia… hypotension…”"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Examine for myxedema facies and nonpitting edema (hands/feet/eyelids), including periorbital puffiness.",
+        "reasoning": "Myxedema (nonpitting edema) and myxedema facies support the diagnosis of severe hypothyroidism.",
+        "expectedFinding": "Nonpitting edema of hands/feet/eyelids and/or myxedema facies (periorbital puffiness, scanty eyebrows, facial pallor/lemon-yellow tint, purplish lips, malar flush).",
+        "importance": "helpful",
+        "textbookReference": "“Myxedema (nonpitting edema of the skin of hands, feet and eyelids)… Myxedema facies… striking periorbital puffiness… purplish lips and malar flush.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order serum TSH.",
+        "reasoning": "TSH is the investigation of choice for hypothyroidism; high TSH supports primary hypothyroidism underlying myxedema madness.",
+        "expectedFinding": "High serum TSH (usually high; sometimes only slightly elevated in severe decompensation).",
+        "importance": "critical",
+        "textbookReference": "“Serum TSH: It is the investigation of choice. High TSH level confirms primary hypothyroidism.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order serum free T4.",
+        "reasoning": "Free T4 confirms hypothyroid state and is specifically noted to be low in myxedema coma (severe hypothyroidism).",
+        "expectedFinding": "Low serum free T4.",
+        "importance": "important",
+        "textbookReference": "“Serum free T4 is low…”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order serum sodium and blood glucose (RBS).",
+        "reasoning": "Myxedema madness is associated with hyponatremia and hypoglycemia; these also indicate severity and need urgent correction.",
+        "expectedFinding": "Hyponatremia and/or hypoglycemia.",
+        "importance": "important",
+        "textbookReference": "“Laboratory findings: Hypoglycemia and hyponatremia…”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order serum creatine phosphokinase (CPK).",
+        "reasoning": "CPK is increased in myxedema madness and is often markedly raised in severe hypothyroidism.",
+        "expectedFinding": "Increased CPK (often markedly raised).",
+        "importance": "helpful",
+        "textbookReference": "“Laboratory findings… increased CPK.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order ECG and arterial blood gases (ABG).",
+        "reasoning": "Myxedema madness can show reduced ECG voltage; blood gases often reveal respiratory acidosis with hypoxia and hypercapnia, supporting diagnosis and severity (hypoventilation).",
+        "expectedFinding": "ECG: reduced voltage; ABG: respiratory acidosis with hypoxia and hypercapnia.",
+        "importance": "helpful",
+        "textbookReference": "“Reduced ECG voltage, blood gases often reveal respiratory acidosis, hypoxia and hypercapnia.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Myxedema coma (severe hypothyroidism with decreased mentation)",
+        "howToRuleOut": "Assess for hallmark features of myxedema coma (decreased mentation and hypothermia) and other systemic features (bradycardia, hypotension, hypoventilation, hyponatremia, hypoglycemia). Myxedema madness emphasizes hypothermia with neuropsychiatric manifestations (depression to psychosis/dementia).",
+        "textbookReference": "“The hallmarks of myxedema coma are decreased mentation and hypothermia… Myxedema Madness: Patient presents with hypothermia and neuropsychiatric manifestations.”"
+      },
+      {
+        "name": "Sick euthyroid syndrome / Nonthyroid illness state (NTIS)",
+        "howToRuleOut": "Consider systemic illness/surgery/fasting context; thyroid tests may show variable T4 and usually normal TSH influenced by illness; treatment with thyroxine is not recommended (unlike true hypothyroidism).",
+        "textbookReference": "“Changes in thyroid function in the setting of systemic illness… referred to as the nonthyroidal illness syndrome… Serum TSH is usually normal… Treatment with thyroxine is not recommended.”"
+      },
+      {
+        "name": "Subclinical hypothyroidism",
+        "howToRuleOut": "Check thyroid function tests: subclinical hypothyroidism has increased TSH with normal free T4; myxedema madness implies severe hypothyroidism with low free T4 and systemic/lab derangements (e.g., hypothermia, hyponatremia, hypoglycemia).",
+        "textbookReference": "“Subclinical hypothyroidism is defined as an increased serum TSH in the presence of a normal serum free T4.”"
+      }
+    ],
+    "diagnosticApproach": "Suspect myxedema madness in an older patient presenting with hypothermia plus neuropsychiatric manifestations (depression; rarely dementia/psychosis with confusion, disorientation, delusions/hallucinations), including cases occurring shortly after starting T4 replacement. Perform focused examination for hypothermia (cool pale skin), altered sensorium, and supportive severe hypothyroid signs (bradycardia, hypotension, nonpitting edema/myxedema facies). Order cost-effective tests first: serum TSH (investigation of choice) and free T4 to confirm hypothyroidism, then screen for typical associated abnormalities (serum sodium and blood glucose; CPK). Use ECG and ABG to identify reduced voltage and respiratory acidosis/hypoxia/hypercapnia. Differentiate from NTIS (systemic illness with usually normal TSH; thyroxine not recommended) and from subclinical hypothyroidism (normal free T4).",
+    "textbookSources": [
+      "and by thyroid function tests after 6 weeks on a steady dose.\n– Complete suppression of TSH should be avoided because it may cause atrial fibrillation and osteoporosis.\n– Lifelong therapy is needed.\n\n...",
+      "ia\n\n1016 CHAPTER 13: Endocrinology\n\nMyxedema Madness\nz Patient presents with hypothermia and neuropsychiatric manifestations.\nz Neuropsychiatric manifestations: Include:\n\n Depression is common in hyp..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Myxedema Madness (severe hypothyroidism with neuropsychiatric manifestations)",
+      "description": "Myxedema madness is a neuropsychiatric presentation of severe **hypothyroidism**, often in older adults, characterized by hypothermia and prominent mental status changes. It can include depression, confusion, disorientation, and sometimes frank psychosis with **delusions** and **hallucinations**, and may appear shortly after starting **thyroid hormone replacement**.",
+      "keySymptoms": [
+        "**Hypothermia** - Reflects reduced metabolic heat production in severe hypothyroidism; signals life-threatening decompensation.",
+        "**Depression** - Common hypothyroid manifestation; supports endocrine cause of mood symptoms rather than primary psychiatry.",
+        "**Confusion and disorientation** - Indicates encephalopathy from severe hypothyroidism, often worsening in elderly patients.",
+        "**Hallucinations and delusions** - Psychotic features can occur in myxedema madness, distinguishing it from simple depression.",
+        "**Symptoms after starting thyroid replacement** - Myxedema madness may emerge shortly after **T4/T3** initiation, matching classic timing.",
+        "**Hyponatremia** - Due to impaired free-water clearance/ADH dysregulation in hypothyroidism; contributes to confusion.",
+        "**Hypoglycemia** - Reduced gluconeogenesis and slowed metabolism in severe hypothyroidism; worsens neurocognitive symptoms.",
+        "**Hypercapnia and hypoxia** - Hypoventilation from hypothyroid respiratory drive depression causes CO2 retention and encephalopathy.",
+        "**Increased CO2/respiratory acidosis** - Supports hypoventilation physiology typical of severe hypothyroidism-related respiratory failure.",
+        "**Elevated CPK** - Suggests hypothyroid myopathy/rhabdomyolysis tendency; supportive lab clue in severe hypothyroidism.",
+        "**Low-voltage ECG** - Classic supportive finding in myxedema (often with effusions/edema), reinforcing severe hypothyroid state."
+      ],
+      "clinicalReasoning": "The patient’s hypothermia plus prominent neuropsychiatric changes (depression progressing to confusion, disorientation, hallucinations, and delusions) strongly matches **myxedema madness**, a severe **hypothyroidism** presentation seen especially in older adults. The timing—symptoms beginning shortly after starting **thyroid hormone replacement**—is specifically described in this condition. Supporting laboratory and physiologic findings (hyponatremia, hypoglycemia, hypercapnia with respiratory acidosis/hypoxia, elevated CPK, and low-voltage ECG) align with severe hypothyroid decompensation. Together, these features make myxedema madness the best unifying diagnosis over primary psychiatric disease or isolated delirium."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Subclinical Hypothyroidism",
+      "description": "**Subclinical hypothyroidism** is mild thyroid failure defined by elevated **TSH** with normal free **T4**. Many patients are asymptomatic or have subtle, nonspecific symptoms and do not develop severe systemic decompensation.",
+      "keySymptoms": [
+        "**Mild fatigue** - Low energy without major cognitive impairment or psychosis; often intermittent and nonspecific.",
+        "**Weight gain** - Small, gradual increase in weight due to reduced metabolic rate; not rapid or profound.",
+        "**Cold intolerance** - Feeling colder than others, typically mild; not associated with **hypothermia**.",
+        "**Constipation** - Slower bowel movements, usually manageable; not accompanied by severe metabolic derangements.",
+        "**Dry skin** - Coarse, dry skin changes that develop slowly; not a marker of acute decompensation.",
+        "**Menstrual changes** - Irregular or heavy menses may occur; less relevant postmenopausally in older adults."
+      ],
+      "clinicalReasoning": "This patient has **hypothermia** with prominent **neuropsychiatric manifestations** (confusion, disorientation, hallucinations, delusions) and multiple laboratory/physiologic abnormalities (e.g., **hyponatremia**, **hypoglycemia**, hypercapnia/respiratory acidosis, elevated **CPK**, low-voltage ECG). These findings indicate severe, systemic hypothyroid decompensation rather than a mild biochemical abnormality. The timing—symptoms beginning shortly after starting thyroid hormone replacement—is a classic association described with **myxedema madness**. Therefore, labeling this as **subclinical hypothyroidism** does not match the severity or pattern of illness.",
+      "whyIncorrectForCase": "**Subclinical hypothyroidism** typically has normal free **T4** and does not cause **hypothermia**, psychosis, or respiratory failure physiology. This patient’s profound mental status changes plus multisystem abnormalities are far more consistent with **myxedema madness** from severe hypothyroidism.",
+      "keyDifferencesFromCorrect": [
+        "**Severity of thyroid dysfunction** - Subclinical: elevated **TSH** with normal **T4**; Myxedema madness: severe hypothyroidism with systemic decompensation.",
+        "**Mental status** - Subclinical: none or mild cognitive slowing; Myxedema madness: **confusion**, **disorientation**, **delusions**, **hallucinations**.",
+        "**Temperature regulation** - Subclinical: mild cold intolerance; Myxedema madness: true **hypothermia**.",
+        "**Metabolic labs** - Subclinical: usually normal sodium/glucose; Myxedema madness: **hyponatremia** and **hypoglycemia** are characteristic.",
+        "**Respiratory physiology** - Subclinical: no ventilatory failure; Myxedema madness: **hypoventilation** with **hypercapnia** and **respiratory acidosis**.",
+        "**Cardiac/other markers** - Subclinical: typically no low-voltage ECG or marked **CPK** rise; Myxedema madness: reduced ECG voltage and elevated **CPK** can occur.",
+        "**Treatment relationship** - Subclinical: symptoms not classically triggered by starting therapy; Myxedema madness: may develop shortly after initiating **thyroid hormone replacement**."
+      ],
+      "missingFindings": [
+        "**Normal free T4** - Required for subclinical hypothyroidism; severe systemic features suggest low **T4** instead.",
+        "**Absence of severe systemic decompensation** - Subclinical disease should not produce **hypothermia**, psychosis, or respiratory acidosis.",
+        "**Stable electrolytes and glucose** - Subclinical hypothyroidism usually lacks **hyponatremia** and **hypoglycemia** seen here."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Sick Euthyroid Syndrome/Nonthyroid Illness State (NTIS)",
+      "description": "**Sick Euthyroid Syndrome (NTIS)** is an adaptive alteration in thyroid hormone levels during acute or chronic systemic illness without intrinsic thyroid gland failure. Typical patterns include low **T3** (± low **T4**) with **TSH** that is low/normal early and may rise slightly during recovery, and treatment is usually supportive rather than thyroid hormone replacement.",
+      "keySymptoms": [
+        "**Systemic illness context** - Occurs during severe infection, trauma, surgery, or organ failure causing thyroid test changes.",
+        "**Low T3 symptoms absent** - Patients usually lack classic hypothyroid signs; symptoms reflect underlying illness instead.",
+        "**No primary thyroid failure** - Clinical picture is dominated by critical illness, not progressive hypothyroid features."
+      ],
+      "clinicalReasoning": "NTIS is primarily a laboratory phenomenon seen in significant non-thyroidal systemic illness, with thyroid tests altered by cytokines, reduced peripheral conversion of **T4 to T3**, and changes in binding proteins. It does not typically produce profound **hypothermia** or prominent neuropsychiatric syndromes as a primary manifestation. In this case, the patient has features consistent with severe hypothyroidism physiology (e.g., **hyponatremia**, **hypoglycemia**, **hypercapnia/respiratory acidosis**, low-voltage ECG) and a classic neuropsychiatric presentation. The timing shortly after starting thyroid hormone replacement is also described with **myxedema madness**, not NTIS.",
+      "whyIncorrectForCase": "This patient’s presentation is driven by severe hypothyroidism with **hypothermia** and frank **psychosis/confusion**, which is not typical for NTIS. NTIS would be expected in the setting of a major systemic illness and usually lacks striking hypothyroid clinical signs and the characteristic severe hypothyroid lab/physiology pattern seen here.",
+      "keyDifferencesFromCorrect": [
+        "**Primary process** - NTIS is thyroid test alteration from illness; **myxedema madness** is true severe hypothyroidism with CNS effects.",
+        "**Temperature** - NTIS does not usually cause marked **hypothermia**; myxedema states commonly present with **hypothermia**.",
+        "**Neuropsychiatric profile** - NTIS rarely causes primary **delusions/hallucinations**; myxedema can cause **psychosis/delirium**.",
+        "**Electrolytes/glucose** - NTIS has variable labs; myxedema commonly shows **hyponatremia** and **hypoglycemia**.",
+        "**Ventilation/ABG** - NTIS does not classically cause **hypercapnic respiratory acidosis**; myxedema can cause hypoventilation with **hypercapnia**.",
+        "**Trigger with thyroid replacement** - NTIS is not characteristically precipitated after starting thyroid hormone; myxedema madness may develop shortly after **T replacement**."
+      ],
+      "missingFindings": [
+        "**Severe systemic non-thyroidal illness** - Lack of a clear precipitating critical illness makes NTIS unlikely as primary diagnosis.",
+        "**Typical NTIS thyroid pattern** - Expected low **T3** with low/normal **TSH** (± low **T4**) is not provided and would be needed.",
+        "**Absence of classic hypothyroid physiology** - Presence of **hypothermia**, **hyponatremia**, **hypoglycemia**, and **hypercapnia** argues against NTIS."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Addison’s Disease (Primary Adrenal Insufficiency)",
+      "description": "Addison’s disease is **primary adrenal insufficiency** due to destruction or dysfunction of the adrenal cortex, causing deficient **cortisol** and often **aldosterone**. It typically presents with chronic fatigue, weight loss, **orthostatic hypotension**, and characteristic **hyperpigmentation**, and can decompensate into an **adrenal crisis** during stress.",
+      "keySymptoms": [
+        "**Fatigue/weakness** - Progressive low energy from **cortisol deficiency** and impaired stress response.",
+        "**Weight loss/anorexia** - Chronic catabolic state and reduced appetite in untreated adrenal insufficiency.",
+        "**Orthostatic hypotension** - **Aldosterone deficiency** causes salt wasting, volume depletion, and postural dizziness.",
+        "**Hyperpigmentation** - Elevated **ACTH** increases melanocyte stimulation, darkening skin and mucosa.",
+        "**GI symptoms** - Nausea, vomiting, and abdominal pain may occur, especially in adrenal crisis.",
+        "**Salt craving** - Compensatory behavior from chronic sodium loss due to mineralocorticoid deficiency.",
+        "**Hyperkalemia** - Reduced renal potassium excretion from low **aldosterone** (primary, not secondary).",
+        "**Hyponatremia** - Salt wasting and increased **ADH** can lower serum sodium levels.",
+        "**Hypoglycemia** - Low **cortisol** impairs gluconeogenesis, especially in fasting or illness."
+      ],
+      "clinicalReasoning": "This patient’s dominant syndrome is hypothermia with prominent **neuropsychiatric manifestations** (depression, confusion, disorientation, hallucinations/delusions) occurring shortly after starting **thyroid hormone replacement**, which is classic for **Myxedema Madness** (severe hypothyroidism with psychosis). While Addison’s can cause **hyponatremia** and **hypoglycemia**, it does not characteristically cause hypothermia with severe psychosis temporally linked to thyroid replacement. The provided supportive data—**increased CO2**, **respiratory acidosis with hypoxia/hypercapnia**, **elevated CPK**, low-voltage ECG, slow-wave EEG, and elevated CSF protein—align far more strongly with severe hypothyroidism than with primary adrenal failure.",
+      "whyIncorrectForCase": "Addison’s disease typically features **hyperpigmentation**, **hyperkalemia**, and **hypotension/volume depletion**, none of which are described in this case. The hallmark clue here is psychosis/confusion developing shortly after **thyroid replacement** in an elderly patient with severe hypothyroidism—classic for **Myxedema Madness**, not Addison’s.",
+      "keyDifferencesFromCorrect": [
+        "**Trigger/temporal pattern** - Addison’s worsens with physiologic stress; **Myxedema Madness** may appear after starting **T4/T3**.",
+        "**Temperature regulation** - Addison’s is not classically hypothermic; severe hypothyroidism often causes **hypothermia**.",
+        "**Electrolytes** - Addison’s commonly causes **hyperkalemia**; **Myxedema Madness** more often shows **hyponatremia** without hyperkalemia.",
+        "**Cardiorespiratory findings** - Addison’s does not cause **hypercapnic respiratory acidosis**; hypothyroidism can cause hypoventilation with **CO2 retention**.",
+        "**Cardiac testing** - Addison’s lacks typical low-voltage ECG; hypothyroidism can show **reduced voltage** and bradycardic features.",
+        "**Muscle enzymes** - Addison’s does not typically raise **CPK**; hypothyroidism often increases **CPK** from myopathy.",
+        "**Neuropsychiatric profile** - Addison’s may cause fatigue/apathy; **Myxedema Madness** can cause frank **psychosis** with hallucinations/delusions."
+      ],
+      "missingFindings": [
+        "**Hyperpigmentation** - Absence of ACTH-driven skin/mucosal darkening makes primary adrenal failure unlikely.",
+        "**Hyperkalemia** - Not reported; primary adrenal insufficiency usually elevates potassium via low **aldosterone**.",
+        "**Orthostatic hypotension/shock** - No postural symptoms or hemodynamic collapse described, expected in Addison’s/adrenal crisis.",
+        "**Volume depletion/dehydration** - Not mentioned; Addison’s typically causes salt wasting and dehydration.",
+        "**Eosinophilia** - Often present in adrenal insufficiency; not provided among case labs.",
+        "**Autoimmune context** - No history of autoimmune disease (e.g., autoimmune thyroiditis, type 1 diabetes) suggesting polyglandular syndrome."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Acute Adrenal Crisis (Addisonian Crisis)",
+      "description": "An **acute adrenal crisis** is a life-threatening state of **cortisol deficiency** (often with **aldosterone deficiency**) causing shock, electrolyte derangements, and hypoglycemia. It is typically triggered by infection, surgery, trauma, or abrupt steroid withdrawal in patients with known or unrecognized adrenal insufficiency.",
+      "keySymptoms": [
+        "**Refractory hypotension/shock** - Profound low blood pressure unresponsive to fluids due to cortisol and aldosterone deficiency.",
+        "**Severe weakness/fatigue** - Marked asthenia from glucocorticoid deficiency and volume depletion.",
+        "**Nausea/vomiting/abdominal pain** - Prominent GI symptoms that can mimic an acute abdomen.",
+        "**Fever** - Common trigger-related finding, especially with infection precipitating crisis.",
+        "**Altered mental status** - Confusion, lethargy, or coma from hypoglycemia, hypotension, and metabolic disturbance.",
+        "**Hypoglycemia** - Low glucose due to impaired gluconeogenesis from cortisol deficiency.",
+        "**Hyperkalemia** - Elevated potassium from mineralocorticoid deficiency (primary adrenal insufficiency).",
+        "**Hyponatremia** - Low sodium from aldosterone loss and increased ADH driven by cortisol deficiency."
+      ],
+      "clinicalReasoning": "This patient has **hypothermia** with prominent **neuropsychiatric symptoms** (depression, confusion, hallucinations/delusions) and a pattern of labs described for severe hypothyroidism (e.g., **increased CO2**, **respiratory acidosis with hypercapnia**, **elevated CPK**, **low-voltage ECG**). While **hyponatremia** and **hypoglycemia** can occur in adrenal crisis, the overall syndrome is dominated by findings classic for **myxedema-related** hypoventilation and metabolic slowing. Additionally, symptoms began shortly after starting **thyroid hormone replacement**, which is a known setting for **Myxedema Madness** rather than a primary presentation of adrenal crisis.",
+      "whyIncorrectForCase": "An **acute adrenal crisis** typically presents with **hypotension/shock**, prominent **GI symptoms**, and often **hyperkalemia**, none of which are emphasized in this case. The hallmark combination here—**hypothermia**, **psychosis/delirium**, **hypoventilation with hypercapnia**, **elevated CPK**, and **low-voltage ECG**—fits **Myxedema Madness** far better than adrenal crisis.",
+      "keyDifferencesFromCorrect": [
+        "**Temperature pattern** - Adrenal crisis often has **fever** (triggered by infection); **Myxedema Madness** features **hypothermia**.",
+        "**Respiratory findings** - Adrenal crisis does not classically cause **hypoventilation with hypercapnia**; severe hypothyroidism can cause **CO2 retention** and **respiratory acidosis**.",
+        "**Cardiac/EKG clues** - Adrenal crisis is not defined by **low-voltage ECG**; myxedema can show **reduced voltage** and bradycardic physiology.",
+        "**Muscle enzymes** - **Elevated CPK** is typical in hypothyroidism; it is not a defining feature of adrenal crisis.",
+        "**Neuropsychiatric signature** - **Delusions/hallucinations** shortly after starting **T replacement** is described in **Myxedema Madness**; adrenal crisis more often causes nonspecific lethargy/confusion from shock/hypoglycemia."
+      ],
+      "missingFindings": [
+        "**Hypotension/shock** - Lack of documented hemodynamic collapse makes adrenal crisis unlikely as primary diagnosis.",
+        "**Hyperkalemia** - Expected in primary adrenal crisis from aldosterone deficiency; not reported in this case.",
+        "**Severe dehydration/volume depletion** - Typical in adrenal crisis due to salt wasting; not described here.",
+        "**GI crisis symptoms** - Prominent vomiting/abdominal pain are common in adrenal crisis; absent from presentation.",
+        "**Clear precipitating stressor** - Infection, surgery, trauma, or steroid withdrawal often triggers crisis; not indicated."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Cushing’s Syndrome",
+      "description": "Cushing’s syndrome is a state of chronic **glucocorticoid excess** from exogenous steroids or endogenous cortisol overproduction. It classically causes progressive metabolic, cardiovascular, skin, and musculoskeletal changes, often with mood disturbance rather than hypothermic delirium.",
+      "keySymptoms": [
+        "**Central obesity** - Truncal weight gain with relatively thin limbs due to cortisol-driven fat redistribution.",
+        "**Moon facies** - Rounded, plethoric face from fat deposition and fluid retention.",
+        "**Dorsocervical fat pad** - \"Buffalo hump\" from abnormal fat accumulation over upper back and neck.",
+        "**Purple striae** - Wide violaceous abdominal striae from dermal collagen breakdown and skin thinning.",
+        "**Proximal muscle weakness** - Difficulty rising from chair or climbing stairs due to steroid myopathy.",
+        "**Hypertension** - Cortisol increases vascular tone and mineralocorticoid activity, raising blood pressure chronically.",
+        "**Hyperglycemia** - Increased gluconeogenesis and insulin resistance leading to diabetes or impaired glucose tolerance.",
+        "**Easy bruising** - Skin and vessel fragility from protein catabolism and impaired connective tissue integrity.",
+        "**Osteoporosis** - Bone loss and fractures from inhibited osteoblast function and calcium imbalance.",
+        "**Mood changes** - Depression, irritability, or insomnia; frank psychosis can occur but is less typical."
+      ],
+      "clinicalReasoning": "The target diagnosis would be considered when a patient has signs of **hypercortisolism** such as truncal obesity, **purple striae**, **proximal myopathy**, **hypertension**, and **hyperglycemia**. Neuropsychiatric symptoms can occur in Cushing’s, but they usually accompany systemic cushingoid features rather than presenting with **hypothermia**. The provided labs in this case (e.g., **hyponatremia**, **hypoglycemia**, hypercapnic respiratory acidosis, elevated **CPK**, low-voltage ECG) are not typical for cortisol excess. Overall, the presentation aligns far better with severe **hypothyroidism** and **myxedema-related neuropsychiatric** manifestations.",
+      "whyIncorrectForCase": "This patient’s hallmark features are **hypothermia** with acute **confusion, hallucinations, and delusions** developing shortly after starting thyroid replacement—classic for **Myxedema Madness**, not Cushing’s. Additionally, the case shows **hyponatremia** and **hypoglycemia**, whereas Cushing’s more often causes **hyperglycemia** and does not explain hypothermia with hypercapnia.",
+      "keyDifferencesFromCorrect": [
+        "**Temperature regulation** - Cushing’s does not cause **hypothermia**; **Myxedema Madness** commonly presents with hypothermia.",
+        "**Glucose pattern** - Cushing’s typically causes **hyperglycemia**; **Myxedema Madness** can show **hypoglycemia**.",
+        "**Sodium pattern** - Cushing’s more often causes sodium retention/volume expansion; **Myxedema Madness** often causes **hyponatremia**.",
+        "**Body habitus/skin** - Cushing’s has **central obesity**, **purple striae**, and easy bruising; **Myxedema Madness** relates to hypothyroid features (e.g., myxedematous changes) and neuropsychiatric symptoms.",
+        "**Respiratory status** - Cushing’s is not characterized by **hypercapnia**; severe hypothyroidism can cause hypoventilation with **respiratory acidosis**.",
+        "**Trigger/timing** - Cushing’s is chronic and progressive; **Myxedema Madness** may emerge shortly after starting **thyroid hormone replacement**."
+      ],
+      "missingFindings": [
+        "**Cushingoid appearance** - No **moon facies**, **buffalo hump**, or truncal obesity described, weakening Cushing’s.",
+        "**Purple striae** - Absence of violaceous striae argues against chronic glucocorticoid excess.",
+        "**Hyperglycemia** - Case reports **hypoglycemia**, which conflicts with typical cortisol-driven hyperglycemia.",
+        "**Hypertension** - No hypertension noted; Cushing’s commonly presents with sustained elevated blood pressure.",
+        "**Proximal myopathy** - No proximal muscle weakness described, a common clinical clue for Cushing’s.",
+        "**Skin fragility/easy bruising** - Not reported; these are frequent in Cushing’s due to protein catabolism."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Ectopic ACTH Secretion",
+      "description": "**Ectopic ACTH secretion** is a paraneoplastic syndrome in which a non-pituitary tumor produces **ACTH**, causing severe **hypercortisolism (Cushing syndrome)**. It commonly arises from **small cell lung carcinoma** or **bronchial carcinoid** and leads to metabolic, infectious, and cardiovascular complications.",
+      "keySymptoms": [
+        "**Proximal muscle weakness** - Cortisol-induced myopathy causes difficulty rising from chairs and climbing stairs.",
+        "**Hypertension** - Cortisol and mineralocorticoid effects increase vascular tone and sodium retention.",
+        "**Hyperglycemia** - Cortisol promotes gluconeogenesis and insulin resistance, raising serum glucose levels.",
+        "**Hypokalemic metabolic alkalosis** - Excess cortisol activates mineralocorticoid receptors, wasting potassium and hydrogen ions.",
+        "**Easy bruising and thin skin** - Protein catabolism weakens dermis and capillaries, causing ecchymoses.",
+        "**Recurrent infections** - Immunosuppression increases risk of bacterial, fungal, and opportunistic infections.",
+        "**Weight gain/central adiposity** - Fat redistribution produces truncal obesity, dorsocervical fat pad, facial rounding.",
+        "**Psychiatric changes** - Cortisol excess can cause insomnia, anxiety, irritability, depression, or psychosis."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by **hypothermia** and prominent **neuropsychiatric manifestations** (confusion, disorientation, hallucinations, delusions) in the setting of **severe hypothyroidism**, with symptoms beginning shortly after **thyroid hormone replacement**. Her labs (notably **hyponatremia**, **hypoglycemia**, elevated **CO2** with **respiratory acidosis**, and elevated **CPK**) align with decompensated hypothyroid physiology rather than cortisol excess. **Ectopic ACTH secretion** would instead produce a hypermetabolic, catabolic state with **hyperglycemia**, **hypokalemia**, and **hypertension**, not hypothermia and hypoglycemia.",
+      "whyIncorrectForCase": "The case features **hypothermia**, **hyponatremia**, and **hypoglycemia** with psychosis after starting thyroid replacement—classic for **Myxedema Madness**, not **ectopic ACTH**. Ectopic ACTH typically causes **hypercortisolism** findings such as **hyperglycemia** and **hypokalemic metabolic alkalosis**, which are not described here.",
+      "keyDifferencesFromCorrect": [
+        "**Temperature regulation** - Ectopic ACTH causes no hypothermia; **Myxedema Madness** presents with **hypothermia**.",
+        "**Glucose pattern** - Ectopic ACTH causes **hyperglycemia**; **Myxedema Madness** can cause **hypoglycemia**.",
+        "**Sodium/potassium** - Ectopic ACTH often causes **hypokalemia**; **Myxedema Madness** commonly causes **hyponatremia**.",
+        "**Acid-base/ventilation** - Ectopic ACTH may cause **metabolic alkalosis**; **Myxedema Madness** shows **hypoventilation** with **respiratory acidosis** and **hypercapnia**.",
+        "**Trigger/timing** - Ectopic ACTH is tumor-driven; **Myxedema Madness** may appear shortly after starting **thyroid hormone replacement**.",
+        "**Systemic phenotype** - Ectopic ACTH is catabolic (bruising, weakness, infections); **Myxedema Madness** is hypothyroid (cold intolerance, slowed mentation)."
+      ],
+      "missingFindings": [
+        "**Hyperglycemia** - Expected in cortisol excess; this case instead reports **hypoglycemia**.",
+        "**Hypokalemia with metabolic alkalosis** - Hallmark of ectopic ACTH; not reported and physiology points elsewhere.",
+        "**Hypertension** - Common in ectopic ACTH; not described in this patient’s presentation.",
+        "**Cushingoid features** - No **central obesity**, **moon facies**, **purple striae**, or **easy bruising** mentioned.",
+        "**Evidence of malignancy** - No symptoms/signs suggesting **small cell lung cancer** or **carcinoid tumor**.",
+        "**Opportunistic/recurrent infections** - Immunosuppression is typical in ectopic ACTH but not present here."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Primary Hyperparathyroidism",
+      "description": "Primary hyperparathyroidism is a disorder of excess **parathyroid hormone (PTH)** secretion, most often from a parathyroid adenoma, causing increased serum **calcium**. It classically produces hypercalcemia-related neuropsychiatric, renal, gastrointestinal, and skeletal manifestations over time.",
+      "keySymptoms": [
+        "**Hypercalcemia symptoms** - Causes polyuria, polydipsia, constipation, dehydration, and neurocognitive slowing or lethargy.",
+        "**Neuropsychiatric changes** - Can cause irritability, depression, confusion, and rarely psychosis from elevated calcium.",
+        "**Nephrolithiasis** - Kidney stones from hypercalciuria; may present with flank pain or hematuria.",
+        "**Bone pain/fractures** - Increased bone resorption leads to osteopenia, fractures, and subperiosteal resorption.",
+        "**Abdominal pain/pancreatitis** - Hypercalcemia can trigger abdominal discomfort and, less commonly, pancreatitis."
+      ],
+      "clinicalReasoning": "The patient’s presentation centers on **hypothermia** with prominent neuropsychiatric symptoms (depression, confusion, disorientation, hallucinations/delusions) in an elderly person, beginning shortly after starting **thyroid hormone replacement**. Her reported labs (e.g., **hyponatremia**, **hypoglycemia**, increased **CO2** with respiratory acidosis/hypercapnia, low voltage ECG, elevated **CPK**) are characteristic of severe **hypothyroidism** physiology rather than a primary **PTH** excess state. Primary hyperparathyroidism would be expected to show a hypercalcemia-driven picture (stones, bones, abdominal groans) and does not explain hypothermia or the hypothyroid-pattern labs.",
+      "whyIncorrectForCase": "Primary hyperparathyroidism does not typically cause **hypothermia** or the respiratory acidosis/hypercapnia pattern described. The case is tightly linked to severe **hypothyroidism** with neuropsychiatric decompensation shortly after **T4 replacement**, which is classic for **Myxedema Madness**.",
+      "keyDifferencesFromCorrect": [
+        "**Temperature regulation** - Primary hyperparathyroidism does not cause **hypothermia**; **Myxedema Madness** often presents with hypothermia.",
+        "**Core labs** - Primary hyperparathyroidism features **hypercalcemia** (often low phosphate); **Myxedema Madness** features **hyponatremia** and **hypoglycemia**.",
+        "**Respiratory status** - Hyperparathyroidism does not cause hypoventilation; **Myxedema Madness** can cause **respiratory acidosis**, hypoxia, and hypercapnia.",
+        "**Cardiac findings** - Hyperparathyroidism may shorten QT via hypercalcemia; **Myxedema Madness** can show **low-voltage ECG** and bradycardic physiology.",
+        "**Trigger/timeline** - Hyperparathyroidism is usually chronic/insidious; **Myxedema Madness** may appear shortly after starting **thyroid hormone replacement**."
+      ],
+      "missingFindings": [
+        "**Hypercalcemia** - Required hallmark; absence (or no evidence provided) strongly argues against primary hyperparathyroidism.",
+        "**Elevated PTH** - Diagnostic requirement; not suggested by the case narrative or accompanying hypothyroid-pattern labs.",
+        "**Kidney stones or hypercalciuria** - Common clinical clue; not present in this patient’s presentation.",
+        "**Bone disease signs** - No bone pain, fractures, or osteoporosis clues provided to support PTH-mediated bone resorption.",
+        "**GI hypercalcemia syndrome** - No constipation, abdominal pain, or pancreatitis features described to suggest hypercalcemia."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Subclinical Hyperthyroidism",
+      "description": "Subclinical hyperthyroidism is defined by a low or suppressed **TSH** with normal circulating **free T4** and **T3** levels. Patients are often asymptomatic or have mild hyperthyroid effects, with major risks including **atrial fibrillation** and **bone loss** rather than hypothermia or severe psychosis.",
+      "keySymptoms": [
+        "**Low TSH with normal free T4/T3** - Biochemical hallmark; symptoms may be absent despite suppressed pituitary signaling.",
+        "**Palpitations** - Increased adrenergic tone can cause awareness of rapid or irregular heartbeat.",
+        "**Heat intolerance** - Excess thyroid effect typically increases thermogenesis and sweating rather than cold sensitivity.",
+        "**Weight loss** - Mild catabolism may occur even when thyroid hormone levels remain in reference range.",
+        "**Tremor/anxiety** - Hyperadrenergic symptoms can appear, usually without severe confusion or hallucinations.",
+        "**Atrial fibrillation risk** - Older adults have increased likelihood of AF even with subclinical disease.",
+        "**Osteopenia/osteoporosis** - Chronic low TSH state accelerates bone turnover, especially in postmenopausal women."
+      ],
+      "clinicalReasoning": "This patient has **hypothermia** and prominent neuropsychiatric changes (confusion, disorientation, hallucinations, delusions) in the setting of severe hypothyroid-type labs: **hyponatremia**, **hypoglycemia**, elevated **CO2** with **respiratory acidosis**, and **low-voltage ECG**. These findings align with **myxedema-related decompensation** rather than a hyperthyroid state, which would typically cause heat intolerance, tachycardia, and metabolic acceleration. The timing—symptoms developing shortly after starting thyroid hormone—matches the classic description of **Myxedema Madness**, where psychiatric manifestations can emerge during early replacement in severely hypothyroid elderly patients. Overall, the physiologic pattern is hypometabolic and hypoventilatory, not hypermetabolic.",
+      "whyIncorrectForCase": "Subclinical hyperthyroidism would not explain **hypothermia**, **hyponatremia**, **hypoglycemia**, or **hypercapnic respiratory acidosis**, which point to severe hypothyroidism with hypoventilation. It also does not fit the classic syndrome of **Myxedema Madness** with striking psychosis occurring after initiation of thyroid replacement in an elderly severely hypothyroid patient.",
+      "keyDifferencesFromCorrect": [
+        "**Temperature regulation** - Subclinical hyperthyroidism causes **heat intolerance**; **Myxedema Madness** presents with **hypothermia** and cold intolerance.",
+        "**Metabolic state** - Subclinical hyperthyroidism is relatively **hypermetabolic**; **Myxedema Madness** is profoundly **hypometabolic**.",
+        "**Sodium/glucose** - Subclinical hyperthyroidism does not typically cause **hyponatremia/hypoglycemia**; these are classic in severe hypothyroidism.",
+        "**Respiratory status** - Subclinical hyperthyroidism does not cause **hypoventilation**; **Myxedema Madness** can cause **hypercapnia** and **respiratory acidosis**.",
+        "**Cardiac/ECG** - Subclinical hyperthyroidism often shows **tachyarrhythmias**; severe hypothyroidism can show **low-voltage ECG**.",
+        "**Neuropsychiatric pattern** - Subclinical hyperthyroidism may cause anxiety/irritability; **Myxedema Madness** can cause **confusion, psychosis, hallucinations, delusions**."
+      ],
+      "missingFindings": [
+        "**Suppressed TSH with normal free T4/T3** - Required diagnostic pattern for subclinical hyperthyroidism; not supported here.",
+        "**Heat intolerance and sweating** - Expected with thyroid excess; patient reports feeling unusually cold.",
+        "**Tachycardia/palpitations** - Common hyperthyroid feature; case emphasizes low-voltage ECG and hypometabolic signs instead.",
+        "**Hyperdefecation/diarrhea** - Often present in thyroid excess; not described in this presentation.",
+        "**Weight loss with increased appetite** - Typical hyperthyroid trend; not reported and inconsistent with hypometabolic labs."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Type 2 Diabetes Mellitus",
+      "description": "**Type 2 Diabetes Mellitus** is a chronic metabolic disorder characterized by **insulin resistance** and progressive **beta-cell dysfunction**, leading to persistent **hyperglycemia**. It commonly presents with gradual-onset symptoms and long-term microvascular and macrovascular complications rather than acute hypothermia with psychosis.",
+      "keySymptoms": [
+        "**Polyuria** - Osmotic diuresis from hyperglycemia causes frequent urination, often worse at night.",
+        "**Polydipsia** - Excessive thirst occurs due to dehydration from glucose-driven fluid losses.",
+        "**Polyphagia** - Increased hunger may occur despite high glucose because cellular uptake is impaired.",
+        "**Unintentional weight loss** - Catabolism can occur when glucose utilization is impaired, especially if uncontrolled.",
+        "**Blurred vision** - Lens swelling from hyperglycemia causes fluctuating refractive changes and visual blurring.",
+        "**Fatigue** - Reduced cellular glucose utilization and dehydration contribute to persistent tiredness.",
+        "**Recurrent infections** - Hyperglycemia impairs immune function, increasing skin, urinary, and fungal infections.",
+        "**Peripheral neuropathy** - Chronic hyperglycemia damages nerves, causing numbness, burning, and tingling pain."
+      ],
+      "clinicalReasoning": "This patient’s presentation is dominated by **hypothermia** and prominent **neuropsychiatric manifestations** (confusion, disorientation, hallucinations, delusions) beginning shortly after starting **thyroid hormone replacement**, which is classic for **Myxedema Madness**. The associated laboratory pattern described (e.g., **hyponatremia**, **hypoglycemia**, **hypercapnia/respiratory acidosis**, increased **CPK**, low-voltage ECG) supports severe **hypothyroidism** physiology rather than chronic hyperglycemia. **Type 2 Diabetes Mellitus** would be expected to cause **hyperglycemia** with osmotic symptoms, not hypothermia and psychosis linked to thyroid replacement initiation. Therefore, diabetes does not explain the core syndrome or the provided supportive findings.",
+      "whyIncorrectForCase": "**Type 2 Diabetes Mellitus** typically presents with **hyperglycemia** (polyuria, polydipsia, weight changes), not **hypothermia** with acute psychosis and delirium. The case explicitly features **hyponatremia** and **hypoglycemia** with severe hypothyroid-associated cardiopulmonary and neurologic findings, which contradict diabetes as the primary diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Temperature regulation** - Diabetes usually does not cause **hypothermia**; **Myxedema Madness** commonly presents with hypothermia.",
+        "**Mental status pattern** - Diabetes causes confusion mainly during **hypoglycemia** or **HHS**; myxedema causes frank **psychosis/delusions/hallucinations** in severe hypothyroidism.",
+        "**Trigger/timing** - Diabetes symptoms are gradual; **Myxedema Madness** may appear shortly after starting **thyroid hormone replacement**.",
+        "**Electrolytes/glucose** - Diabetes is defined by **hyperglycemia**; myxedema often has **hyponatremia** and **hypoglycemia**.",
+        "**Respiratory findings** - Diabetes crises may cause **Kussmaul** breathing in DKA; myxedema causes **hypoventilation** with **hypercapnia** and respiratory acidosis.",
+        "**Cardiac testing** - Diabetes has no typical low-voltage ECG signature; myxedema can show **reduced voltage** on ECG.",
+        "**Muscle enzymes** - Diabetes does not typically raise **CPK**; hypothyroidism can increase **CPK** from myopathy."
+      ],
+      "missingFindings": [
+        "**Persistent hyperglycemia** - Absence of elevated glucose or HbA1c argues against diabetes as the unifying diagnosis.",
+        "**Polyuria/polydipsia** - No osmotic symptoms are described, making diabetes less likely.",
+        "**Dehydration signs** - No evidence of volume depletion typical of marked hyperglycemia-related diuresis.",
+        "**HHS features** - No severe hyperosmolarity, profound dehydration, or very high glucose to explain delirium.",
+        "**DKA features** - No metabolic acidosis with ketones; instead respiratory acidosis/hypercapnia is described."
+      ]
+    }
+  ]
+}

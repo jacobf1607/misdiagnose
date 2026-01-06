@@ -1,0 +1,450 @@
+{
+  "persona": {
+    "name": "Anil Patel",
+    "age": 45,
+    "gender": "Male",
+    "occupation": "Restaurant Owner in Pune",
+    "background": "Runs a busy traditional restaurant in Pune and has been experiencing increasing fatigue over the past few months. He attributes his symptoms to work stress and irregular eating patterns.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": false,
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "hardworking",
+      "detail-oriented",
+      "tends to ignore health issues"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Primary Hypothyroidism (Hashimoto's thyroiditis)",
+      "description": "Most common cause of primary hypothyroidism in iodine sufficient areas, characterized by gradual thyroid failure with lymphoid infiltration"
+    },
+    {
+      "id": "d2",
+      "name": "Subclinical Hypothyroidism",
+      "description": "Increased serum TSH with normal serum free T4, prevalent in elderly persons with risk of progression to overt hypothyroidism"
+    },
+    {
+      "id": "d3",
+      "name": "Sick Euthyroid Syndrome",
+      "description": "Changes in thyroid function during systemic illness, surgery, or fasting not caused by primary thyroid dysfunction"
+    },
+    {
+      "id": "d4",
+      "name": "Type 2 Diabetes Mellitus",
+      "description": "Heterogeneous group characterized by variable degrees of insulin resistance and impaired insulin secretion, usually begins after age 40"
+    },
+    {
+      "id": "d5",
+      "name": "Primary Adrenal Insufficiency (Addison's disease)",
+      "description": "Uncommon disorder resulting from progressive destruction of entire adrenal cortex with deficiency of glucocorticoid, mineralocorticoid, and androgen"
+    },
+    {
+      "id": "d6",
+      "name": "Secondary Adrenal Insufficiency",
+      "description": "Inadequate ACTH secretion leading to cortisol deficiency, commonly from exogenous glucocorticoid therapy"
+    },
+    {
+      "id": "d7",
+      "name": "Primary Hyperparathyroidism",
+      "description": "Autonomous secretion of PTH causing hypercalcemia, most commonly from single adenoma"
+    },
+    {
+      "id": "d8",
+      "name": "Cushing's Syndrome",
+      "description": "State of circulating cortisol excess causing weight gain, hypertension, and metabolic abnormalities"
+    },
+    {
+      "id": "d9",
+      "name": "Hyperthyroidism (Graves' disease)",
+      "description": "Most common form of thyrotoxicosis characterized by thyrotoxicosis, goiter, and sometimes orbitopathy"
+    },
+    {
+      "id": "d10",
+      "name": "Male Hypogonadism",
+      "description": "Below normal testosterone and/or sperm count, can be primary or secondary, causing decreased energy and libido"
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "Doctor, I've been feeling extremely tired and weak for the past 2-3 months. I've also lost about 8 kg without trying, and I keep feeling nauseous. My wife says I look pale.",
+  "medicalHistory": "No significant past medical history. No regular medications. Family history includes mother with 'thyroid problems' but unsure of details.",
+  "symptoms": "Progressive fatigue and weakness over 2-3 months, unintentional weight loss of 8 kg, nausea and occasional vomiting, loss of appetite, muscle weakness especially in the morning, dizziness when standing up quickly, craving for salty foods, decreased frequency of shaving. Reports feeling generally unwell and lacking energy to manage his restaurant effectively.\n\nFrom textbook: : Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ.  Write a short essay/note on major clinical signs of Addison’s disease.\nz Clinical features are produced due to the deficiency of glucocorticoid, mineralocorticoid, and androgen as well as\n\nexcess of ACTH.\nz Fatigue and weight loss are the most prominent symptoms.\nz Primary adrenal failure may pres",
+  "relevantFindings": "Blood pressure 95/60 mmHg (normally runs 120/80), pulse 88 bpm, appears mildly dehydrated and malnourished, notable hyperpigmentation of palmar creases and recent scars, mild postural hypotension, muscle weakness more prominent proximally. Laboratory findings show hyponatremia (Na+ 128 mEq/L), hyperkalemia (K+ 5.4 mEq/L), and mild eosinophilia on complete blood count.\n\nFrom textbook: : Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ.  Write a short essay/note on major clinical signs of Addison’s disease.\nz Clinical features are produced due to the deficiency of glucocorticoid, mineralocorticoid, and androgen as well as\n\nexcess of ACTH.\nz Fatigue and weight loss are the most prominent symptoms.\nz Primary adrenal failure may pres",
+  "redHerrings": "Weight loss and fatigue could suggest hyperthyroidism, nausea and weakness might point to diabetes mellitus, family history of thyroid disease could suggest thyroid dysfunction, work stress could explain fatigue and appetite changes",
+  "id": "case_1767519475939",
+  "domain": "endocrinology",
+  "idealPathway": {
+    "diseaseName": "Primary Adrenal Insufficiency (Addison's disease)",
+    "domain": "endocrinology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about fatigue, weakness, and weight loss pattern",
+        "reasoning": "These are the most prominent symptoms of Addison's disease according to textbook",
+        "expectedFinding": "Progressive fatigue and unintentional weight loss over months",
+        "importance": "critical",
+        "textbookReference": "Fatigue and weight loss are the most prominent symptoms"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about salt craving and postural symptoms",
+        "reasoning": "Mineralocorticoid deficiency causes salt craving and postural hypotension",
+        "expectedFinding": "Craving for salty foods, dizziness on standing",
+        "importance": "important",
+        "textbookReference": "Salt craving, dizziness, postural hypotension"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about GI symptoms - nausea, vomiting, diarrhea",
+        "reasoning": "Glucocorticoid deficiency commonly causes gastrointestinal symptoms",
+        "expectedFinding": "Chronic nausea, vomiting, altered bowel habits",
+        "importance": "important",
+        "textbookReference": "anorexia, nausea, vomiting, diarrhea or constipation"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about history of acute illness or slow recovery from stress",
+        "reasoning": "Cardinal feature includes previous history of acute adrenal crisis or slow recovery",
+        "expectedFinding": "Poor response to illness or stress, prolonged recovery",
+        "importance": "important",
+        "textbookReference": "Cardinal features of Addison's disease: previous history of acute adrenal crisis following stress, or slow recovery from illness"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about other autoimmune conditions",
+        "reasoning": "Addison's disease is often associated with other autoimmune diseases",
+        "expectedFinding": "History of thyroid disease, diabetes type 1, or other autoimmune conditions",
+        "importance": "helpful",
+        "textbookReference": "Other autoimmune diseases associated with Addison's disease: Hashimoto's thyroiditis, primary atrophic hypothyroidism, pernicious anemia, type 1 diabetes mellitus"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Check for hyperpigmentation in exposed areas, pressure points, and mucous membranes",
+        "reasoning": "Skin pigmentation is nearly always present in primary adrenal insufficiency due to excess ACTH",
+        "expectedFinding": "Hyperpigmentation of palms, knuckles, elbows, knees, mucous membranes, recent scars",
+        "importance": "critical",
+        "textbookReference": "Skin pigmentation is nearly always present in primary adrenal insufficiency (but not in secondary). Pigmentation of exposed areas, pressure areas (elbows, knees and knuckles, palmar creases, mucous membranes)"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Measure blood pressure lying and standing",
+        "reasoning": "Hypotension and postural hypotension are cardinal features due to mineralocorticoid deficiency",
+        "expectedFinding": "Hypotension with significant postural drop (>20mmHg systolic)",
+        "importance": "important",
+        "textbookReference": "Cardinal features of Addison's disease: Hypotension. Hypotension, postural hypotension"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess for muscle weakness and general appearance",
+        "reasoning": "Muscle weakness is a key feature of glucocorticoid deficiency",
+        "expectedFinding": "Proximal muscle weakness, thin appearance despite weight loss",
+        "importance": "important",
+        "textbookReference": "Muscle weakness, Fatigue, malaise, weakness, weight loss"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order basic electrolytes (sodium, potassium) and glucose",
+        "reasoning": "Initial screening for electrolyte abnormalities characteristic of adrenal insufficiency",
+        "expectedFinding": "Hyponatremia, hyperkalemia, may have hypoglycemia",
+        "importance": "important",
+        "textbookReference": "Hyponatremia, Hyperkalemia, Hypoglycemia, elevated blood urea, hyponatremia, and hyperkalemia"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order early morning (8 am) cortisol level",
+        "reasoning": "First-line test to screen for adrenal insufficiency - cost-effective screening",
+        "expectedFinding": "Cortisol <3 μg/dL suggestive, >11 μg/dL excludes AI",
+        "importance": "critical",
+        "textbookReference": "Early morning (6 am) cortisol level: Normally, levels are 10–20 μg/dL, Levels <3 μg/dL is suggestive of adrenal insufficiency, Levels >11 μg/dL exclude AI"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order plasma ACTH level",
+        "reasoning": "Essential to differentiate primary from secondary adrenal insufficiency",
+        "expectedFinding": "Elevated ACTH in primary adrenal insufficiency",
+        "importance": "important",
+        "textbookReference": "Plasma ACTH level: Elevated in adrenal insufficiency. Determine whether the cortisol deficiency is primary or central AI"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order ACTH stimulation test (cosyntropin test)",
+        "reasoning": "Gold standard confirmatory test for adrenal insufficiency",
+        "expectedFinding": "Failure of cortisol rise after synthetic ACTH administration",
+        "importance": "critical",
+        "textbookReference": "ACTH stimulation test: There is failure of rise in plasma cortisol level following the administration of 0.25 mg (standard high dose test) of synthetic ACTH (cosyntropin)"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order adrenal autoantibodies (21-hydroxylase antibodies)",
+        "reasoning": "To identify autoimmune etiology, most common cause in developed countries",
+        "expectedFinding": "Positive 21-OH hydroxylase antibodies in autoimmune adrenalitis",
+        "importance": "helpful",
+        "textbookReference": "Adrenal autoantibodies: ACA—adrenal cortex antibody and anti-21-OH-hydroxylase antibody"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Secondary adrenal insufficiency",
+        "howToRuleOut": "ACTH levels will be low or normal (not elevated), and pigmentation will be absent",
+        "textbookReference": "Skin pigmentation is nearly always present in primary adrenal insufficiency (but not in secondary)"
+      },
+      {
+        "name": "Chronic fatigue syndrome",
+        "howToRuleOut": "Normal cortisol response to ACTH stimulation test and absence of electrolyte abnormalities",
+        "textbookReference": "ACTH stimulation test: There is failure of rise in plasma cortisol level following the administration of synthetic ACTH"
+      },
+      {
+        "name": "Depression",
+        "howToRuleOut": "Normal ACTH stimulation test and absence of hyperpigmentation and electrolyte abnormalities",
+        "textbookReference": "Hyponatremia, Hyperkalemia, Pigmentation of exposed areas"
+      },
+      {
+        "name": "Hyperthyroidism",
+        "howToRuleOut": "Check thyroid function tests; hyperthyroidism causes weight loss but with increased appetite and different clinical picture",
+        "textbookReference": "Other autoimmune diseases associated with Addison's disease: Hashimoto's thyroiditis, primary atrophic hypothyroidism"
+      }
+    ],
+    "diagnosticApproach": "Follow the three-step process: 1) Confirm adrenal insufficiency by demonstrating inappropriately low cortisol secretion using morning cortisol and ACTH stimulation test, 2) Determine whether the cortisol deficiency is primary or central AI using plasma ACTH levels, 3) Determine the cause of the underlying disorder through autoantibodies and imaging if needed. Start with cost-effective screening tests (electrolytes, morning cortisol) before proceeding to confirmatory tests (ACTH stimulation test).",
+    "textbookSources": [
+      ": Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ....",
+      ": Antiphospholipid antibody; CMV: Cytomegalovirus; HIV: Human immunodeficiency virus; SLE: Systemic lupus erythematosus)\n\nClinical Features of Addison’s Disease (Table 13.28 and Figs. 13.17A and B)\nQ...."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Primary Adrenal Insufficiency (Addison's Disease)",
+      "description": "**Addison's disease** is an autoimmune disorder causing progressive destruction of the **adrenal cortex**, leading to insufficient production of **cortisol**, **aldosterone**, and **androgens**. This results in complex metabolic and endocrine disruptions affecting multiple body systems.",
+      "keySymptoms": [
+        "**Fatigue** - Progressive weakness due to insufficient cortisol affecting cellular metabolism and energy production",
+        "**Hyperpigmentation** - Excess ACTH stimulation causes increased melanin production in skin and mucous membranes",
+        "**Weight Loss** - Metabolic disruption and decreased appetite lead to unintentional weight reduction",
+        "**Postural Hypotension** - Mineralocorticoid deficiency causes electrolyte imbalances and reduced blood pressure regulation"
+      ],
+      "clinicalReasoning": "Patient's presentation of progressive fatigue, unintentional weight loss, hyperpigmentation, and electrolyte abnormalities strongly suggest primary adrenal insufficiency. Hyponatremia, hyperkalemia, and postural hypotension are classic findings supporting this diagnosis."
+    },
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Primary Hypothyroidism (Hashimoto's thyroiditis)",
+      "description": "An autoimmune disorder where the thyroid gland is progressively destroyed, leading to decreased thyroid hormone production and metabolic dysfunction.",
+      "keySymptoms": [
+        "**Fatigue** - persistent tiredness and reduced energy levels",
+        "**Weight Gain** - gradual increase in body weight due to slowed metabolism",
+        "**Cold Intolerance** - increased sensitivity to low temperatures",
+        "**Hair Loss** - thinning of hair, especially on scalp",
+        "**Depression** - mood changes associated with hormonal imbalance"
+      ],
+      "clinicalReasoning": "Hashimoto's thyroiditis typically presents with symptoms of hypothyroidism, characterized by metabolic slowdown and endocrine dysfunction. Diagnosis requires specific thyroid function tests and antibody markers.",
+      "whyIncorrectForCase": "This patient's presentation with hyperpigmentation, postural hypotension, and electrolyte imbalances strongly suggests adrenal insufficiency rather than thyroid dysfunction. The clinical findings are more consistent with Addison's disease.",
+      "keyDifferencesFromCorrect": [
+        "**Electrolyte Pattern** - Hypothyroidism does not cause the characteristic hyponatremia and hyperkalemia seen in Addison's disease",
+        "**Skin Pigmentation** - Hashimoto's does not cause the distinctive hyperpigmentation characteristic of adrenal insufficiency",
+        "**Hormonal Axis** - Different endocrine pathways are affected in thyroid vs adrenal disorders"
+      ],
+      "missingFindings": [
+        "**ACTH Elevation** - No evidence of increased ACTH levels typical in Addison's disease",
+        "**Mineralocorticoid Deficiency** - Absence of salt-craving and volume depletion symptoms",
+        "**Cortisol Dysfunction** - No indication of glucocorticoid deficiency"
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Subclinical Hypothyroidism",
+      "description": "A subtle thyroid dysfunction where **thyroid-stimulating hormone (TSH)** is mildly elevated while **free T4** remains within normal range.",
+      "keySymptoms": [
+        "**Fatigue** - mild reduction in energy levels and metabolic functioning",
+        "**Weight changes** - subtle weight gain or difficulty losing weight",
+        "**Cold intolerance** - mild sensitivity to lower temperatures"
+      ],
+      "clinicalReasoning": "Subclinical hypothyroidism represents an early stage of thyroid dysfunction where metabolic changes are minimal and often asymptomatic. Laboratory findings typically show marginally elevated TSH without significant hormonal disruption.",
+      "whyIncorrectForCase": "The patient's presentation with significant adrenal-specific symptoms like hyperpigmentation, postural hypotension, and electrolyte imbalances strongly suggests **Addison's disease** rather than thyroid dysfunction.",
+      "keyDifferencesFromCorrect": [
+        "**Electrolyte Pattern** - Subclinical hypothyroidism does not cause dramatic sodium/potassium shifts",
+        "**Skin Pigmentation** - No characteristic hyperpigmentation seen in hypothyroidism",
+        "**Hormonal Axis** - Different endocrine system involvement"
+      ],
+      "missingFindings": [
+        "**Low Cortisol Levels** - Not consistent with subclinical hypothyroidism",
+        "**ACTH Elevation** - Specific to adrenal insufficiency, not thyroid disorder",
+        "**Mineralocorticoid Deficiency** - Not a feature of thyroid dysfunction"
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Sick Euthyroid Syndrome",
+      "description": "**Sick Euthyroid Syndrome** is a complex metabolic condition characterized by alterations in thyroid hormone levels during critical illness without primary thyroid dysfunction.",
+      "keySymptoms": [
+        "**Low T3** - decreased triiodothyronine levels during systemic illness",
+        "**Altered Thyroid Hormones** - abnormal thyroid function tests without underlying thyroid disease",
+        "**Metabolic Adaptation** - hormonal changes reflecting systemic stress response"
+      ],
+      "clinicalReasoning": "Sick Euthyroid Syndrome represents a non-thyroidal systemic response where thyroid hormone metabolism is altered during acute or chronic medical conditions. The body modifies hormone levels as a protective mechanism during metabolic stress.",
+      "whyIncorrectForCase": "The patient's presentation strongly suggests **Addison's disease** with characteristic adrenal insufficiency symptoms. Sick Euthyroid Syndrome does not explain the patient's hyperpigmentation, electrolyte abnormalities, and profound weakness.",
+      "keyDifferencesFromCorrect": [
+        "**Electrolyte Abnormalities** - Addison's disease shows specific sodium and potassium imbalances not seen in Sick Euthyroid Syndrome",
+        "**Hyperpigmentation** - Characteristic of Addison's disease but not Sick Euthyroid Syndrome",
+        "**Hormonal Origin** - Adrenal vs Thyroid pathology"
+      ],
+      "missingFindings": [
+        "**Low Cortisol** - Absent in Sick Euthyroid Syndrome diagnosis",
+        "**ACTH Elevation** - Not typically observed in this syndrome",
+        "**Adrenal Insufficiency Markers** - Completely missing from Sick Euthyroid Syndrome clinical picture"
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Type 2 Diabetes Mellitus",
+      "description": "A metabolic disorder characterized by insulin resistance and progressive pancreatic beta-cell dysfunction leading to chronic hyperglycemia.",
+      "keySymptoms": [
+        "**Polyuria** - Increased urination due to high blood glucose levels",
+        "**Polydipsia** - Excessive thirst from fluid loss and high blood sugar",
+        "**Fatigue** - Cellular energy metabolism impairment from glucose dysregulation"
+      ],
+      "clinicalReasoning": "Type 2 Diabetes typically presents with insulin resistance, progressive hyperglycemia, and metabolic disturbances. Patient symptoms and laboratory findings would typically include elevated blood glucose and characteristic metabolic changes.",
+      "whyIncorrectForCase": "The patient's presentation with hyperpigmentation, low blood pressure, electrolyte imbalances, and progressive weakness are classic signs of **Addison's disease**, not diabetes mellitus.",
+      "keyDifferencesFromCorrect": [
+        "**Endocrine Pathology** - Pancreatic insulin dysfunction vs adrenal cortex insufficiency",
+        "**Electrolyte Profile** - Normal sodium/potassium vs hyponatremia and hyperkalemia",
+        "**Pigmentation** - No characteristic skin changes vs marked hyperpigmentation"
+      ],
+      "missingFindings": [
+        "**Hyperglycemia** - No elevated blood glucose levels",
+        "**Typical Diabetic Markers** - Absence of glycosylated hemoglobin changes",
+        "**Insulin Resistance Indicators** - No evidence of metabolic syndrome"
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Secondary Adrenal Insufficiency",
+      "description": "**Secondary Adrenal Insufficiency** is a condition caused by decreased ACTH production from the pituitary gland, leading to reduced cortisol production by otherwise healthy adrenal glands.",
+      "keySymptoms": [
+        "**Fatigue** - generalized weakness and reduced energy levels",
+        "**Weight Loss** - unintentional decrease in body weight",
+        "**Hypotension** - low blood pressure without electrolyte abnormalities"
+      ],
+      "clinicalReasoning": "Secondary adrenal insufficiency develops due to pituitary dysfunction, resulting in reduced ACTH stimulation of otherwise intact adrenal glands. Unlike primary adrenal insufficiency, it typically does not cause significant electrolyte disturbances or hyperpigmentation.",
+      "whyIncorrectForCase": "This patient demonstrates classic features of **Primary Adrenal Insufficiency**, including hyperpigmentation and electrolyte abnormalities that are not characteristic of secondary adrenal insufficiency.",
+      "keyDifferencesFromCorrect": [
+        "**Hyperpigmentation** - absent in secondary, present in primary adrenal insufficiency",
+        "**Electrolyte Imbalance** - more pronounced in primary adrenal insufficiency",
+        "**ACTH Levels** - elevated in primary, low or normal in secondary"
+      ],
+      "missingFindings": [
+        "**Hyperpigmentation** - characteristic of primary adrenal insufficiency",
+        "**Hyperkalemia** - specific to primary adrenal insufficiency",
+        "**Mineralocorticoid Deficiency** - more severe in primary adrenal insufficiency"
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Primary Hyperparathyroidism",
+      "description": "A condition characterized by excessive secretion of parathyroid hormone (PTH) from one or more overactive parathyroid glands, leading to dysregulated calcium metabolism.",
+      "keySymptoms": [
+        "**Hypercalcemia** - elevated blood calcium levels causing various systemic manifestations",
+        "**Bone Pain** - calcium leaching from bones leading to skeletal demineralization",
+        "**Kidney Stones** - increased urinary calcium excretion predisposes to stone formation"
+      ],
+      "clinicalReasoning": "Primary Hyperparathyroidism typically presents with metabolic disturbances related to calcium dysregulation, which differ significantly from the adrenal insufficiency pattern seen in this patient's presentation.",
+      "whyIncorrectForCase": "The patient's symptoms of fatigue, weakness, hyperpigmentation, and electrolyte abnormalities are classic for Addison's disease, not hyperparathyroidism. The clinical picture does not match calcium metabolism disorders.",
+      "keyDifferencesFromCorrect": [
+        "**Electrolyte Pattern** - Hyperparathyroidism shows hypercalcemia, while Addison's disease shows hyponatremia and hyperkalemia",
+        "**Skin Changes** - No characteristic hyperpigmentation in hyperparathyroidism, unlike Addison's disease",
+        "**Hormonal Axis** - Different endocrine dysfunction mechanisms"
+      ],
+      "missingFindings": [
+        "**Low Blood Pressure** - Not typical in hyperparathyroidism",
+        "**ACTH Excess** - No evidence of pituitary-adrenal axis disruption"
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "**Cushing's Syndrome**",
+      "description": "**Cushing's Syndrome** is an endocrine disorder characterized by excessive cortisol production, typically from prolonged exposure to high cortisol levels.",
+      "keySymptoms": [
+        "**Weight gain** - especially central obesity with rounded 'moon face'",
+        "**Hypertension** - elevated blood pressure due to cortisol effects",
+        "**Muscle weakness** - proximal muscle groups become progressively weaker",
+        "**Skin changes** - thin, fragile skin with easy bruising and purple striae"
+      ],
+      "clinicalReasoning": "Cushing's Syndrome presents with distinctive metabolic and hormonal changes caused by chronic hypercortisolism, which differs fundamentally from the cortisol deficiency seen in this patient's clinical presentation.",
+      "whyIncorrectForCase": "This patient demonstrates signs of adrenal insufficiency with low cortisol, not excessive cortisol. The symptoms and laboratory findings are opposite of Cushing's Syndrome.",
+      "keyDifferencesFromCorrect": [
+        "**Weight changes** - Cushing's causes weight gain; this patient experienced weight loss",
+        "**Blood pressure** - Cushing's typically elevates; this patient has hypotension",
+        "**Skin pigmentation** - Different patterns of skin changes"
+      ],
+      "missingFindings": [
+        "**Central obesity** - No evidence of characteristic fat distribution",
+        "**Buffalo hump** - Absent in this patient's presentation",
+        "**High blood glucose** - No hyperglycemia noted"
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Hyperthyroidism (Graves' disease)",
+      "description": "An autoimmune disorder causing overproduction of thyroid hormones, leading to increased metabolic activity and systemic symptoms.",
+      "keySymptoms": [
+        "**Unexplained weight loss** - despite increased appetite and food intake",
+        "**Rapid heartbeat** - tachycardia and palpitations",
+        "**Tremors** - fine rhythmic shaking of hands and fingers",
+        "**Heat intolerance** - excessive sweating and feeling warm",
+        "**Nervousness** - anxiety and emotional instability"
+      ],
+      "clinicalReasoning": "Graves' disease presents with hypermetabolic symptoms caused by excessive thyroid hormone production. The patient's symptoms might initially seem similar to Addison's disease, but key diagnostic features differ significantly.",
+      "whyIncorrectForCase": "The patient's presentation is more consistent with adrenal insufficiency, including hyperpigmentation, low blood pressure, and electrolyte imbalances. Graves' disease lacks the characteristic mineralocorticoid and glucocorticoid deficiency findings.",
+      "keyDifferencesFromCorrect": [
+        "**Blood Pressure** - Normal in Graves', low in Addison's",
+        "**Electrolytes** - Normal in Graves', abnormal in Addison's",
+        "**Skin Pigmentation** - Absent in Graves', prominent in Addison's"
+      ],
+      "missingFindings": [
+        "**Postural Hypotension** - Not typical in Graves' disease",
+        "**Hyperkalemia** - Not associated with Graves' disease",
+        "**Craving for Salty Foods** - Not a feature of hyperthyroidism"
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Male Hypogonadism",
+      "description": "**Male Hypogonadism** is a condition where the body does not produce sufficient testosterone, leading to reduced male sexual characteristics and function.",
+      "keySymptoms": [
+        "**Decreased libido** - reduced sexual desire and drive",
+        "**Erectile dysfunction** - difficulty achieving or maintaining erections",
+        "**Reduced muscle mass** - diminished muscle strength and development",
+        "**Decreased body hair** - thinning of facial, body, and pubic hair"
+      ],
+      "clinicalReasoning": "Male hypogonadism results from impaired testosterone production by the testes, potentially caused by genetic factors, testicular injury, or pituitary/hypothalamic disorders. Diagnosis requires comprehensive hormonal testing and clinical evaluation.",
+      "whyIncorrectForCase": "The patient's symptoms are more consistent with adrenal insufficiency, showing signs of systemic hormone disruption beyond testosterone deficiency. Addison's disease presents with more complex, multi-system involvement.",
+      "keyDifferencesFromCorrect": [
+        "**Hormonal Profile** - Hypogonadism primarily affects testosterone, while Addison's disease involves cortisol and aldosterone",
+        "**Systemic Impact** - Addison's disease causes more widespread metabolic disruption",
+        "**Pigmentation Changes** - Hypogonadism does not cause characteristic hyperpigmentation seen in Addison's"
+      ],
+      "missingFindings": [
+        "**Postural Hypotension** - Not typically associated with hypogonadism",
+        "**Electrolyte Imbalance** - Lacks significant sodium and potassium disturbances",
+        "**ACTH Elevation** - No evidence of pituitary-adrenal axis dysfunction"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "persona": {
+    "name": "Deepak Joshi",
+    "age": 8,
+    "gender": "Male",
+    "occupation": "Small Business Owner in Indore",
+    "background": "Deepak helps run his family’s small shop in Indore and lives in a crowded neighborhood where skin infections are common among children in the household.",
+    "lifestyle": {
+      "activityLevel": "high",
+      "smoking": false,
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "anxious",
+      "practical",
+      "family-oriented"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Poststreptococcal (postinfectious) glomerulonephritis",
+      "description": "An immune complex–mediated acute proliferative glomerulonephritis occurring after a latent period of 1–4 weeks following streptococcal pharyngitis or skin infection; a common cause of acute nephritic syndrome in children 6–10 years."
+    },
+    {
+      "id": "d2",
+      "name": "IgA nephropathy",
+      "description": "A glomerular disease that can present with microscopic or recurrent episodes of macroscopic hematuria following upper respiratory infection."
+    },
+    {
+      "id": "d3",
+      "name": "Lupus nephritis",
+      "description": "Renal involvement in systemic lupus erythematosus characterized by proteinuria, hematuria, and cellular (red and white blood cell) casts; low complement (C3) may indicate active nephritis."
+    },
+    {
+      "id": "d4",
+      "name": "Acute tubulointerstitial nephropathy (acute interstitial nephritis)",
+      "description": "An inflammatory condition affecting renal tubules and interstitium, commonly due to drugs/toxins or infections, with tubular dysfunction, moderate proteinuria, and varying degrees of renal impairment."
+    },
+    {
+      "id": "d5",
+      "name": "Acute nephritic syndrome",
+      "description": "Syndrome characterized by hematuria (gross or microscopic), red cell casts, azotemia (temporary), temporary oliguria (due to decreased GFR), hypertension, proteinuria, and edema (not as severe as nephrotic syndrome)."
+    },
+    {
+      "id": "d6",
+      "name": "Minimal change disease",
+      "description": "A primary cause of nephrotic syndrome in children, with massive proteinuria, hypoalbuminemia, generalized edema, hyperlipidemia and lipiduria; RBCs and red cell casts are not seen in minimal change disease."
+    },
+    {
+      "id": "d7",
+      "name": "Focal segmental glomerulosclerosis (FSGS)",
+      "description": "A cause of nephrotic syndrome usually manifesting with nephrotic syndrome or heavy proteinuria, hypertension, renal insufficiency, and occasionally hematuria."
+    },
+    {
+      "id": "d8",
+      "name": "Membranous nephropathy",
+      "description": "A common adult cause of nephrotic syndrome with diffuse capillary wall thickening; about 75% present with nephrotic-range proteinuria and 50% with microscopic hematuria."
+    },
+    {
+      "id": "d9",
+      "name": "Chronic kidney disease (CKD)",
+      "description": "Progressive kidney dysfunction where urinalysis may show fixed specific gravity around 1.010 (isosthenuria), hematuria or proteinuria; broad casts may be seen, and complications include anemia and hypertension."
+    },
+    {
+      "id": "d10",
+      "name": "Urinary tract infection (acute cystitis/pyelonephritis spectrum)",
+      "description": "Infection defined by bacteriuria (>10^5 organism/mL in MSU); symptomatic disease includes lower UTI (cystitis/urethritis/prostatitis) and upper UTI (acute pyelonephritis)."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "“His urine has turned cola-colored since yesterday, and his face looks puffy.”",
+  "medicalHistory": "About 2–3 weeks ago, he had a skin infection consistent with impetigo/pyoderma in the household setting of overcrowding and poor hygiene. No known prior kidney disease reported.",
+  "symptoms": "Features consistent with acute nephritic syndrome: hematuria (noticed as dark/cola-colored urine), periorbital edema, reduced urine output consistent with temporary oliguria, and symptoms compatible with temporary azotemia. The timing follows a latent period after a likely streptococcal skin infection.\n\nFrom textbook: cells)\n\nimpairment – Red cell casts\nRenal biopsy: Diffuse acute inflammation in the glomerulus with neutrophils and deposition of immunoglobulin G (IgG) and complement. Electron\nmicroscopy shows electron-dense deposits in the subepithelial aspects of the capillary walls.\n\nManagement/Treatment\n• Supportive treatment during acute PSGN: These include rest, salt restriction, diuretics and antihypertensives.\n• Dialysis is necessary when there is severe oliguria, fluid overload, and hyperkalemia.\n• St",
+  "relevantFindings": "Urinalysis shows hematuria with red cell casts (suggestive of glomerulonephritis) and proteinuria. Blood pressure is elevated (hypertension). Kidney function tests show azotemia (elevated urea/creatinine) consistent with acute nephritic syndrome. Immunology may show low complement components and antibodies to streptococcal antigens (ASOT/anti-DNase B) when PSGN is suspected.\n\nFrom textbook: cells)\n\nimpairment – Red cell casts\nRenal biopsy: Diffuse acute inflammation in the glomerulus with neutrophils and deposition of immunoglobulin G (IgG) and complement. Electron\nmicroscopy shows electron-dense deposits in the subepithelial aspects of the capillary walls.\n\nManagement/Treatment\n• Supportive treatment during acute PSGN: These include rest, salt restriction, diuretics and antihypertensives.\n• Dialysis is necessary when there is severe oliguria, fluid overload, and hyperkalemia.\n• St",
+  "redHerrings": "Microscopic hematuria after an upper respiratory infection could suggest IgA nephropathy; proteinuria and edema could suggest nephrotic syndrome (e.g., minimal change disease), but nephritic features like red cell casts point toward glomerulonephritis. Pyuria/bacteriuria could suggest UTI, but red cell casts are more suggestive of glomerulonephritis.",
+  "id": "case_1767640303044",
+  "domain": "nephrology",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Poststreptococcal (postinfectious) glomerulonephritis",
+      "description": "**Poststreptococcal glomerulonephritis (PSGN)** is an immune-mediated **glomerulonephritis** that occurs after a latent period following **group A streptococcal** throat or skin infection. Immune complex deposition activates **complement**, causing acute **nephritic syndrome** with hematuria, edema, hypertension, and transient azotemia.",
+      "keySymptoms": [
+        "**Cola-colored urine (gross hematuria)** - Indicates glomerular bleeding; classic nephritic sign after recent streptococcal infection latency.",
+        "**Periorbital/facial edema** - Reflects salt and water retention from reduced GFR and renal inflammation.",
+        "**Oliguria (reduced urine output)** - Suggests decreased glomerular filtration from acute inflammatory glomerular injury.",
+        "**Hypertension** - Due to volume expansion and activation of pressor mechanisms during acute nephritic syndrome.",
+        "**Azotemia (elevated urea/creatinine)** - Demonstrates transient reduction in kidney function consistent with acute nephritic syndrome.",
+        "**Red cell casts on urinalysis** - Highly suggestive of glomerulonephritis; RBCs originate from inflamed glomeruli.",
+        "**Proteinuria** - Occurs from increased glomerular permeability; usually subnephrotic in nephritic syndromes."
+      ],
+      "clinicalReasoning": "An 8-year-old with abrupt **cola-colored urine**, **periorbital edema**, **oliguria**, and **hypertension** fits an acute **nephritic syndrome** pattern. Urinalysis showing **hematuria with red cell casts** localizes bleeding to the glomerulus, supporting **glomerulonephritis** rather than lower-tract causes. The history of a latent period after likely streptococcal skin infection plus expected immunology (often **low complement** and elevated **ASO/anti-DNase B**) strongly supports **PSGN**. Classic pathology would show diffuse endocapillary inflammation with neutrophils and **IgG/C3** deposition, with subepithelial electron-dense “humps” on EM."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "IgA nephropathy",
+      "description": "**IgA nephropathy** is an immune-complex glomerulonephritis caused by mesangial deposition of **IgA**, often triggered by mucosal infections. It commonly presents with recurrent episodes of visible hematuria and can variably cause proteinuria and hypertension.",
+      "keySymptoms": [
+        "**Gross hematuria** - Episodic cola- or tea-colored urine due to glomerular bleeding, often recurrent.",
+        "**Microscopic hematuria** - Persistent urinary red cells between attacks, reflecting ongoing mesangial inflammation.",
+        "**Proteinuria** - Usually mild to moderate; heavy nephrotic-range proteinuria is less typical.",
+        "**Hypertension** - May occur with progressive disease or during active nephritic episodes.",
+        "**Flank discomfort** - Sometimes present during episodes of hematuria, especially in older children/adolescents."
+      ],
+      "clinicalReasoning": "This child has an **acute nephritic syndrome** (cola-colored urine, **periorbital edema**, **oliguria**, **hypertension**, azotemia) following a latent period after likely streptococcal skin infection, which strongly favors **poststreptococcal (postinfectious) glomerulonephritis**. **IgA nephropathy** classically causes hematuria that occurs *synchronously* with a mucosal infection (within 1–2 days), rather than after a longer latent interval. The case also mentions expected supportive immunology for PSGN (e.g., **low complement** and antistreptococcal antibodies), which is not typical for IgA nephropathy. Urinalysis with **red cell casts** supports glomerulonephritis but does not distinguish IgA nephropathy from PSGN on its own.",
+      "whyIncorrectForCase": "**IgA nephropathy** typically presents with hematuria occurring within 1–2 days of an upper respiratory infection, not after a latent period following streptococcal skin infection. The expected PSGN pattern of **low complement** with antistreptococcal serologies and classic subepithelial deposits fits this patient better than mesangial IgA disease.",
+      "keyDifferencesFromCorrect": [
+        "**Timing after infection** - IgA nephropathy occurs concurrently with infection (synpharyngitic); PSGN follows a 1–3 week latent period.",
+        "**Complement levels** - IgA nephropathy usually has **normal C3**; PSGN typically has **low C3** due to complement activation.",
+        "**Trigger type** - IgA nephropathy is linked to mucosal URTI/GI infections; PSGN follows nephritogenic **streptococcal** pharyngitis/impetigo.",
+        "**Biopsy immunofluorescence** - IgA nephropathy shows **mesangial IgA**; PSGN shows **granular IgG and C3** along capillary walls/mesangium.",
+        "**Electron microscopy** - IgA nephropathy has **mesangial electron-dense deposits**; PSGN has **subepithelial humps**."
+      ],
+      "missingFindings": [
+        "**Synpharyngitic hematuria** - Absence of hematuria within 24–48 hours of URTI argues against IgA nephropathy.",
+        "**Normal complement (C3)** - Lack of documented normal complement (and expectation of low C3 in PSGN) weakens IgA nephropathy.",
+        "**Mesangial IgA deposition on biopsy** - Not described; case instead aligns with IgG/complement deposition typical of PSGN.",
+        "**Recurrent episodes** - No history of recurrent hematuria episodes, which is common in IgA nephropathy."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Lupus nephritis",
+      "description": "Lupus nephritis is an immune-complex–mediated glomerulonephritis occurring in systemic lupus erythematosus (SLE), causing hematuria, proteinuria, and variable renal dysfunction. It typically accompanies systemic features of SLE and characteristic serologic abnormalities (e.g., anti-dsDNA, low complement).",
+      "keySymptoms": [
+        "**Hematuria** - Glomerular bleeding causes red or cola-colored urine, often with red cell casts.",
+        "**Proteinuria** - Increased glomerular permeability leads to urinary protein loss; can be nephritic or nephrotic range.",
+        "**Edema** - Salt and water retention from reduced GFR causes periorbital and dependent swelling.",
+        "**Hypertension** - Volume expansion and RAAS activation elevate blood pressure in active glomerulonephritis.",
+        "**Acute kidney injury** - Immune-mediated glomerular inflammation reduces filtration, raising urea and creatinine levels.",
+        "**Systemic SLE features** - Rash, photosensitivity, oral ulcers, arthritis, serositis suggest underlying lupus activity."
+      ],
+      "clinicalReasoning": "This child has an acute nephritic syndrome picture (cola-colored urine, **red cell casts**, edema, hypertension, azotemia). However, the history strongly suggests a postinfectious trigger with a latent period after a likely **streptococcal skin infection**, which is classic for poststreptococcal glomerulonephritis. Lupus nephritis usually occurs in the context of systemic SLE manifestations and lupus-specific serologies rather than a single recent streptococcal infection. The expected biopsy/immunofluorescence patterns also differ (lupus: 'full house' vs PSGN: IgG/C3 with subepithelial humps).",
+      "whyIncorrectForCase": "There is no provided evidence of **systemic lupus erythematosus** (e.g., rash, arthritis, oral ulcers, cytopenias) in this 8-year-old boy. The timing after a suspected **streptococcal skin infection** and classic PSGN pathology (subepithelial deposits) fit PSGN better than lupus nephritis.",
+      "keyDifferencesFromCorrect": [
+        "**Trigger/preceding illness** - Lupus nephritis is due to SLE autoimmunity; PSGN follows recent streptococcal throat/skin infection after a latent period.",
+        "**Serology** - Lupus nephritis: **anti-dsDNA/anti-Sm** often positive with low complement; PSGN: **ASO/anti-DNase B** positive with low complement.",
+        "**Immunofluorescence pattern** - Lupus nephritis shows **full house** (IgG, IgA, IgM, C3, C1q); PSGN shows **IgG and complement (C3)** dominant deposits.",
+        "**Electron microscopy** - Lupus nephritis often has mesangial/subendothelial deposits (class-dependent); PSGN classically has **subepithelial electron-dense humps**.",
+        "**Systemic features** - Lupus nephritis commonly coexists with multi-system SLE signs; PSGN is often isolated renal disease in children."
+      ],
+      "missingFindings": [
+        "**SLE clinical features** - No malar rash, photosensitivity, oral ulcers, arthritis, or serositis to support lupus.",
+        "**Autoantibodies** - No reported **ANA**, **anti-dsDNA**, or **anti-Sm** positivity expected in lupus nephritis.",
+        "**Full-house immunofluorescence** - No biopsy evidence of **IgG/IgA/IgM/C3/C1q** deposition pattern typical of lupus.",
+        "**Noninfectious course** - Case emphasizes post-streptococcal latency and classic PSGN findings rather than chronic relapsing SLE activity."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Acute tubulointerstitial nephropathy (acute interstitial nephritis)",
+      "description": "**Acute interstitial nephritis (AIN)** is an acute inflammatory injury of the renal interstitium and tubules, most often triggered by **drug hypersensitivity** (e.g., antibiotics, NSAIDs, PPIs) or less commonly infections/autoimmune disease. It typically causes **acute kidney injury** with tubular dysfunction rather than a primary glomerular process.",
+      "keySymptoms": [
+        "**Acute kidney injury** - Rapid creatinine rise with reduced GFR from interstitial inflammation and tubular injury.",
+        "**Fever** - Hypersensitivity-type systemic symptom commonly accompanying drug-induced interstitial nephritis.",
+        "**Rash** - Maculopapular eruption suggesting allergic/drug reaction rather than postinfectious glomerular disease.",
+        "**Eosinophilia** - Peripheral eosinophils may increase in allergic AIN, supporting hypersensitivity mechanism.",
+        "**Sterile pyuria** - White cells in urine without bacterial growth, reflecting interstitial inflammation.",
+        "**WBC casts** - Tubulointerstitial inflammation produces leukocyte casts rather than red cell casts.",
+        "**Eosinophiluria** - Urinary eosinophils can appear in drug-induced AIN (limited sensitivity/specificity).",
+        "**Mild hematuria/proteinuria** - Usually low-grade; heavy hematuria with casts suggests glomerulonephritis instead."
+      ],
+      "clinicalReasoning": "AIN is primarily a **tubulointerstitial** process, so urinalysis typically shows **pyuria**, **WBC casts**, and sometimes **eosinophiluria**, with only mild proteinuria/hematuria. The history often includes a recent exposure to an offending **medication** or a systemic hypersensitivity picture (fever, rash, eosinophilia). In contrast, this child’s presentation is dominated by **nephritic syndrome** features indicating a **glomerular** source of bleeding and inflammation.",
+      "whyIncorrectForCase": "This patient has **cola-colored urine**, **hypertension**, **periorbital edema**, and **red cell casts**, which strongly localize pathology to the **glomerulus**, not the interstitium. The timing after a likely **streptococcal skin infection** and expected **low complement/anti-streptococcal antibodies** fits **poststreptococcal glomerulonephritis**, not AIN.",
+      "keyDifferencesFromCorrect": [
+        "**Primary site of injury** - AIN affects **interstitium/tubules**; PSGN is a **glomerulonephritis** with immune complex deposition.",
+        "**Urine casts** - AIN classically shows **WBC casts**; PSGN shows **red cell casts** from glomerular bleeding.",
+        "**Urine appearance** - AIN usually lacks dramatic cola-colored urine; PSGN commonly causes **gross hematuria** (tea/cola).",
+        "**Systemic clues** - AIN often has **fever, rash, eosinophilia**; PSGN follows **streptococcal infection** with low complement.",
+        "**Complement levels** - Complement is usually **normal** in AIN; PSGN typically has **low C3** due to complement activation.",
+        "**Proteinuria pattern** - AIN tends to have **mild proteinuria**; PSGN can have more prominent proteinuria with nephritic syndrome."
+      ],
+      "missingFindings": [
+        "**Drug exposure trigger** - No recent **antibiotic/NSAID/PPI** exposure described, which is typical for AIN.",
+        "**Fever and rash** - Absence of hypersensitivity symptoms makes drug-induced AIN less likely.",
+        "**Eosinophilia/eosinophiluria** - Not reported; these findings would support allergic interstitial nephritis.",
+        "**Sterile pyuria/WBC casts** - Case instead shows **red cell casts**, arguing against a tubulointerstitial process.",
+        "**Tubular dysfunction signs** - No glycosuria, phosphaturia, or concentrating defects noted to suggest tubular injury."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Acute nephritic syndrome",
+      "description": "Acute nephritic syndrome is a clinical constellation caused by **glomerular inflammation** leading to **hematuria**, **hypertension**, **edema**, and varying degrees of **acute kidney injury**. It is a syndrome (presentation) rather than a single etiology and can result from multiple diseases such as **postinfectious GN**, **IgA nephropathy**, or **lupus nephritis**.",
+      "keySymptoms": [
+        "**Hematuria** - Glomerular bleeding causes tea/cola urine; microscopy often shows dysmorphic RBCs.",
+        "**Red cell casts** - RBCs trapped in Tamm-Horsfall protein indicate bleeding originating within renal tubules.",
+        "**Periorbital edema** - Salt and water retention from reduced GFR causes facial puffiness, especially mornings.",
+        "**Hypertension** - Volume expansion and RAAS activation elevate blood pressure during acute glomerular inflammation.",
+        "**Oliguria** - Reduced urine output reflects decreased GFR from inflamed, obstructed glomerular capillary loops.",
+        "**Azotemia** - Elevated urea/creatinine occurs when acute glomerular injury reduces filtration temporarily."
+      ],
+      "clinicalReasoning": "Deepak’s cola-colored urine, **red cell casts**, edema, hypertension, oliguria, and azotemia strongly indicate an **acute nephritic syndrome** pattern. However, this label describes the presentation and does not specify the cause. The history of a latent period after a likely **streptococcal skin infection**, plus expected **low complement** and positive **ASO/anti-DNase B**, points to a specific etiology. Therefore, the correct diagnosis is **poststreptococcal (postinfectious) glomerulonephritis**, not the nonspecific syndrome term.",
+      "whyIncorrectForCase": "“Acute nephritic syndrome” is not incorrect as a presentation, but it is **too nonspecific** to be the final diagnosis in this patient. The case provides classic etiologic clues (post-streptococcal latency, complement/antistreptococcal serology, typical biopsy pattern) that support **PSGN** as the correct diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Specificity** - Acute nephritic syndrome is a syndrome; **PSGN** is a defined postinfectious immune-complex disease.",
+        "**Trigger** - Acute nephritic syndrome has many causes; **PSGN** follows **streptococcal pharyngitis/impetigo** after a latent period.",
+        "**Complement pattern** - Complement may vary by cause; **PSGN** classically shows **low C3** with recovery over weeks.",
+        "**Serology** - Syndrome label has no specific antibodies; **PSGN** often has elevated **ASO** and/or **anti-DNase B**.",
+        "**Biopsy/IF/EM** - Syndrome has no single pathology; **PSGN** shows **diffuse endocapillary proliferative GN**, **IgG + C3** deposits, and **subepithelial humps**."
+      ],
+      "missingFindings": [
+        "**Etiologic confirmation** - Acute nephritic syndrome lacks a single confirmatory test; this case includes PSGN-specific clues.",
+        "**Alternative-cause markers** - No evidence provided for other nephritic etiologies (e.g., **IgA nephropathy** with synpharyngitic hematuria, **SLE** autoantibodies).",
+        "**Non-postinfectious course** - The described latent period after infection supports PSGN rather than an undifferentiated syndrome label."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Minimal change disease",
+      "description": "**Minimal change disease (MCD)** is a common pediatric cause of **nephrotic syndrome** due to podocyte injury leading to selective albumin loss. It typically presents with heavy proteinuria, hypoalbuminemia, edema, and hyperlipidemia, often with normal complement levels.",
+      "keySymptoms": [
+        "**Generalized edema** - Due to hypoalbuminemia lowering plasma oncotic pressure, causing fluid shift into tissues.",
+        "**Frothy urine** - Reflects heavy **proteinuria**, typically albumin, producing foam in the urine stream.",
+        "**Weight gain** - Rapid increase from fluid retention associated with nephrotic-range protein loss.",
+        "**Normal-colored urine** - Hematuria is usually absent; urine is not typically cola-colored."
+      ],
+      "clinicalReasoning": "This child has an **acute nephritic syndrome** picture: **cola-colored urine**, **periorbital edema**, **hypertension**, **oliguria**, **azotemia**, and **red cell casts**. These findings indicate **glomerular inflammation with hematuria** rather than isolated podocyte permeability. The history of a latent period after likely **streptococcal skin infection** further supports **poststreptococcal (postinfectious) glomerulonephritis (PSGN)**. MCD would be expected to present primarily with **nephrotic-range proteinuria** and typically without prominent hematuria or red cell casts.",
+      "whyIncorrectForCase": "MCD is a **nephrotic** process and usually lacks **gross hematuria** and **red cell casts**, which are classic for **nephritic** glomerulonephritis. The case’s **hypertension, oliguria, and azotemia** fit inflammatory GN (e.g., **PSGN**) more than MCD.",
+      "keyDifferencesFromCorrect": [
+        "**Urine findings** - MCD: heavy **proteinuria** with minimal/no hematuria; PSGN: **hematuria with red cell casts**.",
+        "**Complement levels** - MCD: typically **normal complement**; PSGN: often **low complement (C3)** during acute phase.",
+        "**Blood pressure/renal function** - MCD: usually normal BP and preserved GFR; PSGN: **hypertension** and **azotemia/oliguria** common.",
+        "**Pathology** - MCD: **podocyte foot process effacement** on EM, light microscopy near-normal; PSGN: **diffuse endocapillary hypercellularity with neutrophils** and **subepithelial electron-dense deposits** plus **IgG/complement**."
+      ],
+      "missingFindings": [
+        "**Nephrotic-range proteinuria** - MCD requires marked protein loss (often >3.5 g/day equivalent), not just mild/moderate proteinuria.",
+        "**Hypoalbuminemia** - Expected in MCD and drives edema; not provided and less typical in nephritic presentations.",
+        "**Hyperlipidemia/lipiduria** - Common in MCD (fatty casts/oval fat bodies); not described in this case.",
+        "**Normal complement (C3)** - Supports MCD; case context suggests immune-complex GN where complement is often low."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Focal segmental glomerulosclerosis (FSGS)",
+      "description": "**FSGS** is a podocyte injury pattern causing **segmental sclerosis** in some glomeruli, classically presenting with **nephrotic syndrome**. It often leads to heavy proteinuria, hypoalbuminemia, and progressive chronic kidney disease, and may be primary or secondary (e.g., obesity, reflux nephropathy, HIV).",
+      "keySymptoms": [
+        "**Nephrotic-range proteinuria** - Typically >3.5 g/day, causing frothy urine and marked albumin loss.",
+        "**Generalized edema** - Due to hypoalbuminemia, often dependent edema rather than isolated periorbital puffiness.",
+        "**Hypoalbuminemia** - Low serum albumin from urinary losses, driving edema and intravascular depletion.",
+        "**Hyperlipidemia** - Increased hepatic lipoprotein synthesis in response to low oncotic pressure.",
+        "**Progressive renal dysfunction** - Gradual decline in GFR over months to years, not abrupt postinfectious onset.",
+        "**Microscopic hematuria** - Can occur, but gross cola-colored urine with casts is less typical."
+      ],
+      "clinicalReasoning": "This child has an **acute nephritic syndrome** picture: **cola-colored hematuria**, **red cell casts**, **hypertension**, **oliguria**, and **azotemia** after a latent period following likely **streptococcal skin infection**. That constellation strongly localizes pathology to an inflammatory **glomerulonephritis** rather than a primary podocytopathy. **FSGS** more commonly presents with dominant **nephrotic syndrome** (heavy proteinuria, hypoalbuminemia) and a more subacute/chronic course. The expected immune profile in the case (often **low complement** with elevated **ASO/anti-DNase B**) also supports postinfectious GN rather than FSGS.",
+      "whyIncorrectForCase": "The patient’s hallmark findings (**gross cola-colored hematuria** with **red cell casts**, acute **hypertension/oliguria/azotemia**) fit **nephritic** inflammation, not the predominantly **nephrotic** presentation of **FSGS**. The post-streptococcal timing and typical immune findings (often **low C3**, **anti-streptococcal antibodies**) point away from FSGS.",
+      "keyDifferencesFromCorrect": [
+        "**Syndrome type** - FSGS is classically **nephrotic**; PSGN is **acute nephritic syndrome** with hematuria and hypertension.",
+        "**Urine findings** - FSGS: heavy proteinuria, lipiduria; PSGN: **hematuria with red cell casts** and variable proteinuria.",
+        "**Complement levels** - FSGS usually has **normal complement**; PSGN often shows **low C3** during acute phase.",
+        "**Trigger/timing** - FSGS is not typically postinfectious with a latent period; PSGN follows **streptococcal** infection by 1–3 weeks (throat) or 3–6 weeks (skin).",
+        "**Pathology** - FSGS: **segmental sclerosis** and **podocyte foot process effacement**; PSGN: diffuse endocapillary proliferation with **neutrophils** and **subepithelial electron-dense deposits** ('humps').",
+        "**Age/epidemiology** - FSGS can occur in children but often presents as steroid-resistant nephrotic syndrome; PSGN is common in school-aged children."
+      ],
+      "missingFindings": [
+        "**Nephrotic-range proteinuria** - Absence of dominant massive proteinuria argues against FSGS as primary presentation.",
+        "**Hypoalbuminemia** - Not described; expected in FSGS-driven nephrotic syndrome and explains prominent edema.",
+        "**Hyperlipidemia/lipiduria** - Not reported; typical nephrotic features (fatty casts/oval fat bodies) support FSGS.",
+        "**Chronic/subacute course** - Sudden onset after infection favors PSGN; FSGS usually evolves over longer periods.",
+        "**Normal complement** - Case context suggests low complement in PSGN; normal complement would be more consistent with FSGS."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Membranous nephropathy",
+      "description": "**Membranous nephropathy** is an immune complex–mediated glomerular disease causing thickening of the glomerular basement membrane and classically presenting with **nephrotic syndrome**. It is commonly associated with **anti-PLA2R antibodies** (primary) or secondary causes such as infections, autoimmune disease, drugs, and malignancy.",
+      "keySymptoms": [
+        "**Proteinuria (nephrotic-range)** - Typically >3.5 g/day causing frothy urine and heavy urinary protein loss.",
+        "**Generalized edema** - Hypoalbuminemia lowers oncotic pressure, producing dependent and periorbital swelling.",
+        "**Hypoalbuminemia** - Low serum albumin due to urinary losses, driving edema and fatigue.",
+        "**Hyperlipidemia** - Liver increases lipoprotein synthesis in response to low oncotic pressure states.",
+        "**Lipiduria** - Oval fat bodies and fatty casts may appear from filtered lipoproteins.",
+        "**Thromboembolism risk** - Loss of antithrombin III increases venous thrombosis risk, especially renal vein thrombosis."
+      ],
+      "clinicalReasoning": "This child’s presentation is dominated by **acute nephritic syndrome**: **cola-colored hematuria**, **red cell casts**, **hypertension**, **oliguria**, and **azotemia** after a latent period following likely streptococcal skin infection. That pattern strongly indicates an inflammatory glomerulonephritis with complement activation (often **low complement**) rather than a primary nephrotic process. **Membranous nephropathy** usually presents with predominant **nephrotic-range proteinuria** and edema, not prominent gross hematuria with **RBC casts** and acute reduction in GFR. The expected biopsy pattern in membranous nephropathy (diffuse capillary wall thickening with subepithelial deposits and “spikes”) does not match the classic diffuse endocapillary proliferative picture of postinfectious GN.",
+      "whyIncorrectForCase": "**Membranous nephropathy** is primarily a **nephrotic syndrome** diagnosis, whereas this patient has clear **nephritic** features including **cola-colored urine** and **red cell casts**. The post-streptococcal timing with expected **low complement** and anti-streptococcal antibodies fits **Poststreptococcal (postinfectious) glomerulonephritis**, not membranous nephropathy.",
+      "keyDifferencesFromCorrect": [
+        "**Syndrome pattern** - Membranous: **nephrotic** (massive proteinuria); PSGN: **nephritic** (hematuria, RBC casts, hypertension).",
+        "**Hematuria/RBC casts** - Membranous: usually minimal hematuria, casts uncommon; PSGN: prominent **gross hematuria** with **red cell casts**.",
+        "**Complement levels** - Membranous: complement typically **normal**; PSGN: **low C3** from complement consumption.",
+        "**Trigger** - Membranous: anti-PLA2R or secondary causes (HBV, SLE, drugs, malignancy); PSGN: follows **streptococcal pharyngitis/impetigo** after latent period.",
+        "**Renal function** - Membranous: often preserved early; PSGN: acute drop in GFR causing **oliguria** and **azotemia**.",
+        "**Biopsy pattern** - Membranous: GBM thickening with “spike and dome” subepithelial deposits; PSGN: diffuse endocapillary hypercellularity with neutrophils and “humps.”"
+      ],
+      "missingFindings": [
+        "**Nephrotic-range proteinuria** - Membranous typically has heavy protein loss; this case emphasizes hematuria and nephritic findings.",
+        "**Hypoalbuminemia** - Expected in membranous due to protein loss; not a defining feature presented here.",
+        "**Hyperlipidemia/lipiduria** - Common nephrotic markers (oval fat bodies, fatty casts) are not described.",
+        "**Anti-PLA2R antibodies** - Supports primary membranous nephropathy; not suggested in this postinfectious context.",
+        "**Normal complement** - Membranous usually has normal complement; PSGN classically shows **low C3**."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Chronic kidney disease (CKD)",
+      "description": "Chronic kidney disease (CKD) is a progressive, usually irreversible decline in kidney function lasting at least 3 months. It commonly results from chronic conditions (e.g., **diabetes**, **hypertension**, congenital anomalies) and leads to persistent reduction in GFR with long-term complications such as anemia and mineral-bone disease.",
+      "keySymptoms": [
+        "**Chronic fatigue** - Gradual tiredness from anemia and uremia developing over weeks to months.",
+        "**Poor growth** - Long-standing renal dysfunction in children can impair appetite and linear growth.",
+        "**Polyuria/nocturia** - Tubular concentrating defects cause increased urine volume, especially at night.",
+        "**Persistent edema** - Ongoing salt and water retention causes chronic swelling, not abrupt onset.",
+        "**Uremic symptoms** - Nausea, anorexia, pruritus, and cognitive slowing occur in advanced chronic disease.",
+        "**Hypertension** - Sustained high blood pressure from chronic volume expansion and RAAS activation."
+      ],
+      "clinicalReasoning": "This child has an acute nephritic presentation: sudden **cola-colored hematuria**, **periorbital edema**, **oliguria**, **hypertension**, and **azotemia**. The presence of **red cell casts** strongly indicates an acute **glomerulonephritis** rather than chronic parenchymal scarring. The history suggests a latent period after a likely **streptococcal skin infection**, which classically precedes **poststreptococcal (postinfectious) glomerulonephritis**. CKD would require evidence of kidney dysfunction persisting for at least 3 months and typically presents more insidiously.",
+      "whyIncorrectForCase": "CKD is defined by abnormalities of kidney structure or function persisting for ≥3 months, whereas this patient’s symptoms began yesterday with an acute nephritic syndrome. The case features (acute **hematuria with red cell casts**, postinfectious timing, and expected low complement/streptococcal antibodies) fit **PSGN** far better than chronic disease.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - CKD is ≥3 months and progressive; **PSGN** is abrupt after a latent post-strep period.",
+        "**Urine findings** - CKD often has bland or variable sediment; **PSGN** has **hematuria** with **red cell casts** and mild-moderate proteinuria.",
+        "**Complement levels** - CKD has no characteristic complement pattern; **PSGN** typically shows **low complement (C3)** early.",
+        "**Etiologic clue** - CKD relates to chronic systemic/congenital causes; **PSGN** follows **streptococcal** throat/skin infection.",
+        "**Pathology** - CKD shows chronic scarring and interstitial fibrosis; **PSGN** shows diffuse acute glomerular inflammation with **IgG** and **complement** deposition and subepithelial electron-dense deposits."
+      ],
+      "missingFindings": [
+        "**Duration ≥3 months** - No evidence of persistent kidney dysfunction over months, required to diagnose CKD.",
+        "**Small echogenic kidneys** - Typical chronicity marker on ultrasound is not described in this acute presentation.",
+        "**Chronic anemia** - CKD commonly causes persistent normocytic anemia; not suggested in this case.",
+        "**Renal osteodystrophy** - CKD often has bone/mineral abnormalities (high phosphate, low calcium, high PTH); not reported.",
+        "**Long-standing growth failure** - Chronic pediatric CKD often presents with poor growth over time; not indicated here."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Urinary tract infection (acute cystitis/pyelonephritis spectrum)",
+      "description": "A **urinary tract infection (UTI)** is a bacterial infection of the bladder (**cystitis**) or kidneys (**pyelonephritis**). It typically causes irritative voiding symptoms and/or systemic signs of infection, and urinalysis classically shows **pyuria** and **bacteriuria** rather than glomerular findings.",
+      "keySymptoms": [
+        "**Dysuria** - Burning or pain with urination due to inflamed bladder/urethral mucosa from infection.",
+        "**Urinary frequency/urgency** - Frequent small voids and urgent need to urinate from bladder irritation.",
+        "**Suprapubic pain** - Lower abdominal discomfort typical of **cystitis** from bladder wall inflammation.",
+        "**Fever** - Suggests upper-tract involvement (**pyelonephritis**) or systemic inflammatory response.",
+        "**Flank pain/CVA tenderness** - Kidney involvement causing pain at costovertebral angle with **pyelonephritis**.",
+        "**Pyuria** - White blood cells in urine reflecting infection-driven inflammation in the urinary tract.",
+        "**Positive nitrites/leukocyte esterase** - Dipstick evidence of gram-negative bacteria and WBC activity in urine."
+      ],
+      "clinicalReasoning": "UTI is considered when a child has urinary symptoms (dysuria, frequency), fever, and urinalysis showing **pyuria** and **bacteriuria**. Hematuria can occur in UTI, but it is usually microscopic and not accompanied by **red cell casts**, which indicate a glomerular source. Hypertension, periorbital edema, oliguria, and azotemia point toward an **acute nephritic syndrome** rather than a lower urinary tract infection. The described latent period after a likely streptococcal skin infection further supports a postinfectious immune process, not an ascending bacterial UTI.",
+      "whyIncorrectForCase": "This patient has **cola-colored urine**, **periorbital edema**, **hypertension**, **azotemia**, and **red cell casts**, which strongly indicate **glomerulonephritis** rather than UTI. UTI would more typically present with **dysuria**, **frequency**, **fever**, and urinalysis dominated by **pyuria/bacteriuria**, not glomerular casts.",
+      "keyDifferencesFromCorrect": [
+        "**Urine sediment** - UTI shows **pyuria** and bacteria; PSGN shows **hematuria with red cell casts**.",
+        "**Pathophysiology** - UTI is direct bacterial infection; PSGN is **immune complex–mediated** glomerular injury after streptococcal infection.",
+        "**Blood pressure/edema** - UTI usually lacks **hypertension** and **periorbital edema**; PSGN commonly has both.",
+        "**Complement levels** - UTI does not cause **low complement**; PSGN often has **low C3** from complement consumption.",
+        "**Timing** - UTI symptoms occur during active infection; PSGN follows a **latent period** after streptococcal skin/throat infection."
+      ],
+      "missingFindings": [
+        "**Pyuria** - Absence of prominent WBCs argues against an infectious cystitis/pyelonephritis pattern.",
+        "**Bacteriuria/positive urine culture** - Lack of bacterial growth would not support UTI as the primary diagnosis.",
+        "**Nitrites/leukocyte esterase positivity** - If negative, it reduces likelihood of typical gram-negative UTI.",
+        "**Dysuria/frequency/urgency** - Missing irritative voiding symptoms makes lower UTI less likely.",
+        "**Fever and flank pain** - Absence of systemic/upper-tract signs weakens pyelonephritis consideration."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Poststreptococcal (postinfectious) glomerulonephritis",
+    "domain": "nephrology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about recent sore throat (pharyngitis) or skin infection (impetigo/pyoderma) in the last 1–4 weeks",
+        "reasoning": "PSGN typically follows a primary streptococcal infection after a latent period compatible with antibody production and immune complex formation.",
+        "expectedFinding": "History of sore throat recovery or recent impetigo/pyoderma occurring 1–4 weeks before onset of cola-colored urine/oliguria/edema",
+        "importance": "critical",
+        "textbookReference": "“It manifests usually after a latent period of 1–4 weeks following primary streptococcal infection.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about hematuria characteristics (smoky/red/cola-colored urine) and onset (abrupt)",
+        "reasoning": "Hematuria with characteristic urine color and abrupt onset is a key clinical feature of PSGN/acute nephritic syndrome.",
+        "expectedFinding": "Abrupt onset of smoky/red/cola-colored urine",
+        "importance": "critical",
+        "textbookReference": "“Onset is often abrupt… hematuria (characteristically, urine appears smoky or red or cola-colored urine)”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about oliguria (reduced urine output)",
+        "reasoning": "Temporary oliguria is part of acute nephritic syndrome and is specifically listed among PSGN urinary findings.",
+        "expectedFinding": "Oliguria since symptom onset",
+        "importance": "important",
+        "textbookReference": "“Temporary oliguria (due to decreased glomerular filtration rate)”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about edema distribution and progression (periorbital puffiness, dependent edema; possible ascites/pleural effusion)",
+        "reasoning": "Edema (often periorbital initially) is a typical presenting feature in PSGN.",
+        "expectedFinding": "Periorbital puffiness progressing to dependent edema; may be associated with ascites and/or pleural effusion",
+        "importance": "important",
+        "textbookReference": "“Periorbital edema… Edema initially appears in areas of low tissue pressure (periorbital areas)… may be associated with ascites and/or pleural effusion.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about systemic symptoms at onset (malaise, fever, nausea)",
+        "reasoning": "These symptoms are described as common at presentation in affected children.",
+        "expectedFinding": "Malaise and/or fever and/or nausea accompanying hematuria/oliguria",
+        "importance": "helpful",
+        "textbookReference": "“Usually the affected child suddenly develops malaise, fever, nausea, oliguria, and hematuria…”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Measure blood pressure to assess for mild to moderate hypertension",
+        "reasoning": "Hypertension is a characteristic feature of acute nephritic syndrome and is commonly observed in PSGN.",
+        "expectedFinding": "Mild to moderate hypertension",
+        "importance": "critical",
+        "textbookReference": "“mild to moderate hypertension is usually observed.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Examine for edema, especially periorbital puffiness and dependent edema",
+        "reasoning": "Edema is a key sign of PSGN and part of acute nephritic syndrome.",
+        "expectedFinding": "Periorbital puffiness; dependent edema (leg/sacral)",
+        "importance": "important",
+        "textbookReference": "“Edema* (periorbital, leg or sacral)”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess volume overload complications clinically (look for features consistent with pulmonary edema)",
+        "reasoning": "Pulmonary edema is listed as a complication of acute PSGN/nephritic syndrome and should be actively looked for in symptomatic patients.",
+        "expectedFinding": "Clinical evidence suggesting pulmonary edema (if present as a complication)",
+        "importance": "helpful",
+        "textbookReference": "“Complications… (2) pulmonary edema”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order urinalysis with urine microscopy to look for hematuria and red cell casts",
+        "reasoning": "Acute nephritic syndrome/PSGN is characterized by hematuria with RBC casts; urine microscopy may show dysmorphic red cells and red cell casts.",
+        "expectedFinding": "Hematuria with dysmorphic red cells and red cell casts; mild proteinuria",
+        "importance": "critical",
+        "textbookReference": "“Urine microscopy: – Red cells (particularly dysmorphic…) – Red cell casts”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order serum urea and creatinine",
+        "reasoning": "Renal impairment may occur in PSGN and is reflected by elevated urea and creatinine.",
+        "expectedFinding": "Urea and creatinine may be elevated indicating renal impairment",
+        "importance": "important",
+        "textbookReference": "“Urea and creatinine: May be elevated and indicates renal impairment”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order serum complement levels (C3; complement components)",
+        "reasoning": "More than 90% of PSGN patients have hypocomplementemia; complement helps differentiate nephritic syndromes (low vs normal complement).",
+        "expectedFinding": "Significant reduction in serum concentration of complement (C3) components",
+        "importance": "important",
+        "textbookReference": "“more than 90% of patients reveal decreased complement (C3 and C4) levels… (hypocomplementemia).”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order antistreptococcal antibody titers (e.g., ASO; consider anti-DNase B per available testing)",
+        "reasoning": "Majority of patients show increased titers of antibodies against streptococcal antigens; Table 10.18 lists raised ASO titer.",
+        "expectedFinding": "Raised antistreptococcal antibody titers (e.g., raised ASO titer)",
+        "importance": "important",
+        "textbookReference": "“Raised antistreptococcal antibody, titers, e.g., antistreptolysin O (ASO) titer”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Consider renal biopsy if indicated to establish diagnosis or if atypical course/concern for RPGN-like presentation",
+        "reasoning": "Renal biopsy in PSGN shows diffuse acute inflammation with neutrophils and deposition of IgG and complement; biopsy is indicated in nephritic syndrome when presentation is RPGN-like or if complement/hematuria abnormalities persist.",
+        "expectedFinding": "Diffuse acute inflammation in glomerulus with neutrophils and deposition of IgG and complement; EM: electron-dense subepithelial deposits",
+        "importance": "helpful",
+        "textbookReference": "“Renal biopsy: Diffuse acute inflammation… deposition of immunoglobulin G (IgG) and complement… electron-dense deposits in the subepithelial aspects…”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "IgA nephropathy",
+        "howToRuleOut": "Use complement levels in nephritic syndrome: IgA nephropathy is listed under normal complement, whereas PSGN is under low complement.",
+        "textbookReference": "“Complement levels in nephritic syndrome… Low complement: Postinfectious glomerulonephritis… Normal complement: IgA nephropathy”"
+      },
+      {
+        "name": "Lupus nephritis",
+        "howToRuleOut": "Use complement levels: lupus nephritis is listed under low complement, so low complement alone does not distinguish; consider that PSGN is supported by raised antistreptococcal antibody titers and typical post-streptococcal latent period history.",
+        "textbookReference": "“Low complement… Postinfectious glomerulonephritis… Lupus nephritis”"
+      },
+      {
+        "name": "Henoch–Schönlein purpura (HSP)",
+        "howToRuleOut": "Use complement levels in nephritic syndrome: HSP is listed under low complement; PSGN is supported by evidence of preceding streptococcal infection (raised ASO/other antistreptococcal antibodies) and typical latent period.",
+        "textbookReference": "“Low complement… Henoch–Schönlein purpura… Postinfectious glomerulonephritis”"
+      },
+      {
+        "name": "Rapidly progressive glomerulonephritis (RPGN)",
+        "howToRuleOut": "Suspect if there is severe oliguria with rapid progressive loss of renal function; confirm with renal biopsy showing crescents. PSGN can be complicated by RPGN.",
+        "textbookReference": "“Rapidly progressive loss of renal function… associated with severe oliguria… Renal biopsy: Shows crescents.”"
+      }
+    ],
+    "diagnosticApproach": "In a child presenting with abrupt cola-colored urine and facial puffiness, first confirm acute nephritic syndrome clinically (hematuria, edema, hypertension, oliguria). Elicit history of preceding streptococcal pharyngitis or skin infection with a 1–4 week latent period. Perform focused examination for blood pressure and edema. Order cost-effective tests first: urinalysis/urine microscopy for dysmorphic RBCs and red cell casts with mild proteinuria, then serum urea/creatinine for renal impairment. Next, support PSGN etiology with low complement (C3) and raised antistreptococcal antibody titers (e.g., ASO). Differentiate from other nephritic syndromes using complement patterns (PSGN typically low complement; IgA nephropathy normal complement). Consider renal biopsy to establish diagnosis in atypical cases or if an RPGN-like presentation is suspected, where biopsy would show crescents; in PSGN biopsy shows diffuse acute inflammation with neutrophils and IgG/complement deposition with subepithelial electron-dense deposits.",
+    "textbookSources": [
+      "cells)\n\nimpairment – Red cell casts\nRenal biopsy: Diffuse acute inflammation in the glomerulus with neutrophils and deposition of immunoglobulin G (IgG) and complement. Electron\nmicroscopy shows elect...",
+      "cells)\n\nimpairment – Red cell casts\nRenal biopsy: Diffuse acute inflammation in the glomerulus with neutrophils and deposition of immunoglobulin G (IgG) and complement. Electron\nmicroscopy shows elect..."
+    ]
+  }
+}

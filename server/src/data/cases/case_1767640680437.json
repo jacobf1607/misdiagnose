@@ -1,0 +1,512 @@
+{
+  "persona": {
+    "name": "Geeta Verma",
+    "age": 32,
+    "gender": "Female",
+    "occupation": "Tailor in Varanasi",
+    "background": "She works long hours in a small tailoring shop and recently had a period of poor appetite and weight loss, making it harder to keep up with work.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": "unknown",
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "hardworking",
+      "anxious",
+      "stoic"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Pneumocystis jirovecii pneumonia",
+      "description": "Common HIV-associated pneumonia with subacute fever, dyspnea, nonproductive cough, hypoxemia and often bilateral perihilar diffuse symmetric interstitial pattern or CT ground-glass opacities; typically with CD4 <200."
+    },
+    {
+      "id": "d2",
+      "name": "Pulmonary tuberculosis",
+      "description": "AIDS-defining condition that can occur at any CD4 count; can present with cough and dyspnea and is suggested when symptoms have been present for several weeks or fail to respond to standard antibiotics."
+    },
+    {
+      "id": "d3",
+      "name": "Community-acquired pneumococcal pneumonia (Streptococcus pneumoniae)",
+      "description": "Bacterial pneumonia with rapid onset fever, dyspnea, cough and sputum; may show lobar or diffuse infiltrates and neutrophilic leukocytosis; rusty sputum may occur."
+    },
+    {
+      "id": "d4",
+      "name": "COVID-19 pneumonia",
+      "description": "Pneumonia with fever, cough, dyspnea and bilateral lung infiltrates; imaging may show peripheral and lower-zone ground glass opacities and/or consolidation."
+    },
+    {
+      "id": "d5",
+      "name": "Legionella pneumonia (Legionnaires’ pneumonia)",
+      "description": "CAP that can have headache, abdominal pain, diarrhea and vomiting; may show hyponatremia and relative bradycardia as a characteristic feature."
+    },
+    {
+      "id": "d6",
+      "name": "Candidiasis of esophagus",
+      "description": "HIV-related opportunistic infection (WHO stage 4 / AIDS-defining) involving candidiasis of the esophagus."
+    },
+    {
+      "id": "d7",
+      "name": "Cryptococcal meningitis",
+      "description": "AIDS-defining condition; part of the opportunistic infections seen with advanced HIV (noted among conditions occurring at very low CD4 counts)."
+    },
+    {
+      "id": "d8",
+      "name": "Typhoid fever",
+      "description": "Systemic infection with features including relative bradycardia, mild hepatosplenomegaly and possible rose spots; labs may show leukopenia with relative lymphocytosis and absent eosinophils; blood culture is the gold standard."
+    },
+    {
+      "id": "d9",
+      "name": "Leptospirosis",
+      "description": "Febrile illness in which chest radiograph may reveal patchy bronchopneumonia and small pleural effusion; ECG abnormalities can include bradycardia and nonspecific ST-T changes; LFTs may show raised AST/ALT and conjugated hyperbilirubinemia."
+    },
+    {
+      "id": "d10",
+      "name": "Chikungunya fever",
+      "description": "Viral illness where a pruritic maculopapular rash (often trunk and limbs) may occur around day 2–3; adults are prone to migratory polyarthritis involving small joints of ankles, feet, hands and wrists."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "I have had fever for about 10 days with worsening shortness of breath and a dry cough. I get breathless even with small activities.",
+  "medicalHistory": "No documented chronic illnesses. She reports recent unexplained weight loss. HIV status unknown.",
+  "symptoms": "Subacute fever with progressive dyspnea and nonproductive (dry) cough, with retrosternal chest pain worse on inspiration and breathlessness that is noticeable on exertion.\n\nFrom textbook: , hot and dry skin, herpes labialis, and flushed face.\nPhysical signs in the chest\nz First 2 days: The physical signs are minimal and include diminished respiratory movements, slight impairment of\n\npercussion note, and pleural rub. In early stages, numerous fine crepitations are audible.\nz After 2 days: Frank signs of consolidation appear (Box 2.16).\n\n290 CHAPTER 2: Respiratory System and Tuberculosis\n\nInvestigations Box 2.16: Signs of consolidation.\n\nz Blood • Diminished respiratory movements\n",
+  "relevantFindings": "Oxygenation shows hypoxemia with increased (A–a) gradient. LDH is elevated. Chest X-ray is normal or shows bilateral perihilar diffuse symmetric interstitial pattern. CT chest shows patchy ground-glass opacities with peripheral and basal sparing. HIV risk assessment prompts offering HIV testing; clinical context is consistent with Pneumocystis jirovecii pneumonia typically seen with CD4 <200.\n\nFrom textbook: iaceae (Klebsiella\nTable 2.66. pneumoniae (most pneumoniae) and Pseudomonas spp.\n\ncommon) ¾ Streptococcus pyogenes\nQ.  Write a short essay on list of bacteria causing pneumonia. ¾ Haemophilus ¾ Pseudomonas aeruginosa\n\nb. Secondary pneumonia (including aspiration pneumonia): influenzae ¾ Coxiella burnetii (Q fever)\n¾ Moraxella ¾ Chlamydia spp. (C. pneumoniae, C.\n\ndiscussed earlier catarrhalis psittaci, and C. trachomatis)\nc. Suppurative pneumonia (necrotizing pneumonia): ¾ Staphylococcus ¾ Viruse",
+  "redHerrings": "Relative bradycardia and hyponatremia could point toward Legionella pneumonia; bilateral ground-glass opacities and dyspnea could suggest COVID-19; several-weeks respiratory symptoms or nonresponse to standard antibiotics would raise pulmonary tuberculosis; rapid onset fever with productive/rusty sputum and neutrophilic leukocytosis would suggest pneumococcal pneumonia.",
+  "id": "case_1767640680437",
+  "domain": "infectious diseases",
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Pneumocystis jirovecii pneumonia",
+      "description": "**Pneumocystis jirovecii pneumonia (PJP)** is an opportunistic fungal pneumonia that classically occurs in patients with impaired cellular immunity, especially untreated or advanced **HIV** with **CD4 <200 cells/µL**. It typically presents subacutely with fever, dry cough, and progressive dyspnea, often with hypoxemia out of proportion to chest examination and sometimes minimal early chest X-ray findings.",
+      "keySymptoms": [
+        "**Subacute fever (~10 days)** - Suggests non-acute bacterial pneumonia; typical for opportunistic infections like **PJP**.",
+        "**Progressive dyspnea on exertion** - Hallmark of **PJP**, reflecting worsening diffusion impairment and increasing oxygen requirement.",
+        "**Nonproductive (dry) cough** - Common in **PJP** because alveoli are affected without purulent airway secretions.",
+        "**Retrosternal pleuritic chest pain** - Can occur with **PJP** due to pleural irritation or associated pneumothorax risk.",
+        "**Hypoxemia with increased (A–a) gradient** - Indicates impaired alveolar-capillary gas exchange, strongly supporting **PJP** physiology.",
+        "**Elevated LDH** - Nonspecific but frequently elevated in **PJP**, correlating with lung injury and inflammation.",
+        "**Normal or mild CXR changes early** - **PJP** may have minimal early radiographic findings despite significant hypoxemia.",
+        "**Bilateral perihilar diffuse interstitial pattern** - Classic chest X-ray pattern for **PJP** rather than lobar consolidation.",
+        "**CT ground-glass opacities with peripheral/basal sparing** - Typical CT signature for **PJP**, supporting an interstitial process."
+      ],
+      "clinicalReasoning": "The patient’s subacute course with fever, progressive exertional dyspnea, and dry cough is highly characteristic of **PJP** rather than typical bacterial pneumonia. Objective findings of **hypoxemia with an increased (A–a) gradient** indicate diffusion impairment, which aligns with **PJP** pathophysiology and often appears disproportionate to early physical signs. Imaging supports this: chest X-ray can be normal early or show bilateral perihilar interstitial infiltrates, while CT demonstrates patchy **ground-glass opacities** with relative peripheral/basal sparing. Given the strong association with immunosuppression, the presentation appropriately prompts **HIV testing** and evaluation for low **CD4** count."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Pulmonary tuberculosis",
+      "description": "**Pulmonary tuberculosis (TB)** is a chronic airborne infection by **Mycobacterium tuberculosis** causing granulomatous lung disease. It typically presents with a more indolent course and characteristic radiographic patterns, and diagnosis relies on microbiologic confirmation (sputum AFB/NAAT) and supportive imaging.",
+      "keySymptoms": [
+        "**Prolonged cough** - Usually persistent for weeks, often productive, and may progress to hemoptysis over time.",
+        "**Fever with night sweats** - Classically low-grade, worse in evenings, accompanied by drenching nocturnal sweating.",
+        "**Weight loss/anorexia** - Constitutional symptoms from chronic inflammation, commonly developing over several weeks.",
+        "**Hemoptysis** - Blood-streaked sputum from cavitary or endobronchial disease, not typical early in illness.",
+        "**Pleuritic chest pain** - Can occur with pleural involvement, often with effusion and focal pleural signs."
+      ],
+      "clinicalReasoning": "This patient has subacute fever with progressive dyspnea and dry cough, which can overlap with TB. However, the investigation pattern is more consistent with **Pneumocystis jirovecii pneumonia (PJP)**: **hypoxemia with increased A–a gradient**, elevated **LDH**, and imaging showing **diffuse bilateral interstitial changes/ground-glass opacities** with typical distribution. TB more often produces focal parenchymal disease (e.g., apical infiltrates/cavitation) and is less likely to cause marked diffusion impairment with a normal or near-normal chest X-ray early on. The clinical context prompting **HIV testing** also aligns strongly with PJP (often with **CD4 < 200**).",
+      "whyIncorrectForCase": "The course is only ~10 days with prominent exertional hypoxemia and diffuse interstitial/ground-glass CT findings, which is atypical for **pulmonary TB**. The case data specifically matches **PJP** physiology (high **A–a gradient**) and biomarkers (**LDH elevation**) rather than TB.",
+      "keyDifferencesFromCorrect": [
+        "**Imaging pattern** - TB often shows **upper-lobe infiltrates/cavitation**; PJP shows **bilateral diffuse interstitial/ground-glass opacities** with characteristic sparing.",
+        "**Oxygenation** - TB usually causes less dramatic diffusion impairment early; PJP classically causes **marked hypoxemia with increased A–a gradient**.",
+        "**Cough character** - TB commonly becomes **productive** over time; PJP typically presents with **nonproductive (dry) cough**.",
+        "**Time course** - TB is typically **weeks to months**; PJP often evolves over **days to a few weeks** with rapid functional decline.",
+        "**Laboratory clues** - **Elevated LDH** is a classic supportive clue for PJP; it is nonspecific and not a typical TB hallmark."
+      ],
+      "missingFindings": [
+        "**Apical/cavitary lesions on chest imaging** - Absence of typical TB radiographic features makes TB less likely here.",
+        "**Chronic constitutional symptoms** - No reported **weight loss**, **night sweats**, or prolonged malaise expected in TB.",
+        "**Microbiologic evidence (AFB/NAAT positive sputum)** - No supportive TB testing is provided; confirmation is essential for TB diagnosis.",
+        "**Productive sputum/hemoptysis** - Lack of sputum production or hemoptysis reduces likelihood of active pulmonary TB."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Community-acquired pneumococcal pneumonia (**Streptococcus pneumoniae**)",
+      "description": "**Pneumococcal pneumonia** is an acute community-acquired bacterial infection causing **alveolar inflammation** and **lobar consolidation**. It typically presents abruptly with high fever, productive cough, pleuritic chest pain, and focal findings on chest exam and imaging.",
+      "keySymptoms": [
+        "**Acute high fever** - Sudden onset fever with rigors is typical; subacute 10-day fever is less characteristic.",
+        "**Productive cough** - Classically produces purulent or rust-colored sputum rather than a persistent dry cough.",
+        "**Pleuritic chest pain** - Sharp pain worse with inspiration can occur from adjacent pleural inflammation.",
+        "**Dyspnea** - Breathlessness occurs but usually parallels focal consolidation severity and hypoxemia.",
+        "**Toxic appearance** - Patients often look acutely ill with flushed face, hot dry skin, or herpes labialis."
+      ],
+      "clinicalReasoning": "This patient has a 10-day subacute febrile illness with progressive exertional dyspnea and a nonproductive cough. Investigations show **hypoxemia with increased (A–a) gradient**, elevated **LDH**, and imaging that is normal or shows **bilateral perihilar diffuse symmetric interstitial** changes with CT **patchy ground-glass opacities** and peripheral/basal sparing—features that favor an interstitial opportunistic process. **Pneumococcal pneumonia** more often causes **lobar consolidation** with focal exam findings and a productive cough. The clinical context also prompts **HIV testing**, aligning with **Pneumocystis jirovecii pneumonia** (typically with **CD4 < 200**).",
+      "whyIncorrectForCase": "The case is dominated by **dry cough**, progressive dyspnea, elevated **LDH**, and **bilateral interstitial/ground-glass** imaging rather than focal **lobar consolidation**. These findings fit **Pneumocystis jirovecii pneumonia** far better than community-acquired **Streptococcus pneumoniae** infection.",
+      "keyDifferencesFromCorrect": [
+        "**Cough character** - Pneumococcal pneumonia is usually **productive**; **Pneumocystis jirovecii pneumonia** is typically **dry**.",
+        "**Radiology pattern** - Pneumococcus favors **lobar consolidation/air bronchograms**; PJP shows **diffuse bilateral interstitial** changes and **ground-glass opacities**.",
+        "**Laboratory clues** - Pneumococcus often has marked **neutrophilic leukocytosis**; PJP commonly has elevated **LDH** and significant **A–a gradient**.",
+        "**Host risk** - Pneumococcus affects immunocompetent hosts commonly; PJP strongly suggests **immunosuppression/HIV with low CD4**.",
+        "**Tempo** - Pneumococcus is typically **abrupt (hours–few days)**; PJP is often **subacute (days–weeks)** with progressive dyspnea."
+      ],
+      "missingFindings": [
+        "**Lobar consolidation on CXR** - Absence of focal consolidation/air bronchograms argues against pneumococcal lobar pneumonia.",
+        "**Purulent or rust-colored sputum** - Lack of productive sputum reduces likelihood of **Streptococcus pneumoniae**.",
+        "**Focal chest signs** - Missing localized bronchial breath sounds, increased vocal fremitus, and dullness to percussion weakens pneumococcal diagnosis.",
+        "**Typical acute onset with rigors** - A 10-day progressive course is less consistent with classic pneumococcal presentation."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "COVID-19 pneumonia",
+      "description": "**COVID-19 pneumonia** is a viral lower respiratory tract infection caused by **SARS-CoV-2**, producing inflammatory lung injury and impaired gas exchange. It commonly presents with fever, cough, dyspnea, and radiographic infiltrates, with severity ranging from mild illness to **ARDS**.",
+      "keySymptoms": [
+        "**Fever** - Acute systemic inflammatory response; often begins early and may persist several days.",
+        "**Dry cough** - Nonproductive cough from viral airway irritation and pneumonitis.",
+        "**Dyspnea** - Shortness of breath from impaired oxygen diffusion and ventilation-perfusion mismatch.",
+        "**Pleuritic chest pain** - Retrosternal pain worse with inspiration due to pleural or peripheral lung inflammation.",
+        "**Exertional breathlessness** - Disproportionate dyspnea with minimal activity reflecting reduced pulmonary reserve."
+      ],
+      "clinicalReasoning": "This patient has subacute fever, progressive dyspnea, dry cough, pleuritic chest pain, and hypoxemia, which can be seen in **COVID-19 pneumonia**. However, the investigation pattern described—normal or near-normal chest X-ray with significant hypoxemia and elevated **LDH**—is more characteristic of **Pneumocystis jirovecii pneumonia (PJP)** than typical COVID-19. The CT description of patchy **ground-glass opacities** with peripheral and basal sparing also aligns better with PJP distribution patterns. Additionally, the case explicitly notes HIV risk assessment and classic association with **CD4 <200**, strongly supporting PJP rather than COVID-19.",
+      "whyIncorrectForCase": "COVID-19 usually shows clear radiographic pneumonia on chest X-ray/CT that correlates with symptoms, whereas this case emphasizes a normal X-ray or diffuse symmetric interstitial pattern with marked hypoxemia and elevated **LDH**, which is classic for **PJP**. The clinical context pointing to HIV testing and **CD4 <200** is far more specific for PJP than for COVID-19.",
+      "keyDifferencesFromCorrect": [
+        "**Host risk factors** - COVID-19 affects immunocompetent hosts commonly; **PJP** strongly suggests **HIV/AIDS** or immunosuppression with **CD4 <200**.",
+        "**Chest X-ray pattern** - COVID-19 commonly shows bilateral peripheral opacities; **PJP** may have normal X-ray early or bilateral perihilar interstitial infiltrates.",
+        "**CT distribution** - COVID-19 often has peripheral/posterior ground-glass changes; **PJP** often has diffuse/perihilar ground-glass with relative peripheral sparing.",
+        "**Laboratory clue (LDH)** - Elevated **LDH** is a classic supportive marker for **PJP** and less specific for COVID-19.",
+        "**Gas exchange** - Both can cause hypoxemia, but a markedly increased **A–a gradient** with minimal auscultatory/X-ray findings is typical for **PJP**."
+      ],
+      "missingFindings": [
+        "**Typical COVID exposure/upper respiratory symptoms** - Lack of clear exposure history, anosmia, sore throat, or coryza reduces support for COVID-19.",
+        "**Peripheral/posterior predominant CT opacities** - Absence of a classic peripheral/posterior COVID pattern argues against COVID-19 pneumonia.",
+        "**Radiographic correlation** - A normal or minimally abnormal chest X-ray despite significant hypoxemia is less typical for COVID-19 than for **PJP**."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Legionella pneumonia (Legionnaires’ pneumonia)",
+      "description": "Legionella pneumonia is an atypical bacterial pneumonia caused by **Legionella pneumophila**, often acquired from contaminated water aerosols. It typically presents as an acute systemic illness with fever and pneumonia, frequently accompanied by prominent **gastrointestinal** and **neurologic** symptoms and characteristic laboratory abnormalities.",
+      "keySymptoms": [
+        "**High fever** - Abrupt high temperature with systemic toxicity; often higher than typical community pneumonias.",
+        "**Productive cough** - Cough may become productive; sputum can be scant but usually not persistently dry.",
+        "**Dyspnea** - Shortness of breath from alveolar infection; severity parallels radiographic pneumonia burden.",
+        "**Pleuritic chest pain** - Sharp pain worsened by inspiration due to pleural inflammation adjacent to consolidation.",
+        "**Diarrhea** - Common extrapulmonary symptom; watery diarrhea supports Legionella over typical bacterial causes.",
+        "**Confusion** - Altered mentation can occur from systemic infection and electrolyte disturbances like hyponatremia.",
+        "**Hyponatremia** - Low sodium due to SIADH-like effect; classic supportive clue for Legionella infection.",
+        "**Elevated transaminases** - Mild AST/ALT elevation is supportive and reflects systemic involvement."
+      ],
+      "clinicalReasoning": "This patient has subacute fever with progressive dyspnea and a dry cough, which can suggest an atypical pneumonia. However, her investigations show **hypoxemia with increased (A–a) gradient**, elevated **LDH**, a **normal or diffuse interstitial chest X-ray**, and CT with **patchy ground-glass opacities** with peripheral and basal sparing—an imaging/physiology pattern that is far more typical of **Pneumocystis jirovecii pneumonia** than Legionella. Legionella more often produces an acute febrile illness with systemic features and radiographic **consolidation**, not predominantly diffuse ground-glass changes with a near-normal initial chest X-ray.",
+      "whyIncorrectForCase": "The case pattern (subacute course, severe hypoxemia, elevated **LDH**, diffuse interstitial/ground-glass changes) strongly favors **Pneumocystis jirovecii pneumonia** rather than Legionella. There is no provided history of typical Legionella clues such as **diarrhea**, **confusion**, **hyponatremia**, or a clear exposure risk (e.g., contaminated water aerosols).",
+      "keyDifferencesFromCorrect": [
+        "**Host risk** - Legionella affects general population/exposed individuals; **Pneumocystis jirovecii pneumonia** classically occurs with **HIV/CD4 <200** or other immunosuppression.",
+        "**Clinical tempo** - Legionella is often acute and toxic-appearing; **Pneumocystis jirovecii pneumonia** is typically subacute with progressive exertional dyspnea.",
+        "**Cough character** - Legionella often becomes **productive**; **Pneumocystis jirovecii pneumonia** is usually **nonproductive (dry)**.",
+        "**Radiology** - Legionella commonly shows focal/lobar **consolidation**; **Pneumocystis jirovecii pneumonia** shows bilateral diffuse interstitial/ground-glass opacities, sometimes with a near-normal early X-ray.",
+        "**Laboratory clues** - Legionella is associated with **hyponatremia** and mild **transaminitis**; **Pneumocystis jirovecii pneumonia** is associated with markedly elevated **LDH** and significant **A–a gradient** hypoxemia.",
+        "**Extrapulmonary features** - Legionella frequently has **GI** and **neurologic** symptoms; **Pneumocystis jirovecii pneumonia** usually lacks prominent extrapulmonary symptoms."
+      ],
+      "missingFindings": [
+        "**Hyponatremia** - Common supportive laboratory clue for Legionella; not reported in this case.",
+        "**Diarrhea** - Typical extrapulmonary symptom in Legionella; absence makes Legionella less likely here.",
+        "**Confusion/neurologic symptoms** - Frequently described with Legionella; not present in the provided history.",
+        "**Lobar consolidation on chest X-ray** - Legionella often shows consolidation; this case has normal/diffuse interstitial pattern.",
+        "**Exposure history** - Travel, hotel stay, spa, cooling towers, or water aerosol exposure supports Legionella; not described."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Candidiasis of esophagus",
+      "description": "**Esophageal candidiasis** is an opportunistic fungal infection of the esophageal mucosa, most often due to **Candida albicans**. It typically occurs in patients with **advanced immunosuppression** (e.g., **HIV/AIDS**, chemotherapy, chronic steroids) and presents with painful swallowing symptoms rather than primary respiratory complaints.",
+      "keySymptoms": [
+        "**Odynophagia** - Painful swallowing due to inflamed, ulcerated esophageal mucosa from Candida overgrowth.",
+        "**Dysphagia** - Sensation of food sticking in chest from esophageal inflammation and plaques.",
+        "**Retrosternal burning pain** - Substernal discomfort, often meal-related, from esophagitis rather than pleurisy.",
+        "**Oral thrush** - White curd-like plaques in mouth suggesting Candida involvement and immunosuppression.",
+        "**Nausea or poor intake** - Reduced eating from pain with swallowing and systemic illness."
+      ],
+      "clinicalReasoning": "This patient has a 10-day subacute febrile illness with progressive **dyspnea**, **dry cough**, exertional breathlessness, and pleuritic chest pain. Investigations show **hypoxemia with increased (A–a) gradient**, elevated **LDH**, and CT with **patchy ground-glass opacities** with peripheral/basal sparing—features classically consistent with **Pneumocystis jirovecii pneumonia (PJP)**, especially in the setting of possible **HIV** with **CD4 < 200**. **Esophageal candidiasis** would primarily produce swallowing-related symptoms (odynophagia/dysphagia) and does not explain diffuse hypoxemic respiratory failure with characteristic CT findings.",
+      "whyIncorrectForCase": "The dominant presentation is respiratory (progressive **dyspnea**, **dry cough**, hypoxemia) with imaging consistent with **interstitial pneumonia**, not esophagitis. There are no reported hallmark esophageal symptoms such as **odynophagia**, **dysphagia**, or **oral thrush** to support **esophageal candidiasis**.",
+      "keyDifferencesFromCorrect": [
+        "**Primary system involved** - Esophageal candidiasis affects the esophagus; **PJP** primarily affects the lungs causing hypoxemic pneumonia.",
+        "**Core symptoms** - Esophageal candidiasis causes **odynophagia/dysphagia**; **PJP** causes **progressive dyspnea** and **nonproductive cough**.",
+        "**Gas exchange** - Esophageal candidiasis does not cause increased **A–a gradient**; **PJP** commonly causes marked **A–a gradient** with hypoxemia.",
+        "**Imaging** - Esophageal candidiasis is diagnosed by endoscopy; **PJP** shows **ground-glass opacities** on CT and may have near-normal CXR early.",
+        "**Key labs** - Elevated **LDH** supports **PJP**; it is not a typical diagnostic clue for esophageal candidiasis."
+      ],
+      "missingFindings": [
+        "**Odynophagia** - Its absence makes esophageal mucosal infection much less likely as the primary diagnosis.",
+        "**Dysphagia** - Lack of swallowing difficulty argues against significant esophageal involvement.",
+        "**Oral thrush** - No reported thrush reduces likelihood of Candida overgrowth affecting upper GI tract.",
+        "**Endoscopic evidence of plaques/ulcers** - Diagnosis requires visualization/biopsy; no supportive findings provided.",
+        "**Meal-related retrosternal pain** - Pain is described as pleuritic (worse on inspiration), not swallowing-related."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Cryptococcal meningitis",
+      "description": "Cryptococcal meningitis is an opportunistic **fungal** infection of the **central nervous system** caused by **Cryptococcus neoformans/gattii**, classically in advanced **HIV/AIDS**. It presents as a subacute meningoencephalitis with raised **intracranial pressure** and requires urgent diagnosis and antifungal therapy.",
+      "keySymptoms": [
+        "**Headache** - Progressive, persistent headache over days to weeks due to meningeal inflammation and pressure.",
+        "**Fever** - Low-grade or intermittent fever accompanying subacute CNS infection, often less dramatic than bacterial meningitis.",
+        "**Neck stiffness** - Meningeal irritation causing nuchal rigidity, though may be mild in immunocompromised patients.",
+        "**Photophobia** - Light sensitivity from meningeal inflammation; commonly accompanies headache and neck stiffness.",
+        "**Altered mental status** - Confusion, lethargy, or reduced consciousness from meningoencephalitis or raised intracranial pressure.",
+        "**Vomiting** - Often related to increased intracranial pressure rather than primary gastrointestinal illness.",
+        "**Cranial nerve palsies** - Diplopia or facial weakness due to basilar meningitis and elevated intracranial pressure."
+      ],
+      "clinicalReasoning": "This patient’s dominant syndrome is respiratory: 10 days of subacute **fever**, progressive **dyspnea**, and **dry cough** with exertional breathlessness and hypoxemia with increased **A–a gradient**. Imaging described (normal/near-normal CXR or bilateral perihilar interstitial pattern; CT with patchy **ground-glass opacities** and peripheral/basal sparing) and elevated **LDH** strongly support **Pneumocystis jirovecii pneumonia (PJP)** in the setting of possible undiagnosed **HIV** with low **CD4**. Cryptococcal meningitis would instead present with a CNS-focused symptom cluster (headache, neck stiffness, altered mentation) and diagnostic CSF abnormalities, which are not described here.",
+      "whyIncorrectForCase": "There are no CNS symptoms such as **headache**, **neck stiffness**, **photophobia**, **vomiting**, or **altered mental status** to suggest meningitis. The objective findings are pulmonary (hypoxemia with increased **A–a gradient**, elevated **LDH**, and CT **ground-glass opacities**), aligning with PJP rather than cryptococcal CNS disease.",
+      "keyDifferencesFromCorrect": [
+        "**Primary organ system** - Cryptococcal meningitis targets **CNS**; **PJP** primarily affects the **lungs** causing hypoxemic respiratory failure.",
+        "**Core symptoms** - Cryptococcal meningitis causes **headache/meningismus/altered sensorium**; **PJP** causes **dry cough, progressive dyspnea, exertional desaturation**.",
+        "**Imaging pattern** - Cryptococcal meningitis is evaluated with **brain imaging/CSF**; **PJP** shows **diffuse interstitial/perihilar changes** and CT **ground-glass opacities**.",
+        "**Key labs/physiology** - Cryptococcal meningitis is suggested by positive **CSF cryptococcal antigen** and high opening pressure; **PJP** often shows elevated **LDH** and increased **A–a gradient**.",
+        "**Typical CD4 association** - Cryptococcal meningitis is common with **CD4 <100**; **PJP** is classically seen with **CD4 <200**."
+      ],
+      "missingFindings": [
+        "**Headache** - Absence of a prominent progressive headache makes cryptococcal meningitis unlikely.",
+        "**Meningeal signs** - No **neck stiffness** or **photophobia** reported to support meningeal irritation.",
+        "**Altered mental status** - No confusion, lethargy, or reduced consciousness described, arguing against meningoencephalitis.",
+        "**Raised intracranial pressure features** - No vomiting, papilledema, or cranial nerve palsies suggesting elevated CSF pressure.",
+        "**CSF abnormalities** - No lumbar puncture findings such as elevated opening pressure or positive **cryptococcal antigen**."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Typhoid fever",
+      "description": "**Typhoid fever** is a systemic infection caused by **Salmonella enterica** serovar Typhi, acquired via fecal–oral transmission. It typically presents with prolonged fever and prominent gastrointestinal and systemic symptoms, and may cause complications such as intestinal hemorrhage or perforation if untreated.",
+      "keySymptoms": [
+        "**Stepwise/prolonged fever** - Gradually rising fever over days with sustained high temperatures and malaise.",
+        "**Abdominal pain** - Diffuse or right lower quadrant discomfort from ileocecal inflammation and lymphoid hyperplasia.",
+        "**Diarrhea or constipation** - Altered bowel habits; constipation is common early, diarrhea may occur later.",
+        "**Headache** - Common systemic symptom reflecting toxemia and cytokine-mediated illness.",
+        "**Relative bradycardia (Faget sign)** - Pulse-temperature dissociation sometimes seen in enteric fever.",
+        "**Rose spots** - Faint salmon-colored macules on trunk appearing during the second week of illness.",
+        "**Hepatosplenomegaly** - Reticuloendothelial involvement causing enlarged liver and spleen on examination."
+      ],
+      "clinicalReasoning": "This patient has subacute **fever** with prominent, progressive **dyspnea** and **dry cough**, plus pleuritic retrosternal chest pain. Investigations show **hypoxemia with increased (A–a) gradient**, elevated **LDH**, and CT chest with **patchy ground-glass opacities** with peripheral and basal sparing—features aligning with an interstitial pneumonitis pattern. These findings strongly suggest **Pneumocystis jirovecii pneumonia (PJP)** in the appropriate context (often **CD4 < 200**), and they are not characteristic of primary enteric fever. Therefore, **typhoid fever** is an incorrect target diagnosis for this presentation.",
+      "whyIncorrectForCase": "Typhoid fever usually causes systemic and gastrointestinal features rather than isolated progressive **hypoxemic respiratory failure** with diffuse interstitial CT changes. The patient’s imaging pattern and elevated **LDH** are far more consistent with **PJP** than with enteric fever.",
+      "keyDifferencesFromCorrect": [
+        "**Primary organ involvement** - Typhoid is primarily **systemic/GI**; **PJP** is primarily **pulmonary** with interstitial pneumonia.",
+        "**Respiratory pattern** - Typhoid rarely causes marked **progressive dyspnea**; **PJP** classically causes worsening exertional dyspnea and **dry cough**.",
+        "**Oxygenation** - Typhoid typically lacks significant **A–a gradient elevation**; **PJP** commonly shows **hypoxemia** with increased **A–a gradient**.",
+        "**Imaging** - Typhoid has no typical **ground-glass opacities** pattern; **PJP** often shows bilateral diffuse/patchy **ground-glass** changes.",
+        "**Laboratory clue** - Elevated **LDH** supports **PJP**; it is not a defining feature of typhoid fever.",
+        "**Risk context** - Typhoid relates to contaminated food/water exposure; **PJP** is linked to **HIV/immunosuppression** (often **CD4 < 200**)."
+      ],
+      "missingFindings": [
+        "**Gastrointestinal symptoms** - Lack of diarrhea/constipation and abdominal pain makes enteric fever less likely.",
+        "**Rose spots** - Absence of characteristic truncal rash reduces support for typhoid fever.",
+        "**Relative bradycardia** - No pulse–temperature dissociation described, which can be a supportive typhoid sign.",
+        "**Hepatosplenomegaly** - Not reported; its absence weakens a classic systemic enteric fever picture.",
+        "**Exposure history** - No contaminated food/water or outbreak/travel exposure provided to support typhoid acquisition."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Leptospirosis",
+      "description": "Leptospirosis is a zoonotic infection caused by **Leptospira** species, typically acquired from exposure to animal urine–contaminated water or soil. It ranges from a mild febrile illness to severe **Weil disease** with **jaundice**, **acute kidney injury**, and hemorrhagic complications, including pulmonary hemorrhage.",
+      "keySymptoms": [
+        "**Acute febrile illness** - Sudden high fever with chills and systemic toxicity, usually beginning abruptly.",
+        "**Severe myalgia (calf/back)** - Prominent muscle pain, classically in calves and lumbar region, often limiting movement.",
+        "**Headache** - Intense headache, sometimes with photophobia, reflecting systemic infection and possible meningeal irritation.",
+        "**Conjunctival suffusion** - Red, nonpurulent conjunctiva; a characteristic early clue in leptospirosis.",
+        "**Jaundice** - Yellow discoloration from hepatic dysfunction, especially in severe Weil disease presentations.",
+        "**Oliguria/AKI** - Reduced urine output from renal involvement; commonly accompanies severe disease.",
+        "**Hemoptysis** - Coughing blood due to pulmonary hemorrhage; can cause severe respiratory failure."
+      ],
+      "clinicalReasoning": "Leptospirosis can cause fever and respiratory symptoms, particularly when pulmonary hemorrhage or severe systemic inflammation occurs. However, the hallmark pattern is an acute systemic illness with prominent **myalgias**, **conjunctival suffusion**, and frequent **hepatorenal** involvement rather than an isolated subacute progressive dyspnea syndrome. This patient’s investigations show **hypoxemia with increased (A–a) gradient**, elevated **LDH**, and **CT ground-glass opacities with peripheral and basal sparing**, which is much more typical of **Pneumocystis jirovecii pneumonia (PJP)**. The clinical context also includes prompting **HIV testing** and a classic association with **CD4 <200**, further supporting PJP over leptospirosis.",
+      "whyIncorrectForCase": "This patient has a 10-day subacute course dominated by progressive exertional dyspnea and dry cough with CT features typical of **PJP**, not the acute systemic hepatorenal syndrome typical of leptospirosis. There is no provided exposure history (freshwater/animal urine) or key leptospirosis signs such as **conjunctival suffusion**, **jaundice**, or **AKI**.",
+      "keyDifferencesFromCorrect": [
+        "**Immune status association** - Leptospirosis affects immunocompetent after exposure; **PJP** classically occurs with **HIV/CD4 <200** or other immunosuppression.",
+        "**Respiratory pattern** - Leptospirosis lung disease often involves **hemorrhage/hemoptysis**; **PJP** causes progressive **dry cough** and exertional dyspnea.",
+        "**Imaging** - Leptospirosis may show alveolar hemorrhage/consolidation; **PJP** shows diffuse/patchy **ground-glass opacities** with typical distribution patterns.",
+        "**Laboratory clues** - Leptospirosis often has **bilirubin/creatinine elevation** and thrombocytopenia; **PJP** commonly has elevated **LDH** with hypoxemia and increased **A–a gradient**.",
+        "**Systemic features** - Leptospirosis frequently has **severe myalgias** and **conjunctival suffusion**; **PJP** often lacks these and presents primarily with respiratory compromise."
+      ],
+      "missingFindings": [
+        "**Conjunctival suffusion** - Absence of this characteristic sign reduces likelihood of leptospirosis.",
+        "**Severe calf/lumbar myalgia** - Not described; its absence argues against classic leptospiral presentation.",
+        "**Jaundice** - No jaundice reported; severe leptospirosis commonly shows hepatic involvement.",
+        "**Acute kidney injury/oliguria** - No renal symptoms or AKI mentioned; renal involvement is a key leptospirosis clue.",
+        "**Exposure history** - No freshwater flooding, sewage, or animal urine exposure provided, which is central to leptospirosis risk.",
+        "**Hemoptysis/pulmonary hemorrhage** - Not described; leptospirosis respiratory failure often involves bleeding rather than isolated dry cough."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Chikungunya fever",
+      "description": "Chikungunya fever is an acute arboviral illness transmitted by Aedes mosquitoes, classically causing abrupt fever and severe polyarthralgia. Respiratory involvement is not a defining feature, and progressive hypoxemic dyspnea with interstitial imaging patterns suggests an alternative diagnosis.",
+      "keySymptoms": [
+        "**Acute high fever** - Sudden onset fever, often high-grade, typically begins abruptly after mosquito exposure.",
+        "**Severe polyarthralgia** - Prominent, disabling joint pains (often symmetric) affecting wrists, hands, ankles, and feet.",
+        "**Maculopapular rash** - Diffuse rash may appear after fever onset, commonly on trunk and limbs.",
+        "**Myalgia and fatigue** - Generalized body aches and marked tiredness are common during acute infection.",
+        "**Headache** - Frontal headache can occur, sometimes with photophobia, but usually without focal deficits."
+      ],
+      "clinicalReasoning": "This patient has subacute fever (~10 days) with progressively worsening **dyspnea**, **dry cough**, pleuritic retrosternal chest pain, and exertional breathlessness. Investigations show **hypoxemia with increased (A–a) gradient**, elevated **LDH**, and CT with **patchy ground-glass opacities** with peripheral and basal sparing—features that are highly characteristic of **Pneumocystis jirovecii pneumonia (PJP)**, especially in the setting of possible **HIV** with low **CD4 (<200)**. Chikungunya typically presents with abrupt fever and prominent **arthralgia** rather than progressive hypoxemic respiratory failure and classic interstitial CT findings.",
+      "whyIncorrectForCase": "Chikungunya fever does not typically cause progressive hypoxemic respiratory illness with diffuse **ground-glass opacities** and elevated **LDH**. The case lacks hallmark chikungunya features such as severe **polyarthralgia** and **rash**, while strongly matching **PJP** physiology and imaging.",
+      "keyDifferencesFromCorrect": [
+        "**Primary syndrome** - Chikungunya is a febrile arthralgia illness; **PJP** is an opportunistic hypoxemic pneumonia.",
+        "**Respiratory pattern** - Chikungunya rarely causes progressive dyspnea; **PJP** causes subacute worsening dyspnea and dry cough.",
+        "**Imaging** - Chikungunya has no typical interstitial pattern; **PJP** often shows bilateral diffuse **ground-glass opacities** with characteristic distribution.",
+        "**Laboratory clue (LDH)** - LDH is not a classic chikungunya discriminator; elevated **LDH** supports **PJP** due to alveolar injury.",
+        "**Risk context** - Chikungunya depends on mosquito exposure/outbreak; **PJP** is linked to **immunosuppression** (e.g., untreated **HIV** with **CD4 <200**)."
+      ],
+      "missingFindings": [
+        "**Severe symmetric polyarthralgia/arthritis** - Its absence makes chikungunya much less likely than **PJP** here.",
+        "**Maculopapular rash** - Lack of rash reduces support for chikungunya in a febrile illness presentation.",
+        "**Epidemiologic exposure** - No mosquito/outbreak/travel exposure provided to support chikungunya acquisition.",
+        "**Typical course** - No abrupt onset with prominent joint symptoms; instead there is subacute progressive respiratory decline.",
+        "**Non-respiratory predominance** - Chikungunya usually has systemic/joint-dominant symptoms, not hypoxemic pneumonia."
+      ]
+    }
+  ],
+  "idealPathway": {
+    "diseaseName": "Pneumocystis jirovecii pneumonia",
+    "domain": "infectious diseases",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about fever duration and pattern (including whether symptoms have been present for several weeks).",
+        "reasoning": "The textbook describes fever as a common feature of pneumonia and notes that prolonged symptoms should prompt consideration of an alternative diagnosis (TB).",
+        "expectedFinding": "Fever as part of pneumonia symptom constellation; if symptoms are prolonged for weeks, consider TB rather than routine pneumonia.",
+        "importance": "critical",
+        "textbookReference": "“Fever: About 80% are febrile… When symptoms have been present for several weeks… the possibility of TB should always be considered.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about breathlessness/shortness of breath and whether it occurs even with small activities.",
+        "reasoning": "Breathlessness is described as occurring due to impaired gas exchange from inflammatory exudate in pneumonia.",
+        "expectedFinding": "Breathlessness consistent with pneumonia physiology.",
+        "importance": "important",
+        "textbookReference": "“Breathlessness: The alveoli become filled inflammatory exudate impairs gas exchange producing breathlessness.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about cough character (dry vs productive) and whether there is no expectoration.",
+        "reasoning": "The textbook contrasts atypical pneumonias as having dry cough and no expectoration; pneumonia in immunocompromised hosts is noted to have ‘symptoms more than the signs’ and includes P. jirovecii as a cause.",
+        "expectedFinding": "Dry cough with no expectoration, supporting an atypical/interstitial pattern in an immunocompromised host where P. jirovecii is included as a cause.",
+        "importance": "critical",
+        "textbookReference": "“Atypical… Dry cough, no blood tinge… No expectoration” and “Pneumonia in immune compromised host… may be caused by… M. tuberculosis or P. jirovecii… Usually, symptoms are more than the signs.”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about pleuritic chest pain.",
+        "reasoning": "Pleuritic chest pain is described as a common presenting feature in CAP due to pleural inflammation.",
+        "expectedFinding": "Pleuritic chest pain (may be present).",
+        "importance": "helpful",
+        "textbookReference": "“Chest pain: It is commonly pleuritic chest pain… due to inflammation of the pleura.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about HIV risk/previous diagnosis and whether HIV testing has been offered or done.",
+        "reasoning": "The textbook explicitly recommends offering HIV testing to all patients with pneumonia, and P. jirovecii is listed as a cause in immunocompromised hosts (including HIV).",
+        "expectedFinding": "HIV infection or risk prompting classification as pneumonia in immunocompromised host where P. jirovecii is a possible etiology.",
+        "importance": "important",
+        "textbookReference": "“HIV testing… a test should be offered to all patients with pneumonia” and “Pneumonia in immune compromised host… acquired immunodeficiency such as HIV infection… may be caused by… P. jirovecii.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Measure oxygen saturation on room air and assess for cyanosis/distress.",
+        "reasoning": "The textbook highlights low oxygen saturation and cyanosis/distress in pneumonia assessment and indicates ABG measurement when SaO2 is low.",
+        "expectedFinding": "Low oxygen saturation on air; patient may be cyanosed and distressed.",
+        "importance": "critical",
+        "textbookReference": "“Oxygen saturation on air may be low, and the patient cyanosed and distressed.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Record vital signs: temperature, respiratory rate, pulse rate, and blood pressure; assess for confusion/delirium.",
+        "reasoning": "The textbook emphasizes fever, raised respiratory/pulse rate, low BP (especially sensitive in elderly), tachycardia, and delirium/confusion in pneumonia.",
+        "expectedFinding": "Fever (may be present), tachypnea, tachycardia, possible hypotension, possible delirium/confusion.",
+        "importance": "important",
+        "textbookReference": "“Fever… Respiratory and pulse rate may be raised and the blood pressure low… Tachycardia is common… There may be delirium.”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Perform chest examination for signs of consolidation (percussion and auscultation, including vocal resonance).",
+        "reasoning": "The textbook provides classic consolidation signs used to evaluate pneumonia on exam.",
+        "expectedFinding": "Dull percussion note, tubular bronchial breathing, bronchophony/egophony/whispering pectoriloquy, coarse crackles (depending on phase).",
+        "importance": "important",
+        "textbookReference": "“During consolidation phase… dull to percussion… tubular bronchial breath sounds… bronchophony and whispering pectoriloquy… Coarse crackles…”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order complete blood count (CBC).",
+        "reasoning": "The textbook lists CBC as a marker of severity and notes leukocyte patterns (bacterial vs viral/atypical).",
+        "expectedFinding": "Total leukocyte count pattern may support atypical/viral (often <5,000/mm3) vs bacterial (neutrophilic leukocytosis >15 × 10^9/L).",
+        "importance": "important",
+        "textbookReference": "“Complete blood count… Marker of severity. In viral and atypical pneumonias, total leukocyte count is often <5,000/mm3… Neutrophilic leukocytosis… suggests bacterial pneumonia.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order arterial blood gas (ABG) if SaO2 <93% or if severe clinical features are present.",
+        "reasoning": "The textbook specifies ABG measurement criteria to assess ventilatory failure or acidosis.",
+        "expectedFinding": "Evidence of hypoxemia and/or ventilatory failure/acidosis in severe pneumonia.",
+        "importance": "important",
+        "textbookReference": "“Arterial blood gases: Measure when SaO2 <93% or when severe clinical features to assess ventilatory failure or acidosis.”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Offer HIV testing.",
+        "reasoning": "The textbook recommends HIV testing for all pneumonia patients; P. jirovecii is specifically listed under pneumonia in immunocompromised host (including HIV).",
+        "expectedFinding": "Positive HIV test supports immunocompromised-host category where P. jirovecii is a possible cause.",
+        "importance": "critical",
+        "textbookReference": "“HIV testing… a test should be offered to all patients with pneumonia” and “Pneumonia in immune compromised host… may be caused by… P. jirovecii.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order chest X-ray.",
+        "reasoning": "The textbook states chest X-ray is essential for confirmation, follow-up, and detecting complications; it also describes interstitial pneumonia patterns and notes P. jirovecii as an interstitial pneumonia cause.",
+        "expectedFinding": "An interstitial/reticular pattern consistent with interstitial pneumonia (where P. jirovecii is listed as an example).",
+        "importance": "important",
+        "textbookReference": "“Chest X-ray: Essential for the confirmation of diagnoses…” and “Interstitial pneumonia… X-ray chest gives a reticular pattern (e.g., Mycoplasma pneumoniae, P. jirovecii, and viruses).”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "If diagnosis remains unclear or patient is severe, obtain fiberoptic bronchoscopy with BAL for stains/culture (including AFB stain) as part of further testing.",
+        "reasoning": "The textbook lists bronchoscopy with BAL and staining/culture as a diagnostic option in selected cases, and emphasizes considering TB when prolonged symptoms or poor response to antibiotics.",
+        "expectedFinding": "BAL results contributing to etiologic diagnosis; AFB stain helps evaluate TB as an alternative diagnosis.",
+        "importance": "helpful",
+        "textbookReference": "“Fiberoptic bronchoscopy with BAL and Gram’s stain, AFB stain, culture, and cytology…” and “When symptoms… have failed to respond… the possibility of TB should always be considered.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Pulmonary tuberculosis (TB)",
+        "howToRuleOut": "If symptoms have been present for several weeks or have failed to respond to standard antibiotics, consider TB and pursue microbiologic evaluation (e.g., AFB stain as part of sputum/BAL testing per listed investigations).",
+        "textbookReference": "“When symptoms have been present for several weeks or have failed to respond to standard antibiotics, the possibility of TB should always be considered.”"
+      },
+      {
+        "name": "Atypical pneumonia (e.g., Mycoplasma/Chlamydia/Legionella/viral)",
+        "howToRuleOut": "Use the textbook’s clinical pattern (symptoms > signs, dry cough, no expectoration) and supportive labs (often low total WBC in viral/atypical). Chest X-ray patterns and targeted tests (PCR/serology listed for atypical pathogens) can support alternative atypical etiologies.",
+        "textbookReference": "“Atypical… Symptoms > signs… Dry cough… No expectoration” and “In viral and atypical pneumonias, total leukocyte count is often <5,000/mm3” and “Oropharynx swab PCR for Mycoplasma pneumoniae and other atypical pathogens.”"
+      },
+      {
+        "name": "Pneumococcal (lobar) pneumonia",
+        "howToRuleOut": "Look for consolidation signs on exam and lobar homogeneous radiopacity with air bronchograms on chest X-ray; supportive tests include severe neutrophil leukocytosis and pneumococcal identification on Gram stain/culture/urinary antigen.",
+        "textbookReference": "“Signs of consolidation…” and “Chest radiograph… homogeneous radiopaque with air bronchograms” and “Neutrophilic leukocytosis… suggests bacterial pneumonia” and “Gram’s staining… may show pneumococci… Urinary antigen…”"
+      },
+      {
+        "name": "Hospital-acquired pneumonia (HAP) / ventilator-associated pneumonia (VAP)",
+        "howToRuleOut": "Differentiate by clinical setting: onset after >48 hours of hospitalization (or after ventilation criteria) plus features such as purulent secretions and new infiltrate; this helps separate from community-onset pneumonia in an immunocompromised host.",
+        "textbookReference": "“Hospital-acquired pneumonias… development of pneumonia after >48 hours of hospitalization.” and “At least two of three clinical features… and a new lung infiltrate.”"
+      }
+    ],
+    "diagnosticApproach": "From the textbook, approach this patient as pneumonia in an immunocompromised host because P. jirovecii is listed among causes in this setting and such cases have ‘symptoms more than the signs.’ Start with symptom-focused history (fever duration, progressive breathlessness, dry cough/no expectoration, pleuritic pain) and explicitly offer HIV testing. On examination, prioritize oxygen saturation (and assess for cyanosis/distress), vital signs (including confusion/delirium), and a focused chest exam for consolidation signs. Order investigations in a cost-effective sequence: CBC first (severity and bacterial vs atypical pattern), ABG when SaO2 <93% or severe features, HIV testing, then chest X-ray to confirm pneumonia and identify an interstitial/reticular pattern (noted for interstitial pneumonia including P. jirovecii). If prolonged symptoms or poor response suggests an alternative diagnosis such as TB, or if severe/unclear, proceed to further microbiologic confirmation using fiberoptic bronchoscopy with BAL and appropriate stains/cultures (including AFB stain) as listed in the textbook.",
+    "textbookSources": [
+      ", hot and dry skin, herpes labialis, and flushed face.\nPhysical signs in the chest\nz First 2 days: The physical signs are minimal and include diminished respiratory movements, slight impairment of\n\npe...",
+      ", hot and dry skin, herpes labialis, and flushed face.\nPhysical signs in the chest\nz First 2 days: The physical signs are minimal and include diminished respiratory movements, slight impairment of\n\npe..."
+    ]
+  }
+}

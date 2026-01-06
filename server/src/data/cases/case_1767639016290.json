@@ -1,0 +1,481 @@
+{
+  "persona": {
+    "name": "Lakshmi Nair",
+    "age": 68,
+    "gender": "Female",
+    "occupation": "Auto Rickshaw Driver in Hyderabad",
+    "background": "Lakshmi drives long hours in city traffic and often skips meals and follow-up visits, getting periodic routine blood tests at local clinics when she feels weak.",
+    "lifestyle": {
+      "activityLevel": "high",
+      "smoking": "unknown",
+      "alcohol": "none"
+    },
+    "personalityTraits": [
+      "stoic",
+      "practical",
+      "anxious about missing work"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Chronic myeloid leukemia (CML)",
+      "description": "A myeloproliferative neoplasm characterized by overproduction of cells of the myeloid series with marked leukocytosis and splenomegaly, typically Philadelphia chromosome/BCR-ABL1 positive and with a low NAP/LAP score."
+    },
+    {
+      "id": "d2",
+      "name": "Primary myelofibrosis",
+      "description": "A myeloproliferative neoplasm with fibrotic marrow (biopsy diagnostic), often with leukoerythroblastosis and tear drop cells, raised LAP score, Philadelphia chromosome negative, and splenomegaly."
+    },
+    {
+      "id": "d3",
+      "name": "Myelodysplastic syndromes (MDS)",
+      "description": "Acquired clonal stem cell disorders (myelodysplastic neoplasms) characterized by cytopenias with dysplasia in one or more myeloid lineages (≥10% dysplastic cells), with risk of progression to AML."
+    },
+    {
+      "id": "d4",
+      "name": "Megaloblastic anemia (vitamin B12/folate deficiency)",
+      "description": "Macrocytic anemia with macro-ovalocytes and hypersegmented neutrophils; often associated with leukopenia and thrombocytopenia, low reticulocyte count, and markedly increased LDH."
+    },
+    {
+      "id": "d5",
+      "name": "Myelodysplastic syndrome with multilineage dysplasia (MDS-MLD)",
+      "description": "A subtype of MDS with cytopenias and dysplasia in 2–3 myeloid lineages; peripheral smear may show macrocytic/dimorphic anemia with dyspoiesis, hypogranular neutrophils and pseudo–Pelger–Hüet cells, and thrombocytopenia with large hypogranular/giant platelets; NAP score is moderately or severely decreased."
+    },
+    {
+      "id": "d6",
+      "name": "Acute myeloid leukemia (AML)",
+      "description": "A malignant stem cell neoplasm with failure of maturation and proliferation of blasts that fill the marrow and spill into peripheral blood; classified as an acute leukemia."
+    },
+    {
+      "id": "d7",
+      "name": "Aplastic anemia",
+      "description": "A cause of pancytopenia due to decreased bone marrow function (bone marrow aplasia/hypoplasia)."
+    },
+    {
+      "id": "d8",
+      "name": "Myelophthisis (secondary myelofibrosis)",
+      "description": "Secondary reactive fibrosis of bone marrow (myelophthisic anemia) due to marrow infiltration or other listed causes, and can produce splenomegaly."
+    },
+    {
+      "id": "d9",
+      "name": "Paroxysmal nocturnal hemoglobinuria (PNH)",
+      "description": "An acquired hemolytic anemia with intravascular hemolysis and pancytopenia; may have dark urine, thrombosis, and reduced NAP score; confirmed by flow cytometry showing deficiency of CD55/CD59."
+    },
+    {
+      "id": "d10",
+      "name": "Immune thrombocytopenic purpura (ITP)",
+      "description": "A diagnosis of exclusion requiring isolated thrombocytopenia without anemia or leukopenia; splenomegaly and lymphadenopathy are uncommon."
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "“For the last few months I’m feeling very weak, I keep getting infections, and I’ve started having easy bleeding from my gums and small bruises.”",
+  "medicalHistory": "Older adult with symptoms developing gradually. No specific prior diagnosis documented; the current presentation is driven by symptoms due to cytopenias (weakness, infections, hemorrhage).",
+  "symptoms": "Weakness consistent with anemia; recurrent infections consistent with leukopenia; hemorrhagic symptoms consistent with thrombocytopenia (mucosal/skin bleeding).\n\nFrom textbook: cytopenia” or to specific types of cytopenia (e.g., refractory anemia). Present\nWHO (2022) classification, gemetic characterization is playing a very important role. The new subgrouping is intended to\nprovide a more accurate classification and thus basis for targeted therapies. The distinction between single and multilineage\ndysplasia is now optional. The subgroup “MDS, unclassifiable” is no longer used in the new WHO classification (Table 9.42).\n\nClinical Features\nz Usually found in patients ab",
+  "relevantFindings": "CBC shows cytopenias (anemia with hemoglobin <10 g/dL threshold for cytopenia in MDS, plus leukopenia/low WBC and thrombocytopenia). Peripheral smear shows macrocytic or dimorphic anemia with evidence of dyspoiesis; neutrophils with hypogranular/agranular cytoplasm and nuclear abnormalities such as pseudo–Pelger–Hüet cells; platelets show thrombocytopenia with large hypogranular or giant platelets. NAP score is moderately or severely decreased. Bone marrow shows dyspoietic differentiation affecting nonlymphoid lineages with cytopenias; cytogenetic study of marrow is important for establishing diagnosis (chromosome abnormalities of chromosome 5 or 7 are frequent).\n\nFrom textbook: cytopenia” or to specific types of cytopenia (e.g., refractory anemia). Present\nWHO (2022) classification, gemetic characterization is playing a very important role. The new subgrouping is intended to\nprovide a more accurate classification and thus basis for targeted therapies. The distinction between single and multilineage\ndysplasia is now optional. The subgroup “MDS, unclassifiable” is no longer used in the new WHO classification (Table 9.42).\n\nClinical Features\nz Usually found in patients ab",
+  "redHerrings": "Easy bleeding could suggest ITP, but ITP requires isolated thrombocytopenia without anemia or leukopenia. Weakness with macrocytosis could suggest megaloblastic anemia (macro-ovalocytes and hypersegmented neutrophils), but this case emphasizes dyspoiesis with pseudo–Pelger–Hüet cells and dysplastic platelets. Dark urine (if specifically asked about) would raise PNH in the differential. Splenomegaly (if found) could suggest CML or myelofibrosis, but extramedullary hematopoiesis causing hepatosplenomegaly is uncommon in MDS.",
+  "id": "case_1767639016290",
+  "domain": "hematology",
+  "idealPathway": {
+    "diseaseName": "Myelodysplastic syndrome with multilineage dysplasia (MDS-MLD)",
+    "domain": "hematology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about weakness/fatigue suggestive of anemia",
+        "reasoning": "Symptoms in MDS are due to cytopenias; anemia commonly causes weakness.",
+        "expectedFinding": "History of progressive weakness consistent with anemia-related symptoms from cytopenia",
+        "importance": "important",
+        "textbookReference": "“Symptoms are due to cytopenias… Symptoms include: Weakness (anemia)”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about recurrent infections suggestive of leukopenia/neutropenia",
+        "reasoning": "Leukopenia/neutropenia in MDS predisposes to infections.",
+        "expectedFinding": "Recurrent infections over months consistent with leukopenia-related symptoms",
+        "importance": "important",
+        "textbookReference": "“Symptoms include: Infections (leukopenia)”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about bleeding manifestations (gum bleeding, easy bruising) suggestive of thrombocytopenia",
+        "reasoning": "Thrombocytopenia in MDS causes hemorrhagic symptoms.",
+        "expectedFinding": "Easy bleeding (e.g., gums) and bruising consistent with thrombocytopenia",
+        "importance": "important",
+        "textbookReference": "“Symptoms include: Hemorrhage (thrombocytopenia)”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask whether abnormalities were detected incidentally on routine blood tests",
+        "reasoning": "About half of MDS cases are found incidentally on routine blood examination.",
+        "expectedFinding": "Prior report of cytopenia or abnormal CBC discovered on routine testing",
+        "importance": "helpful",
+        "textbookReference": "“Detected incidentally on routine blood examination in about 50% of patients.”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about exposures associated with secondary (t-MDS): radiation, benzene, prior chemotherapy (alkylating agents/topoisomerase inhibitors), viruses, cigarette smoking, and PNH",
+        "reasoning": "Textbook lists these as causes of secondary/t-MDS; identifying them supports etiology and suspicion of MDS.",
+        "expectedFinding": "History of any listed exposure or PNH",
+        "importance": "helpful",
+        "textbookReference": "“Causes of secondary/t-MDS: Exposure to radiation, benzene, postchemotherapy… viruses, cigarette smoking, and PNH.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Perform general examination for pallor (anemia)",
+        "reasoning": "MDS presents with cytopenias; anemia manifests clinically as pallor and correlates with weakness.",
+        "expectedFinding": "Pallor consistent with anemia",
+        "importance": "important",
+        "textbookReference": "“Symptoms are due to cytopenias… Weakness (anemia)”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Examine for bleeding signs (gum bleeding, bruises/purpura)",
+        "reasoning": "Thrombocytopenia-related hemorrhage is a key presentation in MDS.",
+        "expectedFinding": "Evidence of mucosal bleeding or easy bruising consistent with thrombocytopenia",
+        "importance": "important",
+        "textbookReference": "“Symptoms include: Hemorrhage (thrombocytopenia).”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Palpate for hepatomegaly and splenomegaly",
+        "reasoning": "Extramedullary hematopoiesis may cause hepatosplenomegaly but is uncommon; documenting it supports assessment of disease manifestations.",
+        "expectedFinding": "Hepatomegaly/splenomegaly may be present but uncommon",
+        "importance": "helpful",
+        "textbookReference": "“Extramedullary hematopoiesis may cause hepatomegaly and splenomegaly but is uncommon.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order complete blood count (CBC) to document cytopenias",
+        "reasoning": "Cytopenia is necessary for diagnosis of MDS and CBC may give clues.",
+        "expectedFinding": "One or more cytopenias: hemoglobin <10 g/dL and/or platelets <100 × 10^9/L and/or ANC <1.8 × 10^9/L (rarely mild anemia/thrombocytopenia above these levels)",
+        "importance": "critical",
+        "textbookReference": "“Cytopenia is necessary for diagnosis of any MDS… Complete blood count: May give clues… Cytopenias defined as hemoglobin <10 g/dL, platelet count <100 × 109/L, and absolute neutrophil count <1.8 × 109/L”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order peripheral blood smear examination (including blast count assessment)",
+        "reasoning": "Peripheral smear shows characteristic dyspoiesis in RBCs, neutrophils, and platelets; blast percentage helps classify MDS subtype per Table 9.42.",
+        "expectedFinding": "RBC: macrocytic or dimorphic anemia with dyspoiesis; WBC: neutropenia with few blasts, hypogranular/agranular cytoplasm, pseudo–Pelger–Hüet cells or other nuclear abnormalities; Platelets: thrombocytopenia with large hypogranular/giant platelets; PB blasts <1% for MDS-MLD",
+        "importance": "critical",
+        "textbookReference": "“Peripheral smear: RBC: Mild-to-moderate degree of macrocytic or dimorphic anemia with evidence of dyspoiesis… Neutropenia with few blasts… Pseudo–Pelger–Hüet cells… Platelets… large hypogranular or giant platelets… Number of blasts determines the type of MDS (Table 9.42).”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order NAP score",
+        "reasoning": "Textbook notes NAP score is moderately or severely decreased in MDS; helps support diagnosis in the appropriate context.",
+        "expectedFinding": "Moderately or severely decreased NAP score",
+        "importance": "helpful",
+        "textbookReference": "“NAP score is moderately or severely decreased.”"
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Perform bone marrow examination to assess dyspoiesis and blast percentage (and evaluate multilineage involvement)",
+        "reasoning": "Bone marrow shows dyspoietic differentiation affecting nonlymphoid lineages with cytopenias; blast percentage is required for classification and MDS-MLD requires BM blasts <5% with PB blasts <1% and dysplasia in multiple lineages per Table 9.42.",
+        "expectedFinding": "Dyspoietic differentiation affecting multiple nonlymphoid lineages; BM blasts <5%; dysplasia meeting minimal criterion (≥10% of cells of at least one myeloid lineage) and consistent with multilineage dysplasia (2–3 dysplastic lineages in Table 9.42)",
+        "importance": "important",
+        "textbookReference": "“Minimal morphologic criterion… Dysplasia in at least 10% of cells of any one of the myeloid lineages… Bone marrow… dyspoietic… differentiation affecting all nonlymphoid lineages… Table 9.42… MDS with multilineage dysplasia… BM <5%, PB <1%, no Auer rods.”"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order cytogenetic study of the bone marrow",
+        "reasoning": "Textbook states cytogenetic study is most important for establishing diagnosis; chromosome 5 or 7 abnormalities are frequent.",
+        "expectedFinding": "Clonal cytogenetic abnormality; commonly chromosome 5 or 7 abnormalities",
+        "importance": "important",
+        "textbookReference": "“Cytogenic study of the marrow: Most important for establishing the diagnosis. Chromosome abnormalities of chromosome 5 or 7 are frequent.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Acute myeloid leukemia (AML)",
+        "howToRuleOut": "Assess blast percentage and Auer rods: AML has blast cells >20% in bone marrow aspirate and Auer rods may be seen; MDS-MLD has BM blasts <5%, PB blasts <1%, and no Auer rods (Table 9.42).",
+        "textbookReference": "“Bone marrow aspirate… Blast cells >20%… Auer rods…” and “MDS with multilineage dysplasia… BM <5%, PB <1%, no Auer rods.”"
+      },
+      {
+        "name": "Chronic myeloid leukemia (CML)",
+        "howToRuleOut": "Differentiate using Philadelphia chromosome and NAP/LAP: CML is Philadelphia positive and has very low NAP/LAP; MDS has decreased NAP score but the textbook differentiator for CML includes Ph positivity and very low LAP score.",
+        "textbookReference": "“Philadelphia chromosome: Positive… Decreased NAP/LAP Score… usually below 20… helpful in differentiating CML from leukemoid reaction.”"
+      },
+      {
+        "name": "Primary myelofibrosis / myelophthisis (secondary myelofibrosis)",
+        "howToRuleOut": "Use marrow features and peripheral smear context: myelofibrosis shows leukoerythroblastosis with tear drop cells and marrow biopsy is diagnostic; MDS diagnosis relies on dysplasia (≥10% of a myeloid lineage) and dyspoietic differentiation in marrow with cytopenias.",
+        "textbookReference": "“Peripheral smear… leukoerythroblastosis with tear drop cells” and “Minimal morphologic criterion… Dysplasia in at least 10%… Bone marrow… dyspoietic… differentiation…”"
+      }
+    ],
+    "diagnosticApproach": "In an older patient (typically >60 years) presenting with symptoms due to cytopenias (weakness from anemia, infections from leukopenia, hemorrhage from thrombocytopenia) or incidentally detected abnormalities, first document cytopenia on CBC (required for MDS). Next, evaluate a peripheral smear for dyspoiesis in RBCs (macrocytic/dimorphic anemia), neutrophil abnormalities (hypogranular cytoplasm, pseudo–Pelger–Hüet cells) and platelet abnormalities (large hypogranular/giant platelets), and quantify blasts to guide classification. Supportive evidence includes a decreased NAP score. Confirm with bone marrow examination demonstrating dyspoietic differentiation affecting nonlymphoid lineages and ensure blast thresholds consistent with MDS-MLD (BM <5%, PB <1%, no Auer rods per Table 9.42) while meeting the minimal morphologic criterion of dysplasia in ≥10% of cells of any myeloid lineage. Finally, perform marrow cytogenetic study (most important for establishing diagnosis), looking for frequent abnormalities involving chromosomes 5 or 7.",
+    "textbookSources": [
+      "cytopenia” or to specific types of cytopenia (e.g., refractory anemia). Present\nWHO (2022) classification, gemetic characterization is playing a very important role. The new subgrouping is intended to...",
+      "cytopenia” or to specific types of cytopenia (e.g., refractory anemia). Present\nWHO (2022) classification, gemetic characterization is playing a very important role. The new subgrouping is intended to..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Chronic myeloid leukemia (CML)",
+      "description": "**Chronic myeloid leukemia (CML)** is a myeloproliferative neoplasm driven by the **BCR::ABL1** fusion (Philadelphia chromosome), causing uncontrolled granulocytic proliferation. It typically presents with marked leukocytosis, left-shifted myeloid cells, and splenomegaly, and is treated with tyrosine kinase inhibitors.",
+      "keySymptoms": [
+        "**Fatigue** - Often from anemia or hypermetabolic state; usually with prominent leukocytosis on CBC.",
+        "**Weight loss/night sweats** - Constitutional symptoms from high cell turnover; not the dominant feature here.",
+        "**Early satiety** - Due to **splenomegaly** from extramedullary hematopoiesis, common in CML.",
+        "**Bleeding tendency** - Can occur via platelet dysfunction, but thrombocytopenia is not typical initially.",
+        "**Infections** - Not typical early; neutrophils are increased and often functionally near-normal initially."
+      ],
+      "clinicalReasoning": "This patient has months of weakness, recurrent infections, and mucocutaneous bleeding with CBC showing **pancytopenia** (anemia, leukopenia, thrombocytopenia). Peripheral smear demonstrates **dyspoiesis** (e.g., **pseudo–Pelger–Hüet** neutrophils, hypogranulation) and platelets that are large/hypogranular, supporting **myelodysplasia** rather than a myeloproliferative process. A decreased **NAP/LAP score** can be seen in CML, but the overall pattern here is ineffective hematopoiesis with cytopenias and multilineage dysplasia, aligning with **MDS-MLD** (WHO 2022 emphasizes genetic characterization; single vs multilineage dysplasia distinction is optional).",
+      "whyIncorrectForCase": "CML classically presents with **marked leukocytosis** and a **left-shifted myeloid differential**, not leukopenia with recurrent infections. The presence of prominent **multilineage dysplasia** and **pancytopenia** is much more consistent with **MDS-MLD** than CML.",
+      "keyDifferencesFromCorrect": [
+        "**CBC pattern** - CML: leukocytosis (often very high) with myeloid left shift; **MDS-MLD**: one or more **cytopenias** often including pancytopenia.",
+        "**Peripheral smear** - CML: myelocytes/metamyelocytes, basophilia, eosinophilia; **MDS-MLD**: **dysgranulopoiesis** (hypogranular neutrophils, **pseudo–Pelger–Hüet**) and dysplastic platelets/RBCs.",
+        "**Bone marrow biology** - CML: hypercellular marrow with granulocytic proliferation; **MDS-MLD**: ineffective hematopoiesis with **multilineage dysplasia** and possible increased blasts (below AML threshold).",
+        "**Genetics** - CML: **BCR::ABL1 (t(9;22))** defining lesion; **MDS-MLD**: diverse cytogenetic abnormalities (e.g., **chromosome 5/7** changes) and other myeloid gene mutations.",
+        "**Clinical exam** - CML: frequent **splenomegaly** and constitutional symptoms; **MDS-MLD**: symptoms dominated by **anemia**, **infections**, and **bleeding** from cytopenias."
+      ],
+      "missingFindings": [
+        "**Marked leukocytosis** - Its absence argues strongly against CML, which is defined by granulocytic overproduction.",
+        "**Basophilia** - Common in CML and supports myeloproliferation; not described in this case.",
+        "**Left-shifted myeloid series** - CML typically shows many immature granulocytes in blood; not reported here.",
+        "**Splenomegaly** - A common clinical clue in CML; not mentioned and symptoms suggest cytopenias instead.",
+        "**BCR::ABL1 positivity** - Required for definitive CML diagnosis; not provided and would be expected if CML."
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Primary myelofibrosis",
+      "description": "**Primary myelofibrosis (PMF)** is a chronic myeloproliferative neoplasm characterized by clonal megakaryocytic proliferation with progressive **bone marrow fibrosis** and extramedullary hematopoiesis. It commonly presents with **massive splenomegaly**, constitutional symptoms, and a leukoerythroblastic blood picture rather than primary dysplasia-driven cytopenias.",
+      "keySymptoms": [
+        "**Splenomegaly** - Enlarged spleen causing early satiety, left upper quadrant fullness, and abdominal discomfort.",
+        "**Constitutional symptoms** - Fever, night sweats, weight loss from cytokine-driven hypermetabolic state.",
+        "**Anemia** - Fatigue and weakness due to ineffective marrow hematopoiesis and sequestration.",
+        "**Bone pain** - Marrow expansion and fibrosis can cause diffuse musculoskeletal discomfort.",
+        "**Thrombotic/bleeding tendency** - Platelet dysfunction and extreme counts may cause thrombosis or bleeding."
+      ],
+      "clinicalReasoning": "This patient has pancytopenic symptoms (weakness, infections, mucocutaneous bleeding) with peripheral smear evidence of **dyspoiesis**: macrocytic/dimorphic anemia, **hypogranular neutrophils**, **pseudo–Pelger–Hüet cells**, and giant/hypogranular platelets. These findings point toward **myelodysplastic syndrome** rather than a myeloproliferative neoplasm. In PMF, the smear classically shows a **leukoerythroblastic picture** with teardrop cells and nucleated RBCs, and the clinical picture is dominated by **splenomegaly** and constitutional symptoms. The case also notes a decreased **NAP score** and emphasizes cytogenetic abnormalities (e.g., chromosomes **5** or **7**) typical of MDS workup.",
+      "whyIncorrectForCase": "The case description centers on **multilineage dysplasia** with cytopenias and dysplastic neutrophils/platelets, which is characteristic of **MDS-MLD**, not PMF. There is no mention of hallmark PMF features such as **massive splenomegaly** or a **leukoerythroblastic** peripheral smear with teardrop cells.",
+      "keyDifferencesFromCorrect": [
+        "**Core pathology** - PMF is a **myeloproliferative neoplasm with marrow fibrosis**; MDS-MLD is **ineffective hematopoiesis with multilineage dysplasia**.",
+        "**Peripheral smear pattern** - PMF shows **leukoerythroblastosis** and **teardrop RBCs**; MDS-MLD shows **dysgranulopoiesis** (e.g., **pseudo–Pelger–Hüet**) and dysplastic platelets.",
+        "**Clinical dominance** - PMF commonly features **splenomegaly** and constitutional symptoms; MDS-MLD commonly presents with **cytopenia-related infections/bleeding/anemia**.",
+        "**Genetic associations** - PMF often has **JAK2/CALR/MPL** driver mutations; MDS-MLD often has cytogenetic abnormalities such as **del(5q)** or **-7/7q-** and other MDS-type mutations.",
+        "**Bone marrow appearance** - PMF shows **reticulin/collagen fibrosis** with atypical megakaryocytes; MDS-MLD shows **dysplasia in ≥2 myeloid lineages** without primary fibrotic architecture."
+      ],
+      "missingFindings": [
+        "**Massive splenomegaly** - Typical in PMF from extramedullary hematopoiesis; not described in this case.",
+        "**Leukoerythroblastic blood film** - PMF usually has nucleated RBCs and left-shifted granulocytes; case emphasizes dysplasia instead.",
+        "**Teardrop cells (dacrocytes)** - Classic PMF smear feature reflecting fibrotic marrow; not reported here.",
+        "**Bone marrow fibrosis** - Diagnostic cornerstone for PMF (reticulin/collagen fibrosis); case highlights dyspoiesis and MDS-type cytogenetics.",
+        "**MPN driver mutation evidence** - PMF commonly shows **JAK2/CALR/MPL** mutations; no such driver mutation context is provided."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Myelodysplastic syndromes (MDS)",
+      "description": "**Myelodysplastic syndromes (MDS)** are clonal hematopoietic stem cell disorders characterized by ineffective hematopoiesis, **cytopenias**, and **dysplasia** in one or more myeloid lineages. In WHO (2022), MDS is best specified by defining genetic lesions and/or morphologic subtype rather than using only the umbrella term.",
+      "keySymptoms": [
+        "**Weakness/Fatigue** - Due to **anemia** from ineffective erythropoiesis causing reduced oxygen delivery to tissues.",
+        "**Recurrent infections** - From **leukopenia/neutropenia** with functionally abnormal neutrophils and impaired host defense.",
+        "**Gum bleeding** - From **thrombocytopenia** causing mucosal bleeding and poor primary hemostasis.",
+        "**Easy bruising** - From low/abnormal **platelets**, leading to purpura and ecchymoses after minimal trauma."
+      ],
+      "clinicalReasoning": "This patient has symptomatic **pancytopenia** (anemia, leukopenia, thrombocytopenia) with peripheral smear evidence of **dyspoiesis** (macrocytic/dimorphic anemia, **pseudo–Pelger–Hüet** neutrophils, hypogranular neutrophils, and large hypogranular/giant platelets). The decreased **NAP score** and bone marrow showing dysplastic differentiation in non-lymphoid lineages support an MDS-spectrum disorder. However, modern classification expects a specific WHO (2022) MDS subtype (e.g., defined by dysplasia pattern and/or genetics) rather than the nonspecific umbrella label.",
+      "whyIncorrectForCase": "The label **Myelodysplastic syndromes (MDS)** is too broad and does not capture the defining subtype present in this case: **multilineage dysplasia** with cytopenias and characteristic dysplastic morphology. The correct diagnosis should specify **Myelodysplastic syndrome with multilineage dysplasia (MDS-MLD)** rather than using the generic category.",
+      "keyDifferencesFromCorrect": [
+        "**Specificity** - Generic **MDS** is an umbrella term; **MDS-MLD** specifies dysplasia in multiple myeloid lineages with cytopenias.",
+        "**Morphologic definition** - **MDS-MLD** requires multilineage dysplasia; generic **MDS** does not state which lineages are dysplastic.",
+        "**WHO (2022) alignment** - WHO (2022) emphasizes genetically/morphologically defined entities; **MDS-MLD** is a defined subtype, unlike the nonspecific label.",
+        "**Clinical implication** - **MDS-MLD** better informs prognosis/risk stratification and therapy planning than an unspecified **MDS** diagnosis."
+      ],
+      "missingFindings": [
+        "**Subtype-defining statement** - Absence of explicitly stating **multilineage dysplasia** makes the diagnosis incomplete/unspecified for this patient.",
+        "**Cytogenetic/molecular specification** - Not documenting marrow **cytogenetics** (e.g., chromosome **5** or **7** abnormalities) leaves the case inadequately classified under WHO (2022).",
+        "**Blast quantification** - Missing marrow/peripheral blood **blast percentage** prevents proper WHO categorization and risk assessment."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Megaloblastic anemia (vitamin B12/folate deficiency)",
+      "description": "Megaloblastic anemia is a macrocytic anemia caused by impaired DNA synthesis, most commonly from **vitamin B12** or **folate** deficiency. It produces ineffective hematopoiesis with **macro-ovalocytes** and **hypersegmented neutrophils**, and may cause pancytopenia in severe cases.",
+      "keySymptoms": [
+        "**Fatigue/weakness** - Reduced oxygen delivery from anemia causes exertional intolerance, pallor, and generalized weakness.",
+        "**Glossitis** - Inflammatory tongue changes with soreness and smooth, beefy-red appearance may occur in deficiency states.",
+        "**Neurologic symptoms (B12)** - Paresthesias, gait instability, and cognitive changes from subacute combined degeneration.",
+        "**Mild bleeding tendency** - Severe deficiency can reduce platelets, causing petechiae or easy bruising occasionally.",
+        "**Recurrent infections** - Marked leukopenia can occur in severe cases, increasing infection susceptibility."
+      ],
+      "clinicalReasoning": "This patient has symptoms of **pancytopenia** (anemia-related weakness, infections from leukopenia, and mucocutaneous bleeding from thrombocytopenia). Megaloblastic anemia can produce macrocytosis and even pancytopenia, so it is a plausible initial consideration. However, the provided smear and marrow features emphasize **dyspoiesis** (e.g., **pseudo–Pelger–Hüet** neutrophils, hypogranulation, giant hypogranular platelets) and a low **NAP score**, which are more characteristic of **myelodysplastic syndrome** than nutritional deficiency.",
+      "whyIncorrectForCase": "The peripheral smear findings described (notably **pseudo–Pelger–Hüet cells** and **hypogranular/agranular neutrophils**) point to **MDS with multilineage dysplasia**, not classic megaloblastic changes. Megaloblastic anemia would more typically show **hypersegmented neutrophils** and macro-ovalocytes rather than prominent multilineage dysplasia with abnormal platelets.",
+      "keyDifferencesFromCorrect": [
+        "**Neutrophil morphology** - Megaloblastic anemia shows **hypersegmentation**; MDS-MLD shows **pseudo–Pelger–Hüet** forms and hypogranulation.",
+        "**Platelet morphology** - Megaloblastic anemia may have low platelets but not typical **giant hypogranular platelets** seen in MDS-MLD.",
+        "**Bone marrow pattern** - Megaloblastic anemia shows megaloblastoid erythropoiesis from vitamin deficiency; MDS-MLD shows true **multilineage dysplasia** with clonal hematopoiesis.",
+        "**Cytogenetics** - Megaloblastic anemia lacks clonal abnormalities; MDS-MLD often has **chromosome 5 or 7 abnormalities** and other clonal changes.",
+        "**NAP score** - Megaloblastic anemia is not defined by a decreased **NAP score**; MDS can have moderately/severely decreased NAP."
+      ],
+      "missingFindings": [
+        "**Hypersegmented neutrophils** - Their absence (and presence of pseudo–Pelger–Hüet cells) argues against megaloblastic anemia.",
+        "**Macro-ovalocytes** - Classic macro-ovalocytes are expected in megaloblastic anemia but not emphasized here.",
+        "**Low vitamin levels** - No evidence provided of decreased **vitamin B12** or **folate**, which would support the diagnosis.",
+        "**Neurologic deficits** - No paresthesias, gait disturbance, or cognitive changes suggesting **B12 deficiency** are described."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Myelodysplastic syndrome with multilineage dysplasia (MDS-MLD)",
+      "description": "**Myelodysplastic syndrome (MDS)** is a clonal hematopoietic stem cell disorder causing ineffective hematopoiesis and persistent cytopenias. **MDS with multilineage dysplasia (MDS-MLD)** features dysplasia in two or more myeloid lineages, leading to anemia, infections, and bleeding, with risk of progression to **acute myeloid leukemia (AML)**.",
+      "keySymptoms": [
+        "**Weakness/fatigue (anemia)** - Reduced oxygen delivery from low hemoglobin causes chronic fatigue and exercise intolerance.",
+        "**Recurrent infections (leukopenia/neutropenia)** - Low and dysplastic neutrophils impair innate immunity, increasing bacterial and fungal infections.",
+        "**Gum bleeding and easy bruising (thrombocytopenia)** - Low and dysfunctional platelets cause mucocutaneous bleeding and spontaneous ecchymoses."
+      ],
+      "clinicalReasoning": "Lakshmi Nair’s triad of fatigue, recurrent infections, and mucocutaneous bleeding indicates **pancytopenia** from bone marrow failure. The CBC shows cytopenias meeting MDS thresholds (e.g., **hemoglobin <10 g/dL**) and the peripheral smear demonstrates **dyspoiesis**: macrocytic/dimorphic anemia, **pseudo–Pelger–Hüet** neutrophils with hypogranulation, and large hypogranular/giant platelets. A moderately to severely decreased **NAP score** supports dysplastic myeloid maturation rather than a reactive process. Bone marrow showing dysplasia in multiple non-lymphoid lineages with supportive cytogenetics (commonly involving **chromosome 5 or 7**) fits **MDS-MLD** under WHO (2022), where genetic characterization is emphasized and “MDS, unclassifiable” is no longer used."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Acute myeloid leukemia (AML)",
+      "description": "**Acute myeloid leukemia (AML)** is an aggressive clonal malignancy of myeloid precursors with rapid marrow replacement by blasts. It typically presents with acute onset **pancytopenia** symptoms and requires confirmation by increased marrow or blood **myeloblasts** and characteristic immunophenotypic/genetic findings.",
+      "keySymptoms": [
+        "**Fatigue/weakness** - Rapidly progressive anemia causes reduced oxygen delivery and marked functional decline.",
+        "**Recurrent infections** - Neutropenia and dysfunctional leukocytes predispose to frequent, severe bacterial/fungal infections.",
+        "**Easy bruising/bleeding** - Thrombocytopenia leads to mucosal bleeding, petechiae, ecchymoses, and gum bleeding.",
+        "**Fever** - Common from infection or cytokine-mediated inflammation due to high leukemic burden.",
+        "**Bone pain** - Marrow expansion from blasts can cause deep bone pain and tenderness."
+      ],
+      "clinicalReasoning": "This patient has symptoms of **pancytopenia** (anemia-related weakness, infections from leukopenia, and mucocutaneous bleeding from thrombocytopenia), which can be seen in both **AML** and **MDS**. However, the provided smear description emphasizes **dysplasia** (e.g., **pseudo–Pelger–Hüet** neutrophils, hypogranular neutrophils, giant/hypogranular platelets) rather than circulating blasts. The course is described as \"for the last few months,\" which is more consistent with **MDS** (a chronic marrow failure syndrome) than the typically more abrupt presentation of **AML**. Definitive AML diagnosis would require evidence of increased **blasts** (classically ≥20% in blood/marrow, or AML-defining genetics), which is not provided here.",
+      "whyIncorrectForCase": "The case findings highlight **multilineage dysplasia** with macrocytic/dimorphic anemia and dysplastic neutrophils/platelets, supporting **MDS-MLD** rather than a blast-driven leukemia. There is no mention of increased **myeloblasts** in peripheral blood or bone marrow, which is required to diagnose **AML**.",
+      "keyDifferencesFromCorrect": [
+        "**Blast percentage** - AML requires markedly increased **blasts**; **MDS-MLD** shows dysplasia with lower blast counts.",
+        "**Tempo of illness** - AML is typically acute and rapidly progressive; **MDS-MLD** often evolves over months with chronic cytopenias.",
+        "**Peripheral smear pattern** - AML often shows circulating **blasts/Auer rods**; **MDS-MLD** shows dysgranulopoiesis (e.g., **pseudo–Pelger–Hüet**) and macrocytosis.",
+        "**Bone marrow morphology** - AML shows marrow packed with blasts; **MDS-MLD** shows ineffective hematopoiesis with dysplasia across lineages.",
+        "**Classification focus (WHO 2022)** - AML is defined by **blast threshold or defining genetics**; **MDS-MLD** is defined by **cytopenias with dysplasia** and relevant cytogenetics."
+      ],
+      "missingFindings": [
+        "**Increased myeloblasts (blood or marrow)** - Required for AML diagnosis; not reported in this case description.",
+        "**Circulating blasts on peripheral smear** - Typical AML clue; smear instead describes dysplasia without blasts.",
+        "**Auer rods** - Support AML with myeloid blasts; absence makes AML less likely (though not mandatory).",
+        "**AML-defining genetic abnormality** - Would establish AML even with lower blast counts; no such genetics provided.",
+        "**Acute systemic deterioration** - AML commonly causes rapid clinical decline; this case describes a months-long course."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Aplastic anemia",
+      "description": "**Aplastic anemia** is a bone marrow failure syndrome characterized by markedly hypocellular marrow and **pancytopenia** due to reduced hematopoietic stem cells. It typically presents with fatigue, infections, and mucocutaneous bleeding but lacks prominent **dysplasia** on smear and marrow.",
+      "keySymptoms": [
+        "**Fatigue/weakness** - Reduced oxygen delivery from anemia causes exertional intolerance, pallor, and generalized weakness.",
+        "**Recurrent infections** - Neutropenia impairs innate immunity, increasing bacterial and fungal infection risk.",
+        "**Gum bleeding/easy bruising** - Thrombocytopenia leads to mucosal bleeding, petechiae, and ecchymoses after minor trauma."
+      ],
+      "clinicalReasoning": "This patient has symptoms consistent with **pancytopenia** (anemia, leukopenia, thrombocytopenia), which can be seen in aplastic anemia. However, the provided peripheral smear shows clear **dyspoiesis**: macrocytic/dimorphic anemia, **hypogranular neutrophils** with **pseudo–Pelger–Hüet** forms, and **large hypogranular/giant platelets**. These morphologic abnormalities indicate ineffective hematopoiesis typical of **myelodysplastic syndrome (MDS)** rather than pure marrow aplasia. Additionally, a decreased **NAP score** and the emphasis on marrow **cytogenetics** (e.g., chromosome 5 or 7 abnormalities) align better with MDS-MLD.",
+      "whyIncorrectForCase": "In **aplastic anemia**, cytopenias occur with a hypocellular marrow and generally without significant **dysplastic morphology** in peripheral blood. This case explicitly describes multilineage **dysplasia** (pseudo–Pelger–Hüet neutrophils and abnormal platelets), supporting **MDS-MLD** instead.",
+      "keyDifferencesFromCorrect": [
+        "**Marrow cellularity** - Aplastic anemia shows markedly hypocellular, fatty marrow; **MDS-MLD** is often normo/hypercellular with ineffective hematopoiesis.",
+        "**Dysplasia** - Aplastic anemia has minimal/absent dysplasia; **MDS-MLD** shows dysplasia in multiple myeloid lineages.",
+        "**Peripheral smear** - Aplastic anemia typically lacks pseudo–Pelger–Hüet cells and hypogranulation; **MDS-MLD** commonly shows these changes.",
+        "**Cytogenetics** - Aplastic anemia usually has normal karyotype; **MDS-MLD** often has clonal abnormalities (e.g., **del(5q)**, monosomy 7).",
+        "**Pathophysiology** - Aplastic anemia is stem-cell depletion/immune-mediated suppression; **MDS-MLD** is a clonal myeloid neoplasm with ineffective hematopoiesis."
+      ],
+      "missingFindings": [
+        "**Hypocellular bone marrow** - Aplastic anemia requires markedly decreased cellularity; not suggested by described dyspoietic differentiation.",
+        "**Absence of dysplasia** - Lack of pseudo–Pelger–Hüet cells/hypogranulation would support aplasia; this case shows them.",
+        "**No clonal cytogenetic abnormality** - Aplastic anemia is typically nonclonal; MDS-associated chromosome 5/7 changes would argue against it."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Myelophthisis (secondary myelofibrosis)",
+      "description": "**Myelophthisis** refers to bone marrow failure due to marrow space being replaced by fibrosis, tumor, or granulomatous infiltration. It typically causes a **leukoerythroblastic blood picture** with **teardrop cells** and extramedullary hematopoiesis, often with **splenomegaly**.",
+      "keySymptoms": [
+        "**Fatigue/weakness** - Anemia from marrow replacement reduces oxygen delivery, causing exertional intolerance and weakness.",
+        "**Recurrent infections** - Neutropenia or dysfunctional leukocytes can increase susceptibility to bacterial and fungal infections.",
+        "**Easy bruising/bleeding** - Thrombocytopenia from marrow crowding leads to mucocutaneous bleeding and petechiae."
+      ],
+      "clinicalReasoning": "The patient has pancytopenia symptoms (anemia, infections, mucosal/skin bleeding), which can occur in both **myelophthisis** and **myelodysplastic syndromes (MDS)**. However, the provided smear description emphasizes **dyspoiesis** (e.g., **pseudo–Pelger–Hüet cells**, hypogranular neutrophils, giant hypogranular platelets) and a decreased **NAP score**, which are classic for **MDS** rather than marrow infiltration/fibrosis. Additionally, the case framing highlights the importance of **bone marrow cytogenetics** (e.g., chromosome **5** or **7** abnormalities), aligning strongly with **WHO (2022) MDS** diagnostic approach. Therefore, while cytopenias overlap, the morphologic pattern supports **MDS with multilineage dysplasia (MDS-MLD)**, not myelophthisis.",
+      "whyIncorrectForCase": "Myelophthisis is expected to show a **leukoerythroblastic reaction** with **nucleated RBCs** and **teardrop (dacrocyte) cells**, not primarily dysplastic neutrophils like **pseudo–Pelger–Hüet** forms. The case explicitly describes **multilineage dysplasia** and MDS-typical smear findings, making secondary myelofibrosis unlikely.",
+      "keyDifferencesFromCorrect": [
+        "**Peripheral smear pattern** - Myelophthisis shows **leukoerythroblastosis** and **dacrocytes**; **MDS-MLD** shows **dyspoiesis** (pseudo–Pelger–Hüet, hypogranulation, abnormal platelets).",
+        "**Primary mechanism** - Myelophthisis is marrow **replacement/infiltration or fibrosis**; **MDS-MLD** is a clonal stem cell disorder with **ineffective hematopoiesis** and dysplasia.",
+        "**Bone marrow expectation** - Myelophthisis often has a **dry tap** and marked **reticulin/collagen fibrosis**; **MDS-MLD** shows **hypercellular or normocellular marrow** with multilineage dysplasia (fibrosis may occur but is not defining).",
+        "**Organ findings** - Myelophthisis commonly causes **splenomegaly** from extramedullary hematopoiesis; **MDS-MLD** may not have prominent splenomegaly.",
+        "**Genetics emphasis** - Myelophthisis is not defined by recurrent MDS cytogenetic lesions; **MDS-MLD** commonly involves cytogenetic abnormalities (e.g., **del(5q)**, **-7/7q-**) guiding classification/therapy."
+      ],
+      "missingFindings": [
+        "**Leukoerythroblastic picture** - Absence of nucleated RBCs and left-shifted myeloid precursors argues against myelophthisis.",
+        "**Dacrocytes (teardrop cells)** - Lack of teardrop RBCs makes marrow fibrosis/infiltration less likely.",
+        "**Splenomegaly** - No reported enlarged spleen reduces likelihood of extramedullary hematopoiesis typical of myelophthisis.",
+        "**Dry tap / marked marrow fibrosis** - Not described; myelophthisis commonly yields difficult aspiration and prominent fibrosis on biopsy.",
+        "**Evidence of marrow infiltration** - No history/findings of metastatic cancer, granulomatous disease, or other infiltrative process provided."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Paroxysmal nocturnal hemoglobinuria (PNH)",
+      "description": "**Paroxysmal nocturnal hemoglobinuria (PNH)** is an acquired clonal hematopoietic stem cell disorder caused by loss of GPI-anchored complement regulators (e.g., **CD55/CD59**), leading to complement-mediated intravascular hemolysis. It classically presents with hemolytic anemia, hemoglobinuria, and a high risk of thrombosis, and may overlap with aplastic anemia or other marrow-failure states.",
+      "keySymptoms": [
+        "**Hemoglobinuria** - Dark cola-colored morning urine from intravascular hemolysis and filtered free hemoglobin.",
+        "**Fatigue** - Anemia-related weakness from chronic hemolysis and reduced oxygen-carrying capacity.",
+        "**Thrombosis** - Venous clots (hepatic/portal/cerebral) due to complement-driven platelet activation.",
+        "**Abdominal pain** - Smooth muscle dystonia and mesenteric ischemia related to nitric oxide scavenging.",
+        "**Dysphagia/erectile dysfunction** - Smooth muscle spasm from nitric oxide depletion by free hemoglobin.",
+        "**Pancytopenia (overlap)** - Can occur with marrow failure, especially with aplastic anemia association."
+      ],
+      "clinicalReasoning": "This patient has symptomatic **pancytopenia** (anemia causing weakness, leukopenia causing infections, and thrombocytopenia causing mucosal/skin bleeding). The peripheral smear described shows clear **dysplasia**: **pseudo–Pelger–Hüet** neutrophils, hypogranular neutrophils, and abnormal platelets, which strongly supports **myelodysplastic syndrome** rather than hemolysis. The marrow context (dyspoiesis in multiple non-lymphoid lineages and importance of cytogenetics such as **chromosome 5/7 abnormalities**) aligns with **MDS with multilineage dysplasia (MDS-MLD)** per WHO (2022) concepts emphasizing genetic characterization.",
+      "whyIncorrectForCase": "PNH is primarily a **hemolytic** disorder and typically features **hemoglobinuria**, elevated hemolysis markers, and often **thrombosis**, none of which are provided here. The case instead highlights prominent **morphologic dysplasia** on smear and marrow findings consistent with **MDS-MLD**, not complement-mediated hemolysis.",
+      "keyDifferencesFromCorrect": [
+        "**Core mechanism** - PNH is complement-mediated **intravascular hemolysis**; **MDS-MLD** is clonal **ineffective hematopoiesis with dysplasia**.",
+        "**Peripheral smear** - PNH often shows hemolysis features; **MDS-MLD** shows **pseudo–Pelger–Hüet**, hypogranular neutrophils, and dysplastic platelets.",
+        "**Typical complications** - PNH has high-risk **venous thrombosis**; **MDS-MLD** risks **infection/bleeding** from cytopenias and progression to AML.",
+        "**Key diagnostic test** - PNH requires **flow cytometry for GPI-anchored proteins (CD55/CD59/FLAER)**; **MDS-MLD** relies on marrow morphology plus **cytogenetics/molecular** abnormalities.",
+        "**Laboratory pattern** - PNH shows hemolysis labs (↑LDH, ↓haptoglobin, indirect hyperbilirubinemia); **MDS-MLD** shows cytopenias with dysplastic morphology and often macrocytosis."
+      ],
+      "missingFindings": [
+        "**Hemoglobinuria** - Absence of dark urine episodes makes classic PNH presentation unlikely.",
+        "**Hemolysis markers** - No reported **↑LDH/↓haptoglobin/↑indirect bilirubin/reticulocytosis**, expected in PNH.",
+        "**Thrombosis** - No history of unusual-site venous thrombosis (hepatic/portal/cerebral), a hallmark PNH feature.",
+        "**PNH clone evidence** - No **CD55/CD59 (or FLAER) deficiency** documented on flow cytometry, required for diagnosis.",
+        "**Dysplasia-free picture** - Presence of **pseudo–Pelger–Hüet** cells and hypogranular neutrophils supports **MDS-MLD**, not isolated PNH."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "Immune thrombocytopenic purpura (ITP)",
+      "description": "**Immune thrombocytopenic purpura (ITP)** is an acquired autoimmune disorder causing isolated platelet destruction and impaired platelet production. It typically presents with mucocutaneous bleeding due to thrombocytopenia while other blood cell lines remain normal.",
+      "keySymptoms": [
+        "**Mucosal bleeding** - Gum bleeding, epistaxis, or menorrhagia from low platelets causing impaired primary hemostasis.",
+        "**Petechiae/purpura** - Non-blanching pinpoint rash and bruising after minor trauma due to thrombocytopenia.",
+        "**Isolated thrombocytopenia** - Low platelet count with otherwise normal hemoglobin and white blood cell counts."
+      ],
+      "clinicalReasoning": "ITP is suggested when a patient has predominantly bleeding symptoms with an otherwise normal complete blood count except for thrombocytopenia. Peripheral smear in ITP may show large platelets but should not show significant dysplasia in neutrophils or red cells. Bone marrow, if examined, typically shows normal or increased megakaryocytes without multilineage dyspoiesis. Therefore, ITP is primarily a diagnosis of isolated thrombocytopenia after excluding secondary causes.",
+      "whyIncorrectForCase": "This patient has **pancytopenia** (anemia causing weakness, leukopenia causing infections, and thrombocytopenia causing bleeding), not isolated thrombocytopenia. The smear and marrow show **multilineage dysplasia** (e.g., **pseudo–Pelger–Hüet cells**, hypogranular neutrophils), which is incompatible with ITP and supports **MDS-MLD**.",
+      "keyDifferencesFromCorrect": [
+        "**Number of cytopenias** - ITP causes isolated thrombocytopenia; **MDS-MLD** causes bi-/pancytopenia from marrow failure.",
+        "**Peripheral smear morphology** - ITP may show large platelets only; **MDS-MLD** shows dysplasia (macrocytosis/dimorphic RBCs, hypogranular neutrophils, **pseudo–Pelger–Hüet** forms).",
+        "**Bone marrow findings** - ITP shows increased megakaryocytes without dysplasia; **MDS-MLD** shows dyspoiesis in multiple non-lymphoid lineages.",
+        "**Cytogenetics** - ITP lacks clonal cytogenetic abnormalities; **MDS-MLD** often has clonal changes (e.g., chromosome **5** or **7** abnormalities).",
+        "**NAP score** - ITP does not characteristically lower NAP; **MDS-MLD** may have moderately to severely decreased **NAP score**."
+      ],
+      "missingFindings": [
+        "**Isolated thrombocytopenia** - Absence of isolated platelet-only decrease argues against ITP in this patient.",
+        "**Normal WBC count** - ITP should not cause leukopenia; recurrent infections plus low WBC suggests marrow dysplasia.",
+        "**Normal hemoglobin/MCV** - ITP should not cause macrocytic/dimorphic anemia; anemia supports MDS rather than ITP.",
+        "**Lack of dysplasia on smear** - ITP should not show **pseudo–Pelger–Hüet cells** or hypogranular neutrophils; their presence rules against ITP.",
+        "**No clonal marrow abnormality** - ITP is non-clonal; suspected/identified clonal cytogenetic changes support MDS instead."
+      ]
+    }
+  ]
+}

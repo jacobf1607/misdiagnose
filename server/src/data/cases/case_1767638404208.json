@@ -1,0 +1,492 @@
+{
+  "persona": {
+    "name": "Manoj Verma",
+    "age": 32,
+    "gender": "Male",
+    "occupation": "Tailor in Varanasi",
+    "background": "He spends long hours seated at a sewing machine in a warm workshop, often working late under stress to meet deadlines. He reports frequent sweating and occasional self-use of over-the-counter topical creams for skin problems.",
+    "lifestyle": {
+      "activityLevel": "low",
+      "smoking": "unknown",
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "anxious",
+      "practical",
+      "detail-oriented"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Pityriasis versicolor (Tinea versicolor)",
+      "description": "A relatively common persistent superficial skin condition caused by Malassezia furfur, presenting as round/oval scaly macules on the upper trunk that are usually hypopigmented on dark skin; more frequent in warm, humid climates and can be more severe/persistent in immunocompromised individuals."
+    },
+    {
+      "id": "d2",
+      "name": "Vitiligo (Nonsegmental vitiligo)",
+      "description": "A common, slowly progressive acquired condition caused by focal loss of melanocytes, resulting in well-circumscribed depigmented macules/patches that may enlarge and coalesce; often symmetrical and occurs around orifices and on hands/feet; susceptible to sunburn."
+    },
+    {
+      "id": "d3",
+      "name": "Atopic dermatitis (Atopic eczema)",
+      "description": "An endogenous eczema in atopic individuals characterized by extremely itchy erythematous scaly patches with scratching; may have xeroderma and vesicles acutely; chronic lesions show lichenification; distribution often periorbital and flexural areas."
+    },
+    {
+      "id": "d4",
+      "name": "Psoriasis vulgaris (Chronic plaque psoriasis)",
+      "description": "A noninfectious chronic papulosquamous T-cell-mediated disorder with well-defined pink-red sharply demarcated plaques covered by silvery scales; commonly affects scalp and extensor surfaces; grattage test and Auspitz sign may be positive; may show Koebner phenomenon and nail pitting."
+    },
+    {
+      "id": "d5",
+      "name": "Seborrheic dermatitis",
+      "description": "An erythematous scaling disorder affecting the nasolabial folds, eyebrows, eyelids, glabella and scalp (dandruff) in young adults (especially males); may also involve central chest and body folds; can be more common in HIV."
+    },
+    {
+      "id": "d6",
+      "name": "Erythema multiforme (EM)",
+      "description": "An acute, self-limiting recurrent cutaneous/mucocutaneous eruption with target-shaped plaques, usually symmetrical and acral with centripetal distribution; often follows herpes infection and may include macules, papules, vesicles and bullae."
+    },
+    {
+      "id": "d7",
+      "name": "Lichen planus",
+      "description": "A pruritic eruption described by the '5 P’s' (pruritic, planar, purple, polygonal papules/plaques) commonly on flexor wrists, shins, flanks, medial thighs and mucosa; may show Wickham’s striae and Koebner phenomenon; can leave post-lichen hyperpigmentation."
+    },
+    {
+      "id": "d8",
+      "name": "Bullous pemphigoid",
+      "description": "A chronic relapsing blistering disorder in the elderly, typically itchy with tense bullae and usually negative Nikolsky sign; mucosal involvement occurs in a minority."
+    },
+    {
+      "id": "d9",
+      "name": "Stevens–Johnson syndrome (SJS)",
+      "description": "A rare acute life-threatening mucocutaneous disease that is nearly always drug-related, characterized by erythematous dusky red atypical targetoid macules that may progress to blisters and epidermal detachment (<10% BSA in SJS) with mucous membrane involvement."
+    },
+    {
+      "id": "d10",
+      "name": "DRESS (Drug reaction with eosinophilia and systemic symptoms)",
+      "description": "A severe drug reaction starting as a morbilliform eruption progressing to diffuse/confluent erythema; likely when >50% BSA and/or facial edema/infiltrated lesions/scaling/purpura are present, with systemic involvement and lab findings such as leukocytosis, eosinophilia, atypical lymphocytosis and elevated liver enzymes."
+    }
+  ],
+  "correctDiagnosisId": "d1",
+  "initialComplaint": "“For a few months I’ve noticed light-colored patches with fine scaling on my upper chest and back. They become more noticeable after I’m out in the sun.”",
+  "medicalHistory": "No documented chronic illness. He reports using an over-the-counter topical steroid cream intermittently because he thought it was an allergy; he feels the patches spread after that.",
+  "symptoms": "Persistent round/oval scaly macules on the upper trunk (upper back, shoulders, chest) that appear hypopigmented and are more obvious after sun exposure/tanning. History suggests spread with inappropriate use of topical steroids. Living/working in a warm environment with sweating is consistent with a setting where infection is more frequent.\n\nFrom textbook: itis, keratitis, provocation of photodermatoses\n– Chronic—lentigines, photoaging, actinic keratosis, melanoma\n\nFIG. 19.13: Severity of eczema.\nA score of 0 indicates clear or no eczema, 0.1 to 1.0 indicates almost clear. 1.1 to 7 indicates mild disease. 7.1 to 21 indicates moderate diseases,\n\n21.1 to 50 indicates severe disease, and greater than 51 indicates very severe disease.\n\n1298 CHAPTER 19: Dermatology, Venereology and Leprosy\n\nPityriasis Versicolor (Tinea Versicolor)\nQ.  Write short essay",
+  "relevantFindings": "Skin examination: round, scaly oval macules over upper back and chest, predominantly hypopigmented. Diagnostic confirmation (as per textbook): skin scraping shows characteristic 'spaghetti and meatballs' appearance; Wood’s light examination shows yellow fluorescence in involved regions (in contrast to vitiligo which shows total loss of pigment).\n\nFrom textbook: itis, keratitis, provocation of photodermatoses\n– Chronic—lentigines, photoaging, actinic keratosis, melanoma\n\nFIG. 19.13: Severity of eczema.\nA score of 0 indicates clear or no eczema, 0.1 to 1.0 indicates almost clear. 1.1 to 7 indicates mild disease. 7.1 to 21 indicates moderate diseases,\n\n21.1 to 50 indicates severe disease, and greater than 51 indicates very severe disease.\n\n1298 CHAPTER 19: Dermatology, Venereology and Leprosy\n\nPityriasis Versicolor (Tinea Versicolor)\nQ.  Write short essay",
+  "redHerrings": "He mentions occasional itch and generalized dryness (can suggest atopic dermatitis), and he worries it could be vitiligo because the areas look pale. He also reports working under stress (a known trigger for psoriasis), but the lesions are macules with fine scale on the upper trunk rather than well-defined plaques on extensor surfaces.",
+  "id": "case_1767638404208",
+  "domain": "dermatology",
+  "idealPathway": {
+    "diseaseName": "Pityriasis versicolor (Tinea versicolor)",
+    "domain": "dermatology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about light- or dark-colored patches with fine scaling on the upper trunk (upper chest/back).",
+        "reasoning": "The textbook describes the typical lesion as round/oval scaly macules on the upper trunk.",
+        "expectedFinding": "History of round/oval scaly macules predominantly on upper trunk.",
+        "importance": "critical",
+        "textbookReference": "“Typical lesion is round, scaly, oval macules on the upper trunk.”"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask whether the color change is more obvious after sun exposure or tanning.",
+        "reasoning": "The textbook notes hypopigmentation becomes more obvious after sun exposure and tanning.",
+        "expectedFinding": "Patches become more noticeable after sun exposure/tanning.",
+        "importance": "important",
+        "textbookReference": "“Hypopigmentation is more obvious after sun exposure and tanning.”"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about climate/exposure to warm and humid conditions and whether episodes are persistent or recurrent.",
+        "reasoning": "Infection is more frequent in warmer, humid climates and is described as persistent; recurrence is also noted.",
+        "expectedFinding": "History of disease in warm/humid setting and persistent course (may recur).",
+        "importance": "important",
+        "textbookReference": "“Infection is more frequent in warmer, humid climates” and “relatively common persistent” and “The condition may recur”"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about immunocompromised status (e.g., HIV) and other associated conditions (Cushing’s syndrome, hyperhidrosis).",
+        "reasoning": "Disease is usually more severe/persistent in immunocompromised individuals and is associated with altered immune status, Cushing’s syndrome, and hyperhidrosis.",
+        "expectedFinding": "Presence of immunocompromise or associated conditions supporting risk for extensive/persistent disease.",
+        "importance": "helpful",
+        "textbookReference": "“usually more severe and persistent in the immunocompromised individuals” and “Other diseases associated… Cushing’s syndrome, hyperhidrosis, and altered immune status (e.g., HIV).”"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about inappropriate use of topical steroids and whether lesions spread after steroid use.",
+        "reasoning": "The textbook states topical steroid misuse causes spread of lesions.",
+        "expectedFinding": "History of lesion spread following topical steroid use.",
+        "importance": "helpful",
+        "textbookReference": "“Inappropriate use of topical steroids causes spread of the lesion.”"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Inspect the distribution of lesions on the upper back, shoulders, and chest; also check upper arms and neck (rarely face).",
+        "reasoning": "The textbook lists the common sites affected and notes wider extent in tropics.",
+        "expectedFinding": "Round/oval scaly macules in typical distribution (upper back/shoulders/chest ± upper arms/neck).",
+        "importance": "critical",
+        "textbookReference": "“Sites affected are upper back, shoulders, and chest but it also affects upper arms, neck, and rarely on the face.”"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Assess morphology and color: look for round/oval scaly macules that are hypopigmented (on dark skin) or occasionally hyperpigmented (on light skin).",
+        "reasoning": "The textbook specifies the characteristic appearance and pigmentation pattern by skin type.",
+        "expectedFinding": "Round/oval scaly macules with hypo- or hyperpigmentation as described.",
+        "importance": "important",
+        "textbookReference": "“Typical lesion is round, scaly, oval macules… usually hypopigmented (on dark skin) but occasionally hyperpigmented (on light skin).”"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Look for raised erythematous margins.",
+        "reasoning": "The textbook notes lesions may sometimes have raised erythematous margins.",
+        "expectedFinding": "Raised erythematous margins present in some lesions.",
+        "importance": "helpful",
+        "textbookReference": "“Sometimes, it may have raised erythematous margins.”"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order skin scraping from a lesion for microscopy.",
+        "reasoning": "Textbook states diagnosis can be confirmed by skin scraping showing characteristic appearance.",
+        "expectedFinding": "Characteristic “spaghetti and meatballs” appearance.",
+        "importance": "critical",
+        "textbookReference": "“Skin scraping: It shows characteristic ‘spaghetti and meatballs’ appearance.”"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Perform Wood’s light examination of the involved areas.",
+        "reasoning": "Textbook states Wood’s light shows yellow fluorescence in involved regions and helps compare with vitiligo.",
+        "expectedFinding": "Yellow fluorescence/pigment in involved regions.",
+        "importance": "important",
+        "textbookReference": "“Wood’s light examination: It shows some pigment (yellow fluorescence) in skin regions involved by tinea versicolor”"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "If vitiligo is a key alternative diagnosis, use Wood’s light comparison to assess for total loss of pigment.",
+        "reasoning": "Textbook explicitly contrasts Wood’s light findings in tinea versicolor vs vitiligo.",
+        "expectedFinding": "Tinea versicolor: yellow fluorescence/some pigment; Vitiligo: total loss of pigment.",
+        "importance": "helpful",
+        "textbookReference": "“whereas in vitiligo, there is total loss of pigment in the affected areas.”"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Vitiligo",
+        "howToRuleOut": "Use Wood’s light: tinea versicolor shows some pigment/yellow fluorescence in involved regions, whereas vitiligo shows total loss of pigment in affected areas.",
+        "textbookReference": "“Wood’s light… shows some pigment (yellow fluorescence)… whereas in vitiligo, there is total loss of pigment in the affected areas.”"
+      },
+      {
+        "name": "Postinflammatory hypopigmentation",
+        "howToRuleOut": "On examination (diascopy-based description in textbook), vitiligo appears uniform white with convex margins, whereas postinflammatory hypopigmentation appears tan-brown with uneven or jagged margins.",
+        "textbookReference": "“vitiligo… appears uniform white with convex margins… postinflammatory hypopigmentation… appears tan-brown with uneven or jagged margins.”"
+      },
+      {
+        "name": "Pityriasis alba",
+        "howToRuleOut": "Consider as a listed cause of hypopigmentation; support tinea versicolor instead by typical upper trunk distribution with scaly oval macules and confirm with skin scraping (‘spaghetti and meatballs’) or Wood’s light yellow fluorescence.",
+        "textbookReference": "“Causes of Hypopigmentation… • Pityriasis alba” and “Skin scraping… ‘spaghetti and meatballs’” and “Wood’s light… (yellow fluorescence)”"
+      }
+    ],
+    "diagnosticApproach": "Suspect pityriasis versicolor in a patient with persistent round/oval scaly macules on the upper trunk (often upper back/shoulders/chest), typically hypopigmented on dark skin or occasionally hyperpigmented on light skin, with hypopigmentation more obvious after sun exposure/tanning; assess risk context (warm humid climates; immunocompromised states such as HIV; associated conditions like Cushing’s syndrome and hyperhidrosis; topical steroid misuse causing spread). Confirm the diagnosis with skin scraping demonstrating the characteristic “spaghetti and meatballs” appearance. Use Wood’s light examination as supportive confirmation (yellow fluorescence/some pigment in involved areas) and to differentiate from vitiligo (total loss of pigment).",
+    "textbookSources": [
+      "itis, keratitis, provocation of photodermatoses\n– Chronic—lentigines, photoaging, actinic keratosis, melanoma\n\nFIG. 19.13: Severity of eczema.\nA score of 0 indicates clear or no eczema, 0.1 to 1.0 ind...",
+      "itis, keratitis, provocation of photodermatoses\n– Chronic—lentigines, photoaging, actinic keratosis, melanoma\n\nFIG. 19.13: Severity of eczema.\nA score of 0 indicates clear or no eczema, 0.1 to 1.0 ind..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Pityriasis versicolor (Tinea versicolor)",
+      "description": "**Pityriasis versicolor** is a superficial fungal infection caused by overgrowth of **Malassezia** on the stratum corneum. It produces multiple finely scaly macules on the upper trunk that may appear hypo- or hyperpigmented and become more apparent after sun exposure due to impaired tanning of affected skin.",
+      "keySymptoms": [
+        "**Hypopigmented macules on upper trunk** - Classic distribution on chest/back; lesions stand out after tanning.",
+        "**Fine branny scaling** - Subtle scale suggests superficial stratum corneum involvement typical of Malassezia.",
+        "**More noticeable after sun exposure** - Affected areas tan poorly, increasing contrast with surrounding skin.",
+        "**Round/oval coalescing patches** - Common morphology; multiple lesions may merge into larger geographic areas.",
+        "**Warm climate and sweating** - Heat/humidity promote Malassezia proliferation and recurrence on seborrheic areas.",
+        "**Worsening/spread with topical steroids** - Steroids can alter local immunity and worsen superficial fungal overgrowth."
+      ],
+      "clinicalReasoning": "The patient has persistent, round/oval, finely scaly macules over the upper back, shoulders, and chest—an anatomic pattern strongly associated with **pityriasis versicolor**. The lesions are predominantly hypopigmented and become more obvious after sun exposure, consistent with reduced tanning in affected areas. The warm environment with sweating is a typical predisposing factor for **Malassezia** overgrowth. Diagnostic confirmation is supported by KOH microscopy showing the **\"spaghetti and meatballs\"** pattern and **Wood’s lamp** yellow fluorescence, helping distinguish it from **vitiligo** (complete pigment loss without scale)."
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Vitiligo (Nonsegmental vitiligo)",
+      "description": "**Vitiligo** is an acquired depigmenting disorder caused by loss of functional melanocytes, producing well-demarcated chalk-white macules and patches. In **nonsegmental vitiligo**, lesions are typically symmetric and may progress over time, often without surface scale.",
+      "keySymptoms": [
+        "**Chalk-white depigmented macules/patches** - Complete pigment loss with sharply defined borders, often symmetric distribution.",
+        "**No surface scale** - Lesions are smooth; fine scaling suggests an alternative diagnosis like superficial fungal infection.",
+        "**Periorificial/acral involvement** - Commonly affects face, hands, and around eyes/mouth rather than only upper trunk.",
+        "**Koebner phenomenon** - New lesions may appear at sites of trauma, friction, or pressure.",
+        "**Leukotrichia** - White hair within lesions indicates melanocyte loss and supports vitiligo.",
+        "**Autoimmune association** - Increased risk with thyroid disease, type 1 diabetes, and other autoimmune conditions."
+      ],
+      "clinicalReasoning": "This patient has hypopigmented round/oval macules with **fine scaling** on the upper chest and back that become more noticeable after sun exposure. Such trunk-predominant, mildly scaly lesions in a warm, sweaty environment strongly suggest **pityriasis versicolor**, not vitiligo. Vitiligo typically presents as **depigmented** (chalk-white), non-scaly patches and often involves face, acral sites, or periorificial areas. The case’s confirmatory tests (KOH showing **\"spaghetti and meatballs\"** and **yellow fluorescence** on Wood’s lamp) are characteristic of pityriasis versicolor rather than vitiligo.",
+      "whyIncorrectForCase": "The lesions are described as **hypopigmented with fine scaling**, whereas vitiligo lesions are classically **depigmented and non-scaly**. Additionally, the expected Wood’s lamp finding in vitiligo is **bright blue-white accentuation due to total pigment loss**, not yellow fluorescence.",
+      "keyDifferencesFromCorrect": [
+        "**Etiology** - Vitiligo is autoimmune melanocyte loss; **pityriasis versicolor** is **Malassezia** overgrowth in stratum corneum.",
+        "**Color change** - Vitiligo causes **complete depigmentation**; pityriasis versicolor causes **hypo-/hyperpigmented** macules that stand out after tanning.",
+        "**Scale** - Vitiligo is **non-scaly**; pityriasis versicolor has **fine branny scale** (often \"evoked\" by scraping).",
+        "**Distribution** - Vitiligo often affects **face/acral/periorificial** areas; pityriasis versicolor favors **upper trunk, shoulders, back**.",
+        "**Wood’s lamp** - Vitiligo shows **blue-white accentuation**; pityriasis versicolor shows **yellow/coppery fluorescence**.",
+        "**Microscopy** - Vitiligo has no fungal elements; pityriasis versicolor shows **\"spaghetti and meatballs\"** on KOH."
+      ],
+      "missingFindings": [
+        "**Chalk-white depigmentation** - Absence of complete depigmentation makes vitiligo less likely than pityriasis versicolor.",
+        "**No scaling** - Vitiligo should lack scale; presence of fine scale argues against it.",
+        "**Typical vitiligo sites** - No face, periorificial, or acral involvement described, reducing likelihood of nonsegmental vitiligo.",
+        "**Vitiligo Wood’s lamp pattern** - No report of blue-white accentuation/total pigment loss expected in vitiligo.",
+        "**Leukotrichia** - Not described; its absence weakens support for vitiligo in this presentation."
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Atopic dermatitis (Atopic eczema)",
+      "description": "**Atopic dermatitis** is a chronic, relapsing inflammatory dermatosis characterized by pruritus and eczematous lesions. It is associated with **atopy** (asthma/allergic rhinitis), impaired skin barrier, and typical age-dependent distribution patterns.",
+      "keySymptoms": [
+        "**Pruritus** - Intense itching is the hallmark; scratching drives excoriations, lichenification, and sleep disturbance.",
+        "**Eczematous plaques** - Ill-defined erythematous patches/plaques with oozing or crusting in acute flares.",
+        "**Xerosis** - Generalized dry skin from barrier dysfunction; often precedes visible eczema lesions.",
+        "**Flexural predominance** - Commonly affects antecubital/popliteal fossae, neck, wrists, and ankles in adults.",
+        "**Lichenification** - Thickened skin with accentuated markings due to chronic rubbing and scratching over time.",
+        "**Personal/family atopy** - Frequently coexists with asthma, allergic rhinitis, or atopic family history."
+      ],
+      "clinicalReasoning": "Atopic dermatitis typically presents with prominent **itching**, recurrent flares, and **eczematous** morphology (erythema, oozing/crusting, or lichenification). Adult disease usually favors **flexural** sites and is often accompanied by **xerosis** and an atopic background. The case instead describes persistent **hypopigmented scaly macules** on the upper trunk that become more noticeable after sun exposure, which is classic for **pityriasis versicolor** rather than eczema. The provided diagnostic confirmations (KOH 'spaghetti and meatballs' and **Wood’s lamp** yellow fluorescence) directly support a superficial fungal etiology, not eczema.",
+      "whyIncorrectForCase": "This patient’s lesions are **round/oval hypopigmented macules with fine scale** on the upper chest/back, not pruritic, inflamed, flexural **eczema**. Objective tests described (KOH showing **'spaghetti and meatballs'** and **yellow fluorescence** on Wood’s lamp) are inconsistent with atopic dermatitis.",
+      "keyDifferencesFromCorrect": [
+        "**Etiology** - Atopic dermatitis is inflammatory/barrier-related; **pityriasis versicolor** is due to **Malassezia** overgrowth.",
+        "**Primary symptom** - Atopic dermatitis is dominated by **pruritus**; pityriasis versicolor often has minimal or no itch.",
+        "**Morphology** - Atopic dermatitis shows **erythematous eczematous plaques**; pityriasis versicolor shows **hypo/hyperpigmented macules** with fine scale.",
+        "**Distribution** - Atopic dermatitis favors **flexures** and generalized xerosis; pityriasis versicolor favors **upper trunk/shoulders**.",
+        "**Sun relationship** - Atopic dermatitis is not classically unmasked by tanning; pityriasis versicolor becomes more obvious after **sun exposure**.",
+        "**Bedside tests** - Atopic dermatitis lacks specific microscopy; pityriasis versicolor shows **KOH 'spaghetti and meatballs'** and **Wood’s lamp** yellow fluorescence."
+      ],
+      "missingFindings": [
+        "**Significant pruritus** - Absence of prominent itching makes classic atopic dermatitis unlikely in this presentation.",
+        "**Erythema/oozing/crusting** - Lack of inflamed eczematous changes argues against an acute or subacute eczema flare.",
+        "**Flexural involvement** - No antecubital/popliteal or neck flexural dermatitis described, which is typical in adults.",
+        "**Chronic lichenification/excoriations** - No scratch marks or thickened lichenified plaques reported, reducing likelihood.",
+        "**Atopic history** - No asthma/allergic rhinitis/family atopy mentioned, which commonly supports the diagnosis."
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Psoriasis vulgaris (Chronic plaque psoriasis)",
+      "description": "**Psoriasis vulgaris** is a chronic, immune-mediated inflammatory dermatosis characterized by well-demarcated erythematous plaques with adherent silvery scale. It commonly follows a relapsing course and may be associated with **nail disease** and **psoriatic arthritis**.",
+      "keySymptoms": [
+        "**Well-demarcated plaques** - Sharply bordered raised lesions, typically erythematous, persisting for weeks to months.",
+        "**Silvery-white scale** - Thick, micaceous scale that sheds easily and reforms after removal.",
+        "**Extensor distribution** - Predominant involvement of elbows, knees, and lumbosacral area rather than trunk.",
+        "**Auspitz sign** - Pinpoint bleeding after scale removal due to exposed dilated dermal capillaries.",
+        "**Koebner phenomenon** - New lesions arise at sites of trauma such as scratches, pressure, or friction.",
+        "**Nail pitting/onycholysis** - Nail matrix involvement causing pits, distal separation, and subungual hyperkeratosis.",
+        "**Pruritus or soreness** - Variable itch or burning; not primarily driven by sun-tan contrast changes."
+      ],
+      "clinicalReasoning": "This patient has multiple round/oval **hypopigmented macules** with **fine scaling** on the upper chest and back that become more noticeable after sun exposure, which is classic for **pityriasis versicolor**. Psoriasis typically produces **erythematous plaques** with thicker scale and favors extensor surfaces and scalp, not predominantly hypopigmented macules on the upper trunk. The case also includes confirmatory tests for fungal overgrowth (KOH showing **\"spaghetti and meatballs\"** and **yellow fluorescence** on Wood’s lamp), which are not features of psoriasis. Warm environment and sweating further support Malassezia-related disease rather than autoimmune plaque psoriasis.",
+      "whyIncorrectForCase": "The lesions described are **hypopigmented, finely scaly macules** on the upper trunk that accentuate after tanning, not **erythematous plaques** with thick silvery scale. Positive fungal diagnostics (KOH **\"spaghetti and meatballs\"**, Wood’s lamp **yellow fluorescence**) directly support **pityriasis versicolor**, not psoriasis.",
+      "keyDifferencesFromCorrect": [
+        "**Etiology** - Psoriasis is **immune-mediated**; pityriasis versicolor is **Malassezia** yeast overgrowth.",
+        "**Morphology** - Psoriasis forms **thick plaques**; pityriasis versicolor forms **macules/patches** with fine branny scale.",
+        "**Color change** - Psoriasis is usually **erythematous**; pityriasis versicolor is often **hypo-/hyperpigmented** and contrasts after sun exposure.",
+        "**Distribution** - Psoriasis favors **scalp/extensors/nails**; pityriasis versicolor favors **upper trunk/shoulders**.",
+        "**Bedside tests** - Psoriasis lacks **Wood’s lamp yellow fluorescence** and **KOH spaghetti-and-meatballs** findings.",
+        "**Steroid response** - Psoriasis may improve with topical steroids; pityriasis versicolor can **spread/worsen** with inappropriate steroid use."
+      ],
+      "missingFindings": [
+        "**Erythematous well-demarcated plaques** - Absence of classic red plaques makes chronic plaque psoriasis unlikely.",
+        "**Thick micaceous (silvery) scale** - Only fine scaling is described, not the typical psoriatic scale.",
+        "**Extensor/scalp involvement** - No elbows, knees, scalp, or lumbosacral predominance is reported.",
+        "**Nail changes** - No **pitting**, **onycholysis**, or subungual hyperkeratosis described.",
+        "**Auspitz sign/Koebner phenomenon** - No history of pinpoint bleeding on scale removal or trauma-induced lesions."
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Seborrheic dermatitis",
+      "description": "**Seborrheic dermatitis** is a chronic, relapsing inflammatory dermatosis affecting sebaceous-rich areas with greasy scale. It commonly involves the scalp and face, and may extend to the presternal chest, but typically presents with erythema and greasy scaling rather than hypopigmented macules.",
+      "keySymptoms": [
+        "**Greasy scale** - Yellowish, oily-looking scale that adheres to erythematous skin in sebaceous areas.",
+        "**Erythema** - Red, inflamed patches or plaques, often with ill-defined borders on affected regions.",
+        "**Scalp involvement** - Dandruff-like flaking or thicker scale on scalp; may itch and recur.",
+        "**Facial distribution** - Involves nasolabial folds, eyebrows, glabella, and beard area with scaling.",
+        "**Pruritus** - Variable itching, often worse with stress, cold weather, or irritation."
+      ],
+      "clinicalReasoning": "This patient has persistent round/oval scaly macules on the upper trunk that are predominantly **hypopigmented** and become more obvious after sun exposure, which strongly suggests **pityriasis versicolor**. The textbook-confirmatory findings for that condition include KOH microscopy showing **\"spaghetti and meatballs\"** and **yellow fluorescence** on Wood’s lamp. **Seborrheic dermatitis** can involve the presternal area, but it usually produces erythematous patches with **greasy** scale and commonly coexists with prominent scalp/facial involvement. The history of spread with inappropriate topical steroid use also aligns better with superficial fungal overgrowth than classic seborrheic dermatitis.",
+      "whyIncorrectForCase": "The lesions described are **hypopigmented round/oval macules** on the upper chest/back that become more noticeable after tanning, which is characteristic of **pityriasis versicolor**, not seborrheic dermatitis. There is no description of typical seborrheic distribution (scalp/nasolabial folds) or **greasy erythematous plaques**.",
+      "keyDifferencesFromCorrect": [
+        "**Primary morphology** - Seborrheic dermatitis shows erythematous greasy plaques; **pityriasis versicolor** shows hypo/hyperpigmented fine-scaling macules.",
+        "**Distribution pattern** - Seborrheic dermatitis favors scalp/face/ears; **pityriasis versicolor** favors upper trunk, shoulders, and back.",
+        "**Sun relationship** - Seborrheic dermatitis is not accentuated by tanning; **pityriasis versicolor** becomes more obvious after sun exposure.",
+        "**Wood’s lamp** - Seborrheic dermatitis has no characteristic fluorescence; **pityriasis versicolor** may show **yellow fluorescence**.",
+        "**Microscopy** - Seborrheic dermatitis lacks KOH hyphae/yeast clusters; **pityriasis versicolor** shows **\"spaghetti and meatballs\"**."
+      ],
+      "missingFindings": [
+        "**Scalp dandruff** - Absence of scalp scaling reduces likelihood of classic seborrheic dermatitis.",
+        "**Facial involvement** - No nasolabial fold/eyebrow/glabellar scaling described, which is typical for seborrheic dermatitis.",
+        "**Greasy erythematous plaques** - Case describes hypopigmented macules with fine scale, not greasy inflamed plaques.",
+        "**Chronic relapsing seborrheic triggers** - No mention of stress/cold-weather flares typical of seborrheic dermatitis pattern."
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "**Erythema multiforme (EM)**",
+      "description": "**Erythema multiforme** is an acute, immune-mediated mucocutaneous reaction most often triggered by **herpes simplex virus** or medications. It classically presents with sudden-onset **target (iris) lesions** on acral sites and may involve **mucous membranes** in more severe forms.",
+      "keySymptoms": [
+        "**Target lesions** - Concentric rings with central dusky zone, typically on hands, feet, extensor surfaces.",
+        "**Acute onset** - Develops over days, often following infection or drug exposure rather than months.",
+        "**Acral distribution** - Predominantly affects palms, soles, forearms, and legs more than upper trunk.",
+        "**Mucosal involvement** - Painful oral, ocular, or genital erosions can occur, especially in EM major.",
+        "**Burning/tenderness** - Lesions may be painful or tender, unlike minimally symptomatic superficial scaling."
+      ],
+      "clinicalReasoning": "This patient has chronic, round/oval **hypopigmented scaly macules** on the **upper trunk** that become more noticeable after sun exposure, which strongly suggests **pityriasis versicolor**. EM is typically an acute eruption with **target lesions** and an acral predominance, often with systemic trigger history (e.g., **HSV**). The described fine scaling and distribution on chest/back in a warm, sweaty environment aligns with **Malassezia** overgrowth rather than an immune-mediated hypersensitivity reaction. Diagnostic confirmation in this case (KOH showing **spaghetti and meatballs**; **Wood’s lamp** yellow fluorescence) supports the fungal diagnosis, not EM.",
+      "whyIncorrectForCase": "The morphology is wrong: there are no **target lesions**, dusky centers, or blistering/erosions typical of **EM**. The course and location are wrong: months-long **upper trunk** hypopigmented scaling fits **pityriasis versicolor**, not an acute acral eruption.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion morphology** - EM has **target/iris lesions**; pityriasis versicolor has **fine scaly hypo/hyperpigmented macules**.",
+        "**Distribution** - EM favors **acral/extensor** sites; pityriasis versicolor favors **upper back, shoulders, chest**.",
+        "**Time course** - EM is **acute** (days to weeks); pityriasis versicolor is **chronic/recurrent** over months.",
+        "**Etiology** - EM is immune-mediated, often **HSV/drug-triggered**; pityriasis versicolor is **Malassezia** yeast overgrowth.",
+        "**Bedside tests** - EM lacks **KOH spaghetti-and-meatballs** and **yellow Wood’s lamp fluorescence**, which support pityriasis versicolor."
+      ],
+      "missingFindings": [
+        "**Target (iris) lesions** - Absence of classic concentric targets argues strongly against **erythema multiforme**.",
+        "**Acral predominance** - No involvement of hands/feet/extensor limbs makes EM unlikely.",
+        "**Mucosal erosions** - No oral/genital/ocular lesions; EM major typically shows mucosal disease.",
+        "**Acute trigger history** - No recent **HSV outbreak**, febrile illness, or new medication temporally linked to onset.",
+        "**Painful/tender plaques** - Patient describes cosmetic hypopigmented scaling rather than painful inflammatory lesions."
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "Lichen planus",
+      "description": "**Lichen planus** is an inflammatory, immune-mediated dermatosis affecting skin and/or mucous membranes. It classically presents with intensely pruritic, violaceous, flat-topped papules and may involve oral or genital mucosa and nails.",
+      "keySymptoms": [
+        "**Pruritus** - Often prominent itching accompanying lesions; frequently a major complaint in lichen planus.",
+        "**Violaceous flat-topped papules** - Purple, polygonal, flat lesions typically on wrists, ankles, and lower back.",
+        "**Wickham striae** - Fine white lacy lines on lesion surfaces, especially visible on mucosal involvement.",
+        "**Koebner phenomenon** - New lesions appear at sites of trauma or scratching, reflecting inflammatory reactivity.",
+        "**Mucosal involvement** - Oral/genital erosions or reticular white patches may occur, causing soreness or burning."
+      ],
+      "clinicalReasoning": "The patient’s lesions are described as **hypopigmented round/oval macules with fine scaling** on the upper trunk, more noticeable after sun exposure—features typical of **pityriasis versicolor**. **Lichen planus** instead produces **violaceous papules/plaques** and is usually markedly **pruritic**, with common involvement of flexor wrists, ankles, oral mucosa, and sometimes nails. The warm, sweaty environment and steroid misuse history also align better with **Malassezia** overgrowth than with an immune-mediated papulosquamous eruption. Diagnostic confirmation in this case (KOH “**spaghetti and meatballs**”, **Wood’s lamp** yellow fluorescence) supports a superficial fungal etiology rather than lichen planus.",
+      "whyIncorrectForCase": "This patient has **scaly hypopigmented macules on the upper trunk** that become more obvious after tanning, which is not the typical morphology or distribution of **lichen planus**. The case’s confirmatory tests (KOH “**spaghetti and meatballs**” and **yellow fluorescence** on Wood’s lamp) indicate **pityriasis versicolor**, not lichen planus.",
+      "keyDifferencesFromCorrect": [
+        "**Morphology** - Lichen planus causes violaceous papules/plaques; pityriasis versicolor causes fine **scaly macules** with pigment change.",
+        "**Color change pattern** - Lichen planus is purple-brown and not tanning-dependent; pityriasis versicolor appears **hypo-/hyperpigmented** and more obvious after sun exposure.",
+        "**Distribution** - Lichen planus favors flexor wrists/ankles and mucosa; pityriasis versicolor favors **upper trunk/shoulders/back**.",
+        "**Etiology** - Lichen planus is **immune-mediated**; pityriasis versicolor is due to **Malassezia** yeast overgrowth.",
+        "**Bedside tests** - Lichen planus lacks KOH fungal elements; pityriasis versicolor shows **'spaghetti and meatballs'** and **yellow fluorescence** on Wood’s lamp."
+      ],
+      "missingFindings": [
+        "**Violaceous polygonal papules** - Absence of characteristic purple, flat-topped papules argues strongly against lichen planus.",
+        "**Wickham striae** - No mention of lacy white surface/mucosal striae, a classic supportive sign for lichen planus.",
+        "**Significant pruritus** - Case emphasizes appearance and scaling rather than intense itching typical of lichen planus.",
+        "**Mucosal/nail involvement** - No oral/genital lesions or nail dystrophy described, which commonly support lichen planus diagnosis.",
+        "**Negative fungal testing expectation** - Lichen planus would not show **KOH 'spaghetti and meatballs'** or **Wood’s lamp** yellow fluorescence."
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Bullous pemphigoid",
+      "description": "**Bullous pemphigoid** is an autoimmune subepidermal blistering disorder caused by antibodies against hemidesmosomal proteins (BP180/BP230). It typically presents in older adults with intensely pruritic urticarial plaques that evolve into tense bullae on the trunk and flexures.",
+      "keySymptoms": [
+        "**Tense bullae** - Firm, fluid-filled blisters that do not rupture easily due to subepidermal split.",
+        "**Severe pruritus** - Prominent itching often precedes blisters and may be the dominant early symptom.",
+        "**Urticarial plaques** - Erythematous, edematous wheals that can later develop into bullae over days.",
+        "**Flexural/truncal distribution** - Commonly involves lower abdomen, groin, axillae, and inner thighs.",
+        "**Mucosal sparing** - Oral or other mucosal involvement is absent or mild in most cases."
+      ],
+      "clinicalReasoning": "This patient has chronic, round/oval **hypopigmented scaly macules** on the upper trunk that become more apparent after sun exposure, which is classic for **pityriasis versicolor**. **Bullous pemphigoid** instead produces inflammatory, intensely itchy plaques and **tense blisters**, not fine scaling macules. The case also includes confirmatory tests for fungal overgrowth (KOH “**spaghetti and meatballs**” and **Wood’s lamp** yellow fluorescence), which are not features of an autoimmune blistering disease. Warm environment and sweating further support Malassezia-related disease rather than pemphigoid.",
+      "whyIncorrectForCase": "There are no **bullae**, urticarial plaques, or marked pruritus—hallmarks of **bullous pemphigoid**. The described **fine scaling hypopigmented macules** with positive fungal microscopy/Wood’s lamp findings fit **pityriasis versicolor**, not pemphigoid.",
+      "keyDifferencesFromCorrect": [
+        "**Primary lesion** - Bullous pemphigoid causes **tense blisters**; pityriasis versicolor causes **scaly hypo/hyperpigmented macules**.",
+        "**Etiology** - Bullous pemphigoid is **autoimmune (anti-BP180/BP230)**; pityriasis versicolor is **Malassezia** overgrowth.",
+        "**Diagnostic test** - Bullous pemphigoid requires **skin biopsy with subepidermal split** and **DIF linear IgG/C3**; pityriasis versicolor shows **KOH “spaghetti and meatballs”** and **yellow fluorescence** on Wood’s lamp.",
+        "**Symptoms** - Bullous pemphigoid is typically **very pruritic**; pityriasis versicolor is often **mildly itchy or asymptomatic** with cosmetic concern.",
+        "**Pigment change with sun** - Bullous pemphigoid does not characteristically accentuate after tanning; pityriasis versicolor becomes more obvious after sun due to **relative hypopigmentation**."
+      ],
+      "missingFindings": [
+        "**Tense bullae** - Absence of blisters strongly argues against a primary blistering disorder like bullous pemphigoid.",
+        "**Marked pruritus** - Lack of significant itching makes bullous pemphigoid unlikely in this presentation.",
+        "**Erythematous urticarial plaques** - No inflammatory wheals/plaques described that typically precede bullae.",
+        "**Mucocutaneous blistering pattern** - No erosions or blister evolution reported, expected in pemphigoid course.",
+        "**Biopsy/DIF confirmation** - No evidence of **subepidermal blister** or **linear IgG/C3** on DIF, required for diagnosis."
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Stevens–Johnson syndrome (SJS)",
+      "description": "**Stevens–Johnson syndrome (SJS)** is an acute, life-threatening mucocutaneous hypersensitivity reaction, most often triggered by medications or infections. It causes widespread epidermal necrosis with painful skin lesions and prominent mucosal involvement, often with systemic toxicity.",
+      "keySymptoms": [
+        "**Prodromal fever and malaise** - Flu-like symptoms precede rash by 1–3 days with significant systemic illness.",
+        "**Painful erythematous or purpuric macules** - Tender lesions rapidly spread and may develop dusky centers and necrosis.",
+        "**Mucosal erosions** - Painful oral, ocular, or genital erosions are typical and often severe.",
+        "**Epidermal detachment** - Skin sloughing with positive Nikolsky sign may occur, indicating epidermal necrosis.",
+        "**Ocular involvement** - Conjunctivitis to corneal damage can occur, risking long-term visual sequelae.",
+        "**Medication trigger** - Commonly follows new drugs such as sulfonamides, anticonvulsants, allopurinol, NSAIDs."
+      ],
+      "clinicalReasoning": "SJS is characterized by an abrupt onset of a painful, rapidly progressive rash with mucosal involvement and systemic symptoms. Lesions are typically erythematous/purpuric and may blister or detach due to epidermal necrosis. The case instead describes chronic, asymptomatic, finely scaly hypopigmented macules on the upper trunk that become more apparent after sun exposure. The distribution, scaling, chronicity, and classic mycologic findings strongly support **pityriasis versicolor** rather than an acute severe drug reaction.",
+      "whyIncorrectForCase": "This patient has months-long, non-painful, finely scaly hypopigmented macules on the upper chest/back without fever or mucosal erosions. SJS is an acute emergency with painful lesions, systemic toxicity, and prominent mucosal involvement, none of which are described.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - SJS is acute and rapidly progressive; **pityriasis versicolor** is chronic/recurrent over weeks to months.",
+        "**Symptoms** - SJS lesions are painful with systemic illness; **pityriasis versicolor** is usually asymptomatic or mildly pruritic.",
+        "**Morphology** - SJS shows dusky macules, blisters, and epidermal detachment; **pityriasis versicolor** shows fine branny scale on macules.",
+        "**Mucosal involvement** - SJS has prominent oral/ocular/genital erosions; **pityriasis versicolor** has no mucosal disease.",
+        "**Etiology** - SJS is a severe hypersensitivity reaction (often drug-induced); **pityriasis versicolor** is due to **Malassezia** yeast overgrowth.",
+        "**Diagnostic tests** - SJS is diagnosed clinically ± biopsy showing epidermal necrosis; **pityriasis versicolor** shows **'spaghetti and meatballs'** on KOH and yellow fluorescence on Wood’s lamp."
+      ],
+      "missingFindings": [
+        "**Fever or systemic toxicity** - Absence of constitutional symptoms argues strongly against SJS.",
+        "**Mucosal erosions** - No oral/ocular/genital involvement makes SJS very unlikely.",
+        "**Skin pain/tenderness** - SJS typically has painful skin; this case describes non-painful scaly macules.",
+        "**Blistering or epidermal detachment** - No bullae, sloughing, or Nikolsky sign features are reported.",
+        "**Recent high-risk medication exposure** - No history of new culprit drugs preceding onset is provided."
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "DRESS (Drug reaction with eosinophilia and systemic symptoms)",
+      "description": "**DRESS** is a severe, delayed, drug-induced hypersensitivity reaction characterized by widespread rash, hematologic abnormalities, and internal organ involvement. It typically occurs 2–8 weeks after starting a culprit medication and can be life-threatening due to **hepatitis**, **nephritis**, or other systemic complications.",
+      "keySymptoms": [
+        "**Morbilliform rash** - Diffuse erythematous maculopapular eruption, often starting on trunk, spreading widely.",
+        "**Facial edema** - Prominent swelling of face, especially periorbital region, common early clue.",
+        "**Fever** - High-grade systemic fever accompanying rash, reflecting significant inflammatory response.",
+        "**Eosinophilia** - Elevated eosinophil count indicating hypersensitivity; may correlate with organ involvement severity.",
+        "**Lymphadenopathy** - Enlarged tender lymph nodes, typically cervical, reflecting systemic immune activation.",
+        "**Hepatitis** - Elevated transaminases and jaundice risk; liver is most commonly affected organ.",
+        "**Renal involvement** - Interstitial nephritis causing creatinine rise, hematuria, or reduced urine output.",
+        "**Mucosal involvement** - Usually mild or absent; severe erosions suggest SJS/TEN instead."
+      ],
+      "clinicalReasoning": "DRESS requires a clear temporal relationship to a new medication exposure and presents with a diffuse inflammatory eruption plus systemic features such as **fever**, **eosinophilia**, and **organ dysfunction** (commonly **hepatitis**). The case describes chronic, localized, round/oval, finely scaly macules on the upper trunk that are more noticeable after sun exposure—features typical of **pityriasis versicolor**. There is no history of acute systemic illness, no mention of new drug initiation, and no evidence of multi-organ involvement. The described confirmatory tests (KOH showing **\"spaghetti and meatballs\"** and **Wood’s lamp** yellow fluorescence) support a superficial fungal etiology rather than a drug hypersensitivity syndrome.",
+      "whyIncorrectForCase": "This patient has months-long, localized hypopigmented scaly macules on the upper trunk without **fever**, **facial edema**, **eosinophilia**, or **organ involvement**, which are central to **DRESS**. The morphology and distribution, plus expected KOH/Wood’s lamp findings, fit **pityriasis versicolor** rather than a systemic drug reaction.",
+      "keyDifferencesFromCorrect": [
+        "**Time course** - DRESS is acute/subacute after new drug (2–8 weeks); pityriasis versicolor is chronic/recurrent.",
+        "**Distribution** - DRESS is generalized widespread eruption; pityriasis versicolor favors upper trunk/shoulders.",
+        "**Morphology** - DRESS shows erythematous morbilliform rash; pityriasis versicolor shows hypo/hyperpigmented fine **branny scale** macules.",
+        "**Systemic features** - DRESS has **fever**, **lymphadenopathy**, **organ dysfunction**; pityriasis versicolor is usually limited to skin.",
+        "**Laboratory findings** - DRESS shows **eosinophilia** and abnormal LFTs/renal tests; pityriasis versicolor has positive KOH for **Malassezia**.",
+        "**Bedside tests** - DRESS has no specific fungal microscopy; pityriasis versicolor shows **\"spaghetti and meatballs\"** and may fluoresce yellow on **Wood’s lamp**."
+      ],
+      "missingFindings": [
+        "**Recent high-risk drug exposure** - Absence of a new medication trigger makes DRESS unlikely.",
+        "**Fever** - Lack of systemic fever argues strongly against DRESS.",
+        "**Eosinophilia/atypical lymphocytosis** - No hematologic abnormalities reported; these support DRESS diagnosis.",
+        "**Lymphadenopathy** - Not described; commonly present in DRESS.",
+        "**Hepatic involvement** - No jaundice or elevated transaminases mentioned; liver injury is typical in DRESS.",
+        "**Renal involvement** - No creatinine rise/urinary symptoms reported; kidney injury can occur in DRESS.",
+        "**Diffuse erythematous rash** - Patient has localized hypopigmented scaly macules, not generalized erythema."
+      ]
+    }
+  ]
+}

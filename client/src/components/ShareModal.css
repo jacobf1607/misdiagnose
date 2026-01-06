@@ -1,0 +1,181 @@
+/**
+ * Share Modal Styles
+ */
+
+.share-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.share-modal {
+  background: var(--surface-color, #ffffff);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.share-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  background: var(--surface-color, #ffffff);
+}
+
+.share-modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary, #111827);
+}
+
+.share-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-secondary, #6b7280);
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.share-modal-close:hover {
+  color: var(--text-primary, #111827);
+}
+
+.share-modal-body {
+  padding: 1.5rem;
+  background: var(--surface-color, #ffffff);
+}
+
+.share-instruction {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary, #6b7280);
+  font-size: 0.95rem;
+}
+
+.share-link-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--background-color, #f9fafb);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.share-link {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--primary-color, #3b82f6);
+  word-break: break-all;
+  background: none;
+  font-family: 'SF Mono', 'Consolas', monospace;
+}
+
+.copy-link-btn {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+}
+
+.share-message-section {
+  margin-bottom: 1.5rem;
+}
+
+.share-label {
+  margin: 0 0 0.75rem 0;
+  color: var(--text-secondary, #6b7280);
+  font-size: 0.9rem;
+}
+
+.share-message-box {
+  background: var(--background-color, #f9fafb);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.share-message {
+  margin: 0;
+  color: var(--text-primary, #111827);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.copy-message-btn {
+  width: 100%;
+}
+
+.share-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.share-divider::before,
+.share-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-color, #e5e7eb);
+}
+
+.share-divider span {
+  padding: 0 1rem;
+  color: var(--text-muted, #9ca3af);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.share-whatsapp-btn {
+  width: 100%;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.share-whatsapp-btn:hover {
+  background: #20BA5C;
+}
+
+.share-whatsapp-btn::before {
+  content: '📱';
+}

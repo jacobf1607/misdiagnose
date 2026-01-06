@@ -1,0 +1,447 @@
+{
+  "persona": {
+    "name": "Anjali Gupta",
+    "age": 45,
+    "gender": "Female",
+    "occupation": "Electrician in Thane",
+    "background": "Works in industrial settings with exposure to dust and fumes. Has been experiencing increasing respiratory symptoms over the past few months.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": true,
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "hardworking",
+      "concerned about health",
+      "detail-oriented"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "description": "Preventable and treatable pulmonary disease characterized by airflow limitation that is not fully reversible, associated with abnormal inflammatory response to noxious particles or gases"
+    },
+    {
+      "id": "d2",
+      "name": "Bronchial Asthma",
+      "description": "Chronic inflammatory disorder of airways characterized by widespread but variable airflow obstruction that is often reversible either spontaneously or with treatment"
+    },
+    {
+      "id": "d3",
+      "name": "Bronchiectasis",
+      "description": "Abnormal and permanent dilatation of bronchi and bronchioles due to destruction of muscle and elastic tissue resulting from infection and inflammation"
+    },
+    {
+      "id": "d4",
+      "name": "Pneumonia",
+      "description": "Acute respiratory illness with inflammation and exudative solidification of lung parenchyma causing alveoli to be filled with inflammatory exudates"
+    },
+    {
+      "id": "d5",
+      "name": "Interstitial Lung Disease",
+      "description": "Group of diffuse parenchymal lung diseases characterized by inflammation and fibrosis in lung parenchyma with restrictive ventilatory defect"
+    },
+    {
+      "id": "d6",
+      "name": "Pulmonary Tuberculosis",
+      "description": "Infectious disease caused by Mycobacterium tuberculosis affecting lungs with symptoms of chronic cough, sputum production, and systemic symptoms"
+    },
+    {
+      "id": "d7",
+      "name": "Lung Cancer",
+      "description": "Malignant neoplasm of lung parenchyma presenting with respiratory symptoms and systemic manifestations"
+    },
+    {
+      "id": "d8",
+      "name": "Pleural Effusion",
+      "description": "Accumulation of fluid in pleural space causing breathlessness and chest discomfort"
+    },
+    {
+      "id": "d9",
+      "name": "Sarcoidosis",
+      "description": "Multisystem granulomatous disease characterized by noncaseating granulomas, commonly affecting lungs with bilateral hilar lymphadenopathy"
+    },
+    {
+      "id": "d10",
+      "name": "Pulmonary Embolism",
+      "description": "Blockage of pulmonary arteries causing acute onset dyspnea and chest pain"
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "I've been having this dry cough for the past 3 months, and I'm getting short of breath even when doing simple tasks at work. It's getting worse gradually.",
+  "medicalHistory": "No significant past medical history. Works as electrician with exposure to industrial dust and fumes for past 20 years.",
+  "symptoms": "Gradually increasing cough and dyspnea over months. Dry cough present. Shortness of breath on exertion. Fatigue and weakness. Some weight loss noticed recently. No fever or acute symptoms.\n\nFrom textbook: causing reducing lung function decline. Dosing 150 mg BD daily. Combination therapy with\nnintedanib with pirfenidone showed no superiority.\n\nIdiopathic Interstitial Pneumonias\nIdiopathic interstitial pneumonias (IIPs) are characterized by diffuse inflammation and fibrosis in the lung parenchyma\nin which the etiology is not known. They form a major subgroup of interstitial lung diseases or diffuse parenchymal lung\ndiseases. The lung parenchyma shows varying combinations of fibrosis and inflammati",
+  "relevantFindings": "On examination: bilateral fine end-inspiratory crackles (velcro rales) heard at lung bases. No clubbing currently visible. Chest X-ray shows bilateral lower zone reticular opacities. Pulmonary function tests reveal restrictive pattern with reduced FVC, reduced FEV1, normal FEV1:FVC ratio, and reduced diffusion capacity.\n\nFrom textbook: causing reducing lung function decline. Dosing 150 mg BD daily. Combination therapy with\nnintedanib with pirfenidone showed no superiority.\n\nIdiopathic Interstitial Pneumonias\nIdiopathic interstitial pneumonias (IIPs) are characterized by diffuse inflammation and fibrosis in the lung parenchyma\nin which the etiology is not known. They form a major subgroup of interstitial lung diseases or diffuse parenchymal lung\ndiseases. The lung parenchyma shows varying combinations of fibrosis and inflammati",
+  "redHerrings": "Patient smokes occasionally which could suggest COPD. Occupational exposure might point toward pneumoconiosis. Gradual onset could suggest malignancy. Cough might suggest chronic bronchitis.",
+  "id": "case_1767519413588",
+  "domain": "respiratory",
+  "idealPathway": {
+    "diseaseName": "Interstitial Lung Disease",
+    "domain": "respiratory",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about duration and progression of shortness of breath and dry cough",
+        "reasoning": "Most common presentation pattern helps classify ILD timing",
+        "expectedFinding": "Chronic presentation with symptoms present for months to years",
+        "importance": "critical",
+        "textbookReference": "Most common presentation in which symptoms are present for months to years. Common symptoms: Shortness of breath, dry cough, fatigue, weakness, loss of appetite and weight."
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about occupational exposures to dusts, gases, vapors, and fumes",
+        "reasoning": "Essential to identify known causes of ILD that require specific management",
+        "expectedFinding": "Exposure to inorganic dusts (silica, asbestos) or organic dusts (cotton, flax)",
+        "importance": "critical",
+        "textbookReference": "Exclusion of other known causes of ILD (e.g., domestic and occupational environmental exposures, CTD, drug toxicity)"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about drug history including antibiotics, chemotherapy agents, amiodarone",
+        "reasoning": "Drug-induced ILD is a major cause that requires cessation of offending agent",
+        "expectedFinding": "Use of drugs like gold, amiodarone, D-penicillamine, nitrofurantoin, bleomycin, methotrexate",
+        "importance": "important",
+        "textbookReference": "Drugs: Antibiotics, gold, amiodarone, D-penicillamine, nitrofurantoin, Chemotherapeutic (e.g., busulfan, bleomycin, methotrexate, CCNU)"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about symptoms of connective tissue disease including joint pain, skin rashes, Raynaud's phenomenon",
+        "reasoning": "CTD-associated ILD requires different treatment approach than IPF",
+        "expectedFinding": "Features suggestive of systemic lupus erythematosus, rheumatoid arthritis, or scleroderma",
+        "importance": "important",
+        "textbookReference": "Pulmonary autoimmune rheumatic diseases (e.g., systemic lupus erythematosus, rheumatoid arthritis)"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about smoking history and family history of lung disease",
+        "reasoning": "Smoking-related ILD has different patterns and IPF has contributory factors",
+        "expectedFinding": "Smoking history or family history of pulmonary fibrosis",
+        "importance": "helpful",
+        "textbookReference": "Contributory factors: Cigarette smoking, chronic aspiration, antidepressants, infections (e.g., Epstein–Barr virus), exposure to occupational dusts"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Examine fingers for clubbing",
+        "reasoning": "Clubbing is a key physical sign present in most forms of ILD",
+        "expectedFinding": "Digital clubbing present",
+        "importance": "critical",
+        "textbookReference": "Clubbing"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Perform chest auscultation focusing on fine inspiratory crackles",
+        "reasoning": "Characteristic auscultatory finding that helps distinguish from other respiratory conditions",
+        "expectedFinding": "Crackles or 'velcro rales' present on chest examination",
+        "importance": "important",
+        "textbookReference": "Crackles or 'velcro rales' are present on chest examination in most forms of ILD"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Assess chest expansion and look for cyanosis",
+        "reasoning": "Restrictive pattern causes decreased expansion and advanced disease causes cyanosis",
+        "expectedFinding": "Decreased chest expansion and possible central cyanosis",
+        "importance": "important",
+        "textbookReference": "Decreased chest expansion, Cyanosis"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Look for signs of pulmonary hypertension and cor pulmonale",
+        "reasoning": "Advanced ILD can lead to pulmonary hypertension requiring additional treatment",
+        "expectedFinding": "Signs of right heart failure in advanced cases",
+        "importance": "helpful",
+        "textbookReference": "Evidence of pulmonary hypertension/cor pulmonale"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order chest X-ray PA view",
+        "reasoning": "Initial imaging to identify characteristic patterns of ILD",
+        "expectedFinding": "Bibasilar reticular or linear pattern, or nodular pattern depending on type",
+        "importance": "critical",
+        "textbookReference": "Often shows a bibasilar reticular or linear pattern or ground-glass appearance. Nodular or mixed pattern of alveolar filling and reticular pattern may also be observed."
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order basic blood tests including ANA, RF, ESR",
+        "reasoning": "Serology helps identify CTD-associated ILD which requires different treatment",
+        "expectedFinding": "Positive ANA or RF if connective tissue disease present",
+        "importance": "important",
+        "textbookReference": "History, examination, lung function testing, serology (ANA, RF in all patients)"
+      },
+      {
+        "order": 3,
+        "type": "investigation",
+        "action": "Order pulmonary function tests",
+        "reasoning": "Confirms restrictive pattern characteristic of ILD and assesses severity",
+        "expectedFinding": "Restrictive defect with reduced FVC, FEV1, normal or elevated FEV1:FVC ratio, reduced diffusion capacity",
+        "importance": "important",
+        "textbookReference": "Restrictive defect is characterized by reduced FVC, reduced FEV1, normal or elevated FEV1:FVC ratio, total lung capacity, reduced diffusion capacity."
+      },
+      {
+        "order": 4,
+        "type": "investigation",
+        "action": "Order arterial blood gas analysis",
+        "reasoning": "Assesses gas exchange impairment and helps determine need for oxygen therapy",
+        "expectedFinding": "Hypoxemia and respiratory alkalosis with increased A-a gradient",
+        "importance": "helpful",
+        "textbookReference": "It may reveal hypoxemia and respiratory alkalosis. Hypercapnia is rare and may develop in the end-stage. Increased alveolar-arterial oxygen gradient"
+      },
+      {
+        "order": 5,
+        "type": "investigation",
+        "action": "Order high-resolution CT (HRCT) of chest",
+        "reasoning": "Superior to chest X-ray for confirming diagnosis and determining pattern",
+        "expectedFinding": "Specific patterns like UIP, NSIP, or other characteristic distributions",
+        "importance": "critical",
+        "textbookReference": "High-resolution CT (HRCT) of chest is superior to chest radiography for (i) early detection and confirmation of suspected interstitial lung disease, (ii) demonstrates the extent and distribution of disease"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "COPD",
+        "howToRuleOut": "COPD shows obstructive pattern on PFTs with reduced FEV1/FVC ratio, while ILD shows restrictive pattern",
+        "textbookReference": "Restrictive defect is characterized by reduced FVC, reduced FEV1, normal or elevated FEV1:FVC ratio"
+      },
+      {
+        "name": "Pneumonia",
+        "howToRuleOut": "Acute presentation with fever and consolidation on X-ray, versus chronic progressive symptoms in ILD",
+        "textbookReference": "Chest X-ray shows diffuse alveolar opacities which can be confused with 'atypical' pneumonia"
+      },
+      {
+        "name": "Heart failure",
+        "howToRuleOut": "Heart failure typically shows cardiomegaly and bilateral lower lobe infiltrates, responds to diuretics",
+        "textbookReference": "Evidence of pulmonary hypertension/cor pulmonale"
+      },
+      {
+        "name": "Sarcoidosis",
+        "howToRuleOut": "Sarcoidosis typically shows bilateral hilar lymphadenopathy and upper lobe predominance",
+        "textbookReference": "Nodular opacities in the upper lung zones seen in sarcoidosis, chronic hypersensitivity pneumonitis, silicosis"
+      }
+    ],
+    "diagnosticApproach": "Suspect ILD based on chronic progressive dyspnea and dry cough, confirm with chest imaging showing characteristic patterns, identify underlying cause through history and serology, assess severity with PFTs, and use multidisciplinary discussion between pulmonologist and radiologist to determine specific ILD type and guide treatment approach.",
+    "textbookSources": [
+      "causing reducing lung function decline. Dosing 150 mg BD daily. Combination therapy with\nnintedanib with pirfenidone showed no superiority.\n\nIdiopathic Interstitial Pneumonias\nIdiopathic interstitial ...",
+      ": Elevated in ILDs (e.g., sarcoidosis).\nz Antibodies: Antineutrophil cytoplasmic antibodies and antibasement membrane antibodies are useful if vasculitis is\n\nsuspected (e.g., Wegener’s granulomatosis,..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "description": "**COPD** is a progressive lung disease causing airflow blockage and breathing-related problems, typically caused by long-term exposure to irritating gases or particulate matter, most commonly from cigarette smoking.",
+      "keySymptoms": [
+        "**Chronic Cough** - Progressive, mucus-producing cough indicating chronic airway inflammation and structural lung damage",
+        "**Dyspnea** - Progressive shortness of breath indicating declining lung function and airway obstruction"
+      ],
+      "clinicalReasoning": "COPD typically presents with obstructive lung disease patterns, which would show reduced FEV1 and decreased FEV1/FVC ratio. The patient's symptoms suggest potential respiratory compromise, but the restrictive pattern and interstitial changes are inconsistent with classic COPD presentation.",
+      "whyIncorrectForCase": "The patient demonstrates a restrictive lung disease pattern with interstitial changes, which is fundamentally different from COPD's obstructive characteristics. Pulmonary function tests do not support an obstructive lung disease diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Lung Pattern** - COPD shows obstructive changes, while this case demonstrates a restrictive interstitial pattern",
+        "**Pathophysiology** - COPD involves airway obstruction, whereas interstitial lung disease involves parenchymal inflammation"
+      ],
+      "missingFindings": [
+        "**Reduced FEV1/FVC Ratio** - Classic COPD finding not present in this patient's pulmonary function tests",
+        "**Emphysematous Changes** - Lack of hyperinflation and air trapping typical in COPD"
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Bronchial Asthma",
+      "description": "**Bronchial Asthma** is a chronic inflammatory respiratory condition characterized by reversible airway hyperresponsiveness, causing episodic bronchial smooth muscle constriction and mucus production.",
+      "keySymptoms": [
+        "**Wheezing** - Indicates bronchial tube narrowing and potential reversible airway obstruction",
+        "**Episodic Dyspnea** - Suggests variable and potentially reversible airway responsiveness"
+      ],
+      "clinicalReasoning": "Asthma typically presents with variable airway obstruction, which differs from this patient's consistent, progressive respiratory symptoms. The lack of acute bronchospastic episodes and presence of interstitial changes make asthma an unlikely diagnosis.",
+      "whyIncorrectForCase": "The patient's symptoms suggest a progressive, chronic condition with interstitial changes, which is not characteristic of asthma's typically more episodic and reversible nature.",
+      "keyDifferencesFromCorrect": [
+        "**Disease Progression** - Asthma is typically more variable, while this case shows consistent decline",
+        "**Radiographic Findings** - Asthma lacks the interstitial changes seen in this patient"
+      ],
+      "missingFindings": [
+        "**Bronchodilator Responsiveness** - Lack of significant improvement with bronchodilators",
+        "**Acute Exacerbations** - Absence of classic asthmatic wheeze and acute symptom variability"
+      ]
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "**Bronchiectasis**",
+      "description": "**Bronchiectasis** is a chronic lung condition characterized by permanent widening and damage to the airways, leading to recurrent infections and mucus accumulation.",
+      "keySymptoms": [
+        "**Chronic cough** - persistent productive cough with significant mucus production",
+        "**Recurrent respiratory infections** - frequent episodes of pneumonia or bronchitis",
+        "**Hemoptysis** - occasional blood-tinged sputum due to airway damage"
+      ],
+      "clinicalReasoning": "The diagnosis of bronchiectasis requires specific clinical and radiographic evidence of bronchial wall thickening and irreversible airway dilation. Patients typically present with chronic productive cough and recurrent respiratory infections.",
+      "whyIncorrectForCase": "This patient's presentation is more consistent with **interstitial lung disease** with dry cough and progressive dyspnea. The clinical findings of fine crackles and restrictive lung pattern do not support bronchiectasis.",
+      "keyDifferencesFromCorrect": [
+        "**Radiographic findings** - bronchiectasis shows bronchial wall thickening, unlike ILD's reticular opacities",
+        "**Lung function** - bronchiectasis typically shows mixed obstructive pattern, not restrictive pattern",
+        "**Pathology** - bronchiectasis involves airways, while ILD affects lung parenchyma"
+      ],
+      "missingFindings": [
+        "**Bronchial dilation** - no evidence of widened airways on imaging",
+        "**Mucus production** - patient describes dry cough, not productive cough",
+        "**Absence of bronchial wall thickening** - key diagnostic criterion for bronchiectasis"
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "Pneumonia",
+      "description": "**Pneumonia** is an acute inflammatory condition of the lung parenchyma caused by infectious agents such as bacteria, viruses, or fungi.",
+      "keySymptoms": [
+        "**Fever** - sudden onset of elevated body temperature",
+        "**Productive cough** - presence of mucus or purulent sputum",
+        "**Chest pain** - sharp or stabbing pain during breathing"
+      ],
+      "clinicalReasoning": "Pneumonia typically presents with acute infectious symptoms and rapid onset of respiratory distress, which differs from the chronic progressive presentation in this patient's case.",
+      "whyIncorrectForCase": "The patient's symptoms are chronic and progressive over months, lacking acute infectious features typical of pneumonia. There is no evidence of active infection or acute inflammatory markers.",
+      "keyDifferencesFromCorrect": [
+        "**Duration** - pneumonia is acute, patient's condition is chronic",
+        "**Inflammatory markers** - pneumonia shows elevated infectious indicators",
+        "**Radiographic findings** - pneumonia presents with different infiltrate patterns"
+      ],
+      "missingFindings": [
+        "**Acute fever** - absent in patient's presentation",
+        "**Purulent sputum** - patient reports dry cough",
+        "**Rapid respiratory decline** - symptoms are gradually progressive"
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "**Interstitial Lung Disease**",
+      "description": "**Interstitial Lung Disease** is a group of disorders characterized by progressive scarring and inflammation of lung tissue, leading to reduced lung function and impaired gas exchange.",
+      "keySymptoms": [
+        "**Dry Cough** - Progressive, non-productive cough indicating lung inflammation and fibrotic changes",
+        "**Dyspnea** - Shortness of breath signaling reduced lung compliance and impaired respiratory mechanics",
+        "**Bilateral Crackles** - Fine end-inspiratory sounds indicating interstitial changes and potential fibrosis"
+      ],
+      "clinicalReasoning": "The patient's progressive respiratory symptoms, presence of bilateral fine crackles, restrictive pulmonary function test pattern, and radiographic findings of reticular opacities are highly consistent with interstitial lung disease. The gradual onset, lack of acute symptoms, and documented lung function decline support this diagnosis."
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "**Pulmonary Tuberculosis**",
+      "description": "**Pulmonary Tuberculosis** is an infectious disease caused by **Mycobacterium tuberculosis** that primarily affects the lungs, characterized by granulomatous inflammation and potential lung tissue destruction.",
+      "keySymptoms": [
+        "**Chronic cough** - persistent productive cough often with mucoid or bloody sputum",
+        "**Fever** - typically low-grade and intermittent with night sweats",
+        "**Weight loss** - significant unintentional weight loss due to systemic infection"
+      ],
+      "clinicalReasoning": "In suspected tuberculosis, clinicians evaluate respiratory symptoms, perform chest imaging, and confirm through sputum culture or molecular testing to identify mycobacterial presence.",
+      "whyIncorrectForCase": "This patient lacks classic TB features like fever, productive cough with sputum, and positive infectious markers. The presentation suggests a chronic interstitial lung process rather than an infectious disease.",
+      "keyDifferencesFromCorrect": [
+        "**Inflammatory pattern** - TB shows more acute inflammatory changes compared to fibrotic interstitial lung disease",
+        "**Radiographic findings** - TB typically shows cavitary lesions, unlike the reticular opacities seen in this case",
+        "**Response to treatment** - TB responds to anti-tubercular therapy, while this presentation suggests chronic progressive fibrosis"
+      ],
+      "missingFindings": [
+        "**Positive infectious markers** - absence of elevated inflammatory indicators",
+        "**Mycobacterial evidence** - no confirmed presence of tuberculosis bacteria",
+        "**Acute infectious symptoms** - lack of classic systemic infection signs"
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "**Lung Cancer**",
+      "description": "A malignant neoplasm originating in lung tissue, characterized by uncontrolled cell growth and potential metastasis.",
+      "keySymptoms": [
+        "**Persistent Cough** - Chronic cough that may be dry or produce blood-tinged sputum",
+        "**Dyspnea** - Progressive shortness of breath during physical activities",
+        "**Weight Loss** - Unexplained and often significant weight reduction"
+      ],
+      "clinicalReasoning": "While the patient presents with symptoms that could suggest lung cancer, the clinical findings are more consistent with an inflammatory interstitial lung process. The gradual onset, lack of acute symptoms, and specific pulmonary function test results point away from a malignant process.",
+      "whyIncorrectForCase": "The patient's presentation lacks critical lung cancer markers like hemoptysis, chest pain, or definitive radiographic evidence of a mass. The pulmonary findings are more suggestive of an inflammatory condition.",
+      "keyDifferencesFromCorrect": [
+        "**Pathology** - Lung cancer involves tumor growth, whereas Interstitial Lung Disease shows diffuse inflammation and fibrosis",
+        "**Progression** - Lung cancer typically has more rapid deterioration compared to gradual ILD progression",
+        "**Inflammatory Markers** - ILD shows diffuse parenchymal changes, not focal tumor development"
+      ],
+      "missingFindings": [
+        "**Tumor Mass** - No radiographic evidence of discrete lung mass",
+        "**Metastatic Signs** - Absence of lymphadenopathy or distant metastasis",
+        "**Oncologic Markers** - No elevated cancer-specific biomarkers"
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Pleural Effusion",
+      "description": "**Pleural effusion** is an abnormal accumulation of fluid in the pleural space between the lung and chest wall, often resulting from underlying inflammatory or malignant processes.",
+      "keySymptoms": [
+        "**Dyspnea** - Shortness of breath due to fluid restricting lung expansion",
+        "**Chest Pain** - Sharp or dull pain during breathing",
+        "**Decreased Breath Sounds** - Muffled sounds over fluid-filled areas"
+      ],
+      "clinicalReasoning": "Pleural effusion would typically present with fluid accumulation visible on imaging, specific changes in lung sounds, and potential asymmetric chest findings. Clinical presentation would focus on fluid dynamics and inflammatory markers.",
+      "whyIncorrectForCase": "This patient's presentation demonstrates progressive interstitial lung changes with parenchymal fibrosis, not fluid accumulation. The systematic restrictive pattern points to a different underlying pathology.",
+      "keyDifferencesFromCorrect": [
+        "**Imaging** - Pleural effusion shows fluid levels, not reticular opacities",
+        "**Lung Function** - Different pulmonary function test patterns",
+        "**Pathophysiology** - Fluid accumulation versus parenchymal inflammation"
+      ],
+      "missingFindings": [
+        "**Fluid Levels** - No evidence of significant fluid accumulation",
+        "**Asymmetric Lung Findings** - Consistent bilateral changes not typical of effusion",
+        "**Chest Drain Requirements** - No indication of fluid evacuation needed"
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "**Sarcoidosis**",
+      "description": "**Sarcoidosis** is a multisystem inflammatory disorder characterized by granulomatous lesions that can affect multiple organ systems, predominantly the lungs and lymph nodes.",
+      "keySymptoms": [
+        "**Bilateral hilar lymphadenopathy** - symmetrical lymph node enlargement in chest",
+        "**Pulmonary infiltrates** - non-caseating granulomas causing lung parenchymal changes",
+        "**Systemic inflammation** - potential skin, eye, and joint involvement"
+      ],
+      "clinicalReasoning": "While sarcoidosis can present with progressive respiratory symptoms, this patient's presentation suggests a more progressive fibrotic lung disease with restrictive pattern and reduced lung function.",
+      "whyIncorrectForCase": "The patient lacks classic sarcoidosis features like erythema nodosum, bilateral hilar lymphadenopathy, or evidence of multisystem granulomatous involvement.",
+      "keyDifferencesFromCorrect": [
+        "**Progression Pattern** - Sarcoidosis often has variable progression, unlike steady decline in Interstitial Lung Disease",
+        "**Pathological Mechanism** - Granulomatous vs fibrotic tissue changes",
+        "**Treatment Response** - Sarcoidosis often responds to steroids, unlike fibrotic lung diseases"
+      ],
+      "missingFindings": [
+        "**Bilateral Hilar Lymphadenopathy** - absent in this case",
+        "**Non-caseating Granulomas** - not demonstrated in biopsy",
+        "**Systemic Inflammatory Markers** - not suggestive of sarcoidosis"
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "**Pulmonary Embolism**",
+      "description": "An acute condition where blood clots obstruct pulmonary arteries, causing sudden respiratory and cardiovascular compromise.",
+      "keySymptoms": [
+        "**Sudden Onset Dyspnea** - acute breathlessness typically developing rapidly",
+        "**Chest Pain** - often pleuritic and sharp, worse with breathing",
+        "**Hemoptysis** - potential coughing of blood in some cases"
+      ],
+      "clinicalReasoning": "Pulmonary embolism typically presents with acute respiratory distress and cardiovascular instability, characterized by sudden onset of symptoms and potential hemodynamic compromise.",
+      "whyIncorrectForCase": "This patient demonstrates a chronic, progressive respiratory decline with gradual symptom onset over months, which is inconsistent with the acute nature of pulmonary embolism.",
+      "keyDifferencesFromCorrect": [
+        "**Chronicity** - PE is acute, while Interstitial Lung Disease is progressive",
+        "**Radiographic Findings** - PE shows different lung imaging patterns compared to ILD",
+        "**Symptom Progression** - PE has sudden onset, unlike gradual ILD development"
+      ],
+      "missingFindings": [
+        "**Acute Cardiovascular Instability** - absent in this patient's presentation",
+        "**Sudden Respiratory Compromise** - symptoms are gradual, not acute",
+        "**D-Dimer Elevation** - typically seen in PE, not consistent here"
+      ]
+    }
+  ]
+}

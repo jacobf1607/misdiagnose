@@ -1,0 +1,419 @@
+{
+  "persona": {
+    "name": "Kamala Devi",
+    "age": 42,
+    "gender": "Female",
+    "occupation": "College Professor in Jaipur",
+    "background": "A dedicated literature professor who spends long hours preparing lectures and grading papers. She has been experiencing increasing stress due to academic pressures and departmental responsibilities.",
+    "lifestyle": {
+      "activityLevel": "moderate",
+      "smoking": false,
+      "alcohol": "social"
+    },
+    "personalityTraits": [
+      "perfectionist",
+      "anxious",
+      "detail-oriented"
+    ]
+  },
+  "diagnoses": [
+    {
+      "id": "d1",
+      "name": "Psoriasis vulgaris",
+      "description": "Chronic papulosquamous disorder with well-defined plaques covered by silvery scales"
+    },
+    {
+      "id": "d2",
+      "name": "Atopic dermatitis",
+      "description": "Endogenous eczema with extremely itchy erythematous scaly patches"
+    },
+    {
+      "id": "d3",
+      "name": "Seborrheic dermatitis",
+      "description": "Chronic inflammatory condition affecting scalp, face, and body folds with yellowish scales"
+    },
+    {
+      "id": "d4",
+      "name": "Contact dermatitis",
+      "description": "Inflammatory skin reaction due to contact with irritants or allergens"
+    },
+    {
+      "id": "d5",
+      "name": "Lichen planus",
+      "description": "Inflammatory disorder characterized by pruritic, planar, purple, polygonal papules"
+    },
+    {
+      "id": "d6",
+      "name": "Pityriasis versicolor",
+      "description": "Superficial skin infection by Malassezia furfur causing hypopigmented scaly macules"
+    },
+    {
+      "id": "d7",
+      "name": "Vitiligo",
+      "description": "Acquired condition with focal loss of melanocytes causing well-circumscribed hypopigmented patches"
+    },
+    {
+      "id": "d8",
+      "name": "Erythema multiforme",
+      "description": "Acute self-limiting eruption with target-shaped plaques on extremities"
+    },
+    {
+      "id": "d9",
+      "name": "Acne vulgaris",
+      "description": "Common disorder of pilosebaceous units with comedones, papules, and pustules"
+    },
+    {
+      "id": "d10",
+      "name": "Pemphigus vulgaris",
+      "description": "Autoimmune blistering disease with flaccid bullae and positive Nikolsky sign"
+    }
+  ],
+  "correctDiagnosisId": "d5",
+  "initialComplaint": "I have developed very itchy purple bumps on my wrists and ankles that appeared about 6 weeks ago. The itching is so severe it's affecting my sleep and concentration at work.",
+  "medicalHistory": "No significant past medical history. No known allergies. Takes occasional ibuprofen for headaches. Family history of diabetes in mother.",
+  "symptoms": "Intensely pruritic, well-defined, flat-topped, purple, polygonal papules and plaques on flexor surfaces of wrists, medial thighs, and shins. Fine white lacy pattern visible on some lesions. Patient reports severe pain in mouth when eating spicy foods. Some lesions show post-inflammatory hyperpigmentation where they have resolved. Koebner phenomenon present with new lesions appearing at sites of minor trauma.\n\nFrom textbook: (GVHD). Drugs, such as thiazides, INH,\nallopurinol, angiotensin-converting enzyme\n(ACE) inhibitors, and antimalarials, can produce\nlichenoid eruptions.\n\nClinical Features A B\nAge and gender: Lichen planus affects women\n\nFIGS. 19.7A AND B: Skin lesions in lichen planus.\nmore than men (at a ratio of 3:2) and occurs most\noften in middle-aged adults.\nCharacteristics of lesion\nz Skin lesions (Figs. 19.7A and B):\n\n The typical rash of lichen planus is well described by the “5 P’s”: Well-defined\npruri",
+  "relevantFindings": "Physical examination reveals characteristic purple, polygonal, flat-topped papules on flexor surfaces. Wickham's striae visible as fine white network on surface of larger lesions. Oral mucosa shows white lacy patches with some erosions on buccal mucosa causing severe pain. Nail examination shows thinning with longitudinal ridges on several fingernails. No fever or systemic symptoms.\n\nFrom textbook: (GVHD). Drugs, such as thiazides, INH,\nallopurinol, angiotensin-converting enzyme\n(ACE) inhibitors, and antimalarials, can produce\nlichenoid eruptions.\n\nClinical Features A B\nAge and gender: Lichen planus affects women\n\nFIGS. 19.7A AND B: Skin lesions in lichen planus.\nmore than men (at a ratio of 3:2) and occurs most\noften in middle-aged adults.\nCharacteristics of lesion\nz Skin lesions (Figs. 19.7A and B):\n\n The typical rash of lichen planus is well described by the “5 P’s”: Well-defined\npruri",
+  "redHerrings": "Recent stress from work responsibilities might suggest stress-related eczema. Purple color of lesions could initially be mistaken for bruising. Oral involvement might suggest viral infection. Nail changes could point toward fungal infection.",
+  "id": "case_1767519589720",
+  "domain": "dermatology",
+  "idealPathway": {
+    "diseaseName": "Lichen planus",
+    "domain": "dermatology",
+    "keyHistoryQuestions": [
+      {
+        "order": 1,
+        "type": "history",
+        "action": "Ask about the character and intensity of pruritus (itching)",
+        "reasoning": "Lichen planus is characterized by intense pruritus as part of the classic '5 P's' presentation",
+        "expectedFinding": "Severe pruritus affecting sleep and daily activities",
+        "importance": "critical",
+        "textbookReference": "The typical rash of lichen planus is well described by the '5 P's': Well-defined pruritic, planar, purple, polygonal papules, or plaques"
+      },
+      {
+        "order": 2,
+        "type": "history",
+        "action": "Ask about location of lesions, particularly flexor surfaces",
+        "reasoning": "Lichen planus has characteristic distribution pattern involving specific anatomical sites",
+        "expectedFinding": "Lesions on wrists, flanks, medial thighs, shins, glans penis, or oral mucosa",
+        "importance": "critical",
+        "textbookReference": "Sites involved: Flexor surfaces especially wrists, flanks, medial thighs, shins of tibia, glans penis, nails, scalp, and oral mucosa"
+      },
+      {
+        "order": 3,
+        "type": "history",
+        "action": "Ask about oral pain rather than itching in the mouth",
+        "reasoning": "Mucous membrane involvement presents differently with pain being the prominent symptom",
+        "expectedFinding": "Severe oral pain if mucous membranes are involved",
+        "importance": "important",
+        "textbookReference": "Mucous membrane: Involvement is common (30–70%) and prominent symptom is of severe pain rather than itch"
+      },
+      {
+        "order": 4,
+        "type": "history",
+        "action": "Ask about recent drug history, particularly thiazides, INH, allopurinol, ACE inhibitors, antimalarials",
+        "reasoning": "Drug-induced lichenoid eruptions can mimic lichen planus",
+        "expectedFinding": "History of exposure to drugs that can cause lichenoid eruptions",
+        "importance": "important",
+        "textbookReference": "Drugs, such as thiazides, INH, allopurinol, angiotensin-converting enzyme (ACE) inhibitors, and antimalarials, can produce lichenoid eruptions"
+      },
+      {
+        "order": 5,
+        "type": "history",
+        "action": "Ask about nail changes including thinning and ridging",
+        "reasoning": "Nail involvement occurs in about 10% of cases and can progress to complete nail loss",
+        "expectedFinding": "Thinning of nails with longitudinal ridges",
+        "importance": "helpful",
+        "textbookReference": "Nail involvement: Occurs in about 10% and causes a thinning of the nail with longitudinal ridges and may progress to complete loss of the nail plate"
+      }
+    ],
+    "keyExaminations": [
+      {
+        "order": 1,
+        "type": "examination",
+        "action": "Examine lesions for the '5 P's' characteristics: pruritic, planar, purple, polygonal papules or plaques",
+        "reasoning": "The classic morphological description is pathognomonic for lichen planus",
+        "expectedFinding": "Well-defined purple, flat-topped, polygonal papules or plaques",
+        "importance": "critical",
+        "textbookReference": "The typical rash of lichen planus is well described by the '5 P's': Well-defined pruritic, planar, purple, polygonal papules, or plaques"
+      },
+      {
+        "order": 2,
+        "type": "examination",
+        "action": "Look for Wickham's striae - fine lacy white pattern on lesion surface",
+        "reasoning": "Wickham's striae are characteristic feature of lichen planus lesions",
+        "expectedFinding": "Fine lacy white network pattern visible on lesion surface",
+        "importance": "important",
+        "textbookReference": "There may be a characteristic fine lacy white pattern (network) on the surface of lesions (Wickham's striae)"
+      },
+      {
+        "order": 3,
+        "type": "examination",
+        "action": "Test for Koebner's phenomenon by examining areas of trauma",
+        "reasoning": "Lichen planus can be induced by trauma, showing Koebner's phenomenon",
+        "expectedFinding": "New lesions appearing at sites of minor trauma or injury",
+        "importance": "helpful",
+        "textbookReference": "Koebner's phenomenon is observed"
+      },
+      {
+        "order": 4,
+        "type": "examination",
+        "action": "Examine oral mucosa, particularly the mouth",
+        "reasoning": "Mucous membrane involvement is common and may be the only manifestation",
+        "expectedFinding": "Oral mucosal lesions with severe pain",
+        "importance": "important",
+        "textbookReference": "Mucous membrane: Involvement is common (30–70%) and prominent symptom is of severe pain rather than itch. The mouth is the most commonly affected"
+      }
+    ],
+    "keyInvestigations": [
+      {
+        "order": 1,
+        "type": "investigation",
+        "action": "Order clinical diagnosis based on morphology and distribution",
+        "reasoning": "Lichen planus can often be diagnosed clinically based on characteristic appearance and location",
+        "expectedFinding": "Classic '5 P's' appearance in typical distribution",
+        "importance": "critical",
+        "textbookReference": "In most cases, the diagnosis can be made based on the history and physical examination alone"
+      },
+      {
+        "order": 2,
+        "type": "investigation",
+        "action": "Order skin biopsy for histological examination if diagnosis uncertain",
+        "reasoning": "Histological changes are characteristic and confirm the diagnosis when clinical features are atypical",
+        "expectedFinding": "Hyperkeratosis, basal cell degeneration, dense band-like T-lymphocyte infiltrate, saw-toothed dermoepidermal junction",
+        "importance": "important",
+        "textbookReference": "Characteristic histological changes include—(1) hyperkeratosis with thickening of the granular cell layer, (2) basal cell degeneration, and (3) dense, band-like T-lymphocyte infiltrate at the dermal–epidermal junction"
+      }
+    ],
+    "differentialDiagnoses": [
+      {
+        "name": "Drug-induced lichenoid eruptions",
+        "howToRuleOut": "Detailed drug history and temporal relationship between drug exposure and lesion onset",
+        "textbookReference": "Drugs, such as thiazides, INH, allopurinol, angiotensin-converting enzyme (ACE) inhibitors, and antimalarials, can produce lichenoid eruptions"
+      },
+      {
+        "name": "Graft-versus-host disease (GVHD)",
+        "howToRuleOut": "History of bone marrow or organ transplantation",
+        "textbookReference": "Drugs, such as thiazides, INH, allopurinol, angiotensin-converting enzyme (ACE) inhibitors, and antimalarials, can produce lichenoid eruptions. (GVHD)"
+      },
+      {
+        "name": "Psoriasis",
+        "howToRuleOut": "Different morphology (silvery scales vs purple polygonal), different distribution (extensor vs flexor surfaces), and different histological pattern",
+        "textbookReference": "The typical rash of lichen planus is well described by the '5 P's': Well-defined pruritic, planar, purple, polygonal papules, or plaques"
+      }
+    ],
+    "diagnosticApproach": "Diagnosis of lichen planus follows a systematic approach starting with recognition of the classic '5 P's' (pruritic, planar, purple, polygonal papules/plaques) in characteristic flexor surface distribution, particularly wrists and ankles. Key diagnostic features include Wickham's striae and potential mucous membrane involvement with pain rather than itch. Clinical diagnosis is often sufficient, but histological confirmation may be needed in atypical cases. Drug history is essential to exclude lichenoid drug reactions.",
+    "textbookSources": [
+      "(GVHD). Drugs, such as thiazides, INH,\nallopurinol, angiotensin-converting enzyme\n(ACE) inhibitors, and antimalarials, can produce\nlichenoid eruptions.\n\nClinical Features A B\nAge and gender: Lichen pl...",
+      "(GVHD). Drugs, such as thiazides, INH,\nallopurinol, angiotensin-converting enzyme\n(ACE) inhibitors, and antimalarials, can produce\nlichenoid eruptions.\n\nClinical Features A B\nAge and gender: Lichen pl..."
+    ]
+  },
+  "precomputedExplanations": [
+    {
+      "diagnosisId": "d1",
+      "diagnosisName": "Psoriasis vulgaris",
+      "description": "**Psoriasis** is a chronic autoimmune inflammatory skin condition characterized by rapid skin cell proliferation, resulting in thick, red, scaly plaques with silvery scales. The disease typically involves genetic predisposition and immune system dysregulation.",
+      "keySymptoms": [
+        "**Erythematous plaques** - Thick, raised red patches with distinct silvery-white scales indicating rapid epidermal cell turnover",
+        "**Koebner phenomenon** - Skin lesions developing at sites of trauma, demonstrating abnormal skin cell response"
+      ],
+      "clinicalReasoning": "Psoriasis typically presents with well-defined erythematous plaques, often on extensor surfaces like elbows and knees. While some features overlap with lichen planus, the characteristic silvery scales and different plaque morphology distinguish the conditions.",
+      "whyIncorrectForCase": "Patient's lesions are purple, polygonal, and located on flexor surfaces, unlike psoriasis's typical red, scaly plaques. Wickham's striae and oral involvement are not characteristic of psoriasis.",
+      "keyDifferencesFromCorrect": [
+        "**Color** - Psoriasis plaques are bright red, not purple like lichen planus",
+        "**Surface texture** - Silvery scales in psoriasis versus fine white network in lichen planus",
+        "**Lesion shape** - Irregular psoriatic plaques versus precise polygonal lichen planus papules"
+      ],
+      "missingFindings": [
+        "**Silvery scales** - Absence of characteristic thick, adherent psoriatic scales",
+        "**Extensor surface involvement** - Lesions typically on elbows and knees, not flexor surfaces",
+        "**Nail changes** - Psoriasis would show more distinctive nail pitting and discoloration"
+      ]
+    },
+    {
+      "diagnosisId": "d2",
+      "diagnosisName": "Atopic dermatitis",
+      "description": "**Atopic dermatitis** is a chronic, inflammatory skin condition characterized by intense pruritus, impaired skin barrier function, and recurrent eczematous lesions. It typically begins in childhood and is associated with allergic tendencies.",
+      "keySymptoms": [
+        "**Intense itching** - Severe pruritus causing significant patient discomfort and potential skin damage",
+        "**Eczematous changes** - Dry, inflamed skin with potential lichenification from chronic scratching"
+      ],
+      "clinicalReasoning": "Atopic dermatitis can present with pruritic lesions, but the precise, well-defined purple papules and specific distribution of this case are inconsistent with typical atopic dermatitis presentation.",
+      "whyIncorrectForCase": "Patient's lesions are distinctly purple, polygonal papules with Wickham's striae, which are not characteristic of atopic dermatitis. The precise morphology differs significantly.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion morphology** - Atopic dermatitis has diffuse, eczematous patches versus defined lichen planus papules",
+        "**Color** - Typically red or flesh-colored in atopic dermatitis, not purple",
+        "**Distribution** - Atopic dermatitis often involves flexural areas differently than this case"
+      ],
+      "missingFindings": [
+        "**Vesicular lesions** - Absence of small, fluid-filled vesicles typical in atopic dermatitis",
+        "**Chronic skin barrier changes** - Missing typical lichenification and excoriation patterns",
+        "**Childhood onset** - Adult presentation inconsistent with typical atopic dermatitis progression"
+      ]
+    },
+    {
+      "diagnosisId": "d5",
+      "diagnosisName": "Lichen planus",
+      "description": "**Lichen planus** is an inflammatory mucocutaneous disorder characterized by distinctive purple, polygonal papules with Wickham's striae, typically affecting middle-aged adults. It involves immune-mediated destruction of skin and mucous membrane epithelial cells.",
+      "keySymptoms": [
+        "**Purple polygonal papules** - Precise, angular lesions indicating characteristic lichen planus inflammatory response",
+        "**Wickham's striae** - Fine white network on lesion surface, pathognomonic for lichen planus",
+        "**Oral mucosal involvement** - White lacy patches and erosions demonstrating systemic nature of condition"
+      ],
+      "clinicalReasoning": "The patient's presentation perfectly matches classic lichen planus: purple polygonal papules on flexor surfaces, Wickham's striae, oral mucosal changes, and characteristic distribution. Age and gender also align with typical lichen planus demographics."
+    },
+    {
+      "diagnosisId": "d3",
+      "diagnosisName": "Seborrheic dermatitis",
+      "description": "A chronic inflammatory skin condition characterized by scaly, greasy, yellowish patches typically occurring on sebum-rich areas of the body.",
+      "keySymptoms": [
+        "**Erythematous patches** - red, scaly skin lesions in oily areas like scalp, face, and chest",
+        "**Dandruff** - flaky, itchy scalp with white or yellow scales",
+        "**Greasy appearance** - skin looks oily with yellowish-white scaling"
+      ],
+      "clinicalReasoning": "Seborrheic dermatitis typically presents with greasy, yellowish patches in sebum-rich areas, unlike the specific purple polygonal papules seen in this patient. The condition is often associated with fungal overgrowth and hormonal changes.",
+      "whyIncorrectForCase": "This patient presents with distinctly purple, polygonal, flat-topped papules on wrists and ankles, which are completely inconsistent with seborrheic dermatitis. The specific morphology and distribution of lesions point to a different diagnosis.",
+      "keyDifferencesFromCorrect": [
+        "**Color** - Seborrheic dermatitis has erythematous/yellowish patches vs. purple polygonal papules in Lichen planus",
+        "**Morphology** - Greasy, scaling patches vs. well-defined, flat-topped papules",
+        "**Distribution** - Typically on scalp and seborrheic areas vs. flexor surfaces of wrists and ankles"
+      ],
+      "missingFindings": [
+        "**Wickham's striae** - Fine white network characteristic of Lichen planus",
+        "**Oral mucosal involvement** - Specific white lacy patches not seen in seborrheic dermatitis",
+        "**Koebner phenomenon** - New lesions at sites of trauma, not typical for seborrheic dermatitis"
+      ]
+    },
+    {
+      "diagnosisId": "d4",
+      "diagnosisName": "**Contact Dermatitis**",
+      "description": "An inflammatory skin reaction caused by direct contact with an irritant or allergen, resulting in localized skin inflammation and immune response.",
+      "keySymptoms": [
+        "**Erythematous rash** - red, inflamed skin at site of irritant exposure",
+        "**Pruritus** - intense itching and skin discomfort",
+        "**Vesicles or bullae** - small fluid-filled skin lesions"
+      ],
+      "clinicalReasoning": "Contact dermatitis typically presents with localized skin reaction at point of exposure, with clear boundaries of irritant contact. It involves acute inflammatory response to specific external agent.",
+      "whyIncorrectForCase": "The patient's presentation shows characteristic **purple polygonal papules** with Wickham's striae, which are classic findings of lichen planus, not contact dermatitis. The widespread distribution and specific morphology do not match contact dermatitis pattern.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion Color** - Contact dermatitis is typically red, not purple",
+        "**Lesion Shape** - Lacks polygonal, flat-topped morphology of lichen planus",
+        "**Distribution** - Contact dermatitis is more localized to exposure site"
+      ],
+      "missingFindings": [
+        "**Specific Allergen Exposure** - No clear triggering external agent identified",
+        "**Acute Inflammation** - Lacks typical acute inflammatory signs",
+        "**Mucosal Involvement** - No evidence of specific mucosal reaction pattern"
+      ]
+    },
+    {
+      "diagnosisId": "d6",
+      "diagnosisName": "Pityriasis versicolor",
+      "description": "A superficial fungal skin infection caused by **Malassezia** yeast that produces hypopigmented or hyperpigmented scaly patches.",
+      "keySymptoms": [
+        "**Hypopigmented patches** - light or darker skin patches that do not tan normally",
+        "**Scaling** - fine, powdery scaling of skin surface",
+        "**Distribution** - typically on trunk, chest, back, and shoulders"
+      ],
+      "clinicalReasoning": "Pityriasis versicolor is a common fungal skin condition that causes color changes in skin patches. It is more common in warm, humid climates and often affects young adults.",
+      "whyIncorrectForCase": "This patient presents with well-defined, purple, polygonal papules characteristic of **lichen planus**, which is distinctly different from the scaling, color-changing patches of pityriasis versicolor.",
+      "keyDifferencesFromCorrect": [
+        "**Morphology** - Pityriasis versicolor has flat patches; lichen planus has raised polygonal papules",
+        "**Color** - Pityriasis versicolor has variable color changes; lichen planus has distinct purple hue",
+        "**Symptoms** - No significant itching in pityriasis versicolor vs. severe pruritus in lichen planus"
+      ],
+      "missingFindings": [
+        "**Wickham's striae** - fine white network not present in pityriasis versicolor",
+        "**Oral lesions** - no characteristic white lacy patches",
+        "**Koebner phenomenon** - not typically seen in pityriasis versicolor"
+      ]
+    },
+    {
+      "diagnosisId": "d7",
+      "diagnosisName": "**Vitiligo**",
+      "description": "**Vitiligo** is an autoimmune disorder characterized by progressive loss of skin pigmentation resulting in white patches on various body areas.",
+      "keySymptoms": [
+        "**Depigmentation** - Complete loss of skin color in well-defined patches",
+        "**Symmetrical distribution** - Often affects sun-exposed areas and body folds",
+        "**Color loss** - Gradual appearance of white or pale patches"
+      ],
+      "clinicalReasoning": "Vitiligo represents an autoimmune destruction of melanocytes, leading to complete loss of pigmentation in affected skin regions. Diagnosis typically involves visual examination and assessment of pigment loss.",
+      "whyIncorrectForCase": "This patient presents with purple, itchy, polygonal papules characteristic of lichen planus, which is distinctly different from the depigmented patches of vitiligo. The patient's lesions have defined color and texture inconsistent with vitiligo.",
+      "keyDifferencesFromCorrect": [
+        "**Color** - Vitiligo is white/pale, while lichen planus is purple/violaceous",
+        "**Texture** - Vitiligo is smooth, lichen planus has distinct papular/plaque texture",
+        "**Symptoms** - No itching in vitiligo, severe pruritus in lichen planus"
+      ],
+      "missingFindings": [
+        "**Wickham's striae** - Characteristic white network absent in vitiligo",
+        "**Polygonal papules** - Not present in typical vitiligo presentation",
+        "**Mucosal involvement** - Oral lesions different from vitiligo manifestation"
+      ]
+    },
+    {
+      "diagnosisId": "d8",
+      "diagnosisName": "Erythema multiforme",
+      "description": "An **acute inflammatory skin condition** characterized by distinctive target-like lesions, often triggered by infections or medications.",
+      "keySymptoms": [
+        "**Target lesions** - raised, red-purple circular rashes with concentric color changes",
+        "**Mucocutaneous involvement** - can affect mouth, genitals, and skin simultaneously",
+        "**Sudden onset** - rapid appearance of distinctive skin eruptions"
+      ],
+      "clinicalReasoning": "**Erythema multiforme** typically presents with acute, symmetrical target-shaped lesions that have a classic 'bulls-eye' appearance. The condition is often associated with herpes simplex virus or medication reactions, causing widespread inflammatory changes.",
+      "whyIncorrectForCase": "This patient's lesions are consistently purple, polygonal, and located on specific flexor surfaces, which is more characteristic of **lichen planus** than erythema multiforme.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion shape** - target-like vs polygonal",
+        "**Color** - variable reddish tones vs consistent purple",
+        "**Distribution** - widespread vs specific flexor surfaces"
+      ],
+      "missingFindings": [
+        "**Target lesions** - absent in this presentation",
+        "**Symmetrical acute onset** - not consistent with this patient's description",
+        "**Herpes or medication trigger** - not identified in patient history"
+      ]
+    },
+    {
+      "diagnosisId": "d9",
+      "diagnosisName": "Acne vulgaris",
+      "description": "A common **dermatological condition** characterized by inflammation of sebaceous glands and hair follicles, typically affecting adolescents and young adults.",
+      "keySymptoms": [
+        "**Comedones** - non-inflammatory skin lesions including blackheads and whiteheads",
+        "**Pustules** - pus-filled inflammatory lesions typically on face, chest, and back",
+        "**Sebum overproduction** - excess oil production contributing to follicular blockage"
+      ],
+      "clinicalReasoning": "Acne vulgaris primarily affects younger patients with oily skin, presenting with characteristic comedones, pustules, and inflammatory papules concentrated in sebaceous regions. Diagnosis requires assessment of lesion morphology, distribution, and patient age.",
+      "whyIncorrectForCase": "This patient is a 42-year-old female with purple, polygonal papules on wrists and ankles, which is not consistent with typical acne vulgaris presentation. The lesions show specific characteristics incompatible with acne.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion color** - Acne lesions are typically red/white, not purple",
+        "**Distribution** - Acne concentrates on face/chest, not wrists and ankles",
+        "**Patient age** - Acne more common in younger individuals"
+      ],
+      "missingFindings": [
+        "**Wickham's striae** - characteristic fine white network absent in acne",
+        "**Koebner phenomenon** - not associated with standard acne pathology",
+        "**Oral mucosal involvement** - not typical in acne vulgaris"
+      ]
+    },
+    {
+      "diagnosisId": "d10",
+      "diagnosisName": "**Pemphigus vulgaris**",
+      "description": "An autoimmune **blistering disorder** characterized by painful, fragile skin lesions that easily rupture and form painful erosions.",
+      "keySymptoms": [
+        "**Flaccid blisters** - soft, easily ruptured skin lesions that appear on skin and mucous membranes",
+        "**Nikolsky sign** - skin separation when lateral pressure is applied",
+        "**Painful oral erosions** - widespread, painful mucosal ulcerations"
+      ],
+      "clinicalReasoning": "**Pemphigus vulgaris** is an autoimmune condition where antibodies target desmoglein proteins, causing loss of cell adhesion and blister formation. Diagnosis requires specific immunofluorescence findings and serological testing.",
+      "whyIncorrectForCase": "The patient presents with discrete purple polygonal papules characteristic of **lichen planus**, not the flaccid blisters typical of pemphigus vulgaris. The lesion morphology and distribution do not match pemphigus.",
+      "keyDifferencesFromCorrect": [
+        "**Lesion morphology** - Pemphigus has fluid-filled blisters, lichen planus has solid papules",
+        "**Color** - Pemphigus lesions are typically reddish, lichen planus are distinctly purple",
+        "**Surface characteristics** - Pemphigus blisters are fragile and rupture easily, lichen planus papules are firm"
+      ],
+      "missingFindings": [
+        "**Intact skin adhesion** - No evidence of skin separation or blistering",
+        "**Absence of autoimmune blistering** - Patient shows papular, not bullous lesions",
+        "**Normal desmoglein antibody levels** - Not consistent with pemphigus pathogenesis"
+      ]
+    }
+  ]
+}
