@@ -18,6 +18,7 @@ import {
   findUserNeedingCases
 } from './casePoolManager';
 import { getActiveUsers, getAllUserIds } from './userService';
+import { startPendingMonitor, stopPendingMonitor, isMonitorRunning, getPendingStatus, migrateIncompleteCasesToPending } from './pendingCaseManager';
 
 let isGenerating = false;
 let intervalId: NodeJS.Timeout | null = null;
@@ -56,6 +57,15 @@ export function startBackgroundGenerator(): void {
   console.log(`[BackgroundGenerator] Target cases per user: ${TARGET_CASES_PER_USER}`);
   console.log(`[BackgroundGenerator] Active user window: ${ACTIVE_USER_DAYS} days`);
 
+  // One-time migration: move incomplete cases from pool to pending
+  const migrated = migrateIncompleteCasesToPending();
+  if (migrated > 0) {
+    console.log(`[BackgroundGenerator] Migrated ${migrated} incomplete cases to pending queue`);
+  }
+
+  // Start the pending case monitor (completes Phase 2-3 for pending cases)
+  startPendingMonitor(60000); // Check every 60 seconds
+
   intervalId = setInterval(async () => {
     await checkAndReplenish();
   }, CHECK_INTERVAL_MS);
@@ -75,6 +85,8 @@ export function stopBackgroundGenerator(): void {
     intervalId = null;
     console.log('[BackgroundGenerator] Stopped');
   }
+  // Also stop the pending monitor
+  stopPendingMonitor();
 }
 
 /**
@@ -153,10 +165,18 @@ async function checkAndReplenish(): Promise<void> {
 /**
  * Get generator status
  */
-export function getGeneratorStatus(): { running: boolean; isGenerating: boolean } {
+export function getGeneratorStatus(): {
+  running: boolean;
+  isGenerating: boolean;
+  pendingMonitor: boolean;
+  pendingCases: number;
+} {
+  const pendingStatus = getPendingStatus();
   return {
     running: intervalId !== null,
-    isGenerating
+    isGenerating,
+    pendingMonitor: isMonitorRunning(),
+    pendingCases: pendingStatus.total
   };
 }
 

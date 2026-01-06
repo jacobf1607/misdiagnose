@@ -24,6 +24,7 @@ import {
   generateSingleDiagnosisExplanation,
   GenerateCaseOptions
 } from './openai';
+import { addToPending, getPendingCount } from './pendingCaseManager';
 
 // Constants
 const CASES_DIR = path.join(__dirname, '../data/cases');
@@ -425,23 +426,32 @@ export function needsReplenishment(): boolean {
 
 /**
  * Generate cases to replenish pool
- * Cases are ONLY added to pool after ALL phases complete successfully:
- * 1. Generate all case JSONs in parallel
- * 2. Generate all pathways in parallel
- * 3. Generate all explanations in rounds
- * 4. Add ONLY fully complete cases to pool
+ * Uses a fault-tolerant 2-stage approach:
+ * 1. Generate Phase 1 cases (basic JSON) and add to PENDING queue
+ * 2. Background monitor completes Phase 2-3 and moves to pool
  *
- * This ensures players NEVER get incomplete cases (no coaching, slow explanations).
+ * This ensures:
+ * - No case is ever lost after Phase 1 (persisted to pending/)
+ * - Server restarts don't lose work
+ * - Failed phases get retried automatically
+ * - Only complete cases ever reach the pool
  */
 export async function replenishPool(count?: number): Promise<number> {
   const status = getPoolStatus();
-  const toGenerate = count ?? status.needsGeneration;
+  const pendingCount = getPendingCount();
+
+  // Consider pending cases when deciding how many to generate
+  const effectivePool = status.totalCases + pendingCount;
+  const toGenerate = count ?? Math.max(0, status.needsGeneration - pendingCount);
 
   if (toGenerate <= 0) {
+    if (pendingCount > 0) {
+      console.log(`[CasePool] Pool has ${status.totalCases} cases + ${pendingCount} pending, no new generation needed`);
+    }
     return 0;
   }
 
-  console.log(`[CasePool] Replenishing pool with ${toGenerate} COMPLETE cases...`);
+  console.log(`[CasePool] Generating ${toGenerate} new cases (current: ${status.totalCases} pool + ${pendingCount} pending)...`);
   const startTime = Date.now();
 
   // Pick random domains for each case
@@ -449,116 +459,40 @@ export async function replenishPool(count?: number): Promise<number> {
     DOMAINS[Math.floor(Math.random() * DOMAINS.length)]
   );
 
-  // PHASE 1: Generate all case JSONs in parallel (without pathways or explanations)
-  console.log(`[CasePool] Phase 1: Generating ${toGenerate} case JSONs in parallel...`);
-  const casePromises = domains.map((domain, i) => {
-    console.log(`[CasePool] Starting case ${i + 1}/${toGenerate} (${domain})...`);
-    return generateCaseFromAI({ domain, skipPathway: true, skipPrecompute: true })
-      .then(caseData => ({ success: true as const, caseData, domain, index: i }))
-      .catch(error => ({ success: false as const, error, domain, index: i }));
-  });
+  // PHASE 1 ONLY: Generate case JSONs and add to pending queue
+  // The pending monitor will complete Phase 2-3 automatically
+  console.log(`[CasePool] Generating ${toGenerate} case JSONs...`);
 
-  const caseResults = await Promise.all(casePromises);
-  const successfulCases = caseResults.filter((r): r is { success: true; caseData: Case; domain: string; index: number } => r.success);
+  let addedToPending = 0;
 
-  if (successfulCases.length === 0) {
-    console.error('[CasePool] Phase 1 failed: No cases generated');
-    return 0;
-  }
-  console.log(`[CasePool] Phase 1 complete: ${successfulCases.length}/${toGenerate} cases generated`);
+  for (let i = 0; i < domains.length; i++) {
+    const domain = domains[i];
+    console.log(`[CasePool] Generating case ${i + 1}/${toGenerate} (${domain})...`);
 
-  // Initialize precomputedExplanations for all cases (DO NOT add to pool yet)
-  for (const { caseData } of successfulCases) {
-    caseData.precomputedExplanations = [];
-  }
+    try {
+      const caseData = await generateCaseFromAI({ domain, skipPathway: true, skipPrecompute: true });
 
-  const phase1Elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-  console.log(`[CasePool] Phase 1 took ${phase1Elapsed}s (cases NOT yet in pool)`);
-
-  // PHASE 2: Generate all pathways in parallel
-  console.log(`[CasePool] Phase 2: Generating ${successfulCases.length} pathways in parallel...`);
-  const pathwayPromises = successfulCases.map(async ({ caseData, domain }) => {
-    const correctDiagnosis = caseData.diagnoses.find(d => d.id === caseData.correctDiagnosisId);
-    if (!correctDiagnosis) return { success: false, caseData };
-
-    console.log(`[CasePool] Generating pathway for ${correctDiagnosis.name}...`);
-
-    // Retry up to 3 times
-    for (let attempt = 1; attempt <= 3; attempt++) {
-      const pathway = await generateIdealPathway(correctDiagnosis.name, domain, caseData);
-      if (pathway) {
-        caseData.idealPathway = pathway;
-        console.log(`[CasePool] ✓ Pathway for ${correctDiagnosis.name}`);
-        return { success: true, caseData };
+      if (caseData) {
+        // Add to pending queue - monitor will complete it
+        addToPending(caseData, domain);
+        addedToPending++;
+        console.log(`[CasePool] ✓ Case ${caseData.id} added to pending queue`);
       }
-      if (attempt < 3) await new Promise(r => setTimeout(r, 2000));
+    } catch (error) {
+      console.error(`[CasePool] Error generating case ${i + 1}:`, error);
     }
-    return { success: false, caseData };
-  });
 
-  const pathwayResults = await Promise.all(pathwayPromises);
-  const casesWithPathways = pathwayResults
-    .filter((r): r is { success: true; caseData: Case } => r.success)
-    .map(r => r.caseData);
-
-  console.log(`[CasePool] Phase 2 complete: ${casesWithPathways.length} pathways generated`);
-
-  // PHASE 3: Generate explanations in rounds (1 per case per round, 10 rounds)
-  if (casesWithPathways.length > 0) {
-    console.log(`[CasePool] Phase 3: Generating explanations in ${casesWithPathways[0].diagnoses.length} rounds...`);
-
-    const numDiagnoses = casesWithPathways[0].diagnoses.length;
-    for (let round = 0; round < numDiagnoses; round++) {
-      console.log(`[CasePool] Round ${round + 1}/${numDiagnoses}: Generating explanation for d${round + 1} across all cases...`);
-
-      // Generate one explanation per case in parallel
-      const explanationPromises = casesWithPathways.map(async (caseData) => {
-        const diagnosis = caseData.diagnoses[round];
-        if (!diagnosis) return null;
-
-        try {
-          const explanation = await generateSingleDiagnosisExplanation(caseData, diagnosis.id);
-          if (explanation) {
-            caseData.precomputedExplanations!.push(explanation);
-            return explanation;
-          }
-        } catch (error) {
-          console.error(`[CasePool] Error generating explanation for ${diagnosis.name}:`, error);
-        }
-        return null;
-      });
-
-      await Promise.all(explanationPromises);
-      console.log(`[CasePool] Round ${round + 1} complete`);
-    }
-  }
-
-  console.log(`[CasePool] Phase 3 complete`);
-
-  // PHASE 4: Add ONLY fully complete cases to pool
-  console.log(`[CasePool] Phase 4: Adding complete cases to pool...`);
-  let added = 0;
-  for (const caseData of casesWithPathways) {
-    const hasPathway = !!caseData.idealPathway;
-    const explanationCount = caseData.precomputedExplanations?.length || 0;
-    const requiredExplanations = caseData.diagnoses.length;
-
-    if (hasPathway && explanationCount >= requiredExplanations) {
-      try {
-        addCaseToPool(caseData, false); // allowIncomplete = FALSE - will throw if incomplete
-        added++;
-        console.log(`[CasePool] ✓ Complete case ${caseData.id} added to pool`);
-      } catch (error) {
-        console.error(`[CasePool] Error adding case ${caseData.id}:`, error);
-      }
-    } else {
-      console.warn(`[CasePool] ✗ Skipping incomplete case ${caseData.id} (pathway: ${hasPathway}, explanations: ${explanationCount}/${requiredExplanations})`);
+    // Small delay between generations
+    if (i < domains.length - 1) {
+      await new Promise(r => setTimeout(r, 500));
     }
   }
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-  console.log(`[CasePool] Replenishment complete: ${added}/${toGenerate} complete cases in ${elapsed}s`);
-  return added;
+  console.log(`[CasePool] Added ${addedToPending}/${toGenerate} cases to pending queue in ${elapsed}s`);
+  console.log(`[CasePool] Pending monitor will complete Phase 2-3 automatically`);
+
+  return addedToPending;
 }
 
 /**
