@@ -6,6 +6,7 @@
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { API_BASE } from '../services/api';
 import type { Challenge, ChallengeResponse, Case } from '../types';
 import './ChallengePage.css';
 
@@ -46,8 +47,8 @@ export function ChallengePage({ challengeId, onAcceptChallenge, onBackToDashboar
 
       try {
         const url = userProfile
-          ? `/api/challenge/${challengeId}?userId=${userProfile.uid}`
-          : `/api/challenge/${challengeId}`;
+          ? `${API_BASE}/challenge/${challengeId}?userId=${userProfile.uid}`
+          : `${API_BASE}/challenge/${challengeId}`;
 
         const response = await fetch(url);
         const data = await response.json();
@@ -77,7 +78,7 @@ export function ChallengePage({ challengeId, onAcceptChallenge, onBackToDashboar
     setError(null);
 
     try {
-      const response = await fetch(`/api/challenge/${challengeId}/start`, {
+      const response = await fetch(`${API_BASE}/challenge/${challengeId}/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: userProfile?.uid })

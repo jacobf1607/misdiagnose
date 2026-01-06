@@ -10,6 +10,8 @@
  * - sessionId: Single browser session (sessionStorage)
  */
 
+import { API_BASE } from '../services/api';
+
 // Storage keys
 const DEVICE_ID_KEY = 'dg_device_id';
 const SESSION_ID_KEY = 'dg_session_id';
@@ -363,11 +365,11 @@ class Analytics {
 
     if (useBeacon && navigator.sendBeacon) {
       navigator.sendBeacon(
-        '/api/telemetry/events',
+        `${API_BASE}/telemetry/events`,
         JSON.stringify({ events })
       );
     } else {
-      fetch('/api/telemetry/events', {
+      fetch(`${API_BASE}/telemetry/events`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ events }),
@@ -401,7 +403,7 @@ class Analytics {
     const sessionId = getSessionId();
 
     try {
-      await fetch('/api/telemetry/link-guest', {
+      await fetch(`${API_BASE}/telemetry/link-guest`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

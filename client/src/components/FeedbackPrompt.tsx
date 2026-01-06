@@ -7,6 +7,7 @@
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { API_BASE } from '../services/api';
 import './FeedbackPrompt.css';
 
 // LocalStorage keys
@@ -70,7 +71,7 @@ export function FeedbackPrompt({ onSubmit }: FeedbackPromptProps) {
 
     try {
       // Submit feedback to API
-      const response = await fetch('/api/feedback', {
+      const response = await fetch(`${API_BASE}/feedback`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

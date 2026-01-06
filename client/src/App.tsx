@@ -307,7 +307,7 @@ function GameContent() {
       // If this was a challenge game, complete the challenge
       if (activeChallenge && response.scoreBreakdown) {
         try {
-          const challengeResponse = await fetch(`/api/challenge/${activeChallenge.id}/complete`, {
+          const challengeResponse = await fetch(`${api.API_BASE}/challenge/${activeChallenge.id}/complete`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

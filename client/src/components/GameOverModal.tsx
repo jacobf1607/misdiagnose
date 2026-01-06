@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { GameState, ScoreBreakdown, CoachingFeedback, DiagnosisExplanation, IncorrectDiagnosisExplanation, Challenge } from '../types';
 import { useAuth } from '../contexts/AuthContext';
+import { API_BASE } from '../services/api';
 import { CoachingModal } from './CoachingModal';
 import { ShareModal } from './ShareModal';
 import { FeedbackPrompt } from './FeedbackPrompt';
@@ -118,7 +119,7 @@ export function GameOverModal({
     setCoachingError(null);
 
     try {
-      const response = await fetch(`/api/game/${state.gameId}/coaching`);
+      const response = await fetch(`${API_BASE}/game/${state.gameId}/coaching`);
       const data = await response.json();
 
       if (!response.ok) {

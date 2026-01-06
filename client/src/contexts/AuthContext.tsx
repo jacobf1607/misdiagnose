@@ -15,6 +15,7 @@ import {
   signOut as firebaseSignOut,
   FirebaseUser
 } from '../services/firebase';
+import { API_BASE } from '../services/api';
 
 // App user profile (stored in our backend)
 export interface UserProfile {
@@ -77,7 +78,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   // Fetch user profile from backend
   const fetchUserProfile = useCallback(async (uid: string): Promise<UserProfile | null> => {
     try {
-      const response = await fetch(`/api/user/${uid}`);
+      const response = await fetch(`${API_BASE}/user/${uid}`);
       if (response.ok) {
         const data = await response.json();
         return data.user;
@@ -95,7 +96,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     phoneNumber: string,
     username?: string
   ): Promise<UserProfile> => {
-    const response = await fetch('/api/user', {
+    const response = await fetch(`${API_BASE}/user`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ uid, phone_number: phoneNumber, username })

@@ -4,6 +4,7 @@
  */
 
 import type { GameMode } from '../types';
+import { API_BASE } from '../services/api';
 
 /**
  * Create a challenge and get the share URL
@@ -17,7 +18,7 @@ export async function createChallenge(params: {
   challengerGrade: string;
   challengerScore: number;
 }): Promise<{ challengeId: string; shareUrl: string }> {
-  const response = await fetch('/api/challenge', {
+  const response = await fetch(`${API_BASE}/challenge`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(params)

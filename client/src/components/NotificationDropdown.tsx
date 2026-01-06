@@ -5,6 +5,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { API_BASE } from '../services/api';
 import type { Notification } from '../types';
 import './NotificationDropdown.css';
 
@@ -21,7 +22,7 @@ export function NotificationDropdown() {
     if (!userProfile || isGuest) return;
 
     try {
-      const response = await fetch(`/api/notifications/${userProfile.uid}`);
+      const response = await fetch(`${API_BASE}/notifications/${userProfile.uid}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -60,7 +61,7 @@ export function NotificationDropdown() {
     if (!userProfile) return;
 
     try {
-      await fetch(`/api/notifications/${notificationId}/read`, {
+      await fetch(`${API_BASE}/notifications/${notificationId}/read`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: userProfile.uid })
@@ -82,7 +83,7 @@ export function NotificationDropdown() {
 
     try {
       setLoading(true);
-      await fetch(`/api/notifications/${userProfile.uid}/read-all`, {
+      await fetch(`${API_BASE}/notifications/${userProfile.uid}/read-all`, {
         method: 'POST'
       });
 
