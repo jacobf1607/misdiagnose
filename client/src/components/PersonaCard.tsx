@@ -67,7 +67,7 @@ export function PersonaCard({
       {(isExpanded || !collapsible) && (
         <>
           <div className="persona-complaint">
-            <p>"{initialComplaint}"</p>
+            <p>"{initialComplaint.replace(/^["'"]+|["'"]+$/g, '')}"</p>
           </div>
 
           <div className="persona-lifestyle">
@@ -95,7 +95,7 @@ export function PersonaCard({
       {/* Show brief complaint when collapsed */}
       {collapsible && !isExpanded && (
         <div className="persona-complaint-brief">
-          <p>"{initialComplaint.substring(0, 80)}{initialComplaint.length > 80 ? '...' : ''}"</p>
+          <p>"{initialComplaint.replace(/^["'"]+|["'"]+$/g, '').substring(0, 80)}{initialComplaint.length > 80 ? '...' : ''}"</p>
         </div>
       )}
     </div>

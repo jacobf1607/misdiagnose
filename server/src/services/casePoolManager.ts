@@ -164,6 +164,26 @@ export async function allocateCase(
   let availableCases = [...index.cases];
 
   console.log(`[CasePool] Total cases in pool: ${availableCases.length}`);
+
+  // CRITICAL: Filter out incomplete cases (missing idealPathway or precomputedExplanations)
+  // This prevents players from getting cases without coaching or instant explanations
+  const beforeCompleteness = availableCases.length;
+  availableCases = availableCases.filter(meta => {
+    const caseData = loadCaseFile(meta.caseId);
+    if (!caseData) return false;
+
+    const hasPathway = !!caseData.idealPathway;
+    const hasExplanations = (caseData.precomputedExplanations?.length || 0) >= (caseData.diagnoses?.length || 10);
+
+    if (!hasPathway || !hasExplanations) {
+      console.log(`[CasePool] Filtering out incomplete case ${meta.caseId} (pathway: ${hasPathway}, explanations: ${caseData.precomputedExplanations?.length || 0})`);
+      return false;
+    }
+    return true;
+  });
+  if (beforeCompleteness !== availableCases.length) {
+    console.log(`[CasePool] Filtered out ${beforeCompleteness - availableCases.length} incomplete cases`);
+  }
   console.log(`[CasePool] Request userId: ${request.userId || 'NONE'}`);
 
   // Exclude cases user has seen
@@ -405,14 +425,13 @@ export function needsReplenishment(): boolean {
 
 /**
  * Generate cases to replenish pool
- * Uses batched parallel generation with immediate availability:
- * 1. Generate all case JSONs in parallel → ADD TO POOL IMMEDIATELY (playable!)
- * 2. Generate all pathways in parallel → update case files
- * 3. Generate explanations in rounds → update case files
+ * Cases are ONLY added to pool after ALL phases complete successfully:
+ * 1. Generate all case JSONs in parallel
+ * 2. Generate all pathways in parallel
+ * 3. Generate all explanations in rounds
+ * 4. Add ONLY fully complete cases to pool
  *
- * Players can start playing as soon as Phase 1 completes for a case.
- * Pathway and explanations are generated in background and will be ready
- * by the time players finish (or fallback to runtime generation).
+ * This ensures players NEVER get incomplete cases (no coaching, slow explanations).
  */
 export async function replenishPool(count?: number): Promise<number> {
   const status = getPoolStatus();
@@ -422,7 +441,7 @@ export async function replenishPool(count?: number): Promise<number> {
     return 0;
   }
 
-  console.log(`[CasePool] Replenishing pool with ${toGenerate} cases (immediate availability)...`);
+  console.log(`[CasePool] Replenishing pool with ${toGenerate} COMPLETE cases...`);
   const startTime = Date.now();
 
   // Pick random domains for each case
@@ -448,23 +467,15 @@ export async function replenishPool(count?: number): Promise<number> {
   }
   console.log(`[CasePool] Phase 1 complete: ${successfulCases.length}/${toGenerate} cases generated`);
 
-  // ADD CASES TO POOL IMMEDIATELY (playable now!)
-  let added = 0;
+  // Initialize precomputedExplanations for all cases (DO NOT add to pool yet)
   for (const { caseData } of successfulCases) {
-    try {
-      caseData.precomputedExplanations = []; // Initialize empty
-      addCaseToPool(caseData, true); // allowIncomplete = true
-      added++;
-      console.log(`[CasePool] ✓ Case ${caseData.id} now PLAYABLE (pathway/explanations generating...)`);
-    } catch (error) {
-      console.error(`[CasePool] Error adding case ${caseData.id}:`, error);
-    }
+    caseData.precomputedExplanations = [];
   }
 
   const phase1Elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-  console.log(`[CasePool] ${added} cases now available to players (${phase1Elapsed}s)`);
+  console.log(`[CasePool] Phase 1 took ${phase1Elapsed}s (cases NOT yet in pool)`);
 
-  // PHASE 2: Generate all pathways in parallel (background enrichment)
+  // PHASE 2: Generate all pathways in parallel
   console.log(`[CasePool] Phase 2: Generating ${successfulCases.length} pathways in parallel...`);
   const pathwayPromises = successfulCases.map(async ({ caseData, domain }) => {
     const correctDiagnosis = caseData.diagnoses.find(d => d.id === caseData.correctDiagnosisId);
@@ -477,9 +488,7 @@ export async function replenishPool(count?: number): Promise<number> {
       const pathway = await generateIdealPathway(correctDiagnosis.name, domain, caseData);
       if (pathway) {
         caseData.idealPathway = pathway;
-        // Update case file on disk
-        saveCaseFile(caseData);
-        console.log(`[CasePool] ✓ Pathway for ${correctDiagnosis.name} (saved)`);
+        console.log(`[CasePool] ✓ Pathway for ${correctDiagnosis.name}`);
         return { success: true, caseData };
       }
       if (attempt < 3) await new Promise(r => setTimeout(r, 2000));
@@ -511,8 +520,6 @@ export async function replenishPool(count?: number): Promise<number> {
           const explanation = await generateSingleDiagnosisExplanation(caseData, diagnosis.id);
           if (explanation) {
             caseData.precomputedExplanations!.push(explanation);
-            // Update case file on disk after each explanation
-            saveCaseFile(caseData);
             return explanation;
           }
         } catch (error) {
@@ -526,8 +533,31 @@ export async function replenishPool(count?: number): Promise<number> {
     }
   }
 
+  console.log(`[CasePool] Phase 3 complete`);
+
+  // PHASE 4: Add ONLY fully complete cases to pool
+  console.log(`[CasePool] Phase 4: Adding complete cases to pool...`);
+  let added = 0;
+  for (const caseData of casesWithPathways) {
+    const hasPathway = !!caseData.idealPathway;
+    const explanationCount = caseData.precomputedExplanations?.length || 0;
+    const requiredExplanations = caseData.diagnoses.length;
+
+    if (hasPathway && explanationCount >= requiredExplanations) {
+      try {
+        addCaseToPool(caseData, false); // allowIncomplete = FALSE - will throw if incomplete
+        added++;
+        console.log(`[CasePool] ✓ Complete case ${caseData.id} added to pool`);
+      } catch (error) {
+        console.error(`[CasePool] Error adding case ${caseData.id}:`, error);
+      }
+    } else {
+      console.warn(`[CasePool] ✗ Skipping incomplete case ${caseData.id} (pathway: ${hasPathway}, explanations: ${explanationCount}/${requiredExplanations})`);
+    }
+  }
+
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-  console.log(`[CasePool] Replenishment fully complete: ${added} cases in ${elapsed}s`);
+  console.log(`[CasePool] Replenishment complete: ${added}/${toGenerate} complete cases in ${elapsed}s`);
   return added;
 }
 

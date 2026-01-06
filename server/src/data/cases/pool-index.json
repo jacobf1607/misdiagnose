@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "lastUpdated": 1767641042568,
-  "totalCases": 31,
-  "availableCases": 31,
+  "totalCases": 23,
+  "availableCases": 23,
   "cases": [
     {
       "caseId": "case_1767519413588",
@@ -77,7 +77,7 @@
       "caseId": "case_1767638949732",
       "filename": "case_1767638949732.json",
       "domain": "gastroenterology",
-      "correctDiagnosis": "Irritable bowel syndrome—mixed subtype (IBS-M)",
+      "correctDiagnosis": "Irritable bowel syndrome\u2014mixed subtype (IBS-M)",
       "status": "available",
       "createdAt": 1767639200771,
       "usedBy": [
@@ -144,7 +144,7 @@
       "caseId": "case_1767639458038",
       "filename": "case_1767639458038.json",
       "domain": "endocrinology",
-      "correctDiagnosis": "Addison’s disease (primary adrenal insufficiency)",
+      "correctDiagnosis": "Addison\u2019s disease (primary adrenal insufficiency)",
       "status": "available",
       "createdAt": 1767639719188,
       "usedBy": [
@@ -172,28 +172,6 @@
       "correctDiagnosis": "Poststreptococcal (postinfectious) glomerulonephritis",
       "status": "available",
       "createdAt": 1767640306319,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767640594226",
-      "filename": "case_1767640594226.json",
-      "domain": "respiratory",
-      "correctDiagnosis": "Bronchiectasis",
-      "status": "available",
-      "createdAt": 1767640598507,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767640598390",
-      "filename": "case_1767640598390.json",
-      "domain": "rheumatology",
-      "correctDiagnosis": "Rheumatoid arthritis (RA)",
-      "status": "available",
-      "createdAt": 1767640598508,
       "usedBy": [],
       "usedCount": 0,
       "hasIdealPathway": false
@@ -246,7 +224,7 @@
       "caseId": "case_1767640685430",
       "filename": "case_1767640685430.json",
       "domain": "endocrinology",
-      "correctDiagnosis": "Addison’s disease (Primary adrenal insufficiency)",
+      "correctDiagnosis": "Addison\u2019s disease (Primary adrenal insufficiency)",
       "status": "available",
       "createdAt": 1767640685578,
       "usedBy": [],
@@ -279,7 +257,7 @@
       "caseId": "case_1767640677096",
       "filename": "case_1767640677096.json",
       "domain": "infectious diseases",
-      "correctDiagnosis": "Legionella pneumonia (Legionnaires’ disease)",
+      "correctDiagnosis": "Legionella pneumonia (Legionnaires\u2019 disease)",
       "status": "available",
       "createdAt": 1767640685580,
       "usedBy": [],
@@ -304,72 +282,6 @@
       "correctDiagnosis": "Chronic obstructive pulmonary disease (COPD)",
       "status": "available",
       "createdAt": 1767640685581,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767641033067",
-      "filename": "case_1767641033067.json",
-      "domain": "dermatology",
-      "correctDiagnosis": "Pityriasis versicolor (Tinea versicolor)",
-      "status": "available",
-      "createdAt": 1767641042564,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767641031938",
-      "filename": "case_1767641031938.json",
-      "domain": "infectious diseases",
-      "correctDiagnosis": "Pneumocystis jirovecii pneumonia (PJP/PCP)",
-      "status": "available",
-      "createdAt": 1767641042565,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767641042412",
-      "filename": "case_1767641042412.json",
-      "domain": "gastroenterology",
-      "correctDiagnosis": "Irritable bowel syndrome—mixed type (IBS-M)",
-      "status": "available",
-      "createdAt": 1767641042566,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767641035484",
-      "filename": "case_1767641035484.json",
-      "domain": "cardiology",
-      "correctDiagnosis": "Severe aortic stenosis",
-      "status": "available",
-      "createdAt": 1767641042567,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767641036628",
-      "filename": "case_1767641036628.json",
-      "domain": "hematology",
-      "correctDiagnosis": "Chronic myeloid leukemia (CML), BCR-ABL1 positive",
-      "status": "available",
-      "createdAt": 1767641042567,
-      "usedBy": [],
-      "usedCount": 0,
-      "hasIdealPathway": false
-    },
-    {
-      "caseId": "case_1767641036854",
-      "filename": "case_1767641036854.json",
-      "domain": "neurology",
-      "correctDiagnosis": "Multiple sclerosis (Relapsing-remitting MS)",
-      "status": "available",
-      "createdAt": 1767641042568,
       "usedBy": [],
       "usedCount": 0,
       "hasIdealPathway": false

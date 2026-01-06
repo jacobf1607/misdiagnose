@@ -263,7 +263,7 @@ Output ONLY a valid JSON object with this exact structure:
     "personalityTraits": ["trait1", "trait2", "trait3"]
   },
   "diagnoses": [
-    {"id": "d1", "name": "Condition Name from Textbook", "description": "Brief description from textbook"},
+    {"id": "d1", "name": "Condition Name from Textbook", "description": "One-liner definition (max 15 words)"},
     ... (10 total, all from the textbook reference)
   ],
   "correctDiagnosisId": "d5",

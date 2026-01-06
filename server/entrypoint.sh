@@ -21,6 +21,18 @@ else
     echo "[Entrypoint] Data directory exists with content, using existing data"
 fi
 
+# REFRESH_CASES=true will update cases from backup while keeping user data
+if [ "$REFRESH_CASES" = "true" ]; then
+    echo "[Entrypoint] REFRESH_CASES=true, updating cases folder..."
+    if [ -d "$BACKUP_DIR/cases" ]; then
+        rm -rf $DATA_DIR/cases
+        cp -r $BACKUP_DIR/cases $DATA_DIR/
+        echo "[Entrypoint] Cases refreshed from backup (user data preserved)"
+    else
+        echo "[Entrypoint] Warning: No cases backup found at $BACKUP_DIR/cases"
+    fi
+fi
+
 # Start the server
 echo "[Entrypoint] Starting server..."
 exec npm start
