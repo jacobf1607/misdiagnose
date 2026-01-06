@@ -14,6 +14,9 @@ COPY . .
 # Build TypeScript
 RUN npm run build
 
+# Copy data folder to dist (TypeScript doesn't copy non-TS files)
+RUN cp -r src/data dist/
+
 # Expose port
 EXPOSE 3005
 
