@@ -91,12 +91,22 @@ export function stopBackgroundGenerator(): void {
 
 /**
  * Check pool and generate if needed
- * Now uses per-user availability checking
+ *
+ * CRITICAL: Only generate new cases (Phase 1) when pending queue is empty.
+ * This ensures we complete a batch before starting the next one.
  */
 async function checkAndReplenish(): Promise<void> {
   // Skip if already generating
   if (isGenerating) {
     console.log('[BackgroundGenerator] Already generating, skipping check');
+    return;
+  }
+
+  // CRITICAL: Do NOT generate new cases if there are pending cases
+  // Wait for current batch to complete before starting next batch
+  const pendingStatus = getPendingStatus();
+  if (pendingStatus.total > 0) {
+    console.log(`[BackgroundGenerator] ${pendingStatus.total} cases pending completion - waiting before generating new batch`);
     return;
   }
 
