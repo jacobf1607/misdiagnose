@@ -312,11 +312,13 @@ export function getUserChallenges(userId: string): Challenge[] {
 }
 
 /**
- * Get challenges received by a user (completed ones where they're the challenged)
+ * Get challenges where user has responded
  */
 export function getReceivedChallenges(userId: string): Challenge[] {
   const challenges = loadChallenges();
-  return challenges.filter(c => c.challengedUserId === userId);
+  return challenges.filter(c =>
+    c.responses.some(r => r.respondentUserId === userId)
+  );
 }
 
 // ============================================
@@ -417,7 +419,7 @@ export function cleanupExpiredChallenges(): number {
   let expiredCount = 0;
 
   for (const challenge of challenges) {
-    if (challenge.status === 'pending' && now > challenge.expiresAt) {
+    if (challenge.status === 'active' && now > challenge.expiresAt) {
       challenge.status = 'expired';
       expiredCount++;
     }
