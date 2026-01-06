@@ -92,7 +92,7 @@ async function startServer() {
     console.log(`[Server] Case pool ready: ${poolStatus.availableCases} available, ${poolStatus.totalCases} total`);
 
     // Start background generator if enabled
-    if (process.env.ENABLE_BACKGROUND_GENERATION === 'true') {
+    if (process.env.ENABLE_BACKGROUND_GENERATION?.toLowerCase() === 'true') {
       console.log('[Server] Starting background case generator...');
       startBackgroundGenerator();
     } else {
