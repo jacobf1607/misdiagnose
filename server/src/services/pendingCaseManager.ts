@@ -318,9 +318,10 @@ export async function processAllPending(): Promise<{ completed: number; remainin
       continue;
     }
 
-    // Skip if too many attempts (likely permanent failure)
+    // Delete if too many attempts (likely permanent failure)
     if (status.attemptCount >= 10) {
-      console.warn(`[PendingCases] Case ${status.caseId} has ${status.attemptCount} attempts, skipping`);
+      console.warn(`[PendingCases] Case ${status.caseId} failed 10 times, deleting`);
+      deletePendingCase(status.caseId);
       continue;
     }
 
