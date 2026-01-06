@@ -22,7 +22,7 @@ import type {
 
 // In production, VITE_API_URL should be set to the backend URL
 // In development, Vite proxy handles /api requests
-export const API_BASE = import.meta.env.VITE_API_URL || 'https://extraordinary-connection-production.up.railway.app/api';
+export const API_BASE = import.meta.env.VITE_API_URL || 'https://api.misdiagnose.in/api';
 
 interface NewGameResponse {
   gameId: string;
