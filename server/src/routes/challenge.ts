@@ -34,7 +34,7 @@ router.post('/', (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    if (!request.challengerGrade || !request.challengerScore) {
+    if (!request.challengerGrade || request.challengerScore === undefined) {
       return res.status(400).json({ error: 'Challenger score and grade are required' });
     }
 
