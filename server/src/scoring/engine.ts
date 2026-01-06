@@ -22,7 +22,7 @@ import {
   ChatMessage,
   TestResult,
   ExamResult
-} from '../../../shared/types';
+} from '../types';
 
 import {
   DEFAULT_WEIGHTS,

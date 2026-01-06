@@ -13,7 +13,7 @@ import {
   FeedbackContext,
   FeedbackCaseSnapshot,
   SubmitFeedbackRequest
-} from '../../../shared/types';
+} from '../types';
 
 // Path to feedback storage file
 const FEEDBACK_FILE = path.join(__dirname, '../data/feedback.json');

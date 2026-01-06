@@ -11,7 +11,7 @@ import {
   ChatMessage,
   TestResult,
   ExamResult
-} from '../../../shared/types';
+} from '../types';
 
 // Similarity threshold for matching actions to pathway steps
 const SIMILARITY_THRESHOLD = 0.4;

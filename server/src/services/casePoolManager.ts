@@ -17,7 +17,7 @@ import {
   CaseAllocationRequest,
   CaseAllocationResult,
   PoolStatus
-} from '../../../shared/types';
+} from '../types';
 import {
   generateCase as generateCaseFromAI,
   generateIdealPathway,

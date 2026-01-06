@@ -20,7 +20,7 @@ import {
   replenishPool
 } from '../services/casePoolManager';
 import { generateCase, precomputeAllExplanations } from '../services/openai';
-import type { Case } from '../../../shared/types';
+import type { Case } from '../types';
 
 const DOMAINS = [
   'cardiology',

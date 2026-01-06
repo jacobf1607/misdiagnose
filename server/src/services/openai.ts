@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { Case, ChatMessage, IdealPathway, PathwayStep, ValidationError, ScoreBreakdown } from '../../../shared/types';
+import { Case, ChatMessage, IdealPathway, PathwayStep, ValidationError, ScoreBreakdown } from '../types';
 import {
   searchDomain,
   getDiseaseInfo,

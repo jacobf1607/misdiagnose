@@ -8,7 +8,7 @@ import {
   SubmitFeedbackRequest,
   UpdateFeedbackStatusRequest,
   FeedbackStatus
-} from '../../../shared/types';
+} from '../types';
 import {
   submitFeedback,
   getAllFeedback,

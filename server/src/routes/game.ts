@@ -23,7 +23,7 @@ import {
   GameMode,
   BLITZ_TIME_LIMIT_MS,
   BLITZ_GRACE_PERIOD_MS
-} from '../../../shared/types';
+} from '../types';
 import {
   compareToIdealPathway,
   generateCoachingFeedback

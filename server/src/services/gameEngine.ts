@@ -8,7 +8,7 @@ import {
   GameMode,
   BLITZ_TIME_LIMIT_MS,
   ScoreBreakdown
-} from '../../../shared/types';
+} from '../types';
 
 import { generateAIScore, AIScoreInput } from './openai';
 

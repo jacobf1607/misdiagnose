@@ -7,7 +7,7 @@ import { Router, Request, Response } from 'express';
 import {
   CreateChallengeRequest,
   CompleteChallengeRequest
-} from '../../../shared/types';
+} from '../types';
 import {
   createChallenge,
   getChallengeById,

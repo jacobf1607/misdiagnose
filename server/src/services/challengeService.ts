@@ -11,7 +11,7 @@ import {
   ChallengeStatus,
   Notification,
   CreateChallengeRequest
-} from '../../../shared/types';
+} from '../types';
 import { loadCaseFile } from './casePoolManager';
 import { getCaseHistory } from './userService';
 
