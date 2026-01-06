@@ -17,8 +17,15 @@ RUN npm run build
 # Copy data folder to dist (TypeScript doesn't copy non-TS files)
 RUN cp -r src/data dist/
 
+# Keep a backup of initial data (volume will mount over dist/data)
+RUN cp -r src/data /app/data-init
+
+# Copy and prepare entrypoint script
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
 # Expose port
 EXPOSE 3005
 
-# Start the server
-CMD ["npm", "start"]
+# Use entrypoint script to handle volume initialization
+ENTRYPOINT ["/app/entrypoint.sh"]
