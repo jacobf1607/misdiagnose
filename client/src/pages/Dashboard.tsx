@@ -78,77 +78,114 @@ export function Dashboard({ onStartGame, onEnterTestMode, onViewFeedback, onView
   return (
     <div className="dashboard">
       <div className="dashboard-content">
-        <div className="welcome-section">
-          {isGuest ? (
-            <>
-              <h1 className="welcome-title">
-                Welcome, <span className="username">Guest</span>!
-              </h1>
-              <p className="welcome-subtitle">
-                Practice your clinical reasoning skills
+        {isGuest ? (
+          <>
+            <div className="guest-hero">
+              <h1 className="guest-hero-title">Think you can diagnose a patient?</h1>
+              <p className="guest-hero-subtitle">
+                A medical diagnosis game for students, doctors, and the
+                dangerously curious. Practice clinical reasoning with AI-generated cases.
               </p>
-            </>
-          ) : (
-            <>
+            </div>
+
+            <div className="guest-how-it-works">
+              <div className="guest-step">
+                <span className="guest-step-icon">💬</span>
+                <div className="guest-step-text">
+                  <strong>Interview the patient</strong>
+                  <span>Ask about symptoms, history, and lifestyle</span>
+                </div>
+              </div>
+              <div className="guest-step">
+                <span className="guest-step-icon">🔬</span>
+                <div className="guest-step-text">
+                  <strong>Order tests &amp; examine</strong>
+                  <span>Run labs, imaging, and physical exams</span>
+                </div>
+              </div>
+              <div className="guest-step">
+                <span className="guest-step-icon">🎯</span>
+                <div className="guest-step-text">
+                  <strong>Make your diagnosis</strong>
+                  <span>Pick from 10 possibilities and get scored</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="action-section">
+              <div className="action-row-primary">
+                <button
+                  className="btn btn-primary start-case-btn"
+                  onClick={onStartGame}
+                >
+                  <span className="btn-icon">🩺</span>
+                  Start a Case — It's Free
+                </button>
+              </div>
+              <div className="action-row-secondary">
+                <button
+                  className="btn btn-outline login-prompt-btn"
+                  onClick={exitGuestMode}
+                >
+                  <span className="btn-icon">🔐</span>
+                  Login to Save Progress
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="welcome-section">
               <h1 className="welcome-title">
                 Welcome back, <span className="username">{userProfile?.username}</span>!
               </h1>
               <p className="welcome-subtitle">
                 Ready to practice your clinical reasoning skills?
               </p>
-            </>
-          )}
-        </div>
+            </div>
 
-        <div className="action-section">
-          <div className="action-row-primary">
-            <button
-              className="btn btn-primary start-case-btn"
-              onClick={onStartGame}
-            >
-              <span className="btn-icon">🩺</span>
-              Start New Case
-            </button>
-            {!isGuest && history.length > 0 && onViewPastCases && (
-              <button
-                className="btn btn-outline past-cases-btn"
-                onClick={onViewPastCases}
-              >
-                <span className="btn-icon">📋</span>
-                Past Cases
-              </button>
-            )}
-          </div>
-          <div className="action-row-secondary">
-            {isGuest && (
-              <button
-                className="btn btn-outline login-prompt-btn"
-                onClick={exitGuestMode}
-              >
-                <span className="btn-icon">🔐</span>
-                Login to Save Progress
-              </button>
-            )}
-            {isTestUser && onEnterTestMode && (
-              <button
-                className="btn btn-outline test-mode-btn"
-                onClick={onEnterTestMode}
-              >
-                <span className="btn-icon">🧪</span>
-                Enter Test Mode
-              </button>
-            )}
-            {isTestUser && onViewFeedback && (
-              <button
-                className="btn btn-outline feedback-dashboard-btn"
-                onClick={onViewFeedback}
-              >
-                <span className="btn-icon">💬</span>
-                View Feedback
-              </button>
-            )}
-          </div>
-        </div>
+            <div className="action-section">
+              <div className="action-row-primary">
+                <button
+                  className="btn btn-primary start-case-btn"
+                  onClick={onStartGame}
+                >
+                  <span className="btn-icon">🩺</span>
+                  Start New Case
+                </button>
+                {history.length > 0 && onViewPastCases && (
+                  <button
+                    className="btn btn-outline past-cases-btn"
+                    onClick={onViewPastCases}
+                  >
+                    <span className="btn-icon">📋</span>
+                    Past Cases
+                  </button>
+                )}
+              </div>
+              <div className="action-row-secondary">
+                {isTestUser && onEnterTestMode && (
+                  <button
+                    className="btn btn-outline test-mode-btn"
+                    onClick={onEnterTestMode}
+                  >
+                    <span className="btn-icon">🧪</span>
+                    Enter Test Mode
+                  </button>
+                )}
+                {isTestUser && onViewFeedback && (
+                  <button
+                    className="btn btn-outline feedback-dashboard-btn"
+                    onClick={onViewFeedback}
+                  >
+                    <span className="btn-icon">💬</span>
+                    View Feedback
+                  </button>
+                )}
+              </div>
+            </div>
+          </>
+        )}
 
         {/* Only show stats for logged-in users */}
         {!isGuest && (
@@ -225,13 +262,15 @@ export function Dashboard({ onStartGame, onEnterTestMode, onViewFeedback, onView
           </div>
         )}
 
-        <div className="info-section">
-          <p>
-            Misdiagnose presents you with realistic patient cases.
-            Ask questions, order tests, and make your diagnosis.
-            Your performance is graded on accuracy, efficiency, and clinical reasoning.
-          </p>
-        </div>
+        {!isGuest && (
+          <div className="info-section">
+            <p>
+              Misdiagnose presents you with realistic patient cases.
+              Ask questions, order tests, and make your diagnosis.
+              Your performance is graded on accuracy, efficiency, and clinical reasoning.
+            </p>
+          </div>
+        )}
       </div>
 
       {selectedCase && (
