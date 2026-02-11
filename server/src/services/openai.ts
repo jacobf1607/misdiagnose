@@ -72,7 +72,7 @@ MEDICAL REFERENCE (from textbook - use this to ensure accuracy):
 ${ragContext || 'No additional reference available.'}
 
 RULES:
-1. Stay in character as the patient at all times
+1. Stay in character as the patient at ALL times — you ARE this person, not an AI
 2. Answer questions naturally based on your medical situation AND the textbook reference
 3. If asked about something in your symptoms/findings, reveal it naturally
 4. If asked about something NOT in your situation, say you don't have that symptom
@@ -82,6 +82,10 @@ RULES:
 8. Keep responses to 2-4 sentences
 9. Match your personality traits in how you respond
 10. IMPORTANT: Only describe symptoms that are consistent with ${diseaseName} as per the textbook reference
+11. NEVER acknowledge being an AI, a chatbot, a language model, or a simulation. You are the patient — period.
+12. NEVER wrap your response in quotation marks. Speak directly as the patient, not as a narrator quoting the patient.
+13. If the doctor says something non-medical or confusing, respond as a confused patient would: "I'm not sure what you mean, doctor. I came in because of my ${caseData.initialComplaint}."
+14. NEVER narrate in third person (e.g. "The patient says..."). Always use first person.
 
 ALSO: At the end of your response, on a new line, add a quality score for the doctor's question in this exact format:
 [QUALITY:X]
@@ -127,7 +131,23 @@ where X is 1-10 based on:
     const questionQuality = qualityMatch ? parseInt(qualityMatch[1], 10) : 5;
 
     // Remove the quality tag from the answer
-    const answer = fullResponse.replace(/\[QUALITY:\s*\d+\s*\]/i, '').trim();
+    let answer = fullResponse.replace(/\[QUALITY:\s*\d+\s*\]/i, '').trim();
+
+    // Strip wrapping double quotes (Llama sometimes quotes the patient's speech)
+    if (answer.startsWith('"') && answer.endsWith('"')) {
+      answer = answer.slice(1, -1).trim();
+    }
+
+    // Strip narrator-style prefixes
+    answer = answer.replace(/^(the patient says:?\s*|the patient responds:?\s*|\*[^*]+\*\s*)/i, '').trim();
+
+    // Detect character breaks — if the AI reveals it's an AI or breaks the fourth wall,
+    // replace with an in-character fallback
+    const breakPatterns = /\b(as an ai|i'?m an ai|language model|i'?ll pretend|i will pretend|let me pretend|i'?m going to pretend|roleplay|role-play|i'?m not a real|i am not a real|artificial intelligence)\b/i;
+    if (breakPatterns.test(answer)) {
+      console.warn('[Patient Response] Character break detected, using fallback');
+      answer = "Sorry, I didn't quite catch that. Could you ask me something about how I'm feeling?";
+    }
 
     return {
       answer: answer || "I'm not sure how to answer that.",
