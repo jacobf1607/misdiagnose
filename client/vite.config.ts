@@ -14,7 +14,15 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          firebase: ['firebase/app', 'firebase/auth'],
+          vendor: ['react', 'react-dom']
+        }
+      }
+    }
   },
   // Allow environment variables starting with VITE_
   envPrefix: 'VITE_'
